@@ -16,15 +16,15 @@ permissions:
 jobs:
   build:
     name: Build & Validate
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install Dependencies
@@ -47,10 +47,7 @@ jobs:
   deploy:
     name: Deploy to CloudPanel VPS
     needs: build
-    runs-on: ubuntu-22.04
-    environment:
-      name: production
-      url: https://adigitaltools.in
+    runs-on: ubuntu-latest
     steps:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
