@@ -45,7 +45,7 @@ jobs:
           if-no-files-found: error
 
   deploy:
-    name: Deploy to Hostinger VPS
+    name: Deploy to CloudPanel VPS
     needs: build
     runs-on: ubuntu-22.04
     environment:
@@ -70,54 +70,21 @@ jobs:
           echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
-      - name: Upload Release via Rsync
+      - name: Upload Release & Update CloudPanel Live Directory
         env:
           HOST: ${{ secrets.SSH_HOST }}
           USER: ${{ secrets.SSH_USER }}
           PORT: ${{ secrets.SSH_PORT || '22' }}
           SHA: ${{ github.sha }}
         run: |
-          echo "[+] Uploading build to release folder: /var/www/adigitaltools.in/releases/${SHA}..."
-          ssh -p ${PORT} -i ~/.ssh/deploy_key ${USER}@${HOST} "mkdir -p /var/www/adigitaltools.in/releases/${SHA}"
+          echo "[+] Syncing build files to /home/adigitaltools/htdocs/adigitaltools.in..."
           
-          rsync -avz --delete -e "ssh -p ${PORT} -i ~/.ssh/deploy_key" \
-            dist/ ${USER}@${HOST}:/var/www/adigitaltools.in/releases/${SHA}/
-
-      - name: Health Check & Atomic Symlink Activation
-        env:
-          HOST: ${{ secrets.SSH_HOST }}
-          USER: ${{ secrets.SSH_USER }}
-          PORT: ${{ secrets.SSH_PORT || '22' }}
-          SHA: ${{ github.sha }}
-        run: |
-          ssh -p ${PORT} -i ~/.ssh/deploy_key ${USER}@${HOST} << 'EOF'
-            set -euo pipefail
-            SHA="${SHA}"
-            RELEASE_DIR="/var/www/adigitaltools.in/releases/${SHA}"
-            CURRENT_LINK="/var/www/adigitaltools.in/current"
-
-            echo "[+] Running pre-activation integrity check..."
-            if [ ! -f "${RELEASE_DIR}/index.html" ]; then
-              echo "[-] Pre-flight check failed: index.html not found in release!" >&2
-              exit 1
-            fi
-
-            echo "[+] Performing atomic symlink swap..."
-            ln -sfn "${RELEASE_DIR}" "${CURRENT_LINK}"
-
-            echo "[+] Testing and reloading Nginx..."
-            sudo /usr/sbin/nginx -t
-            sudo /usr/bin/systemctl reload nginx
-
-            echo "[+] Pruning older releases (keeping the latest 5)..."
-            cd /var/www/adigitaltools.in/releases
-            ls -1td */ 2>/dev/null | tail -n +6 | xargs -r rm -rf --
-
-            echo "[✓] Deployment completed successfully! Live SHA: ${SHA}"
-          EOF
+          rsync -avz --delete \
+            -e "ssh -p ${PORT} -i ~/.ssh/deploy_key" \
+            dist/ ${USER}@${HOST}:/home/adigitaltools/htdocs/adigitaltools.in/
 
       - name: Live Endpoint Health Verification
         run: |
           echo "[+] Verifying public HTTPS response..."
-          sleep 3
+          sleep 2
           curl -f -s -I -A "GitHubActions-HealthCheck" https://adigitaltools.in | head -n 5
