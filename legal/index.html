@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link rel="icon" type="image/png" href="/logo.png"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#003733","on-background":"#dae2fd","on-primary-container":"#00423b","primary":"#4fdbc8","on-secondary-container":"#9af0e5","surface":"#0b1326","slate-surface":"#1E293B","on-surface":"#dae2fd","surface-dim":"#0b1326","on-error":"#690005","tertiary":"#7bd8b1","surface-container-low":"#131b2e","tertiary-fixed-dim":"#7bd8b1","canvas-light":"#F8FAFC","surface-bright":"#31394d","primary-container":"#14b8a6","outline-variant":"#3c4947","surface-container-high":"#222a3d","on-error-container":"#ffdad6","background":"#0b1326","on-tertiary-fixed-variant":"#00513a","on-surface-variant":"#bbcac6","secondary-container":"#007068","on-primary":"#003731","primary-fixed":"#71f8e4","inverse-primary":"#006b5f","slate-border":"#334155","error":"#ffb4ab","on-secondary-fixed-variant":"#00504a","tertiary-fixed":"#97f5cc","tertiary-container":"#58b590","on-primary-fixed":"#00201c","inverse-on-surface":"#283044","error-container":"#93000a","primary-fixed-dim":"#4fdbc8","on-secondary-fixed":"#00201d","on-primary-fixed-variant":"#005048","on-tertiary-container":"#00432f","secondary-fixed-dim":"#80d5cb","secondary-fixed":"#9cf2e8","secondary":"#80d5cb","outline":"#859490","surface-container":"#171f33","surface-variant":"#2d3449","surface-tint":"#4fdbc8","inverse-surface":"#dae2fd","surface-container-lowest":"#060e20","surface-container-highest":"#2d3449","on-tertiary":"#003827","alert-amber":"#F59E0B","on-tertiary-fixed":"#002115"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","space-xl":"2.5rem","space-lg":"1.5rem","space-md":"1rem","gutter":"1.5rem","margin-mobile":"1rem","space-sm":"0.5rem"},"fontFamily":{"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["Inter"],"headline-lg-mobile":["Space Grotesk"],"display-hero":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Inter"],"body-lg":["Inter"],"label-mono-sm":["JetBrains Mono"],"title-md":["Inter"],"label-mono-lg":["JetBrains Mono"]},"fontSize":{"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-mono-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-mono-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-space-sm flex-shrink-0"><img alt="Precision geometric tech logo for 'Digital Tools'. An intertwined hexagonal circuit gear merged with a stylized agricultural leaf and digital node network. Minimal, clean vector badge, technical emerald teal (#14B8A6) and crisp cyan accents on dark industrial background.. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase leading-none">Digital Tools</span><span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wider uppercase mt-space-xs">Compliance &amp; Developer Legal Hub</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-lg bg-surface-container-high"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">RFC 9116 / GOOGLE PLAY POLICY COMPLIANT</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-1 rounded-lg bg-surface-container-low" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-title-md"><a aria-current="page" class="px-space-sm py-1.5 transition-colors bg-primary-container text-on-primary-container rounded-lg font-title-md" href="/legal/">Legal Center</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="/apps/attendy/">Attendy Compliance</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="/apps/sudoku-master-pro/">Sudoku Master Pro Legal</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" href="/legal/deletion/">Account &amp; Data Deletion</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm font-label-mono-sm" data-path="security-txt" href="#">security.txt</a></nav><div class="flex items-center gap-space-sm flex-shrink-0"><a class="hidden sm:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all font-label-mono-sm text-label-mono-sm" href="/"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Main Portal</span></a><a class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-fixed transition-all font-label-mono-sm text-label-mono-sm font-medium" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">verified</span><span class="hidden md:inline">Developer Profile</span></a><button aria-label="Print or Plain Text View" class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" onclick="window.print()" type="button"><span class="material-symbols-outlined text-[18px]">print</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Command Telemetry Bar -->
+<section class="w-full bg-surface-container-lowest py-space-sm px-gutter">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm font-label-mono-sm text-label-mono-sm">
+<div class="flex items-center gap-space-sm text-outline">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-on-surface uppercase font-medium">SYS_STATUS: VERIFIED DIRECTORY</span>
+<span>/</span>
+<span class="text-primary uppercase tracking-wider">DOC_TREE: REL_2025_Q1</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant">
+<span>ENCRYPTION: SHA-256 SUMS INTACT</span>
+<span class="text-outline">|</span>
+<span class="text-tertiary">RFC 9116 COMPLIANT</span>
+<span class="text-outline">|</span>
+<span class="text-alert-amber">STABLE PERMALINKS ENFORCED</span>
+</div>
+</div>
+</section>
+<!-- Hero Header Section with Technical Brutalist Precision -->
+<section class="w-full bg-surface py-space-xl px-gutter relative overflow-hidden">
+<!-- Subtle Ambient Architectural Glow (Bounded) -->
+<div class="absolute -top-32 right-12 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-20 w-80 h-80 rounded-full bg-secondary-container/10 blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg relative z-10">
+<!-- Eyebrow & Badging -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm tracking-widest uppercase">
+          // GOOGLE PLAY CONSOLE COMPLIANT // STABLE PERMANENT URLS // RFC 9116 VERIFIED
+        </span>
+<span class="px-space-sm py-1 rounded bg-secondary-container/40 text-on-secondary-container font-label-mono-sm text-label-mono-sm">
+          PLAY POLICY TARGET: API 34
+        </span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-tertiary font-label-mono-sm text-label-mono-sm">
+          DPDP INDIA 2023 ACTIVE
+        </span>
+</div>
+<!-- Main Headline & Subtitle Split Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase">
+            Developer Legal Center &amp; App Compliance Directory
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Permanent, immutable URLs and technical compliance documentation for production applications published by <span class="text-primary font-medium">Digital Tools Pvt. Ltd.</span> on the Google Play Store. Architected strictly to fulfill Google Play Developer Policy, DPDP Act 2023, EU GDPR Article 17, and California CCPA statutory requirements.
+          </p>
+</div>
+<!-- Telemetry Digest Box (Right Column) -->
+<div class="lg:col-span-4 bg-surface-container rounded-lg p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">TELEMETRY AUDIT</span>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm font-semibold">PASS: 100%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-lowest rounded overflow-hidden">
+<div class="h-full bg-primary w-full transition-all duration-500"></div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs font-label-mono-sm text-label-mono-sm">
+<div class="flex flex-col">
+<span class="text-outline uppercase">Published Packages</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">02</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline uppercase">Ad Trackers</span>
+<span class="font-headline-sm text-headline-sm text-tertiary">ZERO (0%)</span>
+</div>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm pt-space-xs">
+            Directly monitored by internal legal CI pipeline. Last static crawl: <span class="font-label-mono-sm text-label-mono-sm text-on-surface">TODAY, 04:00 UTC</span>.
+          </div>
+</div>
+</div>
+<!-- Status Strip Grid (4 Pillars) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-sm">
+<!-- Metric 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between text-primary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">STAT_01</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">2 Verified Apps</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated live Google Play package identifiers in release tier.</span>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between text-tertiary">
+<span class="material-symbols-outlined text-[24px]">shield_person</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">STAT_02</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">0 Ad Trackers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">100% clean binaries. No AdMob, Facebook Audience, or data brokers.</span>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between text-secondary">
+<span class="material-symbols-outlined text-[24px]">auto_delete</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">STAT_03</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">&lt; 72hr SLA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated retention &amp; cryptographic account deletion pipeline.</span>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between text-alert-amber">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">STAT_04</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-xs">Designated DPO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Statutory Grievance Redressal established under India DPDP Act.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Legal Notice & Verification Callout Banner -->
+<section class="w-full bg-surface-container-low py-space-md px-gutter">
+<div class="max-w-7xl mx-auto bg-surface-container rounded-lg p-space-md lg:p-space-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md shadow-md">
+<div class="flex items-start gap-space-md max-w-4xl">
+<div class="p-2 rounded bg-alert-amber/10 text-alert-amber flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber uppercase font-bold tracking-wide">
+              MANDATORY LEGAL NOTICE &amp; REGULATORY SPECIFICATION
+            </span>
+<span class="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="hidden sm:inline-block font-label-mono-sm text-label-mono-sm text-outline">REV 2025.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The documentation presented herein is maintained for Google Play store listing validation, policy adherence, and automated automated testing. Organizations deploying enterprise builds must verify terms with in-house legal counsel for specific jurisdictional liabilities under Indian, European, and US state frameworks.
+          </p>
+</div>
+</div>
+<!-- Action Utilities -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-sm w-full lg:w-auto flex-shrink-0">
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold uppercase hover:bg-primary-fixed transition-colors shadow-sm" id="downloadZipBtn">
+<span class="material-symbols-outlined text-[18px]">folder_zip</span>
+<span>Download Legal .ZIP</span>
+</button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-bright transition-colors shadow-sm" id="exportMdBtn">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Export Markdown</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Application Compliance Matrix (The Core Engine) -->
+<section class="w-full bg-background py-space-xl px-gutter">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-mono-sm text-label-mono-sm uppercase">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+<span>SECTION 01 // STORE AUDIT REGISTRY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase">
+            Application Compliance Matrix
+          </h2>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">
+          PERMANENT CANONICAL URIS â€¢ GOOGLE PLAY COMPLIANT
+        </span>
+</div>
+<!-- Matrix Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- CARD 1: Attendy: Attendance & Payroll -->
+<article class="bg-surface-container rounded-lg p-space-lg flex flex-col gap-space-lg shadow-md relative overflow-hidden">
+<!-- Card Header / Identity -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[32px]">badge</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm uppercase">Active Release</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm">PEGI 3+ / Everyone</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+                  Attendy: Attendance &amp; Payroll
+                </h3>
+<span class="font-label-mono-sm text-label-mono-sm text-outline select-all">
+                  pkg: com.attendance.protoos
+                </span>
+</div>
+</div>
+<a class="p-2 rounded bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-colors" href="https://play.google.com/store/apps/details?id=com.attendance.protoos" rel="noopener noreferrer" target="_blank" title="Google Play Store Listing">
+<span class="material-symbols-outlined text-[20px]">open_in_new</span>
+</a>
+</div>
+<!-- Application Spec Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm bg-surface-container-lowest p-space-md rounded-lg font-label-mono-sm text-label-mono-sm">
+<div class="flex flex-col">
+<span class="text-outline uppercase">Version</span>
+<span class="text-on-surface font-semibold">3.4.1 (Stable)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline uppercase">Target SDK</span>
+<span class="text-primary font-semibold">Android 14 (API 34)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline uppercase">Category</span>
+<span class="text-on-surface">Productivity</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline uppercase">Telemetry</span>
+<span class="text-tertiary">Zero Trackers</span>
+</div>
+</div>
+<!-- Play Store Permanent Direct URLs List -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase tracking-wider">
+              GOOGLE PLAY PERMANENT DIRECT URIS (IMMUTABLE)
+            </span>
+<div class="flex flex-col gap-space-xs">
+<!-- Privacy URL -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Privacy Policy URL</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary truncate select-all">https://adigitaltools.in/apps/attendy/privacy</span>
+</div>
+</div>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex-shrink-0" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/attendy/privacy'); alert('Copied Attendy Privacy URL');" title="Copy URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<!-- Terms URL -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-outline text-[18px]">article</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Terms of Service</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant truncate select-all">https://adigitaltools.in/apps/attendy/terms</span>
+</div>
+</div>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex-shrink-0" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/attendy/terms'); alert('Copied Attendy Terms URL');" title="Copy URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<!-- Data Safety URL -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">safety_check</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Play Store Data Safety Specification</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary truncate select-all">https://adigitaltools.in/apps/attendy/data-safety</span>
+</div>
+</div>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex-shrink-0" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/attendy/data-safety'); alert('Copied Data Safety URL');" title="Copy URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<!-- Deletion URL -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-alert-amber text-[18px]">delete_forever</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Account &amp; Data Deletion Request</span>
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber truncate select-all">https://adigitaltools.in/apps/attendy/delete-request</span>
+</div>
+</div>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex-shrink-0" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/attendy/delete-request'); alert('Copied Deletion Request URL');" title="Copy URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Google Play Data Safety Summary -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase font-medium">Declared Data Types &amp; Permissions</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm text-body-sm text-on-surface-variant pt-space-xs">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0">location_on</span>
+<div>
+<strong class="text-on-surface">Approx &amp; Fine GPS:</strong>
+<span>Used solely for geofence punch-in verification. Never tracked in background.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary flex-shrink-0">account_circle</span>
+<div>
+<strong class="text-on-surface">Personal Profile:</strong>
+<span>Name, Phone, Employee ID for multi-tenant organizational roster isolation.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary flex-shrink-0">receipt_long</span>
+<div>
+<strong class="text-on-surface">Salary &amp; Financial:</strong>
+<span>Wages strictly processed locally for PDF pay-slip export. Zero broker transfer.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-alert-amber flex-shrink-0">lock</span>
+<div>
+<strong class="text-on-surface">Data Transmission:</strong>
+<span>TLS 1.3 encrypted over HTTPS. AES-256 at rest. Zero advertising identifiers collected.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="px-space-md py-2 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:bg-primary-fixed transition-colors" href="/apps/attendy/">
+              Inspect Full Attendy Policy
+            </a>
+<a class="px-space-md py-2 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-bright transition-colors" data-path="attendy-data-safety" href="#">
+              View Data Safety Map
+            </a>
+<a class="px-space-md py-2 rounded bg-surface-container-low text-on-surface-variant hover:text-primary font-label-mono-sm text-label-mono-sm uppercase transition-colors" href="https://play.google.com/store/apps/details?id=com.attendance.protoos" rel="noopener noreferrer" target="_blank">
+              Play Store Listing
+            </a>
+</div>
+</article>
+<!-- CARD 2: Sudoku Master Pro -->
+<article class="bg-surface-container rounded-lg p-space-lg flex flex-col gap-space-lg shadow-md relative overflow-hidden">
+<!-- Card Header / Identity -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[32px]">grid_4x4</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-label-mono-sm uppercase">Pure Offline Mode</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm">PEGI 3+ / All Ages</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+                  Sudoku Master Pro
+                </h3>
+<span class="font-label-mono-sm text-label-mono-sm text-outline select-all">
+                  pkg: com.numbers_game.protoos
+                </span>
+</div>
+</div>
+<a class="p-2 rounded bg-surface-container-high text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" href="https://play.google.com/store/apps/details?id=com.numbers_game.protoos" rel="noopener noreferrer" target="_blank" title="Google Play Store Listing">
+<span class="material-symbols-outlined text-[20px]">open_in_new</span>
+</a>
+</div>
+<!-- Application Spec Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm bg-surface-container-lowest p-space-md rounded-lg font-label-mono-sm text-label-mono-sm">
+<div class="flex flex-col">
+<span class="text-outline uppercase">Version</span>
+<span class="text-on-surface font-semibold">1.2.0 (Stable)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline uppercase">Target SDK</span>
+<span class="text-primary font-semibold">Android 14 (API 34)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline uppercase">Category</span>
+<span class="text-on-surface">Puzzle / Logic</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline uppercase">Network Perms</span>
+<span class="text-tertiary">NONE (No Internet)</span>
+</div>
+</div>
+<!-- Play Store Permanent Direct URLs List -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase tracking-wider">
+              GOOGLE PLAY PERMANENT DIRECT URIS (IMMUTABLE)
+            </span>
+<div class="flex flex-col gap-space-xs">
+<!-- Privacy URL -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Privacy Policy URL</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary truncate select-all">https://adigitaltools.in/apps/sudoku-master-pro/privacy</span>
+</div>
+</div>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-secondary transition-colors flex-shrink-0" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/sudoku-master-pro/privacy'); alert('Copied Sudoku Privacy URL');" title="Copy URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<!-- Terms URL -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-outline text-[18px]">article</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Terms of Service</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant truncate select-all">https://adigitaltools.in/apps/sudoku-master-pro/terms</span>
+</div>
+</div>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-secondary transition-colors flex-shrink-0" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/sudoku-master-pro/terms'); alert('Copied Sudoku Terms URL');" title="Copy URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<!-- Data Safety Summary URL -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[18px]">signal_wifi_off</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">100% Offline Architecture Notice</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary truncate select-all">android.permission.INTERNET OMITTED</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-label-mono-sm uppercase">AIR-GAPPED</span>
+</div>
+<!-- Account Deletion Special Exemption URL -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-outline text-[18px]">info</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface">Account Deletion Obligation</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant truncate">Exempt: No account creation or cloud store</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-outline font-label-mono-sm text-label-mono-sm uppercase">N/A</span>
+</div>
+</div>
+</div>
+<!-- Google Play Data Safety Summary -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase font-medium">Deterministic Offline Architecture</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm text-body-sm text-on-surface-variant pt-space-xs">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary flex-shrink-0">cloud_off</span>
+<div>
+<strong class="text-on-surface">Zero Data Transmission:</strong>
+<span>Binary contains no socket networking. Impossible to exfiltrate bits off-device.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0">sd_storage</span>
+<div>
+<strong class="text-on-surface">Encrypted Local SQLite:</strong>
+<span>Game progression and high scores reside inside app sandbox. Cleared via uninstall.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary flex-shrink-0">block</span>
+<div>
+<strong class="text-on-surface">Zero Ad SDKs:</strong>
+<span>No behavioral telemetry, no attribution SDKs (AppsFlyer/Adjust), no marketing ID read.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface flex-shrink-0">child_care</span>
+<div>
+<strong class="text-on-surface">COPPA / Child Safety:</strong>
+<span>Fully safe for children and families. Zero personally identifiable data handled.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="px-space-md py-2 rounded bg-secondary text-on-secondary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:bg-secondary-fixed transition-colors" href="/apps/sudoku-master-pro/">
+              Inspect Sudoku Policy
+            </a>
+<button class="px-space-md py-2 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-bright transition-colors" onclick="alert('Offline Certification: APK Manifest contains 0 Network Permissions. Binary SHA256 verified.');">
+              Offline Verification
+            </button>
+<a class="px-space-md py-2 rounded bg-surface-container-low text-on-surface-variant hover:text-secondary font-label-mono-sm text-label-mono-sm uppercase transition-colors" href="https://play.google.com/store/apps/details?id=com.numbers_game.protoos" rel="noopener noreferrer" target="_blank">
+              Play Store Listing
+            </a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Interactive Searchable / Filterable Compliance Directory Table -->
+<section class="w-full bg-surface-container-lowest py-space-xl px-gutter">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header & Filter Controls -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-mono-sm text-label-mono-sm uppercase">
+<span class="material-symbols-outlined text-[16px]">table_rows</span>
+<span>SECTION 02 // STATUTORY INDEX</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase">
+            Quick Compliance Directory
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Audit-ready tabular ledger of statutory policies, sub-processors, and endpoint declarations. Filterable by compliance framework.
+          </p>
+</div>
+<!-- Search & Filter Interface -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="pl-9 pr-3 py-2 rounded bg-surface text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary w-64 shadow-inner" id="dirSearch" placeholder="Search URI, App, Standard..." type="text"/>
+</div>
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded">
+<button class="dir-filter-btn px-space-sm py-1 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold uppercase" data-filter="all">ALL (7)</button>
+<button class="dir-filter-btn px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase" data-filter="play">Google Play</button>
+<button class="dir-filter-btn px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase" data-filter="dpdp">DPDP India</button>
+<button class="dir-filter-btn px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase" data-filter="gdpr">GDPR Art 17</button>
+</div>
+</div>
+</div>
+<!-- Compliance Spec Table -->
+<div class="w-full bg-surface-container rounded-lg overflow-x-auto shadow-md">
+<table class="w-full text-left font-body-sm text-body-sm min-w-[900px]">
+<thead class="bg-surface-container-highest text-outline font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+<tr>
+<th class="py-space-md px-space-md">Document Title &amp; Scope</th>
+<th class="py-space-md px-space-md">Target Package</th>
+<th class="py-space-md px-space-md">Permanent Canonical URI</th>
+<th class="py-space-md px-space-md">Last Verified</th>
+<th class="py-space-md px-space-md">Compliance Frameworks</th>
+<th class="py-space-md px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40" id="directoryTableBody">
+<!-- Row 1 -->
+<tr class="dir-row hover:bg-surface-container-high/30 transition-colors" data-cat="play,dpdp,gdpr">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Attendy Privacy Policy</span>
+<span class="text-on-surface-variant text-body-sm">Enterprise payroll &amp; geofenced punch rules</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                com.attendance.protoos
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-primary select-all">
+                /apps/attendy/privacy
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                2025-01-15
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm">Play DDA</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-label-mono-sm">DPDP 2023</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-primary" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/attendy/privacy');" title="Copy Permanent Link">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<a class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" href="/apps/attendy/" title="View Document">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</a>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="dir-row hover:bg-surface-container-high/30 transition-colors" data-cat="play,gdpr">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-alert-amber flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Attendy Account Deletion</span>
+<span class="text-on-surface-variant text-body-sm">Self-service in-app &amp; external web form</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                com.attendance.protoos
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-alert-amber select-all">
+                /apps/attendy/delete-request
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                2025-01-10
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-alert-amber/10 text-alert-amber font-label-mono-sm text-label-mono-sm">GDPR Art 17</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm">Play DDA 4.8</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-alert-amber" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/attendy/delete-request');" title="Copy Permanent Link">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<a class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" href="/legal/deletion/" title="View Document">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</a>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="dir-row hover:bg-surface-container-high/30 transition-colors" data-cat="play">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Attendy Play Data Safety</span>
+<span class="text-on-surface-variant text-body-sm">Field-by-field safety taxonomy breakdown</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                com.attendance.protoos
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-secondary select-all">
+                /apps/attendy/data-safety
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                2025-01-18
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm">Console Verified</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-secondary" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/attendy/data-safety');" title="Copy Permanent Link">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<a class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" data-path="attendy-data-safety" href="#" title="View Document">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</a>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="dir-row hover:bg-surface-container-high/30 transition-colors" data-cat="play,dpdp">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Sudoku Master Pro Privacy</span>
+<span class="text-on-surface-variant text-body-sm">100% offline standalone logic game policy</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                com.numbers_game.protoos
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-secondary select-all">
+                /apps/sudoku-master-pro/privacy
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                2025-01-08
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm">Play DDA</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-label-mono-sm">COPPA Pass</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-secondary" onclick="navigator.clipboard.writeText('https://adigitaltools.in/apps/sudoku-master-pro/privacy');" title="Copy Permanent Link">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<a class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" href="/apps/sudoku-master-pro/" title="View Document">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</a>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="dir-row hover:bg-surface-container-high/30 transition-colors" data-cat="play,dpdp,gdpr">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Master Developer Terms of Service</span>
+<span class="text-on-surface-variant text-body-sm">Global account license &amp; acceptable use terms</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-outline">
+                GLOBAL ORG SCOPE
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-tertiary select-all">
+                /legal/terms-of-service
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                2025-01-01
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-label-mono-sm">Commercial DDA</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-tertiary" onclick="navigator.clipboard.writeText('https://adigitaltools.in/legal/terms-of-service');" title="Copy Permanent Link">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<a class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" data-path="master-terms-of-service" href="#" title="View Document">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</a>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="dir-row hover:bg-surface-container-high/30 transition-colors" data-cat="play,dpdp,gdpr">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Master Developer Privacy Policy</span>
+<span class="text-on-surface-variant text-body-sm">Corporate data controller overview &amp; transfer policy</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-outline">
+                GLOBAL ORG SCOPE
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-primary select-all">
+                /legal/master-privacy-policy
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                2025-01-01
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm">DPDP â€¢ GDPR</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-primary" onclick="navigator.clipboard.writeText('https://adigitaltools.in/legal/master-privacy-policy');" title="Copy Permanent Link">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<a class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" data-path="master-privacy-policy" href="#" title="View Document">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</a>
+</div>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="dir-row hover:bg-surface-container-high/30 transition-colors" data-cat="play">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-outline flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Vulnerability Disclosure (RFC 9116)</span>
+<span class="text-on-surface-variant text-body-sm">Standardized security research submission contact</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-outline">
+                INFRASTRUCTURE
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface select-all">
+                /.well-known/security.txt
+              </td>
+<td class="py-space-md px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+                2025-01-01
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-mono-sm text-label-mono-sm">RFC 9116</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" onclick="navigator.clipboard.writeText('https://adigitaltools.in/.well-known/security.txt');" title="Copy Permanent Link">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<a class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface" data-path="security-txt" href="#" title="View Document">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Corporate Statutory Information & Grievance Redressal Mechanism -->
+<section class="w-full bg-background py-space-xl px-gutter">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-mono-sm text-label-mono-sm uppercase">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+<span>SECTION 03 // STATUTORY DISCLOSURES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase">
+          Corporate Information &amp; Statutory Grievance Redressal
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Fulfilling mandatory disclosure norms under Rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, and Section 8(6) of the Digital Personal Data Protection Act, 2023 (DPDPA).
+        </p>
+</div>
+<!-- Bento Grid Layout for Corporate & Grievance -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Corporate Entity Card (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container rounded-lg p-space-lg flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">MCA REGISTERED ENTITY</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-label-mono-sm font-semibold">ACTIVE</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+                Digital Tools Private Limited
+              </h3>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">CIN / Corporate Registration Maintained</span>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline flex-shrink-0 mt-0.5">location_on</span>
+<div>
+<strong class="text-on-surface block">Registered Headquarters:</strong>
+<span>State of Maharashtra, Republic of India.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline flex-shrink-0 mt-0.5">business</span>
+<div>
+<strong class="text-on-surface block">Legal Jurisdiction:</strong>
+<span>High Court of Judicature at Bombay, Maharashtra, India.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline flex-shrink-0 mt-0.5">mail</span>
+<div>
+<strong class="text-on-surface block">Primary Developer Desk:</strong>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">developer@adigitaltools.in</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-outline uppercase">Developer Console ID</span>
+<span class="text-on-surface font-semibold">6740194394029144829</span>
+</div>
+</div>
+<!-- Statutory Grievance Redressal Officer (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container rounded-lg p-space-lg flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber uppercase font-bold tracking-wider">
+                INDIA DPDP ACT 2023 DESIGNATED DESK
+              </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm">
+                RULE 3(2) IT RULES
+              </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+                Grievance &amp; Data Protection Officer
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Users or corporate tenants may direct any grievance regarding processing of personal data, non-adherence to consent terms, or deletion delays directly to our statutory officer:
+              </p>
+</div>
+<!-- Officer Bio Table Spec -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md bg-surface-container-lowest p-space-md rounded-lg font-body-sm text-body-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Appointed Officer</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Rajesh Kumar</span>
+<span class="text-on-surface-variant text-body-sm">Chief Grievance Officer &amp; Legal Head</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Grievance Desk Email</span>
+<a class="font-label-mono-sm text-label-mono-sm text-primary hover:underline" href="mailto:grievance@adigitaltools.in">grievance@adigitaltools.in</a>
+<span class="text-outline text-body-sm font-label-mono-sm">CC: compliance@adigitaltools.in</span>
+</div>
+<div class="flex flex-col gap-1 sm:col-span-2 pt-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Mandatory Statutory Response SLAs</span>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="flex items-center gap-space-xs bg-surface-container p-space-sm rounded">
+<span class="material-symbols-outlined text-primary text-[18px]">timer</span>
+<div>
+<strong class="text-on-surface block font-label-mono-sm text-label-mono-sm">&lt; 24 HOURS</strong>
+<span class="text-on-surface-variant text-body-sm">Acknowledgment of ticket receipt</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container p-space-sm rounded">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<div>
+<strong class="text-on-surface block font-label-mono-sm text-label-mono-sm">â‰¤ 15 CALENDAR DAYS</strong>
+<span class="text-on-surface-variant text-body-sm">Complete redressal or escalation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Notice filing accepts PGP encrypted statements. Download officer public key below.
+            </span>
+<div class="flex items-center gap-space-sm">
+<a class="px-space-md py-2 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:bg-primary-fixed transition-colors" href="mailto:grievance@adigitaltools.in?subject=Grievance%20Redressal%20Request%20-%20Tools%20Digital">
+                Lodge Grievance
+              </a>
+<a class="px-space-md py-2 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-bright transition-colors" data-path="security-txt" href="#">
+                RFC 9116 Key
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Automated Client-Side Behavior Script -->
+<script>
+    // Search & Filter in Quick Directory Table
+    (function initDirectoryFilter() {
+      const searchInput = document.getElementById('dirSearch');
+      const filterBtns = document.querySelectorAll('.dir-filter-btn');
+      const tableRows = document.querySelectorAll('.dir-row');
+
+      let currentCategory = 'all';
+
+      function applyFilter() {
+        const query = (searchInput?.value || '').toLowerCase().trim();
+
+        tableRows.forEach(row => {
+          const rowCats = (row.getAttribute('data-cat') || '').toLowerCase();
+          const rowText = row.innerText.toLowerCase();
+
+          const matchesCat = currentCategory === 'all' || rowCats.includes(currentCategory);
+          const matchesQuery = !query || rowText.includes(query);
+
+          if (matchesCat && matchesQuery) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+          btn.classList.remove('text-on-surface-variant');
+
+          currentCategory = btn.getAttribute('data-filter') || 'all';
+          applyFilter();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilter);
+      }
+
+      // Download Legal ZIP Handler simulation
+      const zipBtn = document.getElementById('downloadZipBtn');
+      if (zipBtn) {
+        zipBtn.addEventListener('click', () => {
+          const manifest = "TOOLS_DIGITAL_LEGAL_BUNDLE_v2025.zip\nContaining:\n- attendy-privacy.md\n- attendy-data-safety.json\n- sudoku-master-privacy.md\n- statutory-mca-disclosure.pdf\n- security-rfc9116.txt";
+          alert("Preparing compliant ZIP package containing all canonical documents...\n\n" + manifest);
+        });
+      }
+
+      // Markdown Export Handler
+      const mdBtn = document.getElementById('exportMdBtn');
+      if (mdBtn) {
+        mdBtn.addEventListener('click', () => {
+          const mdContent = `# Digital Tools Legal Center Directory\n\nCanonical URLs:\n- Attendy Privacy: https://adigitaltools.in/apps/attendy/privacy\n- Attendy Data Safety: https://adigitaltools.in/apps/attendy/data-safety\n- Attendy Deletion: https://adigitaltools.in/apps/attendy/delete-request\n- Sudoku Pro Privacy: https://adigitaltools.in/apps/sudoku-master-pro/privacy\n\nEntity: Digital Tools Private Limited\nGrievance Officer: Rajesh Kumar <grievance@adigitaltools.in>`;
+          navigator.clipboard.writeText(mdContent).then(() => {
+            alert("Markdown compliance manifest copied to clipboard!");
+          });
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]"><div class="w-full px-gutter max-w-7xl mx-auto flex flex-col gap-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg"><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">Digital Tools Pvt. Ltd.</span><p class="font-body-sm text-body-sm text-on-surface-variant">Corporate entity incorporated under the Ministry of Corporate Affairs (MCA), Republic of India. Dedicated to privacy-first systems engineering, verifiable data handling, and deterministic mobile telemetry.</p><div class="flex items-center gap-space-xs mt-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-mono-sm text-label-mono-sm text-tertiary">Registry Active â€¢ Verified Developer</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-mono-lg text-label-mono-lg text-on-surface uppercase">Regulatory Frameworks</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li>â€¢ Google Play Developer Distribution Agreement (DDA)</li><li>â€¢ Digital Personal Data Protection Act (DPDP India 2023)</li><li>â€¢ EU GDPR Article 17 (Mandatory Right to Erasure)</li><li>â€¢ Children's Online Privacy Protection Act (COPPA)</li><li>â€¢ RFC 9116 Automated Security Vulnerability Reporting</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-mono-lg text-label-mono-lg text-on-surface uppercase">Statutory Direct Links</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="master-privacy-policy" href="#">Master Privacy Policy</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="master-terms-of-service" href="#">Master Terms of Service</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="attendy-data-safety" href="#">Attendy Data Safety Section</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="/apps/sudoku-master-pro/">Sudoku Master Pro Policy</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="/legal/deletion/">Data Deletion Request Form</a><a class="text-on-surface-variant hover:text-primary transition-colors font-label-mono-sm" data-path="security-txt" href="#">Security Disclosure (RFC 9116)</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-mono-lg text-label-mono-lg text-on-surface uppercase">Grievance &amp; Compliance</span><div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs"><span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase">Chief Grievance Officer</span><span class="font-body-sm text-body-sm text-on-surface-variant">Digital Tools Legal &amp; Redressal Desk</span><span class="font-label-mono-sm text-label-mono-sm text-primary">compliance@adigitaltools.in</span><span class="font-label-mono-sm text-label-mono-sm text-secondary mt-space-xs">developer@adigitaltools.in</span><span class="font-body-sm text-body-sm text-outline mt-space-xs">Average statutory response SLA: &lt; 48 hours</span></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Â© 2025 Digital Tools Pvt. Ltd. All rights reserved. System build v4.2.1-compliance</span><div class="flex items-center gap-space-md"><span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Host: adigitaltools.in/legal</span><span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">TLS 1.3 Strict Enforced</span></div></div></div></footer></body></html>
