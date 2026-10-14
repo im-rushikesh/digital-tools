@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#003827", "on-error": "#690005", "tertiary-container": "#58b590", "surface-bright": "#31394d", "on-error-container": "#ffdad6", "on-secondary": "#003733", "secondary-fixed-dim": "#80d5cb", "surface-dim": "#0b1326", "on-tertiary-fixed": "#002115", "inverse-primary": "#006b5f", "alert-amber": "#F59E0B", "on-surface-variant": "#bbcac6", "inverse-surface": "#dae2fd", "inverse-on-surface": "#283044", "tertiary": "#7bd8b1", "on-tertiary-fixed-variant": "#00513a", "background": "#0b1326", "on-secondary-fixed-variant": "#00504a", "primary-fixed": "#71f8e4", "outline-variant": "#3c4947", "surface-variant": "#2d3449", "primary": "#4fdbc8", "slate-border": "#334155", "on-surface": "#dae2fd", "surface-container-low": "#131b2e", "on-background": "#dae2fd", "on-secondary-fixed": "#00201d", "surface-container": "#171f33", "on-tertiary-container": "#00432f", "secondary-container": "#007068", "surface-container-lowest": "#060e20", "on-primary": "#003731", "secondary-fixed": "#9cf2e8", "tertiary-fixed": "#97f5cc", "on-primary-fixed-variant": "#005048", "surface": "#0b1326", "error-container": "#93000a", "secondary": "#80d5cb", "tertiary-fixed-dim": "#7bd8b1", "primary-fixed-dim": "#4fdbc8", "on-primary-fixed": "#00201c", "surface-tint": "#4fdbc8", "surface-container-high": "#222a3d", "outline": "#859490", "canvas-light": "#F8FAFC", "on-secondary-container": "#9af0e5", "primary-container": "#14b8a6", "slate-surface": "#1E293B", "surface-container-highest": "#2d3449", "on-primary-container": "#00423b", "error": "#ffb4ab" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "margin": "2rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-md": "1rem" }, "fontFamily": { "label-mono-sm": [ "JetBrains Mono" ], "body-md": [ "Inter" ], "title-md": [ "Inter" ], "body-sm": [ "Inter" ], "display-hero": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "label-mono-lg": [ "JetBrains Mono" ], "headline-lg": [ "Space Grotesk" ] }, "fontSize": { "label-mono-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "label-mono-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-slate-border"><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Tools Digital Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuhC9MjrOSFkvdGEGuUpGnQiXki8RNBZN7IVIHSBYWGw9v1DeCPGT1GkBEueU5OeQq9zx-joa-ViD_RU_ib1fEORSWuvFrWBJnSQ22-9LxE3HwUkwPixjXEov1aurDQbGREW17DjrQwHR9wjeDVoGtB7i4Lf0F81im0wpTh9yCMll5umtZOOHYh7xfPX6JnGeDe-gc86w5fC0EZdefu9lcswbCWYTPzY0Jn7wnwaPRWW_Hl5e3WeOX"/><div class="flex flex-col"><a class="font-headline-sm text-headline-sm text-on-surface tracking-tight hover:text-primary transition-colors flex items-center gap-space-xs" data-path="home" href="#">Tools Digital<span class="h-1.5 w-1.5 rounded-full bg-primary-container animate-pulse"></span></a><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider hidden sm:inline-block">Modern technology for everyday work</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="home" href="#">Home</a><div class="relative group"><button class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-colors" type="button"><span>Agriculture</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:rotate-180 transition-transform">expand_more</span></button><div class="absolute left-0 top-full pt-2 hidden group-hover:block z-50"><div class="w-56 bg-slate-surface border border-slate-border rounded-lg shadow-xl p-space-xs flex flex-col gap-1"><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="agriculture-overview" href="#">Overview</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="agriculture-problems-and-solutions" href="#">Problems &amp; Solutions</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="agriculture-products" href="#">Products</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="agriculture-impact" href="#">Impact</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="agriculture-farmer-support" href="#">Farmer Support</a></div></div></div><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="industrial" href="#">Industrial</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="apps" href="#">Apps</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="videos" href="#">Videos</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#">Portfolio</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="legal-and-compliance" href="#">Legal &amp; Compliance</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="px-space-sm py-space-xs font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm shrink-0"><div aria-label="Language Selector" class="flex items-center bg-surface-container-low border border-slate-border rounded-lg p-0.5" role="group"><button class="px-2 py-0.5 font-label-mono-sm text-label-mono-sm rounded bg-primary-container text-on-primary-container uppercase transition-colors" type="button">EN</button><button class="px-2 py-0.5 font-label-mono-sm text-label-mono-sm rounded text-on-surface-variant hover:text-on-surface uppercase transition-colors" type="button">HI</button><button class="px-2 py-0.5 font-label-mono-sm text-label-mono-sm rounded text-on-surface-variant hover:text-on-surface uppercase transition-colors" type="button">MR</button></div><button aria-label="Toggle Color Theme" class="h-8 w-8 rounded-lg bg-surface-container-low border border-slate-border text-on-surface-variant hover:text-primary hover:border-primary flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">dark_mode</span></button><a class="hidden sm:flex items-center gap-space-xs px-3 py-1.5 bg-primary-container hover:bg-primary text-on-primary font-label-mono-sm text-label-mono-sm rounded-lg transition-colors border border-primary" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">android</span><span class="uppercase font-semibold tracking-wider">Google Play</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO -->
+<section class="relative w-full bg-surface-container-lowest overflow-hidden pb-16 pt-8 md:pt-16">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 via-surface-container-lowest to-surface-container-low pointer-events-none"></div>
+<div class="absolute right-0 top-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin relative z-10 flex flex-col gap-8">
+<!-- Status Badge & Breadcrumb Metric -->
+<div class="flex flex-wrap items-center gap-3">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded text-primary font-label-mono-sm text-label-mono-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+          FIELD TELEMETRY ENGINE v4.2 • ZERO-INTERNET RADIO MESH
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-tertiary font-label-mono-sm text-label-mono-sm rounded">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+          3-PHASE HARDENED
+        </span>
+</div>
+<!-- Main Headline & Subtitle -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 flex flex-col gap-6">
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+            Modern Technology for <span class="text-primary underline decoration-primary/30 decoration-wavy">Everyday Work</span>.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Replacing outdated manual workflows with hardened IoT hardware, radio-mesh automation, and intuitive mobile applications designed for deep-field resilience and industrial precision.
+          </p>
+<!-- Primary Action CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2.5 px-5 py-3.5 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-mono-lg text-label-mono-lg uppercase font-semibold rounded-lg shadow-md transition-all group" href="#farmer-solutions">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">cell_tower</span>
+              Explore Agriculture Solutions
+            </a>
+<a class="inline-flex items-center gap-2.5 px-5 py-3.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-mono-lg text-label-mono-lg uppercase rounded-lg shadow-sm transition-all group" href="#knowledge-split">
+<span class="material-symbols-outlined text-[20px] text-tertiary group-hover:rotate-45 transition-transform">memory</span>
+              Industrial Automation
+            </a>
+<a class="inline-flex items-center gap-2.5 px-5 py-3.5 bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-mono-lg text-label-mono-lg uppercase rounded-lg shadow-sm transition-all" href="#play-apps">
+<span class="material-symbols-outlined text-[20px] text-primary">apps</span>
+              Explore Apps &amp; Tools
+            </a>
+</div>
+</div>
+<!-- Telemetry Widget Graphic -->
+<div class="lg:col-span-4 flex flex-col bg-surface-container p-6 rounded-xl shadow-xl gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">sensors</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase">Live Field Readout</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-mono-sm text-label-mono-sm">
+              STABLE
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-2">
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">Sub-GHz RF Link</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">11.4 km</span>
+<span class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> 99.4% RSSI
+              </span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">3-Phase Line</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">415 V</span>
+<span class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">offline_bolt</span> Balanced
+              </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded flex items-center justify-between">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">Active Mesh Nodes</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">14 Relays Deployed</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Links Navigation Row -->
+<div class="w-full bg-surface-container-low rounded-lg p-2 shadow-sm overflow-x-auto mt-4">
+<div class="flex items-center gap-2 min-w-max">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant px-3 uppercase">Jump to:</span>
+<a class="px-3.5 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-mono-sm text-label-mono-sm uppercase transition-colors flex items-center gap-1.5" href="#farmer-solutions">
+<span class="material-symbols-outlined text-[16px]">agriculture</span> Agriculture
+          </a>
+<a class="px-3.5 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-mono-sm text-label-mono-sm uppercase transition-colors flex items-center gap-1.5" href="#knowledge-split">
+<span class="material-symbols-outlined text-[16px]">precision_manufacturing</span> Industrial Automation
+          </a>
+<a class="px-3.5 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-mono-sm text-label-mono-sm uppercase transition-colors flex items-center gap-1.5" href="#play-apps">
+<span class="material-symbols-outlined text-[16px]">phone_android</span> Mobile Apps
+          </a>
+<a class="px-3.5 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-mono-sm text-label-mono-sm uppercase transition-colors flex items-center gap-1.5" href="#video-gallery">
+<span class="material-symbols-outlined text-[16px]">videocam</span> Video Demos
+          </a>
+<a class="px-3.5 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-label-mono-sm text-label-mono-sm uppercase transition-colors flex items-center gap-1.5" href="#how-it-works">
+<span class="material-symbols-outlined text-[16px]">schema</span> Architecture
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: FARMER SOLUTIONS (AgriTech Division) -->
+<section class="w-full bg-surface-dim py-20" id="farmer-solutions">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">grass</span>
+            Agritech Division • Hardened Edge Hardware
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            Hardware Engineered for Real Farms | No Internet Required
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Reliable agronomic automation designed to survive rural power volatility, seasonal monsoons, and zero-cellular dead zones across deep agricultural basins.
+          </p>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-3 bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary-container font-label-mono-lg text-label-mono-lg uppercase font-semibold rounded-lg shadow transition-colors shrink-0" href="#knowledge-split">
+          Visit the Agriculture Portal →
+        </a>
+</div>
+<!-- Grid of 5 Agriculture Devices -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Device 1 -->
+<div class="bg-surface-container p-6 rounded-xl shadow-lg flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary-container/20 text-primary font-label-mono-sm text-label-mono-sm font-semibold">
+                Available • 10-12 km RF
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors text-[24px]">settings_remote</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Radio-based Remote Pump Controller
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Switch high-voltage farm water pumps ON/OFF over 10-12 km range without internet or cellular reception. Built-in 3-phase power monitor &amp; automatic scheduling alarms.
+            </p>
+<div class="grid grid-cols-2 gap-2 pt-2 text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span class="bg-surface-container-lowest p-2 rounded">Range: 12 km LoS</span>
+<span class="bg-surface-container-lowest p-2 rounded">Volts: 415V 3-Phase</span>
+</div>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low rounded p-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Surge Protected: 6kV</span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Zero GSM Latency
+            </span>
+</div>
+</div>
+<!-- Device 2 -->
+<div class="bg-surface-container p-6 rounded-xl shadow-lg flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-alert-amber/20 text-alert-amber font-label-mono-sm text-label-mono-sm font-semibold">
+                Beta • Field Portable
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-alert-amber transition-colors text-[24px]">science</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Soil Testing Device
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Instant digital NPK, pH, and electrical conductivity readouts directly in the field. Replaces multi-week soil lab turnaround with an on-spot calibrated probe sensor.
+            </p>
+<div class="grid grid-cols-2 gap-2 pt-2 text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span class="bg-surface-container-lowest p-2 rounded">Sample Time: 8s</span>
+<span class="bg-surface-container-lowest p-2 rounded">Probe: 316 Stainless</span>
+</div>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low rounded p-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Battery: 48h Runtime</span>
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sync</span> BLE Sync
+            </span>
+</div>
+</div>
+<!-- Device 3 -->
+<div class="bg-surface-container p-6 rounded-xl shadow-lg flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary-container/20 text-primary font-label-mono-sm text-label-mono-sm font-semibold">
+                Available • Closed-Loop Sensor
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors text-[24px]">water_drop</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Automatic Pump Controller
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Autonomous soil-moisture sensor arrays trigger starter relays when root zones reach moisture thresholds. Eliminates irrigation run-offs and preserves deep aquifers.
+            </p>
+<div class="grid grid-cols-2 gap-2 pt-2 text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span class="bg-surface-container-lowest p-2 rounded">Depth: 15-60 cm</span>
+<span class="bg-surface-container-lowest p-2 rounded">Auto-Dry Cutoff</span>
+</div>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low rounded p-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Relay: 30A Continuous</span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">power</span> Standalone Edge
+            </span>
+</div>
+</div>
+<!-- Device 4 -->
+<div class="bg-surface-container p-6 rounded-xl shadow-lg flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-tertiary/20 text-tertiary font-label-mono-sm text-label-mono-sm font-semibold">
+                Field Tested • Solar-Powered
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary transition-colors text-[24px]">volume_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Wild-Animal Deterrent Device
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Frequency-modulated bio-acoustic sound sweeps protect standing crops from wild boars and deer without harming wildlife. Randomized firing cycles prevent habituation.
+            </p>
+<div class="grid grid-cols-2 gap-2 pt-2 text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span class="bg-surface-container-lowest p-2 rounded">Radius: 350m Sweep</span>
+<span class="bg-surface-container-lowest p-2 rounded">Solar: 10W Array</span>
+</div>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low rounded p-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Enclosure: IP66 Weather</span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">wb_sunny</span> Solar Self-Sustained
+            </span>
+</div>
+</div>
+<!-- Device 5 -->
+<div class="bg-surface-container p-6 rounded-xl shadow-lg flex flex-col justify-between group hover:bg-surface-container-high transition-all md:col-span-2 lg:col-span-2">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-fixed/20 text-secondary-fixed font-label-mono-sm text-label-mono-sm font-semibold">
+                Pilot • BLE + LoRa
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors text-[24px]">pets</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Livestock &amp; Crop Monitor
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Smart telemetry tags and satellite-augmented field scanning apps for herd health, rumination rhythm tracking, and high-resolution spatial yield forecasting across micro-climatic zones.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span class="bg-surface-container-lowest p-2.5 rounded">Rumination Bio-Sensors</span>
+<span class="bg-surface-container-lowest p-2.5 rounded">Geofencing Alarms (BLE)</span>
+<span class="bg-surface-container-lowest p-2.5 rounded">NDVI Satellite Overlay</span>
+</div>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low rounded p-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Collar Weight: 98 grams</span>
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">satellite_alt</span> Hybrid Orbit + Ground Mesh
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: OUR APPS ON GOOGLE PLAY -->
+<section class="w-full bg-surface-container-low py-20" id="play-apps">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-3 max-w-2xl">
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">android</span>
+            Verified Google Play Store Releases from Tools Digital
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            Mobile Applications Built for Utility &amp; Offline Logic
+          </h2>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container-highest rounded text-on-surface font-label-mono-sm text-label-mono-sm w-fit shadow-sm">
+<span class="material-symbols-outlined text-alert-amber text-[16px]">star</span>
+            Verified Stat: Trusted by 5,000+ Active Users • 4.1★ Play Store Rating
+          </div>
+</div>
+<a class="inline-flex items-center gap-3 px-5 py-3.5 bg-surface-container hover:bg-surface-container-high rounded-xl shadow transition-colors text-on-surface font-label-mono-sm text-label-mono-sm" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">store</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Google Play Developer Profile</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Tools Digital • 2 Published Apps</span>
+</div>
+</a>
+</div>
+<!-- Interactive Grid of Apps -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- App 1: Attendy -->
+<div class="bg-surface-container p-8 rounded-xl shadow-xl flex flex-col justify-between gap-6 hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-5">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[36px]">badge</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Attendy: Attendance &amp; Payroll</h3>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">com.attendance.protoos</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-primary/20 text-primary font-label-mono-sm text-label-mono-sm">
+                BUSINESS • 3+
+              </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+              Attendance management, automatic payroll, GPS punch-in, and PDF salary slips. Built specifically for workshop owners, field staff managers, and agro-enterprises needing deterministic calculation.
+            </p>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-wrap gap-4 items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Downloads</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">5,000+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Play Rating</span>
+<span class="font-headline-sm text-headline-sm text-alert-amber flex items-center gap-1">
+                  4.1 <span class="material-symbols-outlined text-[18px]">star</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Data Privacy</span>
+<span class="font-body-md text-body-md text-tertiary font-semibold">100% Encrypted</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Content Rating</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Rated 3+</span>
+</div>
+</div>
+</div>
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3 bg-surface-container-lowest hover:bg-black text-on-surface rounded-lg shadow transition-all" href="https://play.google.com/store/apps/details?id=com.attendance.protoos" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[24px] text-primary">play_arrow</span>
+<div class="flex flex-col text-left">
+<span class="text-[10px] uppercase font-label-mono-sm text-on-surface-variant leading-none">GET IT ON</span>
+<span class="text-body-md font-semibold text-on-surface leading-tight">Google Play</span>
+</div>
+</a>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+              Includes GPS Geofence Verification
+            </span>
+</div>
+</div>
+<!-- App 2: Sudoku Master Pro -->
+<div class="bg-surface-container p-8 rounded-xl shadow-xl flex flex-col justify-between gap-6 hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-5">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[36px]">grid_on</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sudoku Master Pro</h3>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">com.numbers_game.protoos</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+                LOGIC • OFFLINE
+              </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+              Clean, distraction-free number puzzle logic game with offline play. Engineered with an instant mathematical solver and battery-preserving dark canvas.
+            </p>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<div class="inline-flex items-center gap-2 text-alert-amber font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+                Features list pending user confirmation — Clean minimal logic engine.
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Zero invasive tracking libraries, instantaneous startup, and multiple difficulty boards ranging from Casual to Master level.
+              </p>
+</div>
+</div>
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3 bg-surface-container-lowest hover:bg-black text-on-surface rounded-lg shadow transition-all" href="https://play.google.com/store/apps/details?id=com.numbers_game.protoos" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[24px] text-primary">play_arrow</span>
+<div class="flex flex-col text-left">
+<span class="text-[10px] uppercase font-label-mono-sm text-on-surface-variant leading-none">GET IT ON</span>
+<span class="text-body-md font-semibold text-on-surface leading-tight">Google Play</span>
+</div>
+</a>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+              100% Offline Capable
+            </span>
+</div>
+</div>
+</div>
+<!-- Architecture collection note -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+          Add new apps in 2 minutes via <code class="text-primary bg-surface-container px-1.5 py-0.5 rounded">src/content/apps/</code> content collection.
+        </span>
+<span class="font-label-mono-sm text-label-mono-sm hidden md:inline-block">Continuous CI/CD Pipeline</span>
+</div>
+</div>
+</section>
+<!-- SECTION 4: HOW IT WORKS (Operating Model, Field Testing & System Architecture) -->
+<section class="w-full bg-surface-dim py-20" id="how-it-works">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-16">
+<div class="flex flex-col gap-3">
+<span class="text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+          Engineering Rigor • System Lifecycle
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          How It Works: Operating Model, Field Testing &amp; System Architecture
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          From bare silicon boards to extreme agrarian conditions, every Tools Digital module is designed with deterministic edge logic and failsafe radio fallback.
+        </p>
+</div>
+<!-- 3-Part Layout: (a) Operating Model & (b) Field Testing -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- (a) Operating Model -->
+<div class="lg:col-span-4 bg-surface-container p-6 rounded-xl shadow-lg flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded bg-primary-container/20 text-primary flex items-center justify-center font-label-mono-sm font-bold">A</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Operating Model</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Deep-field hardware fabrication, firmware flashing, and offline-first edge telemetry. We treat hardware not as an accessory to the cloud, but as an autonomous primary compute node.
+          </p>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-primary block mb-1">01. IN-HOUSE PCB FABRICATION</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Custom multi-layer PCBs with conformal silicon coating resisting 98% relative humidity.</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-primary block mb-1">02. BARE-METAL FIRMWARE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic C++ microcontrollers with watchdog timers and non-volatile EEPROM state registers.</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-primary block mb-1">03. ZERO-CLOUD FIRST</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Systems operate autonomously without requiring external internet pings or token refresh calls.</p>
+</div>
+</div>
+</div>
+<!-- (b) R&D & Field Testing Process -->
+<div class="lg:col-span-8 bg-surface-container p-6 rounded-xl shadow-lg flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded bg-secondary-container/20 text-secondary-fixed flex items-center justify-center font-label-mono-sm font-bold">B</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">R&amp;D &amp; Field Testing Process</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Rigorous validation cycle designed to prevent failures in remote valleys where technician call-outs are cost-prohibitive.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">STEP 01</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">electric_bolt</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">Bench Electrical &amp; Surge Testing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Subjecting line relays to 480V spike bursts, simulated lightning voltage transients, and prolonged thermal stress chambers.
+              </p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">STEP 02</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">radar</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">12 km Line-of-Sight RF Testing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Real topography packet transmissions across mountain gaps and wet sugarcane canopies to calibrate sub-GHz antenna gain.
+              </p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">STEP 03</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">rainy</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">90-Day Monsoon Field Trials</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Continuous operational deployment on working farms through continuous heavy rainfall, mud splatter, and unbuffered grid surges.
+              </p>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">STEP 04</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">verified</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">ISO/CE Quality Audit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Final validation of electromagnetic interference (EMI), enclosure ingress IP ratings, and dielectric isolation clearances.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- (c) Interactive Architecture Diagram -->
+<div class="bg-surface-container p-8 rounded-xl shadow-xl flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-label-mono-sm font-bold">C</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">System Architecture • Dual-Path Telemetry Flow</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Autonomous radio loop operates indefinitely even when cellular and WAN uplinks are severed.</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-lowest text-tertiary font-label-mono-sm text-label-mono-sm rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+            RADIO PATH: 100% INDEPENDENT UPTIME
+          </span>
+</div>
+<!-- Visual Flow Blocks -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
+<!-- Node 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex flex-col gap-2 relative">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase">Edge Node</span>
+<h4 class="font-title-md text-title-md text-on-surface">Field Device / Relay</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3-Phase Starter, Soil Probe, or Bio-Acoustic Array</p>
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container font-label-mono-sm text-[10px] text-on-surface-variant mt-2">Zero WAN dependency</span>
+</div>
+<!-- Connector 1 (RF) -->
+<div class="bg-primary-container/10 p-3 rounded-lg flex flex-col items-center justify-center text-center gap-1">
+<span class="font-label-mono-sm text-[11px] text-primary uppercase font-bold">Encrypted Sub-GHz RF</span>
+<span class="material-symbols-outlined text-primary text-[24px]">sync_alt</span>
+<span class="text-on-surface-variant font-label-mono-sm text-[10px]">NO Internet Needed (12 km)</span>
+</div>
+<!-- Node 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex flex-col gap-2 relative">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase">Local Hub</span>
+<h4 class="font-title-md text-title-md text-on-surface">Base Station Controller</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitors status, activates manual overrides, logs telemetry</p>
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container font-label-mono-sm text-[10px] text-tertiary mt-2">Operates Offline 24/7</span>
+</div>
+<!-- Cloud / Mobile Flow -->
+<div class="flex flex-col gap-3">
+<div class="bg-surface-container-high p-3 rounded flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud</span>
+<span class="font-body-sm text-body-sm">Tools Digital Cloud</span>
+</div>
+<span class="font-label-mono-sm text-[10px] text-on-surface-variant">Optional Sync</span>
+</div>
+<div class="bg-surface-container-high p-3 rounded flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">smartphone</span>
+<span class="font-body-sm text-body-sm">App &amp; Dashboard</span>
+</div>
+<span class="font-label-mono-sm text-[10px] text-tertiary">Live Telemetry</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">info</span>
+<span><strong>Zero-Failure Policy:</strong> When cell towers crash during rainstorms or grid shutdowns, the encrypted Sub-GHz RF loop between Field Relays and the Base Station continues to operate at 100% capacity.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: VIDEO GALLERY (Privacy-Friendly Facade) -->
+<section class="w-full bg-surface-container-lowest py-20" id="video-gallery">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">smart_display</span>
+            Field Demonstrations • Privacy-Friendly Architecture
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            Video Gallery &amp; Bench Testing Archives
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Watch real hardware testing on farms and machine shops. Videos utilize zero-tracker click-to-load facades with zero Google cookies before interaction.
+          </p>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-3 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-mono-lg text-label-mono-lg uppercase font-semibold rounded-lg shadow transition-colors shrink-0" data-path="videos" href="#">
+          Watch all videos on /videos →
+        </a>
+</div>
+<!-- Category Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2">
+<button class="px-4 py-1.5 rounded bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm uppercase font-semibold" type="button">
+          All
+        </button>
+<button class="px-4 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase transition-colors" type="button">
+          Agriculture
+        </button>
+<button class="px-4 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase transition-colors" type="button">
+          Industrial
+        </button>
+<button class="px-4 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase transition-colors" type="button">
+          Apps
+        </button>
+<button class="px-4 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase transition-colors" type="button">
+          Tutorials
+        </button>
+<button class="px-4 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase transition-colors" type="button">
+          Field Demos
+        </button>
+</div>
+<!-- Video Grid with Click-to-Load Facades -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Video 1 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-lg flex flex-col group">
+<div class="relative w-full h-52 bg-surface-container-highest flex items-center justify-center cursor-pointer" onclick="this.innerHTML='&lt;div class=\'w-full h-full flex flex-col items-center justify-center bg-black p-4 text-center\'&gt;&lt;span class=\'text-primary font-label-mono-sm text-label-mono-sm mb-2\'&gt;STREAMING SECURE YOUTUBE EMBED&lt;/span&gt;&lt;span class=\'text-on-surface-variant text-body-sm\'&gt;[Zero trackers active - session sandboxed]&lt;/span&gt;&lt;/div&gt;'">
+<div class="w-full h-full bg-cover bg-center absolute inset-0 opacity-80" data-alt="Close up photograph of a technician testing a radio pump controller in an agricultural field with crops and an antenna visible in moody evening light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0Na8qR8D9FewmyPybfn4Aj1sapk3SoDbSKYXs35Ll-gL8k41tKBC7SehJm4Gcs6tu57z3ZdzV4bQXW_R29Ui5dSi3lEY5bdhXaq5xA5m6SEXHqCuqxf1mVOEh6TTu1SDr_6mTvUd3qhNBMTW80g5cKYNK-9vAbpb3g5GoK6QQPSppxrIMctsJuhhqD9n2qpS_jDDjW52vRohssZ0wnFczIO99o8YYocXKmiveg5tAXYGQz0R5j5uZ')"></div>
+<div class="absolute inset-0 bg-surface-container-lowest/40 group-hover:bg-surface-container-lowest/20 transition-colors"></div>
+<div class="relative z-10 w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+<span class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 font-label-mono-sm text-label-mono-sm text-on-surface">
+              04:32
+            </span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase">Agriculture</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Field Range Test</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">
+              12 km Radio Controller Signal Sweep across Mountain Ridges
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Field verification of packet loss over harsh terrain without cellular reception.
+            </p>
+</div>
+</div>
+<!-- Video 2 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-lg flex flex-col group">
+<div class="relative w-full h-52 bg-surface-container-highest flex items-center justify-center cursor-pointer" onclick="this.innerHTML='&lt;div class=\'w-full h-full flex flex-col items-center justify-center bg-black p-4 text-center\'&gt;&lt;span class=\'text-primary font-label-mono-sm text-label-mono-sm mb-2\'&gt;STREAMING SECURE YOUTUBE EMBED&lt;/span&gt;&lt;span class=\'text-on-surface-variant text-body-sm\'&gt;[Zero trackers active - session sandboxed]&lt;/span&gt;&lt;/div&gt;'">
+<div class="w-full h-full bg-cover bg-center absolute inset-0 opacity-80" data-alt="Industrial technician wiring a DIN-rail automation gateway inside an electrical switchboard cabinet with status LEDs glowing teal and amber" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYWWkXW0pB4RKYtRQBJY_ZXpkYg2TYLQrL2s5OVAzi29I6bjqdEwpk_5SYvxl4bBgWl9BwwOEcDlOygNuCtyqQwDfNl9SfpQKevme6giD-ckr8Rx5Lfj2PwQZcTvlMgszXKNTLOiW4pFHeO0hOCdCcc3laIOvzGgi8k-Aed0hWHqwONLNAf0hU_oftNQThqfs64jFOx-RCbMHMrpyqrdWy9O9rpTU5dZIzS__BKg1X8L6-hinE3IEW')"></div>
+<div class="absolute inset-0 bg-surface-container-lowest/40 group-hover:bg-surface-container-lowest/20 transition-colors"></div>
+<div class="relative z-10 w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+<span class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 font-label-mono-sm text-label-mono-sm text-on-surface">
+              06:15
+            </span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase">Industrial</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">PLC Retrofit</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">
+              Remote PLC Gateway Setup: Zero-Downtime Installation
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Complete walkthrough installing the Ethernet gateway alongside an active production line.
+            </p>
+</div>
+</div>
+<!-- Video 3 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-lg flex flex-col group">
+<div class="relative w-full h-52 bg-surface-container-highest flex items-center justify-center cursor-pointer" onclick="this.innerHTML='&lt;div class=\'w-full h-full flex flex-col items-center justify-center bg-black p-4 text-center\'&gt;&lt;span class=\'text-primary font-label-mono-sm text-label-mono-sm mb-2\'&gt;STREAMING SECURE YOUTUBE EMBED&lt;/span&gt;&lt;span class=\'text-on-surface-variant text-body-sm\'&gt;[Zero trackers active - session sandboxed]&lt;/span&gt;&lt;/div&gt;'">
+<div class="w-full h-full bg-cover bg-center absolute inset-0 opacity-80" data-alt="A farmer holding a smartphone showing the Attendy and agricultural monitoring application interface next to a water pump housing under bright sunlight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkUA02vZcxCn81yUzTA25dyzn47uurccCXC7wQBkYHd3epOu8VgC65WlBNeTvJPYkHjw7VfiD4L8CsRlanawxnKRi2UK0n3uPmbsLl41CeaFyA-zaez1r88m8YruBSTBosjKd6APynuD7ftgMnvufKjn-MD9acYVymr8toVVHNkNxme6VGThQie6WVzIEyrtQekHo_EeOQcDScYeM3CL0BI1TbAbqz9raJoxW9blIz-ARmlYPJaBen')"></div>
+<div class="absolute inset-0 bg-surface-container-lowest/40 group-hover:bg-surface-container-lowest/20 transition-colors"></div>
+<div class="relative z-10 w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</div>
+<span class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 font-label-mono-sm text-label-mono-sm text-on-surface">
+              03:45
+            </span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber uppercase">Tutorials</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Farmer Training</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">
+              Attendy GPS Geofencing &amp; Shift Management in 90 Seconds
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Quick tutorial for supervisors to generate monthly attendance registers and export payslips.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: KNOWLEDGE & SOLUTIONS (Agritech & Industrial Retrofit Split) -->
+<section class="w-full bg-surface-dim py-20" id="knowledge-split">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-12">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">view_column</span>
+          Domain Expertise • Retrofit Engineering
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Engineered for Real-World Field Retrofits
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Whether managing 20 acres of high-yield crops or an automated CNC machining floor, our modular architectures integrate with existing plant equipment without costly overhauls.
+        </p>
+</div>
+<!-- Side-by-Side Split Blocks -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Block A: AgriTech Solutions -->
+<div class="bg-surface-container p-8 rounded-xl shadow-xl flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">water</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AgriTech Solutions</h3>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">FIELD RELIABILITY MODULE</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm">
+                RURAL RETROFIT
+              </span>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-title-md text-title-md text-on-surface">Daily Farmer Challenges Addressed:</h4>
+<ul class="flex flex-col gap-2.5 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-alert-amber text-[18px] shrink-0 mt-0.5">warning</span>
+<span><strong>Erratic Power &amp; Night Dangers:</strong> Farmers forced to walk miles at 2 AM to switch pumps during sudden 3-phase grid power windows.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-alert-amber text-[18px] shrink-0 mt-0.5">warning</span>
+<span><strong>Wildlife Intrusion:</strong> Boars and deer raiding sugarcane, banana, and grain fields during the dark cycles.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Zero Rewiring Needed:</strong> Retrofitting legacy 3-phase starter panels directly with plug-and-play DIN clips without modifying internal pump wiring.</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Key Metric</span>
+<p class="font-body-md text-body-md text-on-surface">
+                Eliminates 95% of night visits to pump stations and reduces pump motor coil burnout by 80% via auto-voltage cutoff.
+              </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:underline mt-4" data-path="agriculture-problems-and-solutions" href="#">
+            Explore AgriTech Retrofits &amp; Support →
+          </a>
+</div>
+<!-- Block B: Industrial Automation -->
+<div class="bg-surface-container p-8 rounded-xl shadow-xl flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Industrial Automation</h3>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">PLANT FLOOR TELEMETRY</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-tertiary font-label-mono-sm text-label-mono-sm">
+                PLC &amp; HMI GATEWAYS
+              </span>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-title-md text-title-md text-on-surface">Shopfloor Capabilities:</h4>
+<ul class="flex flex-col gap-2.5 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">router</span>
+<span><strong>Remote Gateway Integration:</strong> Secure tunneling to remote PLCs, HMIs, and servo drives over Wi-Fi, Ethernet, and encrypted VPN tunnels.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">terminal</span>
+<span><strong>Virtual Programming &amp; Logic:</strong> Live ladder logic telemetry, remote parameter flashing, and fault diagnosis without on-site travel.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">tune</span>
+<span><strong>Zero-Downtime Maintenance:</strong> Passive bus sniffing ensures continuous operation while collecting live production and cycle counts.</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex flex-col gap-2">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Key Metric</span>
+<p class="font-body-md text-body-md text-on-surface">
+                Reduces mean-time-to-repair (MTTR) by 65% with instantaneous engineer remote dial-in to PLC registries.
+              </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:underline mt-4" data-path="industrial" href="#">
+            Explore Industrial IoT Solutions →
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: TRUST STRIP, CASE STUDIES & FINAL CTA -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-16">
+<!-- Verified Statistics Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-surface-container p-6 rounded-xl shadow-lg">
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-primary">5,000+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Verified Downloads</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-tertiary">12 km</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Zero-Internet Radio Range</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">99.8%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Hardware Reliability</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-lg text-headline-lg text-secondary-fixed">100%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Static Secure Arch</span>
+</div>
+</div>
+<!-- Case Studies Teaser Cards -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+            Field Deployments
+          </span>
+<a class="font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-primary transition-colors" data-path="portfolio" href="#">
+            All Case Studies →
+          </a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container p-6 rounded-xl shadow-lg flex flex-col gap-4">
+<span class="px-2.5 py-1 rounded bg-primary-container/20 text-primary font-label-mono-sm text-label-mono-sm w-fit">
+              AGRITECH IMPACT
+            </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Western Maharashtra Sugarcane Co-op: 40% Irrigation Power Saved via Radio Controllers
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Deployment of 85 Sub-GHz remote pump controllers across 450 acres eliminated daytime transformer overloads and enabled automated midnight irrigation cycles without farmer risk.
+            </p>
+<div class="pt-2 flex items-center gap-4 text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span>Payback: 4.2 Months</span>
+<span>•</span>
+<span class="text-tertiary">Zero Line Failures</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl shadow-lg flex flex-col gap-4">
+<span class="px-2.5 py-1 rounded bg-tertiary/20 text-tertiary font-label-mono-sm text-label-mono-sm w-fit">
+              INDUSTRIAL RETROFIT
+            </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Tier-1 Auto Ancillary: Zero-Downtime Remote PLC Gateway Retrofit
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Integrated DIN-rail IoT gateways across 18 hydraulic stamping presses. Provided remote programming diagnostics and live telemetry for OEM maintenance teams without production halts.
+            </p>
+<div class="pt-2 flex items-center gap-4 text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span>Cycle MTTR: -65%</span>
+<span>•</span>
+<span class="text-tertiary">Encrypted Tunnel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Final CTA Banner & Form Preview -->
+<div class="bg-surface-container p-8 md:p-12 rounded-2xl shadow-2xl flex flex-col lg:flex-row gap-10 items-center justify-between">
+<div class="flex flex-col gap-4 max-w-xl">
+<span class="text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+            Direct Engineering Inquiries
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            Ready to Modernize Your Operations?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Speak with our field engineers or install our apps today. We provide hardware demos directly on your farm or factory floor.
+          </p>
+<!-- Direct Phone / WhatsApp Triggers for Farmers -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm uppercase rounded-lg shadow-sm transition-colors" href="tel:+918000000000">
+<span class="material-symbols-outlined text-[18px] text-primary">call</span>
+              Direct Engineer Line
+            </a>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-mono-sm text-label-mono-sm uppercase font-semibold rounded-lg shadow-sm transition-colors" href="https://wa.me/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+              WhatsApp for Farmers
+            </a>
+</div>
+</div>
+<!-- Rapid Form Preview -->
+<div class="w-full lg:w-96 bg-surface-container-lowest p-6 rounded-xl shadow-lg flex flex-col gap-4">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase">Request Field Demo</span>
+<div class="flex flex-col gap-3">
+<div>
+<label class="font-body-sm text-body-sm text-on-surface-variant block mb-1">Your Name / Farm / Facility</label>
+<input class="w-full bg-surface-container p-2.5 rounded text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" placeholder="e.g. Ramesh Patel" type="text"/>
+</div>
+<div>
+<label class="font-body-sm text-body-sm text-on-surface-variant block mb-1">Phone or WhatsApp</label>
+<input class="w-full bg-surface-container p-2.5 rounded text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" placeholder="+91 98..." type="text"/>
+</div>
+<div>
+<label class="font-body-sm text-body-sm text-on-surface-variant block mb-1">Solution Needed</label>
+<select class="w-full bg-surface-container p-2.5 rounded text-on-surface font-body-md text-body-md focus:outline-none">
+<option>Radio Pump Controller (12 km)</option>
+<option>Automatic Soil Moisture Starter</option>
+<option>Wild Animal Sound Deterrent</option>
+<option>Industrial PLC Gateway</option>
+<option>Attendy Payroll Software</option>
+</select>
+</div>
+<button class="w-full mt-2 py-3 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-bold rounded shadow transition-colors" type="button">
+              Transmit Field Request →
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-slate-border"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg mb-space-xl"><div class="flex flex-col gap-space-sm"><div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px]">grid_view</span>Portals</div><ul class="flex flex-col gap-space-xs mt-1"><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="agriculture-overview" href="#">Agriculture Solutions</a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="industrial" href="#">Industrial Automation</a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="apps" href="#">Mobile Applications</a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="portfolio" href="#">Engineering Works</a></li></ul></div><div class="flex flex-col gap-space-sm"><div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px]">shop</span>Google Play Apps</div><ul class="flex flex-col gap-space-xs mt-1"><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary flex items-center justify-between transition-colors" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank"><span>Attendy</span><span class="font-label-mono-sm text-label-mono-sm text-primary bg-primary-container/20 border border-primary/30 px-1.5 py-0.5 rounded">5K+</span></a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank">Sudoku Master Pro</a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank">Developer Profile</a></li></ul></div><div class="flex flex-col gap-space-sm"><div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px]">gavel</span>App Compliance</div><ul class="flex flex-col gap-space-xs mt-1"><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="data-safety-and-deletion" href="#">Data Safety &amp; Deletion</a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="grievance-officer" href="#">Grievance Officer</a></li></ul></div><div class="flex flex-col gap-space-sm"><div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px]">terminal</span>Engineering</div><ul class="flex flex-col gap-space-xs mt-1"><li class="font-body-md text-body-md"><span class="text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary">code</span>Astro SSG Edge</span></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="security-specifications" href="#">Security Specs</a></li><li class="font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary flex items-center gap-1 transition-colors" href="/.well-known/security.txt"><span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>RFC 9116 security.txt</a></li><li class="font-body-md text-body-md"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">v4.2.1 Stable</span></li></ul></div><div class="flex flex-col gap-space-sm"><div class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px]">apartment</span>Company &amp; Contact</div><div class="flex flex-col gap-space-xs"><p class="font-body-md text-body-md text-on-surface">Tools Digital</p><p class="font-body-sm text-body-sm text-on-surface-variant">adigitaltools.in</p><p class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1">Autonomous Agritech &amp; Industrial Systems</p><a class="mt-2 font-label-mono-sm text-label-mono-sm text-primary hover:underline flex items-center gap-1" data-path="contact" href="#">Initiate Transmission →</a></div></div></div><div class="pt-space-md border-t border-slate-border flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><span class="h-2 w-2 rounded-full bg-primary"></span><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">© 2025 Tools Digital. All field and telemetry rights reserved.</span></div><div class="flex items-center gap-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant"><span class="text-on-surface-variant">WCAG AA Compliant</span><span class="text-slate-border">•</span><span class="text-on-surface-variant">Zero Tracker Telemetry</span></div></div></div></footer></body></html>

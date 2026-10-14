@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#0b1326", "error-container": "#93000a", "secondary-fixed-dim": "#80d5cb", "on-tertiary-fixed-variant": "#00513a", "slate-border": "#334155", "on-secondary-fixed-variant": "#00504a", "on-error-container": "#ffdad6", "on-primary-container": "#00423b", "secondary": "#80d5cb", "alert-amber": "#F59E0B", "canvas-light": "#F8FAFC", "surface-container-high": "#222a3d", "primary-container": "#14b8a6", "inverse-primary": "#006b5f", "on-tertiary": "#003827", "on-primary-fixed-variant": "#005048", "tertiary": "#7bd8b1", "inverse-on-surface": "#283044", "primary-fixed-dim": "#4fdbc8", "primary-fixed": "#71f8e4", "error": "#ffb4ab", "on-background": "dae2fd", "on-primary": "#003731", "surface-container-highest": "#2d3449", "on-secondary-container": "#9af0e5", "on-secondary": "#003733", "secondary-container": "#007068", "on-tertiary-container": "#00432f", "on-surface-variant": "#bbcac6", "tertiary-container": "#58b590", "surface-variant": "#2d3449", "surface-container-low": "#131b2e", "tertiary-fixed": "#97f5cc", "on-secondary-fixed": "#00201d", "surface-dim": "#0b1326", "surface": "#0b1326", "on-error": "#690005", "on-surface": "#dae2fd", "tertiary-fixed-dim": "#7bd8b1", "secondary-fixed": "#9cf2e8", "surface-container": "#171f33", "slate-surface": "#1E293B", "surface-tint": "#4fdbc8", "outline": "#859490", "primary": "#4fdbc8", "outline-variant": "#3c4947", "surface-bright": "#31394d", "on-tertiary-fixed": "#002115", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "on-primary-fixed": "#00201c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-mono-sm": [ "JetBrains Mono" ], "display-hero": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "headline-md": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "body-md": [ "Inter" ], "label-mono-lg": [ "JetBrains Mono" ], "title-md": [ "Inter" ] }, "fontSize": { "label-mono-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "label-mono-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Precision geometric tech logo for 'Tools Digital'. An intertwined hexagonal circuit gear merged with a stylized agricultural leaf and digital node network. Minimal, clean vector badge, technical emerald teal (#14B8A6) and crisp cyan accents on dark industrial background.. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">Tools Digital <span class="text-primary font-normal">| AgriTech Division</span></span><div class="flex items-center gap-space-xs mt-0.5"><span class="inline-flex items-center px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase tracking-wider">AGRICULTURE PORTAL (/agriculture)</span></div></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="overview" href="#overview">Overview</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="problems-and-solutions" href="#problems">Problems &amp; Solutions</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="hardware-and-devices" href="#hardware">Hardware &amp; Devices</a><a aria-current="page" class="transition-colors py-space-xs px-space-sm bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="real-life-impact" href="#impact">Real-life Impact</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="farmer-support-and-hotline" href="#support">Farmer Support &amp; Hotline</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm flex items-center gap-space-xs" data-path="back-to-main-portal" href="/"><span class="text-primary-fixed">←</span> Main Portal</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-mono-sm text-label-mono-sm gap-space-xs"><span class="text-primary font-bold">EN</span><span class="text-outline-variant">|</span><span class="hover:text-on-surface cursor-pointer">हिन्दी</span><span class="text-outline-variant">|</span><span class="hover:text-on-surface cursor-pointer">मराठी</span></div><a class="inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase px-space-md py-space-sm rounded shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-semibold" href="#support"><span class="material-symbols-outlined text-[18px]">chat</span><span>WhatsApp Farmer Help</span></a><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[18px]">dark_mode</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- SECTION 1: HEADER & TELEMETRY ANCHOR -->
+<section class="w-full px-gutter pt-space-lg pb-space-xl bg-surface">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-md">
+<!-- Monospaced Header Overline Badges -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider">FIELD VERIFIED RESULTS • SAMPLE CASE STUDIES</span>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-[14px] text-tertiary">database</span>
+<span>COLLECTION: /src/content/impact-stories</span>
+</div>
+</div>
+<!-- Main Headline Grid with Asymmetric Technical Callout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-semibold">
+            Proven in Drought Corridors, Mountain Ridges, and Heavy Monsoon Zones
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Real deployments across rural agricultural belts. Measured before-and-after results in electricity conservation, water retention, hazardous night travel elimination, and crop yield defense.
+          </p>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-alert-amber font-label-mono-sm text-label-mono-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>DEVELOPER FIELD NOTE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            All statistics and locations shown below are sample field test entries from the <code class="font-label-mono-sm text-primary">impact-stories</code> collection for runtime hardware telemetry validation.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TOP METRIC DASHBOARD (TECHNICAL STAT METERS) -->
+<section class="w-full px-gutter pb-space-xl bg-surface">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-space-sm">
+<span>METRIC_01 // POWER</span>
+<span class="text-primary font-semibold">ENERGY CONSERVATION</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-hero text-display-hero text-primary font-bold">40%</span>
+<span class="font-label-mono-lg text-label-mono-lg text-on-surface-variant">AVG DROP</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface mt-space-xs">Average Electricity Saved</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Via automated 3-phase night pumping synchronization and instant cut-off on phase failure.</p>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary h-full w-[40%] rounded-full"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-space-sm">
+<span>METRIC_02 // SAFETY</span>
+<span class="text-tertiary font-semibold">HUMAN TIME RECLAIMED</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-hero text-display-hero text-tertiary font-bold">1.8</span>
+<span class="font-label-mono-lg text-label-mono-lg text-on-surface-variant">HOURS/DAY</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface mt-space-xs">Night Travel Eliminated</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Zero mandatory midnight walks along venomous canal bunds to physically switch irrigation relays.</p>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-tertiary h-full w-[78%] rounded-full"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-space-sm">
+<span>METRIC_03 // WILDLIFE</span>
+<span class="text-secondary font-semibold">PERIMETER DEFENSE</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-hero text-display-hero text-secondary font-bold">85%</span>
+<span class="font-label-mono-lg text-label-mono-lg text-on-surface-variant">DEFENSE RATE</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface mt-space-xs">Wild Boar Crop Losses Avoided</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Solar-powered non-lethal acoustic deterrent nodes sweep ultrasonic repellent frequencies.</p>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-secondary h-full w-[85%] rounded-full"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-space-sm">
+<span>METRIC_04 // RF TELEMETRY</span>
+<span class="text-primary-fixed-dim font-semibold">MESH RELIABILITY</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-hero text-display-hero text-primary-fixed-dim font-bold">0</span>
+<span class="font-label-mono-lg text-label-mono-lg text-on-surface-variant">CELL TOWER DEP.</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface mt-space-xs">Reliance on Cellular Networks</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">100% Sub-GHz long-range LoRa industrial link survives remote valley cellular blackouts.</p>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary-fixed-dim h-full w-[100%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: INTERACTIVE CROP TYPE FILTER & CONTROLS -->
+<section class="w-full px-gutter pb-space-lg bg-surface">
+<div class="max-w-[1440px] mx-auto bg-surface-container-low p-space-md rounded-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider">SELECT FIELD TEST REGIME:</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs" id="crop-filter-group">
+<button class="filter-btn px-space-md py-1.5 rounded font-label-mono-sm text-label-mono-sm uppercase transition-all bg-primary text-on-primary font-semibold shadow-sm" data-crop="all" onclick="filterCases('all')">
+          All Cases [03]
+        </button>
+<button class="filter-btn px-space-md py-1.5 rounded font-label-mono-sm text-label-mono-sm uppercase transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-bright" data-crop="sugarcane" onclick="filterCases('sugarcane')">
+          Sugarcane (Kolhapur)
+        </button>
+<button class="filter-btn px-space-md py-1.5 rounded font-label-mono-sm text-label-mono-sm uppercase transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-bright" data-crop="banana" onclick="filterCases('banana')">
+          Maize &amp; Banana (Jalgaon)
+        </button>
+<button class="filter-btn px-space-md py-1.5 rounded font-label-mono-sm text-label-mono-sm uppercase transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-bright" data-crop="horticulture" onclick="filterCases('horticulture')">
+          Horticulture Pomegranate (Solapur)
+        </button>
+<button class="filter-btn px-space-md py-1.5 rounded font-label-mono-sm text-label-mono-sm uppercase transition-all bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-bright opacity-60 cursor-not-allowed" data-crop="cotton" onclick="filterCases('cotton')" title="Incoming Q3 Field Logging">
+          Cotton [Archiving...]
+        </button>
+</div>
+<div class="hidden xl:flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Hardware Firmware: v3.12-RTX</span>
+</div>
+</div>
+</section>
+<!-- SECTION 4: DETAILED CASE STUDY CARDS (BEFORE & AFTER BREAKDOWNS) -->
+<section class="w-full px-gutter pb-space-xl bg-surface">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl" id="cases-container">
+<!-- CASE STUDY 1: SUGARCANE CO-OPERATIVE -->
+<article class="case-card bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col transition-all" data-crop-category="sugarcane">
+<!-- Technical Spec Banner -->
+<div class="bg-surface-container-high px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm font-label-mono-sm text-label-mono-sm">
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-primary font-bold">CASE ID: CS-MH-429</span>
+<span class="text-on-surface-variant">LAT: 16.7050° N, LON: 74.2433° E</span>
+</div>
+<div class="flex items-center gap-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> SYSTEM: TD-RF12K (x18)</span>
+<span class="text-tertiary font-medium">VERIFIED TRIAL // 2024</span>
+</div>
+</div>
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<!-- Card Title & Metadata Grid -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider font-semibold">AGRI-ZONE: KRISHNA BASIN SUGARCANE BELT</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">Western Maharashtra Sugarcane Co-operative</h2>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">LOCATION</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">Kolhapur District, MH</span>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">CANOPY DENSITY / CROP</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">Sugarcane (85 Acres)</span>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">DEPLOYED ARTIFACTS</span>
+<span class="font-title-md text-title-md text-primary font-medium">18x TD-RF12K Remote Units</span>
+</div>
+</div>
+</div>
+<!-- Split Visual and Engineering Comparison -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Context Photography Placeholder -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="relative w-full h-80 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Dense verdant sugarcane stalks in Maharashtra rural farm at twilight. An industrial Sub-GHz antenna device with glowing teal LED indicators is mounted securely onto an agricultural electrical motor pump starter post, displaying rugged construction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw7ORR4RKvnIEWVL_cXLkfJ8Z_GslkuO08hog0bM2uauQ38aKrzIdpZD4arVxPRHhY28lm2mtZ3N5Sd0JsdzPaYv18GwaXbo1xhyEVt_EcADTnNxF0UCcAYvFrZrgPQR3E-O3QdszegfxY3ftB1mVvqfFq_P6RDALBv0yPigykNdacf0SrD2z0_KLWLNEObEp2LSAZY95GV0rKsn__3Nd6PscxmggZ3En-8KfqOgNS7VORJ9sXniEf"/>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 px-space-sm py-1 rounded backdrop-blur-sm font-label-mono-sm text-label-mono-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+<span>4.2 km Non-Line-of-Sight RF Linkage</span>
+</div>
+</div>
+<!-- Farmer Quote Box -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">format_quote</span>
+<span>VERIFIED VOICE TESTIMONIAL</span>
+</span>
+<blockquote class="font-body-md text-body-md text-on-surface italic">
+                  “We switch the 15 HP well pump on from the verandah with the remote buzzer confirming the pump is running. No more midnight walks through snake territory in the cane.”
+                </blockquote>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1">— Anandrao Patil, Co-operative Secretary, Shirol Block</span>
+</div>
+</div>
+<!-- Right: Challenge vs Solution Technical Comparison -->
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- The Challenge -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-alert-amber font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>THE SYSTEM CHALLENGE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Erratic 3-phase grid power arrived unpredictably between 1:00 AM and 4:30 AM. Farmers walked through unlit, muddy canal bunds rife with Indian cobras and vipers to manually engage industrial pump switches. Sudden single-phasing often burnt copper motor coils.
+                  </p>
+<div class="mt-auto pt-space-xs font-label-mono-sm text-label-mono-sm text-alert-amber/80">
+                    Incidents: 6 motor rewinds/year average per pump.
+                  </div>
+</div>
+<!-- The Solution -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[18px]">build_circle</span>
+<span>THE DEPLOYED SOLUTION</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Centralized radio control transmitter installed at farmer homes reaching well pumps 4.2 km away through dense 12-foot cane canopy. Integrated with automated phase monitors that refuse starter activation during phase imbalance.
+                  </p>
+<div class="mt-auto pt-space-xs font-label-mono-sm text-label-mono-sm text-primary">
+                    Band: 868 MHz ISM band (License Free)
+                  </div>
+</div>
+</div>
+<!-- Measured Outcomes Spec Matrix -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase tracking-wider font-semibold">VERIFIED TELEMETRIC OUTCOMES</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">HAZARDOUS TRAVEL</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">100% ELIMINATED</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero 2 AM foot trips</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">MOTOR BURNOUTS</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">0 INCIDENTS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Auto-cuts on 2-phase drop</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">CAPEX PAYBACK</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">3.8 MONTHS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Saved rewinding costs</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- CASE STUDY 2: SATPURA FOOTHILLS (WILD ANIMAL DETERRENT) -->
+<article class="case-card bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col transition-all" data-crop-category="banana">
+<!-- Technical Spec Banner -->
+<div class="bg-surface-container-high px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm font-label-mono-sm text-label-mono-sm">
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-secondary font-bold">CASE ID: CS-MH-811</span>
+<span class="text-on-surface-variant">LAT: 21.0077° N, LON: 75.5626° E</span>
+</div>
+<div class="flex items-center gap-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> SYSTEM: TD-DETER800 (x6)</span>
+<span class="text-secondary font-medium">SOLAR AUTONOMOUS // 2024</span>
+</div>
+</div>
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<!-- Card Title & Metadata Grid -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider font-semibold">AGRI-ZONE: SATPURA PERIMETER BUFFER TRANSITION</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">Satpura Foothills Maize &amp; Banana Perimeter Protection</h2>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">LOCATION</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">Jalgaon District, MH</span>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">CROP DEFENSE FOCUS</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">Banana &amp; Hybrid Maize</span>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">EQUIPMENT UNITS</span>
+<span class="font-title-md text-title-md text-secondary font-medium">6x TD-DETER800 Acoustic Nodes</span>
+</div>
+</div>
+</div>
+<!-- Split Visual and Engineering Comparison -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Context Photography Placeholder -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="relative w-full h-80 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="A sprawling commercial banana plantation in Jalgaon with large leaves under dusk lighting. Mounted on a perimeter fence pole is an industrial weatherproof acoustic deterrent device with a monocrystalline solar panel and status LED beacon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv71sajUHk_0WTFVKhoR2a-n1PTIpAE9advCCyQ7zlAibU6ojozUEDMqunFr6wN1R9NW8_LseU4-xMGGOLFf03zKbPMsWbPcGf0GyI6W89ogCTIlftDoWGDfuoU_8BmHKm_ki5ZGEqLMAZ_0j5Df5O8faFv6JUKxmmhLAzpkMOWMJ-4vRKRBKjgXYSqi1O1gylGa7kkwhfH_2Od9XsZLGwEcqS-F6_tSdExO_lyj3CpUUx8EU01etb"/>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 px-space-sm py-1 rounded backdrop-blur-sm font-label-mono-sm text-label-mono-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">volume_up</span>
+<span>Sweep: 12 kHz to 28 kHz Non-Habituation</span>
+</div>
+</div>
+<!-- Frequency Chart Mini-Vis -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span>SWEEP PROFILE LOG</span>
+<span class="text-tertiary font-mono">AUTONOMOUS CYCLE</span>
+</div>
+<!-- Inline SVG acoustic spectrum visualization -->
+<svg class="w-full h-12 text-primary" fill="none" viewbox="0 0 400 60">
+<path d="M0 30 Q 30 5, 60 30 T 120 30 T 180 5 T 240 50 T 300 20 T 360 45 T 400 30" stroke="currentColor" stroke-width="2"></path>
+<path d="M0 30 Q 20 50, 50 30 T 100 10 T 170 55 T 230 15 T 310 40 T 380 20 T 400 30" stroke="#80d5cb" stroke-dasharray="4 2" stroke-width="1.5"></path>
+</svg>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Stochastic sound modulation stops boar and nilgai sensory acclimation.</span>
+</div>
+</div>
+<!-- Right: Challenge vs Solution Technical Comparison -->
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- The Challenge -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-alert-amber font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[18px]">crisis_alert</span>
+<span>THE DEPREDATION CHALLENGE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Wild boar droves and antelopes invaded perimeter fields from adjacent reserve forests each night between 11 PM and 4 AM, destroying ripe banana rootstocks and sweet hybrid maize cobs with up to 35% crop devastation directly before harvest.
+                  </p>
+<div class="mt-auto pt-space-xs font-label-mono-sm text-label-mono-sm text-alert-amber/80">
+                    Baseline Loss: ₹2,10,000 lost per farm parcel.
+                  </div>
+</div>
+<!-- The Solution -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[18px]">solar_power</span>
+<span>SOLAR ACOUSTIC SOLUTION</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Autonomous solar acoustic deterrents deployed along perimeter fence lines at 70-meter intervals. Units run randomized frequency sweeps accompanied by synchronized sub-audible pressure pulsations without harming livestock or wild fauna.
+                  </p>
+<div class="mt-auto pt-space-xs font-label-mono-sm text-label-mono-sm text-secondary">
+                    Panel: Integrated 10W Tier-1 Mono Solar + LiFePO4
+                  </div>
+</div>
+</div>
+<!-- Measured Outcomes Spec Matrix -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase tracking-wider font-semibold">VERIFIED TELEMETRIC OUTCOMES</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">NIGHT FORAGING</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">88% DROP</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Camera trap verified</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">BATTERY RECURRING</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">₹0 COST</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Self-sustained 10W solar</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">PATROL EFFORT</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">REDUCED 90%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Replaced night watchmen</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- CASE STUDY 3: SOLAPUR POMEGRANATE (MOISTURE & WATER TABLE) -->
+<article class="case-card bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col transition-all" data-crop-category="horticulture">
+<!-- Technical Spec Banner -->
+<div class="bg-surface-container-high px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm font-label-mono-sm text-label-mono-sm">
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-tertiary font-bold">CASE ID: CS-MH-192</span>
+<span class="text-on-surface-variant">LAT: 17.6599° N, LON: 75.9064° E</span>
+</div>
+<div class="flex items-center gap-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> CLOSED-LOOP: TD-AUTOPUMP</span>
+<span class="text-tertiary font-medium">HYDRO-SENSING // 2024</span>
+</div>
+</div>
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<!-- Card Title & Metadata Grid -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase tracking-wider font-semibold">AGRI-ZONE: DROUGHT-PRONE RAIN SHADOW TRACT</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">Precision Pomegranate Moisture Control &amp; Water Table Preservation</h2>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">LOCATION</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">Solapur District, MH</span>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">HIGH-VALUE CROP</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">Bhagwa Pomegranate (20 Acres)</span>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">HARDWARE INTEGRATION</span>
+<span class="font-title-md text-title-md text-tertiary font-medium">TD-AUTOPUMP Closed Loop</span>
+</div>
+</div>
+</div>
+<!-- Split Visual and Engineering Comparison -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Context Photography Placeholder -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="relative w-full h-80 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High quality pomegranate orchard in Solapur with drip irrigation lines visible near the soil. A soil moisture telemetry probe with digital telemetry enclosure is inserted into the dry red soil near fruit-laden branches." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpqnE5fzJhKB43V7abjK0TRume8hXVdlgisvflaQjWY6bd5-4ki7iqN9_6k4bNK54jgIo4BmvikL0TDdKg1NGlyIGcE1FkEqixG5UfPTThq51rV9KjnJKiAb-ZqyUWur2OF_Vfkb1DKRzxYefdxs3RLQonoKGC6i24MH2ZVzt9WI6vhNNpC5jyV3kTqV_WZeF-gRwj2kVQrr3tUPtRCGfQUf8SINki2Y6dB7i1h3txxwDl08KIczAm"/>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 px-space-sm py-1 rounded backdrop-blur-sm font-label-mono-sm text-label-mono-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+<span>Real-time Tensiometer Soil Moisture Loop</span>
+</div>
+</div>
+<!-- Water Run Hours Sparkline -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span>BOREWELL RUNTIME REDUCTION</span>
+<span class="text-primary font-mono">-34% HOURS</span>
+</div>
+<!-- Inline SVG Bar visualization -->
+<svg class="w-full h-10" fill="none" viewbox="0 0 300 40">
+<rect fill="#334155" height="24" rx="2" width="130" x="10" y="8"></rect>
+<rect fill="#14b8a6" height="24" rx="2" width="86" x="150" y="8"></rect>
+<text fill="#dae2fd" font-family="JetBrains Mono" font-size="10" x="15" y="24">Before: 8.5h/day</text>
+<text fill="#003731" font-family="JetBrains Mono" font-size="10" font-weight="600" x="155" y="24">After: 5.6h/day</text>
+</svg>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Targeted root hydration averted borewell drawdown during peak April heatwave.</span>
+</div>
+</div>
+<!-- Right: Challenge vs Solution Technical Comparison -->
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- The Challenge -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-alert-amber font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[18px]">water_loss</span>
+<span>OVER-IRRIGATION &amp; SHRINKAGE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Farmers ran borewells on fixed timer habits without telemetry. Resulted in excessive root-zone saturation causing disastrous fruit cracking, fungal root rot (Phytophthora), and depletion of precarious regional groundwater aquifers.
+                  </p>
+<div class="mt-auto pt-space-xs font-label-mono-sm text-label-mono-sm text-alert-amber/80">
+                    Defect Rate: 22% fruit split rejection at wholesale.
+                  </div>
+</div>
+<!-- The Solution -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-tertiary font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+<span>CLOSED-LOOP HYDRATION</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Installation of TD-AUTOPUMP with triple-depth soil moisture probes (15cm, 30cm, 45cm). Borewell activates automatically only when soil volumetric water content drops below 18% and terminates precisely at 28%.
+                  </p>
+<div class="mt-auto pt-space-xs font-label-mono-sm text-label-mono-sm text-tertiary">
+                    Sensors: TDT (Time Domain Transmissometry) Probes
+                  </div>
+</div>
+</div>
+<!-- Measured Outcomes Spec Matrix -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase tracking-wider font-semibold">VERIFIED TELEMETRIC OUTCOMES</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">PUMP RUNTIME</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">34% REDUCED</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Saved 2.9 hours daily run</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">FRUIT CRACKING</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">NEAR ZERO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Uniform moisture control</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">AQUIFER SURCHARGE</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">PROTECTED</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sustained borewell yield</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 5: GEOGRAPHIC DISPATCH SPREAD & SUMMARY SPECS -->
+<section class="w-full px-gutter pb-space-xl bg-surface">
+<div class="max-w-[1440px] mx-auto bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">location_searching</span>
+<span>FIELD DISPATCH PRESENCE</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            Operational Field Units Across 4 Key Regional Hubs
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Tools Digital maintains local hardware calibration benches, emergency swap inventory, and bilingual telemetry engineers across India’s highest intensity agricultural clusters.
+          </p>
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm font-label-mono-sm text-label-mono-sm">
+<div class="bg-surface-container p-space-sm rounded flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-on-surface font-medium">Nashik (Grapes/Onions)</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-on-surface font-medium">Indore (Soybean/Wheat)</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-on-surface font-medium">Belagavi (Sugarcane)</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span class="text-on-surface font-medium">Karnal (Paddy/Basmati)</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="w-full h-80 rounded-lg overflow-hidden relative shadow-inner bg-surface-container" data-location="Maharashtra, India" style="">
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 px-space-md py-space-xs rounded backdrop-blur font-label-mono-sm text-label-mono-sm text-on-surface z-10 flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>LIVE FIELD TELEMETRY NETWORK: ACTIVE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CALL TO ACTION (PILOT / CASE SUBMISSION) -->
+<section class="w-full px-gutter pb-space-xl bg-surface">
+<div class="max-w-[1440px] mx-auto bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-space-lg lg:p-space-xl rounded-lg shadow-xl">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-widest font-semibold">COOPERATIVE &amp; CLUSTER INITIATIVES</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">
+            Deploy a Multi-Node Pilot on Your Cooperative Acreage
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Are you an FPO (Farmer Producer Organisation), agricultural cooperative, or high-density estate? We provide hardware installation kits, RF propagation site surveys, and a 60-day telemetry trial.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full lg:w-auto">
+<button class="w-full sm:w-auto px-space-xl py-space-md bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase rounded font-bold tracking-wider hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors flex items-center justify-center gap-space-xs shadow-md" onclick="handleModalOpen('submit')">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Submit Your Farm Case Study</span>
+</button>
+<button class="w-full sm:w-auto px-space-xl py-space-md bg-surface-container-lowest text-on-surface hover:text-primary transition-colors font-label-mono-sm text-label-mono-sm uppercase rounded font-bold tracking-wider flex items-center justify-center gap-space-xs" onclick="handleModalOpen('pilot')">
+<span class="material-symbols-outlined text-[18px]">domain_add</span>
+<span>Request Cooperative Pilot</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE MODAL OVERLAY (FOR PILOT / CASE SUBMISSION) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-sm hidden items-center justify-center p-space-md" id="interaction-modal">
+<div class="bg-surface-container p-space-xl rounded-lg max-w-xl w-full shadow-2xl relative flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-primary uppercase font-bold">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span id="modal-heading">FIELD TELEMETRY REQUEST</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="handleModalClose()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant" id="modal-desc">
+        Connect your acreage or cooperative directly with our field engineering division for on-site RF evaluation and automated pump switchgear integration.
+      </p>
+<form class="flex flex-col gap-space-sm mt-space-xs" onsubmit="handleFormSubmit(event)">
+<div>
+<label class="block font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-1 uppercase">Representative Name / Farmer Name</label>
+<input class="w-full bg-surface-container-lowest px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="e.g. Ramesh V. Kadam" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-1 uppercase">Mobile Number (WhatsApp Enabled)</label>
+<input class="w-full bg-surface-container-lowest px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="+91 98XXX XXXXX" required="" type="tel"/>
+</div>
+<div>
+<label class="block font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-1 uppercase">District &amp; State</label>
+<input class="w-full bg-surface-container-lowest px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="e.g. Kolhapur, Maharashtra" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-1 uppercase">Crop Type</label>
+<select class="w-full bg-surface-container-lowest px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors">
+<option>Sugarcane</option>
+<option>Horticulture (Pomegranate/Grapes)</option>
+<option>Banana &amp; Maize</option>
+<option>Cotton &amp; Soybean</option>
+<option>Other / Mixed</option>
+</select>
+</div>
+<div>
+<label class="block font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-1 uppercase">Total Acreage</label>
+<input class="w-full bg-surface-container-lowest px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="e.g. 50 Acres (Cooperative)" type="text"/>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-on-surface uppercase" onclick="handleModalClose()" type="button">Cancel</button>
+<button class="px-space-lg py-space-sm bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase rounded font-bold hover:bg-primary-fixed transition-colors" type="submit">Submit Telemetry Ticket</button>
+</div>
+</form>
+</div>
+</div>
+<!-- CLIENT-SIDE FILTERING & MODAL SCRIPT -->
+<script>
+    function filterCases(crop) {
+      const cards = document.querySelectorAll('.case-card');
+      const buttons = document.querySelectorAll('#crop-filter-group .filter-btn');
+
+      // Update button visual styles
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-crop') === crop) {
+          btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+          btn.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+        } else {
+          btn.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+          btn.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        }
+      });
+
+      // Filter card visibility
+      cards.forEach(card => {
+        const category = card.getAttribute('data-crop-category');
+        if (crop === 'all' || category === crop) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      });
+    }
+
+    function handleModalOpen(type) {
+      const modal = document.getElementById('interaction-modal');
+      const heading = document.getElementById('modal-heading');
+      const desc = document.getElementById('modal-desc');
+
+      if (type === 'submit') {
+        heading.innerText = 'SUBMIT FARM CASE STUDY ENTRY';
+        desc.innerText = 'Contribute verified sensor logs, pump kilowatt hours, or crop preservation notes from your own Tools Digital hardware deployment.';
+      } else {
+        heading.innerText = 'REQUEST COOPERATIVE PILOT INSTALLATION';
+        desc.innerText = 'Deploy a full pilot kit (up to 10 wireless pump starter nodes + 2 telemetry transmitters) for your local cluster with 60-day telemetry logging.';
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function handleModalClose() {
+      const modal = document.getElementById('interaction-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Telemetry Ticket Successfully Generated. An AgriTech Division field engineer will dispatch coordinates via WhatsApp/SMS.');
+      handleModalClose();
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-lg"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tools Digital</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">AgriTech Division delivering rugged IoT telemetry, telemetry automation, and field intelligence for distributed agriculture.</p><div class="flex items-center gap-space-xs mt-space-sm font-label-mono-sm text-label-mono-sm text-primary"><span class="material-symbols-outlined text-[16px]">verified</span><span>2-Year Full Replacement Hardware Warranty</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">AgriTech Hardware Systems</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="hover:text-primary cursor-pointer">Sub-GHz Long-Range Radio Nodes</li><li class="hover:text-primary cursor-pointer">Digital Soil NPK &amp; Moisture Kits</li><li class="hover:text-primary cursor-pointer">Three-Phase Auto Starters &amp; Switchgear</li><li class="hover:text-primary cursor-pointer">Solar-Powered Livestock Geofence Trackers</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Farmer Field Support &amp; Help</span><p class="font-body-sm text-body-sm">Multilingual Kisan Helpline: <span class="font-label-mono-sm text-label-mono-sm text-on-surface font-medium">1800-419-7284 (Toll-Free)</span></p><p class="font-body-sm text-body-sm">Direct Field Dispatch Centres: Nashik, Indore, Belagavi, Karnal</p><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">translate</span><span>Vernacular Assistance: English, हिन्दी, मराठी</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Mobile &amp; Architecture</span><div class="flex flex-col gap-space-xs"><a class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-sm rounded text-on-surface hover:bg-surface-container-high transition-colors font-label-mono-sm text-label-mono-sm" href="#"><span class="material-symbols-outlined text-primary text-[20px]">android</span><span>Companion Farmer App on Play Store</span></a><div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono-sm text-label-mono-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">security</span><span>Zero-Tracker Telemetry Architecture</span></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-mono-sm text-label-mono-sm"><span class="text-on-surface-variant">© 2025 Tools Digital Architecture &amp; Industrial Electronics. All rights reserved.</span><div class="flex items-center gap-space-md"><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Field Telemetry Standards</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Offline Firmware Policy</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Privacy Charter</span></div></div></div></footer></body></html>

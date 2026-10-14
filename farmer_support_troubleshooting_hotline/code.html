@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#0b1326", "error-container": "#93000a", "secondary-fixed-dim": "#80d5cb", "on-tertiary-fixed-variant": "#00513a", "slate-border": "#334155", "on-secondary-fixed-variant": "#00504a", "on-error-container": "#ffdad6", "on-primary-container": "#00423b", "secondary": "#80d5cb", "alert-amber": "#F59E0B", "canvas-light": "#F8FAFC", "surface-container-high": "#222a3d", "primary-container": "#14b8a6", "inverse-primary": "#006b5f", "on-tertiary": "#003827", "on-primary-fixed-variant": "#005048", "tertiary": "#7bd8b1", "inverse-on-surface": "#283044", "primary-fixed-dim": "#4fdbc8", "primary-fixed": "#71f8e4", "error": "#ffb4ab", "on-background": "dae2fd", "on-primary": "#003731", "surface-container-highest": "#2d3449", "on-secondary-container": "#9af0e5", "on-secondary": "#003733", "secondary-container": "#007068", "on-tertiary-container": "#00432f", "on-surface-variant": "#bbcac6", "tertiary-container": "#58b590", "surface-variant": "#2d3449", "surface-container-low": "#131b2e", "tertiary-fixed": "#97f5cc", "on-secondary-fixed": "#00201d", "surface-dim": "#0b1326", "surface": "#0b1326", "on-error": "#690005", "on-surface": "#dae2fd", "tertiary-fixed-dim": "#7bd8b1", "secondary-fixed": "#9cf2e8", "surface-container": "#171f33", "slate-surface": "#1E293B", "surface-tint": "#4fdbc8", "outline": "#859490", "primary": "#4fdbc8", "outline-variant": "#3c4947", "surface-bright": "#31394d", "on-tertiary-fixed": "#002115", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "on-primary-fixed": "#00201c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-mono-sm": [ "JetBrains Mono" ], "display-hero": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "headline-md": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "body-md": [ "Inter" ], "label-mono-lg": [ "JetBrains Mono" ], "title-md": [ "Inter" ] }, "fontSize": { "label-mono-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "label-mono-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Precision geometric tech logo for 'Tools Digital'. An intertwined hexagonal circuit gear merged with a stylized agricultural leaf and digital node network. Minimal, clean vector badge, technical emerald teal (#14B8A6) and crisp cyan accents on dark industrial background.. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">Tools Digital <span class="text-primary font-normal">| AgriTech Division</span></span><div class="flex items-center gap-space-xs mt-0.5"><span class="inline-flex items-center px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase tracking-wider">AGRICULTURE PORTAL (/agriculture)</span></div></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="overview" href="#overview">Overview</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="problems-and-solutions" href="#problems">Problems &amp; Solutions</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="hardware-and-devices" href="#hardware">Hardware &amp; Devices</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="real-life-impact" href="#impact">Real-life Impact</a><a aria-current="page" class="transition-colors py-space-xs px-space-sm bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="farmer-support-and-hotline" href="#support">Farmer Support &amp; Hotline</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm flex items-center gap-space-xs" data-path="back-to-main-portal" href="/"><span class="text-primary-fixed">←</span> Main Portal</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-mono-sm text-label-mono-sm gap-space-xs"><span class="text-primary font-bold">EN</span><span class="text-outline-variant">|</span><span class="hover:text-on-surface cursor-pointer">हिन्दी</span><span class="text-outline-variant">|</span><span class="hover:text-on-surface cursor-pointer">मराठी</span></div><a class="inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase px-space-md py-space-sm rounded shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-semibold" href="#support"><span class="material-symbols-outlined text-[18px]">chat</span><span>WhatsApp Farmer Help</span></a><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[18px]">dark_mode</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Operational Banner / Status Indicator -->
+<section class="w-full bg-surface-container-low px-gutter py-space-md shadow-sm">
+<div class="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase tracking-wider">
+          LIVE FIELD TELEMETRY &amp; DISPATCH DESK: ONLINE
+        </span>
+</div>
+<div class="flex items-center gap-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">schedule</span>
+          Avg. Callback: 4.8 Mins
+        </span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<span class="hidden md:flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          98.4% First-Call Resolution
+        </span>
+</div>
+</div>
+</section>
+<!-- Hero Header & High-Contrast Direct Actions -->
+<section class="w-full bg-surface px-gutter py-space-xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-sm max-w-4xl">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+          DIRECT FIELD ENGINEERING SUPPORT
+        </div>
+<h1 class="font-display-hero text-headline-lg md:text-display-hero text-on-surface tracking-tight">
+          Farmer Support, Troubleshooting &amp; Multilingual Hotline
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          We stand behind every piece of hardware in your field. 2-Year direct replacement warranty, step-by-step video installation guides, and direct WhatsApp voice/chat engineering help in your regional language.
+        </p>
+</div>
+<!-- High-Contrast Emergency Action Triggers -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mt-space-sm">
+<!-- WhatsApp Callout -->
+<a class="lg:col-span-6 bg-surface-container-high p-space-lg rounded-xl shadow-md hover:bg-surface-variant transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md group" href="https://wa.me/919800000000" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-bold tracking-wider">INSTANT AUDIO &amp; PHOTO HELP</span>
+<span class="font-headline-md text-headline-sm sm:text-headline-md text-on-surface font-semibold">WhatsApp Field Support</span>
+<span class="font-label-mono-lg text-label-mono-lg text-secondary font-medium">+91 98000 12345</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm bg-primary text-on-primary px-space-md py-space-sm rounded font-bold uppercase tracking-wider group-hover:bg-primary-fixed group-hover:text-on-primary-fixed transition-colors">
+            Tap To Chat
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</a>
+<!-- Toll-Free Callout -->
+<a class="lg:col-span-6 bg-surface-container-high p-space-lg rounded-xl shadow-md hover:bg-surface-variant transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md group" href="tel:18004197284">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">phone_in_talk</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase font-bold tracking-wider">TOLL-FREE (6:00 AM – 9:00 PM)</span>
+<span class="font-headline-md text-headline-sm sm:text-headline-md text-on-surface font-semibold">1800-419-7284</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero Call Charges from Any SIM</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm bg-secondary text-on-secondary px-space-md py-space-sm rounded font-bold uppercase tracking-wider group-hover:bg-secondary-fixed group-hover:text-on-secondary-fixed transition-colors">
+            Call Now
+            <span class="material-symbols-outlined text-[18px]">call</span>
+</span>
+</a>
+</div>
+<!-- Vernacular Notice Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container p-space-md rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">translate</span>
+<span class="font-title-md text-title-md text-on-surface">Regional Dialect Guarantee:</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Support natively available in English, हिन्दी (Hindi), and मराठी (Marathi). Speak directly with rural field agronomists.</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-bold">मराठी ०१</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-bold">हिन्दी ०२</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-bold">EN 03</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Installation & Field Wiring Guides -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-bold tracking-wider">
+            STEP-BY-STEP FIELD MANUALS
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+            Field Installation &amp; Wiring Protocols
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Designed for harsh agricultural conditions. High-voltage safety guidelines, DIN-rail mounting specs, and line-of-sight RF calibration.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm text-on-surface-variant bg-surface-container px-space-md py-space-sm rounded">
+<span class="material-symbols-outlined text-primary text-[18px]">build</span>
+            Standard Electrician Kit Compatible
+          </span>
+</div>
+</div>
+<!-- Installation Tabs / Accordions Container -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg" id="guide-cards">
+<!-- Guide 1 -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between gap-space-lg shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold uppercase">HARDWARE GUIDE 01</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">~8 Min Install</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              TD-RF12K Radio Pump Controller on DOL / Star-Delta
+            </h3>
+<div class="h-44 w-full rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a rugged agricultural pump starter box in an outdoor Indian farm setting with a cyan DIN-rail IoT radio module TD-RF12K securely mounted inside with heavy duty wiring terminals and status indicator diodes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6InG0QYJAXQE_71SsERi4rMYF3Yn0lvjQ2WjD2SkZl0QIHXZs8TRQ4MRDI_Asjc8SIAE7klBx-3ay-AB1QHsezGcMKHOOat6TILZTAuaN-Df2KbLeA5YLMxTJBHLZF0aaoNXo8WmGn2YY8ZKp3V49GMFfwI6Ln6eqOm4DSRySGQVxml2RGNVoks4I8F07pB8OTGIX1Qln6aUitgI55ICKc_gzKs96B5ax8jDJTkoWBHFfiVUa9To2"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/80 backdrop-blur px-space-sm py-1 rounded text-primary font-label-mono-sm text-label-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">electric_bolt</span>
+                3-Phase 415V Compatible
+              </div>
+</div>
+<!-- Steps list -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">1</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Turn off 3-phase isolator:</strong> Ensure main busbar is zero potential with a digital multimeter before panel entry.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">2</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Snap DIN-rail module:</strong> Anchor TD-RF12K receiver inside the weatherproof enclosure baseplate.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">3</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Wire NO/NC contacts:</strong> Loop normally open leads to START coil and normally closed leads in series with the STOP circuit.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">4</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Mount Sub-GHz Antenna:</strong> Clamp the high-gain omni antenna ≥3m above ground on the pump shed roof mast.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">5</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Test handshake buzzer:</strong> Power on and trigger remote button; confirm audible continuous confirmation tone.</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-mono-sm text-label-mono-sm uppercase py-space-sm px-space-md rounded flex items-center justify-center gap-space-xs font-semibold transition-colors" onclick="openVideoModal('TD-RF12K Wiring Walkthrough')">
+<span class="material-symbols-outlined text-primary text-[18px]">play_circle</span>
+            Watch Video Guide (Marathi / Hindi)
+          </button>
+</div>
+<!-- Guide 2 -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between gap-space-lg shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-mono-sm text-label-mono-sm font-semibold uppercase">HARDWARE GUIDE 02</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">~5 Min Install</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Deploying TD-AUTOPUMP Soil Probes at Root Depths
+            </h3>
+<div class="h-44 w-full rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="High tech stainless steel agricultural soil moisture probe inserted into rich dark farm soil between cotton crop rows with subtle teal electronic LED node housing and subterranean telemetry wiring diagram overlay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg2bBMRGnClFYTcS2-rFpKleI2ZaiIDo3F-kJVHrb28EqXYcI1rZp5ViqXK7fF7xm9JW4-CvsITuMON2vI0ICSjdRdy3OjTmSixfYeKjKz1aWYCvQsNnCu-jONvkdP0uP6_yLRTloGV2YwKMZ2cs5ASp9TwiRcylhKEadoq1NmdLBw_4ISYpFkDNSJw0fqEFJDQdwFA7lr8fJUVHNh2Z17EIQ8bnY-VUmoJrx2ZWT6C-9MPz6UB2hA"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/80 backdrop-blur px-space-sm py-1 rounded text-tertiary font-label-mono-sm text-label-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">water_drop</span>
+                Capacitive NPK &amp; Moisture
+              </div>
+</div>
+<!-- Steps list -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-tertiary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">1</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Dual-depth placement:</strong> Insert shallow sensor at 15cm (surface evapotranspiration zone) and deep sensor at 45cm root core.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-tertiary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">2</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Lateral drip offset:</strong> Position sensor strictly 20cm away from drip emitter points to avoid false localized saturations.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-tertiary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">3</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Eliminate air pockets:</strong> Make a fine soil-water slurry and pour into probe cavity before gently pressing stainless prongs.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-tertiary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">4</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Protect conduit cables:</strong> Bury the UV-shielded signal conduit 10cm beneath plowing depth to safeguard against tilling.</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-mono-sm text-label-mono-sm uppercase py-space-sm px-space-md rounded flex items-center justify-center gap-space-xs font-semibold transition-colors" onclick="openVideoModal('Soil Probe Root Depth Setup')">
+<span class="material-symbols-outlined text-tertiary text-[18px]">play_circle</span>
+            Soil Calibration Video
+          </button>
+</div>
+<!-- Guide 3 -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between gap-space-lg shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-mono-sm text-label-mono-sm font-semibold uppercase">HARDWARE GUIDE 03</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">~12 Min Install</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Solar Deterrent Perimeter Installation
+            </h3>
+<div class="h-44 w-full rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Solar powered wildlife deterrent agricultural sensor mounted on a galvanized metal pole on a lush green crop boundary fence with integrated strobe and ultrasonic acoustic emitter under dramatic field lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoOBXbDBiq8p5FlJTvUJfugwH0Y8uOiF7nc9X7aUCEqQxlLphL7DWGkA5dmJ0-75-JQY9PqYw1PDHl0YNiY02Uy1qMRR0DiAwt3wvs0A_e-2LVVs2lyKWCr3a2dv-xFm6kA1mv2G2ndjZauB5uJ2vbFzPglazvCH2ZCpP4En4z-XwPm6CJqO3fGYpXF9ucXqMYEljtj-QCuhiM08PyeLALWXxxHM3wlFrd6TgZIAJAI0vIWEykm0M0"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/80 backdrop-blur px-space-sm py-1 rounded text-secondary font-label-mono-sm text-label-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">wb_sunny</span>
+                Monsoon Rain-Shielded IP67
+              </div>
+</div>
+<!-- Steps list -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-secondary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">1</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">South-facing 15° panel angle:</strong> Angle PV surface directly true South at 15° to optimize winter irradiation and monsoon water run-off.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-secondary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">2</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Post anchorage:</strong> Fix 1.5 inch galvanized pipe minimum 40cm into concrete boundary plinth to endure feral boar impacts.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-secondary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">3</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Acoustic horn alignment:</strong> Face radar horn towards uncultivated scrubland corridor away from residential animal sheds.</p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded bg-surface-container-highest text-secondary font-label-mono-sm text-label-mono-sm flex items-center justify-center shrink-0 font-bold">4</span>
+<p class="font-body-sm text-body-sm text-on-surface"><strong class="text-on-surface font-semibold">Pairing handshake:</strong> Press sync toggle on receiver until amber strobe cycles twice in confirmation.</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-mono-sm text-label-mono-sm uppercase py-space-sm px-space-md rounded flex items-center justify-center gap-space-xs font-semibold transition-colors" onclick="openVideoModal('Solar Deterrent Fence Setup')">
+<span class="material-symbols-outlined text-secondary text-[18px]">play_circle</span>
+            Perimeter Setup Video
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Troubleshooting Matrix -->
+<section class="w-full bg-surface px-gutter py-space-xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="font-label-mono-sm text-label-mono-sm text-alert-amber uppercase font-bold tracking-wider">
+          DIAGNOSTIC MATRIX &amp; ERROR CODES
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Quick Field Troubleshooting Guide
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Identify error symptoms without opening starter cabinets. Most telemetry anomalies can be solved on-site within 2 minutes.
+        </p>
+</div>
+<!-- Quick Filter Bar -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="tb-filter active px-space-md py-space-xs rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-bold transition-all" onclick="filterTroubleshoot('all')">All Hardware</button>
+<button class="tb-filter px-space-md py-space-xs rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase font-bold transition-all" onclick="filterTroubleshoot('rf')">RF Remote &amp; Antenna</button>
+<button class="tb-filter px-space-md py-space-xs rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase font-bold transition-all" onclick="filterTroubleshoot('power')">Power &amp; Starters</button>
+<button class="tb-filter px-space-md py-space-xs rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase font-bold transition-all" onclick="filterTroubleshoot('probes')">Soil &amp; Moisture Probes</button>
+</div>
+<!-- Diagnostic Table Component -->
+<div class="w-full overflow-x-auto rounded-xl bg-surface-container shadow-md">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-lowest text-on-surface-variant uppercase font-label-mono-sm text-label-mono-sm tracking-wider">
+<tr>
+<th class="py-space-md px-space-lg" scope="col">Observed Symptom / LED</th>
+<th class="py-space-md px-space-lg" scope="col">System Root Cause</th>
+<th class="py-space-md px-space-lg" scope="col">Recommended Field Fix</th>
+<th class="py-space-md px-space-lg text-right" scope="col">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface" id="matrix-rows">
+<!-- Row 1 -->
+<tr class="tb-row bg-surface-container hover:bg-surface-container-high transition-colors" data-category="rf power">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-error animate-pulse shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Double beep + Solid Red LED</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Code: ERR-VOLT-03</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-medium">
+                Pump starter phase trip, reverse phase sequence, or severe single-phasing on line.
+              </td>
+<td class="py-space-md px-space-lg">
+<span class="inline-block bg-surface-container-lowest px-space-sm py-1 rounded text-primary font-mono text-body-sm">
+                  Verify 3-phase grid voltage with line indicator; interchange R &amp; B phases if auto-phase reverser trips.
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="font-label-mono-sm text-label-mono-sm bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-1 rounded transition-colors uppercase font-bold" onclick="requestSpecificHelp('ERR-VOLT-03: Double Beep Red LED')">
+                  Ask Tech
+                </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="tb-row bg-surface-container/60 hover:bg-surface-container-high transition-colors" data-category="rf">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-alert-amber shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">RF range drops below 8 km</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Code: ERR-SIG-LOW</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-medium">
+                Antenna obstructed by corrugated iron shed cladding or sugarcane canopy cresting.
+              </td>
+<td class="py-space-md px-space-lg">
+<span class="inline-block bg-surface-container-lowest px-space-sm py-1 rounded text-secondary font-mono text-body-sm">
+                  Elevate antenna mast &gt;1.5m clear above metallic rooflines; tighten RG58 coax connector.
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="font-label-mono-sm text-label-mono-sm bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-1 rounded transition-colors uppercase font-bold" onclick="requestSpecificHelp('ERR-SIG-LOW: RF Range Drop')">
+                  Ask Tech
+                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="tb-row bg-surface-container hover:bg-surface-container-high transition-colors" data-category="probes">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-alert-amber shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Moisture probe reads exactly 0%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Code: ERR-SOIL-AIR</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-medium">
+                Air pocket around stainless steel sensor prongs or loose connection at junction gland.
+              </td>
+<td class="py-space-md px-space-lg">
+<span class="inline-block bg-surface-container-lowest px-space-sm py-1 rounded text-tertiary font-mono text-body-sm">
+                  Re-pack probe cavity using moist slurry to ensure 100% soil skin contact along prongs.
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="font-label-mono-sm text-label-mono-sm bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-1 rounded transition-colors uppercase font-bold" onclick="requestSpecificHelp('ERR-SOIL-AIR: Moisture reads 0%')">
+                  Ask Tech
+                </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="tb-row bg-surface-container/60 hover:bg-surface-container-high transition-colors" data-category="power">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-error shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Controller clicks but starter won't pull</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Code: ERR-RELAY-DRV</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-medium">
+                Auxiliary contactor coil operating voltage under 280V AC (low control line transformer tap).
+              </td>
+<td class="py-space-md px-space-lg">
+<span class="inline-block bg-surface-container-lowest px-space-sm py-1 rounded text-primary font-mono text-body-sm">
+                  Shift starter coil tapping to 380V or inspect starter thermal overload relay reset lever.
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="font-label-mono-sm text-label-mono-sm bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-1 rounded transition-colors uppercase font-bold" onclick="requestSpecificHelp('ERR-RELAY-DRV: Starter Coil Failure')">
+                  Ask Tech
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Warranty & Field Dispatch Replacement Policy -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-xl">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left: Big Visual / Seal -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container p-space-xl rounded-xl flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-bold">POLICY NO: AGR-GUAR-2025</span>
+<span class="px-space-sm py-0.5 rounded bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold">100% DISPATCH GUARANTEE</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[36px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">2-Year Direct Replacement</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero Questions Asked on Surge Shield Models</span>
+</div>
+</div>
+<!-- Lightning Surge Protection Spec -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-alert-amber text-[24px] shrink-0">bolt</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Atmospheric Lightning Surge Covered</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Indian monsoon electrical storms produce extreme transients. Our industrial TVS and metal-oxide varistors protect the board. If lightning penetrates, we replace the core unit free of charge.
+              </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs font-label-mono-sm text-label-mono-sm">
+<div class="bg-surface-container-high p-space-sm rounded flex flex-col">
+<span class="text-on-surface-variant">DISPATCH SPEED:</span>
+<span class="text-on-surface font-bold text-label-mono-lg">Within 48 Hours</span>
+</div>
+<div class="bg-surface-container-high p-space-sm rounded flex flex-col">
+<span class="text-on-surface-variant">PICKUP POINT:</span>
+<span class="text-on-surface font-bold text-label-mono-lg">Co-Op or Speed Post</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Detailed Dispatch Timeline -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-bold tracking-wider">
+            ZERO FARM DOWNTIME COMMITMENT
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+            How The 48-Hour Field Replacement Works
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Irrigation cannot wait 3 weeks for lab repairs. When a critical pump starter or moisture node fails during crucial crop cycles, our rapid exchange program triggers automatically.
+          </p>
+</div>
+<!-- 3-Step Horizontal Timeline -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm flex items-center justify-center font-bold">1</span>
+<span class="material-symbols-outlined text-primary text-[20px]">videocam</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface mt-space-xs">1. Send Video on WhatsApp</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Shoot a 15-second phone video showing the LED flash code and starter panel layout. No complex RMA ticket required.
+            </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm flex items-center justify-center font-bold">2</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface mt-space-xs">2. Immediate Unit Dispatched</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Replacement unit is shipped from Nashik, Indore, Belagavi, or Karnal regional depot via Indian Speed Post or local agricultural co-op desk.
+            </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm flex items-center justify-center font-bold">3</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">swap_horizontal_circle</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface mt-space-xs">3. Handover Defective Unit</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Put faulty module in the pre-paid return satchel provided. Drop it at the post office when you pick up the fresh device.
+            </p>
+</div>
+</div>
+<!-- Regional Depot Badges -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container p-space-sm rounded-lg font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span class="text-on-surface font-semibold">Active Dispatch Hubs:</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary">Maharashtra (Nashik)</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary">Madhya Pradesh (Indore)</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary">Karnataka (Belagavi)</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary">Haryana &amp; Punjab (Karnal)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Direct Callback & Field Demo Request Form -->
+<section class="w-full bg-surface px-gutter py-space-xl" id="support-form">
+<div class="max-w-[1440px] mx-auto">
+<div class="bg-surface-container rounded-2xl p-space-lg md:p-space-xl shadow-xl flex flex-col lg:flex-row gap-space-xl">
+<!-- Left: Form Context & Guidance -->
+<div class="lg:w-5/12 flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+              FIELD DEMO &amp; TELEMETRY SUPPORT
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+              Request a Field Engineer Callback
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Fill out this quick form or leave a missed call. An agricultural electrical engineer familiar with your taluka will contact you in your chosen language.
+            </p>
+<div class="flex flex-col gap-space-sm pt-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">agriculture</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">On-farm demonstrations available for farmer groups (FPOs)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">flash_on</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">Free starter compatibility check before purchase</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">record_voice_over</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">Voice memo support on WhatsApp for quick diagnostics</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Emergency 24x7 Night Shift?</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">
+              For midnight power grid line surges or irrigation lockouts, WhatsApp keyword <strong class="text-primary font-mono">EMERGENCY</strong> to <span class="text-secondary font-mono">+91 98000 12345</span>.
+            </p>
+</div>
+</div>
+<!-- Right: Accessible, Large Touch Target Form -->
+<div class="lg:w-7/12">
+<form class="flex flex-col gap-space-md" id="farmerHelpForm" onsubmit="handleFormSubmit(event)">
+<!-- Full Name -->
+<div class="flex flex-col gap-1">
+<label class="font-title-md text-title-md text-on-surface flex items-center justify-between" for="farmerName">
+<span>Farmer / Operator Full Name (शेतकरी / किसान नाव)</span>
+<span class="text-error font-mono text-label-mono-sm">*Required</span>
+</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-lg text-body-lg px-space-md py-space-sm rounded-lg outline-none focus:bg-surface-container-highest transition-colors placeholder:text-on-surface-variant/40" id="farmerName" placeholder="e.g. Ramesh Baburao Patil" required="" type="text"/>
+</div>
+<!-- WhatsApp Number -->
+<div class="flex flex-col gap-1">
+<label class="font-title-md text-title-md text-on-surface flex items-center justify-between" for="phoneNum">
+<span>WhatsApp Mobile Number (व्हॉट्सॲप मोबाइल नंबर)</span>
+<span class="text-error font-mono text-label-mono-sm">*10 Digits</span>
+</label>
+<div class="flex items-center gap-space-xs">
+<span class="bg-surface-container-lowest px-space-md py-space-sm rounded-lg font-label-mono-lg text-label-mono-lg text-on-surface-variant shrink-0">+91</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-lg text-body-lg px-space-md py-space-sm rounded-lg outline-none focus:bg-surface-container-highest transition-colors placeholder:text-on-surface-variant/40" id="phoneNum" pattern="[0-9]{10}" placeholder="98230 XXXXX" required="" type="tel"/>
+</div>
+</div>
+<!-- Location Fields Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-title-md text-title-md text-on-surface" for="villageTaluka">
+                  Village &amp; Taluka (गाव व तालुका)
+                </label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-lg text-body-lg px-space-md py-space-sm rounded-lg outline-none focus:bg-surface-container-highest transition-colors placeholder:text-on-surface-variant/40" id="villageTaluka" placeholder="e.g. Ozar, Niphad" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-title-md text-title-md text-on-surface" for="districtState">
+                  District &amp; State (जिल्हा व राज्य)
+                </label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-lg text-body-lg px-space-md py-space-sm rounded-lg outline-none focus:bg-surface-container-highest transition-colors placeholder:text-on-surface-variant/40" id="districtState" placeholder="e.g. Nashik, Maharashtra" required="" type="text"/>
+</div>
+</div>
+<!-- Equipment Needed Selection -->
+<div class="flex flex-col gap-1">
+<label class="font-title-md text-title-md text-on-surface">
+                Hardware Subject / Inquiry (उपकरण निवडा)
+              </label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs pt-1">
+<label class="flex items-center gap-2 bg-surface-container-lowest p-space-sm rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="accent-primary w-4 h-4" name="equipmentType" type="radio" value="Radio Pump"/>
+<span class="font-body-sm text-body-sm text-on-surface">Radio Pump</span>
+</label>
+<label class="flex items-center gap-2 bg-surface-container-lowest p-space-sm rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="equipmentType" type="radio" value="Soil Kit"/>
+<span class="font-body-sm text-body-sm text-on-surface">Soil NPK Kit</span>
+</label>
+<label class="flex items-center gap-2 bg-surface-container-lowest p-space-sm rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="equipmentType" type="radio" value="Auto Starter"/>
+<span class="font-body-sm text-body-sm text-on-surface">Auto Starter</span>
+</label>
+<label class="flex items-center gap-2 bg-surface-container-lowest p-space-sm rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="equipmentType" type="radio" value="Deterrent"/>
+<span class="font-body-sm text-body-sm text-on-surface">Solar Deterrent</span>
+</label>
+</div>
+</div>
+<!-- Preferred Language Radios -->
+<div class="flex flex-col gap-1">
+<label class="font-title-md text-title-md text-on-surface">
+                Preferred Callback Language (संभाषणाची भाषा)
+              </label>
+<div class="flex flex-wrap items-center gap-space-md pt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="accent-primary w-4 h-4" name="prefLang" type="radio" value="Marathi"/>
+<span class="font-body-md text-body-md text-on-surface">मराठी (Marathi)</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="accent-primary w-4 h-4" name="prefLang" type="radio" value="Hindi"/>
+<span class="font-body-md text-body-md text-on-surface">हिन्दी (Hindi)</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="accent-primary w-4 h-4" name="prefLang" type="radio" value="English"/>
+<span class="font-body-md text-body-md text-on-surface">English</span>
+</label>
+</div>
+</div>
+<!-- Submit Button (High Visual Weight) -->
+<div class="pt-space-sm">
+<button class="w-full bg-primary hover:bg-primary-fixed text-on-primary font-headline-sm text-headline-sm py-space-md px-space-lg rounded-xl font-bold uppercase tracking-wide flex items-center justify-center gap-space-sm transition-all shadow-lg hover:shadow-primary/20" id="submitBtn" type="submit">
+<span class="material-symbols-outlined text-[28px]">phone_callback</span>
+<span>Request Field Engineer Callback</span>
+</button>
+</div>
+<p class="hidden text-center font-label-mono-sm text-label-mono-sm text-tertiary bg-surface-container-lowest p-space-sm rounded-lg" id="formFeedback"></p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Walkthrough Modal (Triggered by Buttons) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md hidden items-center justify-center p-gutter" id="videoModal">
+<div class="bg-surface-container max-w-2xl w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-label-mono-sm text-label-mono-sm uppercase font-bold">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+<span id="modalVideoTitle">Hardware Tutorial Video</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-bright" onclick="closeVideoModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="aspect-video w-full bg-surface-container-lowest rounded-xl flex flex-col items-center justify-center relative overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="Technical video tutorial playback screen showing Marathi and Hindi sub-titles for wiring a 3-phase agricultural water pump starter controller with high contrast schematics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzRcJLVl44JdLFP2AOTA9qJYGA6zF8muc2QtfSf8G0hOngcug6UFSRfS9ZhAGsLVuza-ROOY2ERzju700cx8Su7zKAfaftEEgAISth0bvGK7J-SA8mL6Jxtc2KB4OR627PkbKArDmky64LsG1tNxAFGkAnZ83R3aLJ3X10sIZ3rq1phA-q48170gjZm8xMYy9FKCOik7yUpbH2cEXdH0juTcjSS_wD3gcTkENvDlB2HPrdXZhS5y9Z"/>
+<div class="absolute inset-0 bg-surface-container-lowest/50 flex flex-col items-center justify-center gap-space-sm">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[36px]">play_arrow</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase tracking-wider bg-surface-container px-space-sm py-1 rounded">
+              High Resolution Field Demo (07:42)
+            </span>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Audio Available in: Marathi (मराठी) • Hindi (हिन्दी) • English</span>
+<button class="text-primary hover:underline font-label-mono-sm text-label-mono-sm uppercase" onclick="closeVideoModal()">Close Window</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Script for Diagnostics, Modals and Callback Submissions -->
+<script>
+    function filterTroubleshoot(category) {
+      const rows = document.querySelectorAll('.tb-row');
+      const buttons = document.querySelectorAll('.tb-filter');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+
+      // Highlight active button
+      event.target.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      event.target.classList.add('bg-primary', 'text-on-primary');
+
+      rows.forEach(row => {
+        if (category === 'all') {
+          row.style.display = 'table-row';
+        } else {
+          const rowCats = row.getAttribute('data-category') || '';
+          if (rowCats.includes(category)) {
+            row.style.display = 'table-row';
+          } else {
+            row.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    function requestSpecificHelp(symptomText) {
+      const formSection = document.getElementById('support-form');
+      formSection.scrollIntoView({ behavior: 'smooth' });
+      const nameInput = document.getElementById('farmerName');
+      nameInput.focus();
+      const feedback = document.getElementById('formFeedback');
+      feedback.textContent = `Selected Symptom: ${symptomText}. Complete form below for direct phone troubleshooting.`;
+      feedback.classList.remove('hidden');
+    }
+
+    function openVideoModal(title) {
+      document.getElementById('modalVideoTitle').innerText = title;
+      const modal = document.getElementById('videoModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const feedback = document.getElementById('formFeedback');
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span class="material-symbols-outlined animate-spin text-[24px]">progress_activity</span>
+        <span>Connecting Field Depot...</span>
+      `;
+
+      setTimeout(() => {
+        submitBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[24px]">check_circle</span>
+          <span>Request Registered! Ticket #AGR-${Math.floor(1000 + Math.random() * 9000)}</span>
+        `;
+        submitBtn.classList.remove('bg-primary', 'hover:bg-primary-fixed');
+        submitBtn.classList.add('bg-tertiary', 'text-on-tertiary');
+        
+        feedback.textContent = 'Engineering callback queued for your local taluka. An agronomist will ring you within 5 minutes.';
+        feedback.classList.remove('hidden');
+        feedback.classList.add('text-tertiary');
+
+        document.getElementById('farmerHelpForm').reset();
+      }, 1200);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-lg"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tools Digital</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">AgriTech Division delivering rugged IoT telemetry, telemetry automation, and field intelligence for distributed agriculture.</p><div class="flex items-center gap-space-xs mt-space-sm font-label-mono-sm text-label-mono-sm text-primary"><span class="material-symbols-outlined text-[16px]">verified</span><span>2-Year Full Replacement Hardware Warranty</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">AgriTech Hardware Systems</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="hover:text-primary cursor-pointer">Sub-GHz Long-Range Radio Nodes</li><li class="hover:text-primary cursor-pointer">Digital Soil NPK &amp; Moisture Kits</li><li class="hover:text-primary cursor-pointer">Three-Phase Auto Starters &amp; Switchgear</li><li class="hover:text-primary cursor-pointer">Solar-Powered Livestock Geofence Trackers</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Farmer Field Support &amp; Help</span><p class="font-body-sm text-body-sm">Multilingual Kisan Helpline: <span class="font-label-mono-sm text-label-mono-sm text-on-surface font-medium">1800-419-7284 (Toll-Free)</span></p><p class="font-body-sm text-body-sm">Direct Field Dispatch Centres: Nashik, Indore, Belagavi, Karnal</p><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">translate</span><span>Vernacular Assistance: English, हिन्दी, मराठी</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Mobile &amp; Architecture</span><div class="flex flex-col gap-space-xs"><a class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-sm rounded text-on-surface hover:bg-surface-container-high transition-colors font-label-mono-sm text-label-mono-sm" href="#"><span class="material-symbols-outlined text-primary text-[20px]">android</span><span>Companion Farmer App on Play Store</span></a><div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono-sm text-label-mono-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">security</span><span>Zero-Tracker Telemetry Architecture</span></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-mono-sm text-label-mono-sm"><span class="text-on-surface-variant">© 2025 Tools Digital Architecture &amp; Industrial Electronics. All rights reserved.</span><div class="flex items-center gap-space-md"><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Field Telemetry Standards</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Offline Firmware Policy</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Privacy Charter</span></div></div></div></footer></body></html>

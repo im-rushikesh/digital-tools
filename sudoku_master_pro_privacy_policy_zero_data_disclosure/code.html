@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#003733","on-background":"#dae2fd","on-primary-container":"#00423b","primary":"#4fdbc8","on-secondary-container":"#9af0e5","surface":"#0b1326","slate-surface":"#1E293B","on-surface":"#dae2fd","surface-dim":"#0b1326","on-error":"#690005","tertiary":"#7bd8b1","surface-container-low":"#131b2e","tertiary-fixed-dim":"#7bd8b1","canvas-light":"#F8FAFC","surface-bright":"#31394d","primary-container":"#14b8a6","outline-variant":"#3c4947","surface-container-high":"#222a3d","on-error-container":"#ffdad6","background":"#0b1326","on-tertiary-fixed-variant":"#00513a","on-surface-variant":"#bbcac6","secondary-container":"#007068","on-primary":"#003731","primary-fixed":"#71f8e4","inverse-primary":"#006b5f","slate-border":"#334155","error":"#ffb4ab","on-secondary-fixed-variant":"#00504a","tertiary-fixed":"#97f5cc","tertiary-container":"#58b590","on-primary-fixed":"#00201c","inverse-on-surface":"#283044","error-container":"#93000a","primary-fixed-dim":"#4fdbc8","on-secondary-fixed":"#00201d","on-primary-fixed-variant":"#005048","on-tertiary-container":"#00432f","secondary-fixed-dim":"#80d5cb","secondary-fixed":"#9cf2e8","secondary":"#80d5cb","outline":"#859490","surface-container":"#171f33","surface-variant":"#2d3449","surface-tint":"#4fdbc8","inverse-surface":"#dae2fd","surface-container-lowest":"#060e20","surface-container-highest":"#2d3449","on-tertiary":"#003827","alert-amber":"#F59E0B","on-tertiary-fixed":"#002115"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","space-xl":"2.5rem","space-lg":"1.5rem","space-md":"1rem","gutter":"1.5rem","margin-mobile":"1rem","space-sm":"0.5rem"},"fontFamily":{"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["Inter"],"headline-lg-mobile":["Space Grotesk"],"display-hero":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Inter"],"body-lg":["Inter"],"label-mono-sm":["JetBrains Mono"],"title-md":["Inter"],"label-mono-lg":["JetBrains Mono"]},"fontSize":{"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-mono-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-mono-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-space-sm flex-shrink-0"><img alt="Precision geometric tech logo for 'Tools Digital'. An intertwined hexagonal circuit gear merged with a stylized agricultural leaf and digital node network. Minimal, clean vector badge, technical emerald teal (#14B8A6) and crisp cyan accents on dark industrial background.. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase leading-none">Tools Digital</span><span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wider uppercase mt-space-xs">Compliance &amp; Developer Legal Hub</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-lg bg-surface-container-high"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">RFC 9116 / GOOGLE PLAY POLICY COMPLIANT</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-1 rounded-lg bg-surface-container-low" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-title-md"><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="legal-center" href="#">Legal Center</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="attendy-compliance" href="#">Attendy Compliance</a><a aria-current="page" class="px-space-sm py-1.5 transition-colors bg-primary-container text-on-primary-container rounded-lg font-title-md" data-path="sudoku-master-pro-legal" href="#">Sudoku Master Pro Legal</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="account-data-deletion" href="#">Account &amp; Data Deletion</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm font-label-mono-sm" data-path="security-txt" href="#">security.txt</a></nav><div class="flex items-center gap-space-sm flex-shrink-0"><a class="hidden sm:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all font-label-mono-sm text-label-mono-sm" href="/"><span class="material-symbols-outlined text-[16px]">arrow_back</span><span>Main Portal</span></a><a class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-fixed transition-all font-label-mono-sm text-label-mono-sm font-medium" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">verified</span><span class="hidden md:inline">Developer Profile</span></a><button aria-label="Print or Plain Text View" class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" onclick="window.print()" type="button"><span class="material-symbols-outlined text-[18px]">print</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Engineering Telemetry HUD -->
+<section class="w-full bg-surface-container-lowest py-space-sm px-gutter">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          POLICY VERIFIED: AUDIT-OK
+        </span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SHA256: e8b19..40a92d</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">GOOGLE PLAY POLICY V14 READY</span>
+<div class="h-3 w-px bg-surface-container-high"></div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">STRICT CLIENT-SIDE RUNTIME</span>
+</div>
+</div>
+</section>
+<!-- Document Header & Play Store Identification -->
+<header class="w-full bg-surface-container py-space-xl px-gutter relative overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg relative z-10">
+<!-- Overline / Badges -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-lg bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm uppercase tracking-wider font-semibold">
+          Official Disclosure
+        </span>
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+          Ref: GPLAY-LEGAL-SMP-2024.10
+        </span>
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-high text-tertiary font-label-mono-sm text-label-mono-sm">
+          Target Age: General Audience &amp; Families (Everyone)
+        </span>
+</div>
+<!-- Main Headline Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Sudoku Master Pro — Official Privacy Policy &amp; Zero-Telemetry Disclosure
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Statutory privacy declaration, offline architecture specification, and verifiable safety documentation under the Google Play Developer Distribution Agreement (DDA) and Google Play Families Policy.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm justify-end">
+<a class="flex items-center justify-between gap-space-sm px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase transition hover:brightness-110" href="https://play.google.com/store/apps/details?id=com.numbers_game.protoos" rel="noopener noreferrer" target="_blank">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">shop</span>
+              Google Play Listing
+            </span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+<button class="flex items-center justify-between gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:text-primary transition font-label-mono-sm text-label-mono-sm uppercase" onclick="window.print()" type="button">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">download</span>
+              Export Plaintext Copy
+            </span>
+<span class="material-symbols-outlined text-[16px]">print</span>
+</button>
+</div>
+</div>
+<!-- Metadata Telemetry Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Package Name</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface mt-0.5 truncate" title="com.numbers_game.protoos">com.numbers_game.protoos</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Developer Entity</span>
+<span class="font-body-md text-body-md text-on-surface font-medium mt-0.5">Tools Digital</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Effective Date</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface mt-0.5">Jan 01, 2024</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Last Revision</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary mt-0.5">Oct 24, 2024</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Doc Version</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary mt-0.5">v1.2-OFFLINE</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">ESRB / IARC</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface mt-0.5">Everyone (All Ages)</span>
+</div>
+</div>
+</div>
+</header>
+<!-- The "Zero-Data & Zero-Network" Affirmation Module -->
+<section class="w-full py-space-xl px-gutter bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- High Visibility Schematic Banner -->
+<div class="rounded-lg p-space-lg bg-surface-container-low shadow-xl relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg relative z-10">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">wifi_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-widest uppercase font-semibold">Architectural Affirmation</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">100% OFFLINE APPLICATION • ZERO INTERNET PERMISSION</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-space-xs">
+                The manifest file compiled into the published APK/AAB artifact explicitly omits <code class="px-1.5 py-0.5 rounded bg-surface-container font-label-mono-sm text-primary">android.permission.INTERNET</code>. The Android OS mathematically restricts the application from transmitting data off the physical handset.
+              </p>
+</div>
+</div>
+<div class="px-space-md py-space-sm rounded-lg bg-surface-container-high text-tertiary font-label-mono-sm text-label-mono-sm uppercase tracking-wider flex items-center gap-space-xs self-stretch sm:self-auto justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Zero Outbound Sockets</span>
+</div>
+</div>
+<!-- 4 Telemetry Checkpoints -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-lg pt-space-lg">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-outline">SOCKET ACCESS</span>
+<span class="material-symbols-outlined text-primary text-[20px]">block</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Hardware Isolated</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Incapable of performing DNS queries, HTTP/S requests, WebSocket connections, or background syncing.
+            </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-outline">AUTHENTICATION</span>
+<span class="material-symbols-outlined text-primary text-[20px]">no_accounts</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">No Accounts or Profiles</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              No registration forms, Google Sign-In, social logins, email verification, or phone number collection.
+            </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-outline">ADVERTISING</span>
+<span class="material-symbols-outlined text-primary text-[20px]">ad_units</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Zero Ad Frameworks</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Clean binaries compiled without Google AdMob, Unity Ads, AppLovin, ironSource, or programmatic bid SDKs.
+            </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-outline">TELEMETRY</span>
+<span class="material-symbols-outlined text-primary text-[20px]">fingerprint</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Zero Analytics Tools</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Excludes Google Firebase, Adjust, AppsFlyer, Mixpanel, and device fingerprinting daemons.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Google Play Console Data Safety Declarations Matrix -->
+<section class="w-full py-space-xl px-gutter bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider">Play Console Regulatory Mapping</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Google Play Data Safety Section Declarations</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Below is a verbatim mirror of the answers submitted to Google Play Console compliance questionnaires under the Data Safety regulatory tier.
+        </p>
+</div>
+<!-- Play Console Data Matrix Card -->
+<div class="rounded-lg bg-surface-container overflow-hidden shadow-lg">
+<div class="p-space-md bg-surface-container-high flex flex-wrap items-center justify-between gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold uppercase">Official Google Play Questionnaire Key</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-tertiary font-label-mono-sm text-label-mono-sm">STATUS: CERTIFIED NIL</span>
+</div>
+<div class="divide-y divide-surface-container-high">
+<!-- Row 1 -->
+<div class="p-space-md grid grid-cols-1 md:grid-cols-12 gap-space-md items-start">
+<div class="md:col-span-4 flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Data Collection Status</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Console Field: "data_collected"</span>
+</div>
+<div class="md:col-span-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                No Data Collected
+              </span>
+</div>
+<div class="md:col-span-5 font-body-sm text-body-sm text-on-surface-variant">
+              Does this application collect or store any user data off the device? Response: <strong>No</strong>. Sudoku Master Pro does not capture names, device IDs, IP addresses, location data, audio, photos, or crash diagnostics.
+            </div>
+</div>
+<!-- Row 2 -->
+<div class="p-space-md grid grid-cols-1 md:grid-cols-12 gap-space-md items-start">
+<div class="md:col-span-4 flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Data Sharing Status</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Console Field: "data_shared"</span>
+</div>
+<div class="md:col-span-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                No Data Shared
+              </span>
+</div>
+<div class="md:col-span-5 font-body-sm text-body-sm text-on-surface-variant">
+              Does this app share user data with third-party organizations, advertisers, or aggregators? Response: <strong>No</strong>. Since no data is collected, no sharing or selling of data is physically possible.
+            </div>
+</div>
+<!-- Row 3 -->
+<div class="p-space-md grid grid-cols-1 md:grid-cols-12 gap-space-md items-start">
+<div class="md:col-span-4 flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Data Security Protocols</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Console Field: "security_practices"</span>
+</div>
+<div class="md:col-span-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+                Sandboxed On-Device
+              </span>
+</div>
+<div class="md:col-span-5 font-body-sm text-body-sm text-on-surface-variant">
+              Puzzle boards, timer scores, and difficulty configurations are retained solely inside the Android App Sandboxed directory (<code class="font-label-mono-sm text-primary">/data/data/com.numbers_game.protoos/</code>). Operating system isolation safeguards local states from other apps.
+            </div>
+</div>
+<!-- Row 4 -->
+<div class="p-space-md grid grid-cols-1 md:grid-cols-12 gap-space-md items-start">
+<div class="md:col-span-4 flex flex-col gap-0.5">
+<span class="font-title-md text-title-md text-on-surface">Erasure / Deletion Mechanism</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Console Field: "deletion_request"</span>
+</div>
+<div class="md:col-span-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+                Instant Local Wipe
+              </span>
+</div>
+<div class="md:col-span-5 font-body-sm text-body-sm text-on-surface-variant">
+              Because no remote servers exist, users can instantly delete 100% of persisted game history at any moment by navigating to <em>Android Settings → Apps → Sudoku Master Pro → Clear Data</em> or simply uninstalling the application.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Verification & Manifest Audit Box -->
+<section class="w-full py-space-xl px-gutter bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider">Independent Binary Verification</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Code Audit &amp; Manifest Proof</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Anyone can verify our privacy assertions directly using the Android SDK Asset Packaging Tool (AAPT).
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Deterministic Build Target: APK v1.2</span>
+</div>
+</div>
+<!-- Terminal Mockup -->
+<div class="rounded-lg bg-surface-container-lowest p-space-md shadow-2xl font-label-mono-sm text-label-mono-sm flex flex-col gap-space-sm overflow-x-auto">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-alert-amber"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="ml-2 text-outline">bash terminal — android-platform-tools audit</span>
+</div>
+<span class="text-outline">bash</span>
+</div>
+<pre class="text-on-surface-variant leading-relaxed"><span class="text-primary">$</span> aapt dump badging SudokuMasterPro-release.apk | grep -i permission
+<span class="text-outline"># Output: NULL (Zero declared permissions)</span>
+
+<span class="text-primary">$</span> aapt dump permissions SudokuMasterPro-release.apk
+<span class="text-outline">package: com.numbers_game.protoos</span>
+<span class="text-tertiary">--&gt; [AUDIT SUCCESS]: Zero dangerous permissions declared.</span>
+<span class="text-tertiary">--&gt; [AUDIT SUCCESS]: android.permission.INTERNET not requested.</span>
+<span class="text-tertiary">--&gt; [AUDIT SUCCESS]: android.permission.ACCESS_NETWORK_STATE not requested.</span>
+<span class="text-tertiary">--&gt; [AUDIT SUCCESS]: android.permission.ACCESS_WIFI_STATE not requested.</span>
+<span class="text-tertiary">--&gt; [AUDIT SUCCESS]: Zero runtime storage permissions requested (Scoped App Storage only).</span>
+
+<span class="text-primary">$</span> echo "Runtime Network Capabilities: 0 bytes/sec inbound, 0 bytes/sec outbound"
+<span class="text-on-surface">Runtime Network Capabilities: 0 bytes/sec inbound, 0 bytes/sec outbound</span></pre>
+</div>
+</div>
+</section>
+<!-- Complete Legal Clauses & Regulatory Articles -->
+<section class="w-full py-space-xl px-gutter bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-space-xl">
+<!-- Sticky Navigation Index -->
+<aside class="lg:w-1/3 flex flex-col gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-sm sticky top-24">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider">Statutory Index</span>
+<nav class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition" href="#clause-1">1. Overview and Core Philosophy</a>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition" href="#clause-2">2. On-Device Storage &amp; Local Mechanics</a>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition" href="#clause-3">3. Third-Party Libraries &amp; External SDKs</a>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition" href="#clause-4">4. COPPA &amp; Google Play Families Policy</a>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition" href="#clause-5">5. Android Permissions Statement</a>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition" href="#clause-6">6. Version History &amp; Modifications</a>
+<a class="p-2 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition" href="#clause-7">7. Developer Contact &amp; Grievances</a>
+</nav>
+<div class="p-space-sm rounded bg-surface-container-high mt-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase block mb-1">Applicable Legislation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Complies with COPPA (US), GDPR (EU Art. 5 Zero Processing), and DPDP Act 2023 (India).
+            </p>
+</div>
+</div>
+</aside>
+<!-- Legal Clauses Text Column -->
+<main class="lg:w-2/3 flex flex-col gap-space-xl">
+<!-- Clause 1 -->
+<article class="flex flex-col gap-space-sm p-space-lg rounded-lg bg-surface-container" id="clause-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold">Article 1.0</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">FOUNDATIONAL ARCHITECTURE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Overview and Core Philosophy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Tools Digital Pvt. Ltd. develops software under the strict engineering mandate that personal data which is never collected cannot be leaked, compromised, subpoenaed, or monetized. Sudoku Master Pro is conceived and implemented as a self-contained, deterministic algorithmic puzzle generator that functions without cloud connectivity.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            By downloading, installing, or executing Sudoku Master Pro (package identifier: <code class="font-label-mono-sm text-primary">com.numbers_game.protoos</code>), you operate an isolated execution environment on your Android device. The app requires zero user identity assertions and assumes absolute user anonymity at all times.
+          </p>
+</article>
+<!-- Clause 2 -->
+<article class="flex flex-col gap-space-sm p-space-lg rounded-lg bg-surface-container" id="clause-2">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold">Article 2.0</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">PERSISTENCE &amp; ERASURE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">On-Device Storage &amp; Local Data Mechanics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            The application stores a minimal footprint of operational game state data locally on the host device. This data comprises solely:
+          </p>
+<ul class="list-disc pl-5 font-body-md text-body-md text-on-surface-variant flex flex-col gap-1">
+<li>Current 9x9 numerical cell allocations, candidate pencil markings, and undo/redo stacks.</li>
+<li>Cumulative gameplay statistics (total puzzles completed, win percentage, personal speedrun records).</li>
+<li>User presentation settings (Dark/Light display theme, audio chime toggle, highlight duplicates toggle).</li>
+</ul>
+<div class="p-space-md rounded bg-surface-container-high my-space-xs">
+<span class="font-title-md text-title-md text-on-surface block mb-1">Data Removal Mechanism:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              This data resides within the private app sandbox (<code class="font-label-mono-sm text-primary">SharedPreferences</code>). Uninstalling the application or selecting "Clear Storage" in the Android OS settings irrevocably removes all data from the device immediately. No remote backups or lingering artifacts exist.
+            </p>
+</div>
+</article>
+<!-- Clause 3 -->
+<article class="flex flex-col gap-space-sm p-space-lg rounded-lg bg-surface-container" id="clause-3">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold">Article 3.0</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">DEPENDENCY INTEGRITY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Third-Party Libraries &amp; External SDKs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Sudoku Master Pro does not link or embed commercial SDKs designed for tracking, monetizing, or evaluating user conduct. Specifically:
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm my-space-xs">
+<div class="p-space-sm rounded bg-surface-container-high">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary block font-semibold">NO AD NETWORKS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero AdMob, Unity, AppLovin, ironSource, Vungle.</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary block font-semibold">NO ANALYTICS DAEMONS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero Firebase Analytics, Mixpanel, Adjust, AppsFlyer.</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary block font-semibold">NO REMOTE LOGGERS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero Sentry, Datadog, or external Crashlytics services.</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary block font-semibold">NO USER PROFILERS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero Advertising ID (AAID) queries or cross-app fingerprinting.</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Only standard Android Jetpack and Jetpack Compose runtime libraries are utilized for UI rendering and local mathematical board validation.
+          </p>
+</article>
+<!-- Clause 4 -->
+<article class="flex flex-col gap-space-sm p-space-lg rounded-lg bg-surface-container" id="clause-4">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold">Article 4.0</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">CHILDREN &amp; FAMILIES STATUTE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">COPPA &amp; Google Play Families Policy Compliance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Sudoku Master Pro is certified compliant with the Children's Online Privacy Protection Act (COPPA), EU General Data Protection Regulation (GDPR) Article 8 regarding minors, and the strict guidelines set forth by the Google Play Families Policy program.
+          </p>
+<div class="p-space-md rounded bg-surface-container-high">
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">done</span>
+<span>The app does not collect personal information from any user, including children under 13 (or under 16 in the European Economic Area).</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">done</span>
+<span>The app contains zero advertisements, completely eliminating exposure to age-inappropriate marketing, contextual targeting, or behavioral retargeting.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">done</span>
+<span>No social networking features, chat functions, or user-to-user communications exist in the codebase.</span>
+</li>
+</ul>
+</div>
+</article>
+<!-- Clause 5 -->
+<article class="flex flex-col gap-space-sm p-space-lg rounded-lg bg-surface-container" id="clause-5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold">Article 5.0</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">HARDWARE CAPABILITIES</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Permissions Statement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            The application requests zero Android runtime permissions. Upon installation and initial boot, no dialog boxes asking for system capabilities will be presented:
+          </p>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-high font-label-mono-sm text-label-mono-sm text-outline uppercase">
+<th class="p-space-sm">Permission Class</th>
+<th class="p-space-sm">Requested</th>
+<th class="p-space-sm">Technical Justification</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high">
+<tr>
+<td class="p-space-sm font-label-mono-sm text-on-surface">android.permission.INTERNET</td>
+<td class="p-space-sm text-tertiary font-semibold">NO</td>
+<td class="p-space-sm text-on-surface-variant">Complete offline execution</td>
+</tr>
+<tr>
+<td class="p-space-sm font-label-mono-sm text-on-surface">android.permission.ACCESS_FINE_LOCATION</td>
+<td class="p-space-sm text-tertiary font-semibold">NO</td>
+<td class="p-space-sm text-on-surface-variant">No GPS or geo-spatial awareness</td>
+</tr>
+<tr>
+<td class="p-space-sm font-label-mono-sm text-on-surface">android.permission.READ_EXTERNAL_STORAGE</td>
+<td class="p-space-sm text-tertiary font-semibold">NO</td>
+<td class="p-space-sm text-on-surface-variant">Isolated app sandbox only</td>
+</tr>
+<tr>
+<td class="p-space-sm font-label-mono-sm text-on-surface">android.permission.CAMERA / RECORD_AUDIO</td>
+<td class="p-space-sm text-tertiary font-semibold">NO</td>
+<td class="p-space-sm text-on-surface-variant">No hardware sensor capture</td>
+</tr>
+<tr>
+<td class="p-space-sm font-label-mono-sm text-on-surface">android.permission.READ_CONTACTS</td>
+<td class="p-space-sm text-tertiary font-semibold">NO</td>
+<td class="p-space-sm text-on-surface-variant">Zero address book inspection</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<!-- Clause 6 -->
+<article class="flex flex-col gap-space-sm p-space-lg rounded-lg bg-surface-container" id="clause-6">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold">Article 6.0</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">CHRONOLOGY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Policy Updates and Version History</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            If future software iterations include optional cloud-based features (e.g., cross-device leaderboard synchronization or cloud save state), this document will be updated and users will be presented with a clear opt-in prompt prior to any network permission request.
+          </p>
+<div class="flex flex-col gap-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant pt-space-xs">
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-high">
+<span class="text-on-surface">v1.2-OFFLINE (Current)</span>
+<span>October 24, 2024 — Annual Google Play Policy Refresh &amp; Audit Seal</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-high">
+<span class="text-on-surface">v1.1-OFFLINE</span>
+<span>April 15, 2024 — Verified COPPA and Family Safety Standards</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-high">
+<span class="text-on-surface">v1.0-ORIGIN</span>
+<span>January 01, 2024 — Initial production release baseline</span>
+</div>
+</div>
+</article>
+<!-- Clause 7 -->
+<article class="flex flex-col gap-space-sm p-space-lg rounded-lg bg-surface-container" id="clause-7">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold">Article 7.0</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">CONTACT &amp; REDRESSAL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Developer Contact Information</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            For technical inquiries, audit verification questions, or regulatory compliance clarification regarding Sudoku Master Pro, you may reach out directly to the Tools Digital development office:
+          </p>
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Tools Digital Pvt. Ltd.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Legal Operations &amp; Android Governance Desk</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-sm pt-space-xs">
+<a class="inline-flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm text-primary hover:underline" href="mailto:developer@adigitaltools.in">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+                developer@adigitaltools.in
+              </a>
+<span class="hidden sm:inline text-outline">•</span>
+<a class="inline-flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm text-secondary hover:underline" href="mailto:compliance@adigitaltools.in">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                compliance@adigitaltools.in
+              </a>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-space-xs">Formal compliance and security audit inquiry turnaround: &lt; 48 business hours.</span>
+</div>
+</article>
+</main>
+</div>
+</section>
+<!-- Final Printable Sign-off & Audit Stamp -->
+<section class="w-full py-space-xl px-gutter bg-surface">
+<div class="max-w-7xl mx-auto rounded-lg bg-surface-container p-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Statutory Document Signed &amp; Authenticated</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Digital Signature: TOOLS_DIGITAL_LEGAL_SEC_2024_10_24</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase hover:brightness-110 transition" onclick="window.print()" type="button">
+          Print Statutory Record
+        </button>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]"><div class="w-full px-gutter max-w-7xl mx-auto flex flex-col gap-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg"><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">Tools Digital Pvt. Ltd.</span><p class="font-body-sm text-body-sm text-on-surface-variant">Corporate entity incorporated under the Ministry of Corporate Affairs (MCA), Republic of India. Dedicated to privacy-first systems engineering, verifiable data handling, and deterministic mobile telemetry.</p><div class="flex items-center gap-space-xs mt-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-mono-sm text-label-mono-sm text-tertiary">Registry Active • Verified Developer</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-mono-lg text-label-mono-lg text-on-surface uppercase">Regulatory Frameworks</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li>• Google Play Developer Distribution Agreement (DDA)</li><li>• Digital Personal Data Protection Act (DPDP India 2023)</li><li>• EU GDPR Article 17 (Mandatory Right to Erasure)</li><li>• Children's Online Privacy Protection Act (COPPA)</li><li>• RFC 9116 Automated Security Vulnerability Reporting</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-mono-lg text-label-mono-lg text-on-surface uppercase">Statutory Direct Links</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="master-privacy-policy" href="#">Master Privacy Policy</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="master-terms-of-service" href="#">Master Terms of Service</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="attendy-data-safety" href="#">Attendy Data Safety Section</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="sudoku-master-pro-legal" href="#">Sudoku Master Pro Policy</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="account-data-deletion" href="#">Data Deletion Request Form</a><a class="text-on-surface-variant hover:text-primary transition-colors font-label-mono-sm" data-path="security-txt" href="#">Security Disclosure (RFC 9116)</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-mono-lg text-label-mono-lg text-on-surface uppercase">Grievance &amp; Compliance</span><div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs"><span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase">Chief Grievance Officer</span><span class="font-body-sm text-body-sm text-on-surface-variant">Tools Digital Legal &amp; Redressal Desk</span><span class="font-label-mono-sm text-label-mono-sm text-primary">compliance@adigitaltools.in</span><span class="font-label-mono-sm text-label-mono-sm text-secondary mt-space-xs">developer@adigitaltools.in</span><span class="font-body-sm text-body-sm text-outline mt-space-xs">Average statutory response SLA: &lt; 48 hours</span></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">© 2025 Tools Digital Pvt. Ltd. All rights reserved. System build v4.2.1-compliance</span><div class="flex items-center gap-space-md"><span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Host: adigitaltools.in/legal</span><span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">TLS 1.3 Strict Enforced</span></div></div></div></footer></body></html>

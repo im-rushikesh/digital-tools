@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#0b1326", "error-container": "#93000a", "secondary-fixed-dim": "#80d5cb", "on-tertiary-fixed-variant": "#00513a", "slate-border": "#334155", "on-secondary-fixed-variant": "#00504a", "on-error-container": "#ffdad6", "on-primary-container": "#00423b", "secondary": "#80d5cb", "alert-amber": "#F59E0B", "canvas-light": "#F8FAFC", "surface-container-high": "#222a3d", "primary-container": "#14b8a6", "inverse-primary": "#006b5f", "on-tertiary": "#003827", "on-primary-fixed-variant": "#005048", "tertiary": "#7bd8b1", "inverse-on-surface": "#283044", "primary-fixed-dim": "#4fdbc8", "primary-fixed": "#71f8e4", "error": "#ffb4ab", "on-background": "dae2fd", "on-primary": "#003731", "surface-container-highest": "#2d3449", "on-secondary-container": "#9af0e5", "on-secondary": "#003733", "secondary-container": "#007068", "on-tertiary-container": "#00432f", "on-surface-variant": "#bbcac6", "tertiary-container": "#58b590", "surface-variant": "#2d3449", "surface-container-low": "#131b2e", "tertiary-fixed": "#97f5cc", "on-secondary-fixed": "#00201d", "surface-dim": "#0b1326", "surface": "#0b1326", "on-error": "#690005", "on-surface": "#dae2fd", "tertiary-fixed-dim": "#7bd8b1", "secondary-fixed": "#9cf2e8", "surface-container": "#171f33", "slate-surface": "#1E293B", "surface-tint": "#4fdbc8", "outline": "#859490", "primary": "#4fdbc8", "outline-variant": "#3c4947", "surface-bright": "#31394d", "on-tertiary-fixed": "#002115", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "on-primary-fixed": "#00201c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-mono-sm": [ "JetBrains Mono" ], "display-hero": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "headline-md": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "body-md": [ "Inter" ], "label-mono-lg": [ "JetBrains Mono" ], "title-md": [ "Inter" ] }, "fontSize": { "label-mono-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "label-mono-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Precision geometric tech logo for 'Tools Digital'. An intertwined hexagonal circuit gear merged with a stylized agricultural leaf and digital node network. Minimal, clean vector badge, technical emerald teal (#14B8A6) and crisp cyan accents on dark industrial background.. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">Tools Digital <span class="text-primary font-normal">| AgriTech Division</span></span><div class="flex items-center gap-space-xs mt-0.5"><span class="inline-flex items-center px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase tracking-wider">AGRICULTURE PORTAL (/agriculture)</span></div></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="overview" href="#overview">Overview</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="problems-and-solutions" href="#problems">Problems &amp; Solutions</a><a aria-current="page" class="transition-colors py-space-xs px-space-sm bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="hardware-and-devices" href="#hardware">Hardware &amp; Devices</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="real-life-impact" href="#impact">Real-life Impact</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="farmer-support-and-hotline" href="#support">Farmer Support &amp; Hotline</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm flex items-center gap-space-xs" data-path="back-to-main-portal" href="/"><span class="text-primary-fixed">←</span> Main Portal</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-mono-sm text-label-mono-sm gap-space-xs"><span class="text-primary font-bold">EN</span><span class="text-outline-variant">|</span><span class="hover:text-on-surface cursor-pointer">हिन्दी</span><span class="text-outline-variant">|</span><span class="hover:text-on-surface cursor-pointer">मराठी</span></div><a class="inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase px-space-md py-space-sm rounded shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-semibold" href="#support"><span class="material-symbols-outlined text-[18px]">chat</span><span>WhatsApp Farmer Help</span></a><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[18px]">dark_mode</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Catalog Section -->
+<section class="w-full px-gutter py-space-xl">
+<!-- Top System Header & Spec Filter Bar -->
+<div class="w-full max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Operational Header Ribbon -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-md border-b border-slate-border/50">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-primary tracking-widest">SPECIFICATION CATALOG // REVISION 2.4</span>
+<span class="text-outline-variant font-label-mono-sm text-label-mono-sm">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SUB-GHZ TELEMETRY &amp; HARDWARE CONTROLS</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Proprietary Field Hardware Systems</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Deterministic edge controllers, low-frequency telemetry nodes, and rugged agronomic sensors built for severe agricultural grids and zero-connectivity field conditions.
+          </p>
+</div>
+<!-- Telemetry Summary KPI Badges -->
+<div class="flex items-center gap-space-md self-start md:self-auto bg-surface-container px-space-md py-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Catalog SKU Total</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">5 Systems</span>
+</div>
+<div class="w-px h-8 bg-slate-border"></div>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Hardware Core</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Offline-First</span>
+</div>
+</div>
+</div>
+<!-- Controls & Multi-Parameter Filter Engine -->
+<div class="w-full bg-surface-container rounded-lg p-space-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Filter Pills -->
+<div class="flex flex-wrap items-center gap-space-xs" id="category-filter-group">
+<button class="filter-pill active px-space-md py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase transition-colors bg-primary text-on-primary font-semibold" data-filter="all">
+            All Devices (5)
+          </button>
+<button class="filter-pill px-space-md py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase transition-colors bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium" data-filter="irrigation">
+            Irrigation &amp; Pump Control
+          </button>
+<button class="filter-pill px-space-md py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase transition-colors bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium" data-filter="soil">
+            Soil &amp; Sensing
+          </button>
+<button class="filter-pill px-space-md py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase transition-colors bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium" data-filter="protection">
+            Crop Protection
+          </button>
+<button class="filter-pill px-space-md py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase transition-colors bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium" data-filter="livestock">
+            Livestock Telemetry
+          </button>
+</div>
+<!-- Spec Search & Tag Quick-Selectors -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<div class="relative flex-grow sm:w-64">
+<span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-space-sm py-1.5 rounded bg-surface-container-lowest text-on-surface font-label-mono-sm text-label-mono-sm placeholder-on-surface-variant/60 focus:outline-none focus:bg-surface-container-high transition-colors" id="hardware-search" placeholder="Search spec: Sub-GHz, IP66..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 sm:pb-0">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant hidden xl:inline">Tags:</span>
+<button class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-slate-surface" onclick="applySearchTag('Sub-GHz')">Sub-GHz</button>
+<button class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-slate-surface" onclick="applySearchTag('Solar')">Solar</button>
+<button class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-slate-surface" onclick="applySearchTag('IP66')">IP66</button>
+<button class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm hover:bg-slate-surface" onclick="applySearchTag('3-Phase')">3-Phase</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Grid / Listing -->
+<div class="w-full max-w-7xl mx-auto mt-space-xl flex flex-col gap-space-xl" id="product-container">
+<!-- Product 1: TD-RF12K (Flagship Hero Card) -->
+<div class="product-item w-full bg-slate-surface rounded-lg p-space-lg flex flex-col lg:flex-row gap-space-xl shadow-lg relative overflow-hidden" data-category="irrigation" data-keywords="sub-ghz 3-phase ip66 starter relay dol star-delta radio 415v pump controller">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+<!-- Left: Image & Visual Badge System -->
+<div class="lg:w-5/12 flex flex-col justify-between">
+<div class="relative w-full h-80 rounded bg-surface-container-lowest overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Rugged industrial IP66 field pump automation controller enclosure mounted on steel agricultural post in high-contrast daylight, dual heavy-duty Sub-GHz rubber whip antennas, technical LED indicators glowing turquoise and amber, matte industrial finish with weather seals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMMxDyQDQ-OZaUrcIQGxDc-flqQMeJGLB73LnC73M2NDslNFgaNBEDw1l3_WlQJ5mT-5OtfmkR2FopbcDUfp4Lglq3yY_VmcM9SFhvx4MU3yOhKKeJra4gixqJGP3UiiTDgLPciARnXkzi62jTuVfOjQ6aNhP8KLHBbCgtFutQUBvVsm_UBUXDVevuDmvS7vKJWyxPgarVXy-KeGg6IlEjmoDu8pKWtUXRbrxJo6Rg-subWLWKoTkG"/>
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-space-xs">
+<span class="px-2 py-0.5 rounded-sm bg-primary/20 text-primary font-label-mono-sm text-label-mono-sm font-semibold tracking-wider">AVAILABLE • FLAGSHIP</span>
+<span class="px-2 py-0.5 rounded-sm bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-label-mono-sm">TD-RF12K</span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm bg-surface-container-lowest/90 px-space-sm py-1 rounded font-label-mono-sm text-label-mono-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span>
+<span>10-12 km Line-of-Sight RF</span>
+</div>
+</div>
+<!-- Feature Bullets (High-density) -->
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">sim_card_download</span>
+<span class="font-label-mono-sm text-label-mono-sm font-semibold">Zero SIM Fees</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">Autonomous RF link with no recurring monthly billing.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center gap-1 text-alert-amber">
+<span class="material-symbols-outlined text-[16px]">electric_meter</span>
+<span class="font-label-mono-sm text-label-mono-sm font-semibold">Auto Single-Phase Trip</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">Prevents coil burn on sudden grid phase drop.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]">emergency_home</span>
+<span class="font-label-mono-sm text-label-mono-sm font-semibold">Remote Stop</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">Deterministic field kill switch within 400ms.</p>
+</div>
+</div>
+</div>
+<!-- Right: Technical Specifications & Action Panel -->
+<div class="lg:w-7/12 flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant tracking-wider uppercase">SUB-GHZ TELEMETRY PUMP AUTOMATION</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">2-YEAR FULL REPLACEMENT WARRANTY</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">
+              Radio-based Remote Pump Controller <span class="text-primary font-mono">(TD-RF12K)</span>
+</h2>
+<p class="font-body-md text-body-md text-secondary-fixed-dim font-medium">
+              10-12 km Line-of-Sight RF Control with Zero Cellular/Internet Dependency
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Engineered specifically for agricultural borewells situated in mobile blackspots. The system bridges severe 3-phase grid volatility with an ultra-rugged handheld transceiver, guaranteeing fail-safe motor ignition, real-time power confirmation, and complete single-phasing protection.
+            </p>
+<!-- Technical Specification Table Grid -->
+<div class="mt-space-sm bg-surface-container-lowest rounded overflow-hidden">
+<div class="grid grid-cols-2 sm:grid-cols-4 bg-surface-container-high/60 px-space-md py-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider">
+<span>Parameter</span>
+<span class="col-span-1 sm:col-span-3">Engineering Value / Tolerance</span>
+</div>
+<div class="divide-y divide-slate-border/30 font-body-sm text-body-sm">
+<div class="grid grid-cols-2 sm:grid-cols-4 px-space-md py-2.5">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Operating Range</span>
+<span class="col-span-1 sm:col-span-3 text-on-surface font-medium">10-12 km Line-of-Sight (Sub-GHz 865-867 MHz ISM Band, Penetrative Fresnel Zone)</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 px-space-md py-2.5 bg-surface-container-low/40">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Power Supply</span>
+<span class="col-span-1 sm:col-span-3 text-on-surface font-medium">415V AC 3-Phase standard compatibility with active MOV surge protection up to 6kV</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 px-space-md py-2.5">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Chassis Enclosure</span>
+<span class="col-span-1 sm:col-span-3 text-on-surface font-medium">Heavy-duty IP66 weatherproof polycarbonate, UV stabilized, anti-corrosive brass glands</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 px-space-md py-2.5 bg-surface-container-low/40">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Acknowledge Feedback</span>
+<span class="col-span-1 sm:col-span-3 text-on-surface font-medium">Two-way acknowledgment buzzer + Bi-color LED confirmation diode on remote handset</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 px-space-md py-2.5">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Starter Interfacing</span>
+<span class="col-span-1 sm:col-span-3 text-on-surface font-medium">Direct dry-contact 30A relays; factory harness for Direct-Online (DOL) &amp; Star-Delta starters</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="mt-space-lg pt-space-md border-t border-slate-border/50 flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-primary"><span class="material-symbols-outlined text-[16px]">verified</span> Pre-calibrated</span>
+<span>•</span>
+<span>Fast 25-Min Starter Wireup</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Datasheet (PDF)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-lg py-2 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:bg-primary-fixed transition-colors" onclick="openQuoteModal('TD-RF12K')">
+<span class="material-symbols-outlined text-[18px]">engineering</span>
+<span>Request Field Demo / Quote</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Split: Product 2 & Product 3 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+<!-- Product 2: TD-SOIL4P -->
+<div class="product-item bg-slate-surface rounded-lg p-space-lg flex flex-col justify-between shadow-lg" data-category="soil" data-keywords="npk ph ec soil probe type-c portable bluetooth ble sensing">
+<div class="flex flex-col gap-space-md">
+<div class="relative w-full h-64 rounded bg-surface-container-lowest overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High precision agricultural portable soil testing wand with quad stainless steel probes inserted into crumbly loamy field soil, transflective digital readout showing NPK nitrogen phosphorus potassium values in bright daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwgG9fHhCAbyXb-Og0dKWcVTJ0T6GlZTeuVUHID0CXCFFVixvB_o-wW1mQDTrVU2AX-O1ZrCZ2H1NS68uOCqPkyBECd9V8HRDUAAIjB0oQC8fAhIU8AF_T8I8-UmF6597APJULnSJ7MlkJ6bMQ1VNJl8VRDJjXdtIfRVDCyXQsdLrczpQkaW5VDJRNRVT5B-hIRTKuOWlHCNvYpdgTDUPaTXxiHrILKu8tGvAXCMsfcmMbtKxnesIk"/>
+<div class="absolute top-space-sm left-space-sm flex gap-space-xs">
+<span class="px-2 py-0.5 rounded-sm bg-alert-amber/20 text-alert-amber font-label-mono-sm text-label-mono-sm font-semibold tracking-wider">BETA • FIELD PORTABLE</span>
+<span class="px-2 py-0.5 rounded-sm bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-label-mono-sm">TD-SOIL4P</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-1 rounded font-label-mono-sm text-label-mono-sm text-primary">
+                8-Sec Fast Readout
+              </div>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">MULTI-PARAMETER SOIL SENSING</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">BLE 5.2 / USB-C</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">
+                Digital Soil Testing Device <span class="text-primary font-mono">(TD-SOIL4P)</span>
+</h2>
+<p class="font-body-md text-body-md text-secondary-fixed-dim mt-1 font-medium">
+                On-the-spot NPK, pH, and Electrical Conductivity Readouts in 8 Seconds
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Eliminates multi-week laboratory waits. Provides instant agronomic guidance directly at the borehole with soil temperature compensation and offline encrypted data logging.
+              </p>
+</div>
+<!-- Specs Grid -->
+<div class="bg-surface-container-lowest rounded p-space-sm flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Sensor Probe</span>
+<span class="text-on-surface font-medium text-right">Quad-pin 316L medical-grade stainless steel</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Sample Response</span>
+<span class="text-on-surface font-medium text-right">8 seconds per probe insertion depth</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Display Core</span>
+<span class="text-on-surface font-medium text-right">2.4" Sunlight transflective LCD (zero glare)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Battery &amp; Charging</span>
+<span class="text-on-surface font-medium text-right">40-hr runtime on single Type-C fast charge</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Data Memory</span>
+<span class="text-on-surface font-medium text-right">500 offline borehole records + optional BLE sync</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-md border-t border-slate-border/50 flex items-center justify-between gap-space-sm">
+<button class="inline-flex items-center gap-1 px-space-sm py-2 rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Calibration Guide</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded bg-secondary-container text-on-secondary-container font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:brightness-110 transition-all" onclick="openQuoteModal('TD-SOIL4P')">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Pre-order Beta Batch</span>
+</button>
+</div>
+</div>
+<!-- Product 3: TD-AUTOPUMP -->
+<div class="product-item bg-slate-surface rounded-lg p-space-lg flex flex-col justify-between shadow-lg" data-category="irrigation" data-keywords="soil-moisture closed-loop dry run pump 30a relay automated autonomous retrofit">
+<div class="flex flex-col gap-space-md">
+<div class="relative w-full h-64 rounded bg-surface-container-lowest overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Compact grey industrial wall-mounted electrical pump controller with clear lid displaying solid state relays, heavy-duty wiring connections, and illuminated moisture threshold diodes mounted inside a pump shed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE0WfDvP7ltLOoDpYhvwobHHhG8g0J2eQLviWdHuV7iTtku2DzS_1EdCEomWGWeQSk236dQgqluTIHAOjUfz_Jwp-CoNKhMQ15gtOn_qaqlpJreg3ZRMdxk9dDyhBZCPrNmIuB2Q_M98kot4nhw4KhqIOLKFVAmjr6BsbcJ2N2ii5A4tu0U6xRN_unwpSGIlxkOJy8KOttHDD7W2QADgWdYwzPwTGqcuKY96TpEAkgUPsW-fX5wMan"/>
+<div class="absolute top-space-sm left-space-sm flex gap-space-xs">
+<span class="px-2 py-0.5 rounded-sm bg-primary/20 text-primary font-label-mono-sm text-label-mono-sm font-semibold tracking-wider">AVAILABLE • RETROFIT READY</span>
+<span class="px-2 py-0.5 rounded-sm bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-label-mono-sm">TD-AUTOPUMP</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-1 rounded font-label-mono-sm text-label-mono-sm text-secondary">
+                Autonomous Closed-Loop
+              </div>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">EDGE AUTOMATION CONTROLLER</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">30A SOLID-STATE RELAY</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">
+                Automatic Closed-Loop Pump Controller <span class="text-primary font-mono">(TD-AUTOPUMP)</span>
+</h2>
+<p class="font-body-md text-body-md text-secondary-fixed-dim mt-1 font-medium">
+                Autonomous Soil-Moisture Triggered Pump Cycling
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Eliminates over-irrigation and root rot. Couples continuous soil tension measurements with motor relay triggers, stopping immediately if borehole water yield runs dry.
+              </p>
+</div>
+<!-- Specs Grid -->
+<div class="bg-surface-container-lowest rounded p-space-sm flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Sensor Ingestion</span>
+<span class="text-on-surface font-medium text-right">Dual 15-60 cm subterranean capacitance probes</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Safety Interlock</span>
+<span class="text-on-surface font-medium text-right">Auto-Dry Run Cutoff via current delta detection</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Switching Capacity</span>
+<span class="text-on-surface font-medium text-right">30A Continuous Heavy Duty Contact Relays</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Compute Topology</span>
+<span class="text-on-surface font-medium text-right">Standalone Edge Logic (Zero Cloud Latency)</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Installation</span>
+<span class="text-on-surface font-medium text-right">Universal DIN-rail starter retrofit in 15 minutes</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-md border-t border-slate-border/50 flex items-center justify-between gap-space-sm">
+<button class="inline-flex items-center gap-1 px-space-sm py-2 rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Wiring Diagram</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:bg-primary-fixed transition-colors" onclick="openQuoteModal('TD-AUTOPUMP')">
+<span class="material-symbols-outlined text-[16px]">request_quote</span>
+<span>Get Pricing / Order</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 2-Column Split: Product 4 & Product 5 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+<!-- Product 4: TD-DETER800 -->
+<div class="product-item bg-slate-surface rounded-lg p-space-lg flex flex-col justify-between shadow-lg" data-category="protection" data-keywords="wild animal acoustic deterrent solar ip66 lifepo4 bio-acoustic sound border protection">
+<div class="flex flex-col gap-space-md">
+<div class="relative w-full h-64 rounded bg-surface-container-lowest overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Hexagonal weatherized solar-powered bio-acoustic sound emitter device mounted on wooden perimeter fence post at the edge of an agricultural farm overlooking crop rows during late sunset." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3nqFaa7abcFfH6Hnh5lhc1fYrYl8ayfS4zuVgmR-cRYn6JsCnNI8SKrMdk4QLDaIO0Vz7UbLBmboalVBQP9ux1j4tnWowrzt-cNMzzgVZignvn4x6horsb8ZR-J-xzjhkbAAb-0Ytdg9L4VCOysj-1xWnpPPD1Vvyt4NMaPsEPiqNwFxc1uSoHPsFF5mlXcKBhGU1KCOEiySbtYjF7nk_VpFkMFrCSGIM1_OGDR_f9xIqlGy6VV8Z"/>
+<div class="absolute top-space-sm left-space-sm flex gap-space-xs">
+<span class="px-2 py-0.5 rounded-sm bg-tertiary/20 text-tertiary font-label-mono-sm text-label-mono-sm font-semibold tracking-wider">FIELD TESTED • SOLAR POWERED</span>
+<span class="px-2 py-0.5 rounded-sm bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-label-mono-sm">TD-DETER800</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-1 rounded font-label-mono-sm text-label-mono-sm text-primary">
+                250m Bio-Acoustic Radius
+              </div>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">PERIMETER WILDLIFE DEFENSE</span>
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber">NON-LETHAL HARMONIC</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">
+                Wild-Animal Acoustic Deterrent <span class="text-primary font-mono">(TD-DETER800)</span>
+</h2>
+<p class="font-body-md text-body-md text-secondary-fixed-dim mt-1 font-medium">
+                Bio-Acoustic Multi-Frequency Sound Shield for Crop Borders
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Safeguards standing sugar cane, maize, and orchards against wild boar, nilgai, and deer incursions without lethal electric fences or hazardous chemical toxins.
+              </p>
+</div>
+<!-- Specs Grid -->
+<div class="bg-surface-container-lowest rounded p-space-sm flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Coverage Radius</span>
+<span class="text-on-surface font-medium text-right">250m 360-degree radial sweep (~4.8 Acres per unit)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Autonomous Power</span>
+<span class="text-on-surface font-medium text-right">10W Monocrystalline panel + 12.8V LiFePO4 battery</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Enclosure Integrity</span>
+<span class="text-on-surface font-medium text-right">IP66 High-impact copolymer chassis with insect barrier</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Acoustic Sequencing</span>
+<span class="text-on-surface font-medium text-right">Pseudorandomized multi-frequency (Prevents habituation)</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Light Strobe Support</span>
+<span class="text-on-surface font-medium text-right">Integrated 800-lumen pulsed nocturnal PIR strobe</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-md border-t border-slate-border/50 flex items-center justify-between gap-space-sm">
+<button class="inline-flex items-center gap-1 px-space-sm py-2 rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Field Study Whitepaper</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:bg-primary-fixed transition-colors" onclick="openQuoteModal('TD-DETER800')">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Order Perimeter Units</span>
+</button>
+</div>
+</div>
+<!-- Product 5: TD-TAG-LORA -->
+<div class="product-item bg-slate-surface rounded-lg p-space-lg flex flex-col justify-between shadow-lg" data-category="livestock" data-keywords="livestock herd ear tag geofencing ble sub-ghz lora battery gps telemetry">
+<div class="flex flex-col gap-space-md">
+<div class="relative w-full h-64 rounded bg-surface-container-lowest overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Lightweight yellow ear-tag telemetry sensor tagged onto cattle in green pasture with small integrated antenna and low power LED indicator, clear focus on technological durability in rural conditions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB63ukHwtUGJjMs6GiTB1a2YnIZ2mGWt-C7WBx5QMw2TmRRJ2rlI04b1vY68RBewR3kiOuXHpimy5-lD3GTQ9fNVF_ERD2AzrtYDuRvm3vuigf4uATcc_K_8e8EA_JBYF-3r9KDJEqdTuh_4oH7S_9g8JR2sge5R8mc6ETOhRRv7raWZ3D9aOI4GOFwUCSGupYMWjxNFI672rFyeHM1ByVVWQE2KvEA_M4ju48GEUPb4BbNlj48DBbV"/>
+<div class="absolute top-space-sm left-space-sm flex gap-space-xs">
+<span class="px-2 py-0.5 rounded-sm bg-primary/20 text-primary font-label-mono-sm text-label-mono-sm font-semibold tracking-wider">PILOT • BLE + SUB-GHZ</span>
+<span class="px-2 py-0.5 rounded-sm bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-label-mono-sm">TD-TAG-LORA</span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-1 rounded font-label-mono-sm text-label-mono-sm text-secondary">
+                3-Year Continuous Coin Cell
+              </div>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">RANGELAND TELEMETRY &amp; GEOFENCE</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">5 KM HUB RADIUS</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">
+                Livestock &amp; Crop Telemetry Tag System <span class="text-primary font-mono">(TD-TAG-LORA)</span>
+</h2>
+<p class="font-body-md text-body-md text-secondary-fixed-dim mt-1 font-medium">
+                Low-Power Herd Geofencing and Micro-Climate Health Monitoring
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Affixed safely to cattle ears or field stakes. Dispatches instant SMS / Buzzer alarms upon fence breaches, rumination anomalies, or localized micro-frost drops.
+              </p>
+</div>
+<!-- Specs Grid -->
+<div class="bg-surface-container-lowest rounded p-space-sm flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Weight &amp; Attachment</span>
+<span class="text-on-surface font-medium text-right">38g ultra-light per tag (Veterinary ISO standard)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Battery Lifespan</span>
+<span class="text-on-surface font-medium text-right">3-year internal industrial lithium thionyl coin cell</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Base Station Link</span>
+<span class="text-on-surface font-medium text-right">5 km star network to solar-backed Tools Digital hub</span>
+</div>
+<div class="flex justify-between py-1 border-b border-slate-border/20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Alarm Triggers</span>
+<span class="text-on-surface font-medium text-right">Geofence breach, immobility alert, thermal spike</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">On-Device Sensors</span>
+<span class="text-on-surface font-medium text-right">3-axis accelerometer + ambient temperature sensor</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-md border-t border-slate-border/50 flex items-center justify-between gap-space-sm">
+<button class="inline-flex items-center gap-1 px-space-sm py-2 rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Pilot Spec Sheet</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:bg-primary-fixed transition-colors" onclick="openQuoteModal('TD-TAG-LORA')">
+<span class="material-symbols-outlined text-[16px]">group_add</span>
+<span>Join Hardware Pilot</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State for Filters -->
+<div class="hidden w-full max-w-7xl mx-auto mt-space-xl p-space-xl bg-surface-container text-center rounded-lg" id="no-results">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant">search_off</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2 font-medium">No matching hardware specifications found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Try resetting the keyword filter or selecting 'All Devices'.</p>
+<button class="mt-space-md px-space-md py-2 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold" onclick="resetFilters()">
+        Reset All Hardware Filters
+      </button>
+</div>
+<!-- Architectural Hardware Comparison Table -->
+<div class="w-full max-w-7xl mx-auto mt-24 flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-sm border-b border-slate-border/50">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider font-semibold">ENGINEERING MATRIX</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Full System Comparison Specifications</h2>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+<span>All 5 Systems Covered by Tools Digital 2-Year Full Replacement Guarantee</span>
+</div>
+</div>
+<!-- Comparison Data Table -->
+<div class="w-full bg-slate-surface rounded-lg overflow-x-auto shadow-lg">
+<table class="w-full text-left border-collapse min-w-[760px]">
+<thead>
+<tr class="bg-surface-container-lowest font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider border-b border-slate-border">
+<th class="py-space-md px-space-md">Device Model / SKU</th>
+<th class="py-space-md px-space-md">Primary Power Source</th>
+<th class="py-space-md px-space-md">Operational Range</th>
+<th class="py-space-md px-space-md">Enclosure Rating</th>
+<th class="py-space-md px-space-md">Primary Interface</th>
+<th class="py-space-md px-space-md">Replacement Warranty</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-border/40 font-body-sm text-body-sm">
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-title-md text-title-md text-on-surface font-semibold">TD-RF12K</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Remote Pump Controller</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface">415V AC 3-Phase (6kV Surge) + Handset 9V</td>
+<td class="py-space-md px-space-md text-primary font-label-mono-sm text-label-mono-sm font-semibold">10-12 km Line-of-Sight RF</td>
+<td class="py-space-md px-space-md text-on-surface">IP66 Weatherproof Polycarb</td>
+<td class="py-space-md px-space-md text-on-surface">Sub-GHz Handset + Buzzer</td>
+<td class="py-space-md px-space-md text-tertiary font-medium">2-Year Replacement</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-title-md text-title-md text-on-surface font-semibold">TD-SOIL4P</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Digital Soil Tester</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface">Rechargeable Li-Ion (USB-C Fast Charge)</td>
+<td class="py-space-md px-space-md text-on-surface font-label-mono-sm text-label-mono-sm">Point-of-contact (8s response)</td>
+<td class="py-space-md px-space-md text-on-surface">IP65 Field Resistant + 316L Probes</td>
+<td class="py-space-md px-space-md text-on-surface">2.4" Transflective LCD + BLE</td>
+<td class="py-space-md px-space-md text-tertiary font-medium">2-Year Replacement</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-title-md text-title-md text-on-surface font-semibold">TD-AUTOPUMP</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Closed-Loop Pump Controller</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface">230V / 415V AC Direct Grid Tap</td>
+<td class="py-space-md px-space-md text-on-surface font-label-mono-sm text-label-mono-sm">Direct Probe Tether (15-60 cm)</td>
+<td class="py-space-md px-space-md text-on-surface">IP65 DIN-Enclosure</td>
+<td class="py-space-md px-space-md text-on-surface">Front Dial &amp; State LED Panel</td>
+<td class="py-space-md px-space-md text-tertiary font-medium">2-Year Replacement</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-title-md text-title-md text-on-surface font-semibold">TD-DETER800</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Acoustic Animal Deterrent</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface">10W Solar + 12.8V LiFePO4 Cell</td>
+<td class="py-space-md px-space-md text-primary font-label-mono-sm text-label-mono-sm font-semibold">250m Acoustic Radius (360°)</td>
+<td class="py-space-md px-space-md text-on-surface">IP66 UV Industrial Polycarbonate</td>
+<td class="py-space-md px-space-md text-on-surface">Autonomous Sound Generator + PIR</td>
+<td class="py-space-md px-space-md text-tertiary font-medium">2-Year Replacement</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="font-title-md text-title-md text-on-surface font-semibold">TD-TAG-LORA</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Livestock &amp; Crop Telemetry Tag</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface">3-Year Primary Lithium Coin Cell</td>
+<td class="py-space-md px-space-md text-primary font-label-mono-sm text-label-mono-sm font-semibold">5 km Sub-GHz Hub Link</td>
+<td class="py-space-md px-space-md text-on-surface">IP67 Hermetically Sealed Tag</td>
+<td class="py-space-md px-space-md text-on-surface">Tools Digital Hub &amp; Mobile Push</td>
+<td class="py-space-md px-space-md text-tertiary font-medium">2-Year Replacement</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Cooperative Bulk Orders & Custom Field Engineering CTA Box -->
+<div class="w-full max-w-7xl mx-auto mt-20 bg-surface-container-high rounded-lg p-space-xl relative overflow-hidden shadow-xl">
+<div class="absolute -right-10 -bottom-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs text-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+<span>Agricultural Cooperatives &amp; FPO Programs</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Custom Field Engineering &amp; Farmer Co-op Bulk Orders
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Need customized Sub-GHz frequency allocations, specialized pump relay ratings up to 60 HP, or turnkey field installations for Farmer Producer Organizations (FPOs)? Our regional field engineering labs in Nashik, Indore, and Belagavi dispatch direct technician support.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md mt-space-sm font-label-mono-sm text-label-mono-sm text-secondary">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">support_agent</span> Priority 24/7 Kisan Helpline</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_shipping</span> GST Invoice &amp; Direct Subsidy Invoicing</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full lg:w-auto">
+<button class="w-full sm:w-auto px-space-xl py-3 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-lg uppercase font-semibold hover:bg-primary-fixed transition-colors shadow-md text-center" onclick="openQuoteModal('Bulk Cooperative Engineering')">
+            Schedule Field Consultation
+          </button>
+<a class="w-full sm:w-auto px-space-md py-3 rounded bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm uppercase hover:bg-slate-surface transition-colors text-center flex items-center justify-center gap-2" href="tel:18004197284">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>1800-419-7284</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Field Demo / Quote Modal -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-sm hidden items-center justify-center p-space-md" id="quote-modal">
+<div class="bg-slate-surface rounded-lg max-w-lg w-full p-space-xl relative shadow-2xl">
+<button class="absolute top-space-md right-space-md text-on-surface-variant hover:text-on-surface" onclick="closeQuoteModal()">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider font-semibold">DIRECT FIELD DESPATCH</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Request Hardware Field Demo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Specify your local pump configuration, acreage, or livestock count. An authorized Tools Digital field engineer will contact you within 4 hours.
+        </p>
+</div>
+<form class="mt-space-md flex flex-col gap-space-md" onsubmit="handleQuoteSubmit(event)">
+<div>
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase block mb-1">Selected Product Unit</label>
+<input class="w-full px-space-md py-2 rounded bg-surface-container-lowest text-primary font-label-mono-sm text-label-mono-sm font-semibold focus:outline-none" id="modal-product-sku" readonly="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase block mb-1">Farmer / Manager Name</label>
+<input class="w-full px-space-md py-2 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="e.g. Ramesh Patil" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase block mb-1">Mobile Contact / WhatsApp</label>
+<input class="w-full px-space-md py-2 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="+91 98XXX XXXXX" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase block mb-1">District / Field Location</label>
+<input class="w-full px-space-md py-2 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="e.g. Niphad, Nashik" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase block mb-1">Pump / Farm Scale</label>
+<select class="w-full px-space-md py-2 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors">
+<option>Single 7.5 HP - 10 HP Borewell</option>
+<option>Multiple Borewells (&gt;15 HP)</option>
+<option>Orchard / Horticulture (10-50 Acres)</option>
+<option>Farmer Cooperative / FPO Cluster</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase block mb-1">Field Requirements / Inquiries</label>
+<textarea class="w-full px-space-md py-2 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="e.g. Starter type (Star-Delta), distance from farmhouse to borewell, cellular network signal status..." rows="2"></textarea>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary-fixed-dim flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">offline_bolt</span> No Internet Required at Field
+          </span>
+<button class="px-space-lg py-2.5 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold hover:bg-primary-fixed transition-colors" type="submit">
+            Confirm Field Request
+          </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+  // Filter and Search Engine Logic
+  let currentCategory = 'all';
+  let searchQuery = '';
+
+  const filterButtons = document.querySelectorAll('#category-filter-group .filter-pill');
+  const searchInput = document.getElementById('hardware-search');
+  const productItems = document.querySelectorAll('.product-item');
+  const noResultsDiv = document.getElementById('no-results');
+
+  function updateProductVisibility() {
+    let visibleCount = 0;
+    const q = searchQuery.toLowerCase().trim();
+
+    productItems.forEach(item => {
+      const category = item.getAttribute('data-category');
+      const keywords = (item.getAttribute('data-keywords') || '').toLowerCase();
+      const textContent = item.textContent.toLowerCase();
+
+      const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+      const matchesSearch = (q === '' || keywords.includes(q) || textContent.includes(q));
+
+      if (matchesCategory && matchesSearch) {
+        item.style.display = 'flex';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResultsDiv.classList.remove('hidden');
+    } else {
+      noResultsDiv.classList.add('hidden');
+    }
+  }
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('active', 'bg-primary', 'text-on-primary', 'font-semibold');
+        b.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'font-medium');
+      });
+      btn.classList.add('active', 'bg-primary', 'text-on-primary', 'font-semibold');
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'font-medium');
+
+      currentCategory = btn.getAttribute('data-filter');
+      updateProductVisibility();
+    });
+  });
+
+  searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value;
+    updateProductVisibility();
+  });
+
+  function applySearchTag(tag) {
+    searchInput.value = tag;
+    searchQuery = tag;
+    updateProductVisibility();
+  }
+
+  function resetFilters() {
+    searchQuery = '';
+    searchInput.value = '';
+    currentCategory = 'all';
+    filterButtons.forEach(b => {
+      if (b.getAttribute('data-filter') === 'all') {
+        b.classList.add('active', 'bg-primary', 'text-on-primary', 'font-semibold');
+        b.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'font-medium');
+      } else {
+        b.classList.remove('active', 'bg-primary', 'text-on-primary', 'font-semibold');
+        b.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'font-medium');
+      }
+    });
+    updateProductVisibility();
+  }
+
+  // Quote Modal Handling
+  const modal = document.getElementById('quote-modal');
+  const skuInput = document.getElementById('modal-product-sku');
+
+  function openQuoteModal(productSku) {
+    skuInput.value = productSku;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeQuoteModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  function handleQuoteSubmit(e) {
+    e.preventDefault();
+    alert('Thank you! Tools Digital Field Engineers for your district have received your request. We will initiate contact via WhatsApp / Call shortly.');
+    closeQuoteModal();
+  }
+
+  // Close modal on backdrop click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeQuoteModal();
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-lg"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tools Digital</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">AgriTech Division delivering rugged IoT telemetry, telemetry automation, and field intelligence for distributed agriculture.</p><div class="flex items-center gap-space-xs mt-space-sm font-label-mono-sm text-label-mono-sm text-primary"><span class="material-symbols-outlined text-[16px]">verified</span><span>2-Year Full Replacement Hardware Warranty</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">AgriTech Hardware Systems</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="hover:text-primary cursor-pointer">Sub-GHz Long-Range Radio Nodes</li><li class="hover:text-primary cursor-pointer">Digital Soil NPK &amp; Moisture Kits</li><li class="hover:text-primary cursor-pointer">Three-Phase Auto Starters &amp; Switchgear</li><li class="hover:text-primary cursor-pointer">Solar-Powered Livestock Geofence Trackers</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Farmer Field Support &amp; Help</span><p class="font-body-sm text-body-sm">Multilingual Kisan Helpline: <span class="font-label-mono-sm text-label-mono-sm text-on-surface font-medium">1800-419-7284 (Toll-Free)</span></p><p class="font-body-sm text-body-sm">Direct Field Dispatch Centres: Nashik, Indore, Belagavi, Karnal</p><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">translate</span><span>Vernacular Assistance: English, हिन्दी, मराठी</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Mobile &amp; Architecture</span><div class="flex flex-col gap-space-xs"><a class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-sm rounded text-on-surface hover:bg-surface-container-high transition-colors font-label-mono-sm text-label-mono-sm" href="#"><span class="material-symbols-outlined text-primary text-[20px]">android</span><span>Companion Farmer App on Play Store</span></a><div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono-sm text-label-mono-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">security</span><span>Zero-Tracker Telemetry Architecture</span></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-mono-sm text-label-mono-sm"><span class="text-on-surface-variant">© 2025 Tools Digital Architecture &amp; Industrial Electronics. All rights reserved.</span><div class="flex items-center gap-space-md"><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Field Telemetry Standards</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Offline Firmware Policy</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Privacy Charter</span></div></div></div></footer></body></html>

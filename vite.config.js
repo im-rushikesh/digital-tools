@@ -10,8 +10,6 @@ export default defineConfig({
         attendy: resolve(__dirname, 'apps/attendy/index.html'),
         sudoku: resolve(__dirname, 'apps/sudoku-master-pro/index.html'),
         callassistant: resolve(__dirname, 'apps/call-assistant/index.html'),
-        legal: resolve(__dirname, 'legal/index.html'),
-        deletion: resolve(__dirname, 'legal/deletion/index.html'),
       },
     },
   },

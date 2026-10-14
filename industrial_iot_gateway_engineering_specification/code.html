@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#006b5f","on-error-container":"#ffdad6","primary-container":"#14b8a6","inverse-surface":"#dae2fd","alert-amber":"#F59E0B","primary-fixed-dim":"#4fdbc8","on-tertiary-fixed-variant":"#00513a","surface":"#0b1326","tertiary":"#7bd8b1","secondary-fixed-dim":"#80d5cb","on-tertiary-fixed":"#002115","on-tertiary":"#003827","on-primary-fixed":"#00201c","outline-variant":"#3c4947","canvas-light":"#F8FAFC","on-primary-fixed-variant":"#005048","on-tertiary-container":"#00432f","on-secondary-fixed":"#00201d","surface-dim":"#0b1326","surface-container-highest":"#2d3449","on-secondary-fixed-variant":"#00504a","surface-container-high":"#222a3d","secondary-container":"#007068","tertiary-container":"#58b590","surface-container":"#171f33","on-background":"#dae2fd","error":"#ffb4ab","secondary":"#80d5cb","surface-container-lowest":"#060e20","on-primary-container":"#00423b","tertiary-fixed-dim":"#7bd8b1","surface-bright":"#31394d","primary-fixed":"#71f8e4","error-container":"#93000a","background":"#0b1326","primary":"#4fdbc8","on-secondary-container":"#9af0e5","outline":"#859490","inverse-on-surface":"#283044","secondary-fixed":"#9cf2e8","on-surface":"#dae2fd","surface-tint":"#4fdbc8","on-error":"#690005","on-secondary":"#003733","tertiary-fixed":"#97f5cc","surface-container-low":"#131b2e","on-surface-variant":"#bbcac6","slate-border":"#334155","surface-variant":"#2d3449","slate-surface":"#1E293B","on-primary":"#003731"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","space-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem"},"fontFamily":{"label-mono-lg":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"display-hero":["Space Grotesk"],"body-md":["Inter"],"body-sm":["Inter"],"label-mono-sm":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"body-lg":["Inter"],"title-md":["Inter"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"]},"fontSize":{"label-mono-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-mono-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-slate-border"><div class="h-16 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm" data-path="overview-and-architecture" href="#"><img alt="Precision geometric tech logo for 'Tools Digital'. An intertwined hexagonal circuit gear merged with a stylized agricultural leaf and digital node network. Minimal, clean vector badge, technical emerald teal (#14B8A6) and crisp cyan accents on dark industrial background.. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold hidden sm:inline-block">Tools Digital <span class="text-primary font-normal">| Industrial Automation</span></span></a><div class="hidden xl:flex items-center px-space-sm py-space-xs rounded bg-surface-container border border-slate-border"><span class="w-1.5 h-1.5 rounded-full bg-primary mr-space-xs animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">PLANT FLOOR TELEMETRY &amp; EDGE GATEWAYS</span></div></div><nav class="hidden lg:flex items-center gap-space-xs font-body-sm text-body-sm" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg"><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="overview-and-architecture" href="#">Overview &amp; Architecture</a><a aria-current="page" class="px-space-sm py-1.5 transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg" data-path="industrial-iot-gateway" href="#">Industrial IoT Gateway</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="retrofit-and-machine-access" href="#">Retrofit &amp; Machine Access</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="case-studies-and-uptime" href="#">Case Studies &amp; Uptime</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="field-support-and-diagnostics" href="#">Field Support &amp; Diagnostics</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="hidden md:flex items-center font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-primary transition-colors py-1 px-space-xs" data-path="main-portal" href="#"><span class="material-symbols-outlined text-[16px] mr-1">arrow_back</span>Main Portal</a><div class="hidden sm:flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high rounded border border-slate-border"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-mono-sm text-label-mono-sm text-secondary font-medium tracking-wide uppercase">VPN / TLS 1.3 Hardened</span></div><button aria-label="Toggle system appearance" class="w-8 h-8 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-slate-border transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- PRODUCT HERO & SPEC OVERVIEW -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-xl relative overflow-hidden">
+<!-- Ambient Technical Grid Glow -->
+<div class="absolute -top-32 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto w-full relative z-10">
+<!-- Breadcrumb Bar -->
+<nav aria-label="Breadcrumbs" class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant mb-space-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="overview-and-architecture" href="#">
+<span class="material-symbols-outlined text-[14px]">home</span>
+<span>SYSTEM ARCHITECTURE</span>
+</a>
+<span class="text-slate-border">/</span>
+<a class="text-on-surface font-semibold flex items-center gap-1 text-primary" data-path="industrial-iot-gateway" href="#">
+<span class="material-symbols-outlined text-[14px]">memory</span>
+<span>HARDWARE // TD-GATE100</span>
+</a>
+<span class="text-slate-border">/</span>
+<span class="text-on-surface-variant">ENGINEERING SPECIFICATION</span>
+</nav>
+<!-- Grid Header -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<div class="lg:col-span-8 flex flex-col">
+<!-- Hardware Classification Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high w-fit mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-primary -ml-3"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wider uppercase font-semibold">
+              FLAGSHIP INDUSTRIAL HARDWARE // DIN-RAIL SPECIFICATION
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-sm">
+            TD-GATE100 Rugged Multi-Protocol Industrial Edge Gateway
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed mb-space-lg">
+            Deterministic DIN-rail edge computer engineered for harsh factory environments (vibration, electrical noise, 415V transients, -20°C to +70°C). Facilitates transparent remote PLC upload/download, HMI streaming, and telemetry ingestion with cryptographic OT isolation.
+          </p>
+<!-- Action Hub -->
+<div class="flex flex-wrap items-center gap-space-sm font-label-mono-lg text-label-mono-lg">
+<a class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded bg-primary text-on-primary font-semibold hover:bg-primary-fixed transition-colors shadow-sm" href="#datasheet">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>DOWNLOAD DATASHEET (PDF)</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright hover:text-primary transition-colors" href="#eval-unit">
+<span class="material-symbols-outlined text-[18px]">mark_email_read</span>
+<span>REQUEST EVALUATION UNIT</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#pinout">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+<span>WIRING &amp; PINOUT DIAGRAM</span>
+</a>
+</div>
+</div>
+<!-- Metric Telemetry Cards -->
+<div class="lg:col-span-4 grid grid-cols-2 gap-space-sm">
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm uppercase">Galvanic Isolation</span>
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">3.0 kV</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Continuous Opto-Shield</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm uppercase">Thermal Envelope</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">thermostat</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">-25°C / +70°C</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Conduction Cooled Fanless</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm uppercase">Crypto-Hardware</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">TPM 2.0</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Hardware Root of Trust</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm uppercase">Mean Time (MTBF)</span>
+<span class="material-symbols-outlined text-[16px] text-alert-amber">history</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">320k Hrs</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Telcordia SR-332 Calibrated</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE HARDWARE ANATOMY & INTERFACE HIGHLIGHTS -->
+<section class="w-full bg-surface-container-low px-margin-mobile lg:px-margin py-space-xl">
+<div class="max-w-[1440px] mx-auto w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wider uppercase block mb-1">SECTION 02 // HARDWARE BLUEPRINT</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Interactive Hardware Anatomy &amp; Interfaces</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Extruded aluminum alloy enclosure engineered to conduct heat directly to the DIN rail while shielding sensitive compute logic from EMI interference.
+        </p>
+</div>
+<!-- Bento-style Architecture Grid with Realistic Visuals -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Callout 1: Dual Gigabit RJ45 OT/WAN -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-primary px-space-xs py-0.5 rounded bg-primary/10">ETH0 / ETH1 PHYSICAL AIRGAP</span>
+<span class="material-symbols-outlined text-primary text-[24px]">lan</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              Dual Isolated Gigabit Ethernet
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Hardware-segmented interfaces separating factory OT (PLCs, drives, HMIs) from corporate WAN/cellular uplink. Independent MAC layers eliminate bridge loop vulnerabilities.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between font-label-mono-sm text-label-mono-sm text-secondary">
+<span>WAN: 192.168.1.0/24</span>
+<span class="text-on-surface-variant text-[10px]">L3 ISOLATED</span>
+<span>OT: 10.0.4.0/24</span>
+</div>
+</div>
+<!-- Callout 2: Opto-Isolated RS-485/232 -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary px-space-xs py-0.5 rounded bg-secondary/10">SERIAL ENGINE</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">cable</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              Opto-Isolated RS-485 / RS-232
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              3kV galvanic isolation defends against catastrophic high-potential voltage spikes and plant ground loops. Integrated switchable 120Ω termination resistor for noisy long-run drops.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>BAUD: 115200 bps</span>
+<span class="text-tertiary">3000V Isolation Diode Active</span>
+</div>
+</div>
+<!-- Callout 3: Wide-Input 9-36V Redundant Terminal -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber px-space-xs py-0.5 rounded bg-alert-amber/10">POWER REDUNDANCY</span>
+<span class="material-symbols-outlined text-alert-amber text-[24px]">power</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              Wide-Input 9V – 36V DC Terminal
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Dual redundant screw terminal block prevents downtime during primary 24V supply brownouts. Tolerates inductive motor kickbacks and reverse polarity faults up to 40V surge.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between font-label-mono-sm text-label-mono-sm text-alert-amber">
+<span>V_IN_A: 24.2V NOMINAL</span>
+<span>V_IN_B: STANDBY 24.0V</span>
+</div>
+</div>
+<!-- Callout 4: Hardware Key Switch -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary px-space-xs py-0.5 rounded bg-tertiary/10">LOCKOUT SAFETY</span>
+<span class="material-symbols-outlined text-tertiary text-[24px]">key</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              Physical Technician Key Switch
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Local bypass keyswitch allows shop-floor maintenance personnel to mechanically disengage remote cloud and cellular access prior to cell entry, upholding Zero Trust safety.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface">
+<span class="text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>SWITCH: ARMED (ONLINE)</span>
+<span class="text-on-surface-variant">LOTO Compatible</span>
+</div>
+</div>
+<!-- Callout 5: MicroSD & 8GB eMMC Persistence -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-primary px-space-xs py-0.5 rounded bg-primary/10">TELEMETRY BUFFER</span>
+<span class="material-symbols-outlined text-primary text-[24px]">save</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              Internal MicroSD &amp; 8GB eMMC
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Non-volatile circular FIFO buffer guarantees zero packet loss during prolonged WAN disconnections. Stores up to 180 continuous days of sub-second vibration and tag logs.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between font-label-mono-sm text-label-mono-sm text-primary">
+<span>OFFLINE BUFFER: 180 DAYS</span>
+<span>AUTO-RESYNC: ENABLED</span>
+</div>
+</div>
+<!-- Callout 6: Cellular / Industrial Wi-Fi & Enclosure -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary px-space-xs py-0.5 rounded bg-secondary/10">RUGGED RF &amp; CHASSIS</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">cell_tower</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              IP40 Aluminum &amp; 4G Cat-1 Fallback
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Machined aluminum enclosure with spring-loaded steel DIN clip. Dual SMA antenna feeds for 2.4/5.8GHz Wi-Fi and global multi-carrier cellular fallback with automatic SIM handover.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>CELL: CAT-1 / 2G / 4G</span>
+<span class="text-secondary font-medium">DIN: EN 50022 (35mm)</span>
+</div>
+</div>
+</div>
+<!-- Photo Callout Showcase -->
+<div class="mt-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-md items-stretch">
+<div class="lg:col-span-7 bg-surface-container rounded-lg overflow-hidden flex flex-col">
+<div class="relative w-full h-80">
+<img class="w-full h-full object-cover" data-alt="High-resolution industrial hardware photograph of the TD-GATE100 DIN-rail gateway mounted inside an electrical control cabinet next to Siemens and Allen-Bradley PLCs. Matte black and teal anodized aluminum enclosure, dual green RJ45 LED indicators lit, spring-loaded steel DIN rail clip, cleanly labeled terminal blocks, harsh industrial factory background with precise depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDkDR4G1rhukEvjF173sKaG24BJl81r_RMfnjYG_xeZwwNQlk8uJuGs731-l7wY39KgFbXJGPUfDhQOP_6fnl4S5KZc15-eB0QqOt_kKWCNInaVYfRDUdxWRILGQg2OYFCVTh3bGYB7ZaSBHjQPasYPYm6grZGca8sR66w-L0-DpfVgrwwHE25muZ_Dc3PfH6-jhaVlc_-QrsrhLAwKaYO-VmLqBYa8xF0yJT84i6nVXOuf1H4W95_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-surface">
+<span class="font-label-mono-sm text-label-mono-sm px-2 py-1 rounded bg-surface/80 backdrop-blur">RACK POSITION: EN-35 DIN-04</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>ACTIVE RUNTIME
+              </span>
+</div>
+</div>
+<div class="p-space-md">
+<h4 class="font-title-md text-title-md text-on-surface mb-1">Cabinet Field Deployment</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Precision engineered chassis dimensions (125mm x 45mm x 95mm) allow direct retrofits into congested 35mm DIN-rail industrial automation cabinets without requiring relay relocations.
+            </p>
+</div>
+</div>
+<div class="lg:col-span-5 bg-surface-container rounded-lg p-space-lg flex flex-col justify-between">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary block mb-2">FIELD BUS WIRING TERMINAL SPEC</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-sm">Front I/O Interface Map</h4>
+<div class="space-y-space-sm font-label-mono-sm text-label-mono-sm">
+<div class="p-space-xs px-space-sm bg-surface-container-high rounded flex justify-between items-center">
+<span class="text-on-surface">PIN 01-02: VCC_A / GND</span>
+<span class="text-primary">9-36V DC PWR</span>
+</div>
+<div class="p-space-xs px-space-sm bg-surface-container-high rounded flex justify-between items-center">
+<span class="text-on-surface">PIN 03-04: VCC_B / GND</span>
+<span class="text-secondary">AUX PWR FEED</span>
+</div>
+<div class="p-space-xs px-space-sm bg-surface-container-high rounded flex justify-between items-center">
+<span class="text-on-surface">PIN 05-06: RS485 (D+ / D-)</span>
+<span class="text-tertiary">120Ω TERM SW</span>
+</div>
+<div class="p-space-xs px-space-sm bg-surface-container-high rounded flex justify-between items-center">
+<span class="text-on-surface">PIN 07-08: RS232 (TX / RX)</span>
+<span class="text-on-surface-variant">HW FLOW CONTROL</span>
+</div>
+<div class="p-space-xs px-space-sm bg-surface-container-high rounded flex justify-between items-center">
+<span class="text-on-surface">PIN 09-10: DRY RELAY ALARM</span>
+<span class="text-alert-amber">250VAC / 2A RATED</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block mb-1">CABLE STRIP LENGTH:</span>
+<span class="font-label-mono-lg text-label-mono-lg text-on-surface">7.0 mm (0.28") | 14-26 AWG Torque 0.4 Nm</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ENGINEERING SPECIFICATIONS TABLE -->
+<section class="w-full bg-surface-container px-margin-mobile lg:px-margin py-space-xl" id="datasheet">
+<div class="max-w-[1440px] mx-auto w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wider uppercase block mb-1">SECTION 03 // ELECTRICAL &amp; COMPUTATIONAL PARAMETERS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Engineering Specifications Matrix</h2>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>CALIBRATED ACCORDING TO IEC-61131-2 STANDARDS</span>
+</div>
+</div>
+<!-- Spec Table Container -->
+<div class="overflow-x-auto rounded-lg bg-surface-container-lowest">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+<th class="py-space-md px-space-lg w-1/4">Parameter Group</th>
+<th class="py-space-md px-space-lg w-1/3">Standard Hardware Specification</th>
+<th class="py-space-md px-space-lg">Engineering Design Tolerances &amp; Notes</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-border/50 text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-lg font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">memory</span>
+<span>Processor / Edge OS</span>
+</td>
+<td class="py-space-md px-space-lg font-label-mono-sm text-label-mono-sm text-primary">
+                Quad-Core ARM Cortex-A53 @ 1.5GHz, Real-Time Linux (PREEMPT_RT patch)
+              </td>
+<td class="py-space-md px-space-lg font-body-sm text-body-sm text-on-surface-variant">
+                Sub-millisecond jitter for deterministic cycle sampling. Integrated watchdog timer with automatic 3.5s hardware hardware-reset on deadlock.
+              </td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container/20">
+<td class="py-space-md px-space-lg font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">settings_input_component</span>
+<span>Serial Interfaces</span>
+</td>
+<td class="py-space-md px-space-lg font-label-mono-sm text-label-mono-sm text-secondary">
+                1x RS-485 (2-wire half duplex), 1x RS-232, 115200 baud deterministic scheduler
+              </td>
+<td class="py-space-md px-space-lg font-body-sm text-body-sm text-on-surface-variant">
+                3.0 kV optical galvanic separation. Supports Modbus RTU master/slave caching, PPI, Host Link, and bit-level raw byte passthrough.
+              </td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-lg font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">lan</span>
+<span>Ethernet Subsystem</span>
+</td>
+<td class="py-space-md px-space-lg font-label-mono-sm text-label-mono-sm text-tertiary">
+                2x RJ45 10/100/1000 Mbps with independent hardware MAC addresses
+              </td>
+<td class="py-space-md px-space-lg font-body-sm text-body-sm text-on-surface-variant">
+                Auto MDI/MDI-X detection. Strict routing airgap prevents factory OT networks from discovering corporate IT subnet assets.
+              </td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container/20">
+<td class="py-space-md px-space-lg font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-alert-amber text-[18px]">power_input</span>
+<span>Power Input</span>
+</td>
+<td class="py-space-md px-space-lg font-label-mono-sm text-label-mono-sm text-alert-amber">
+                Dual 9–36V DC screw terminal, reverse polarity &amp; 4kV surge protection
+              </td>
+<td class="py-space-md px-space-lg font-body-sm text-body-sm text-on-surface-variant">
+                Max power consumption: 8.5W (all radios transmitting). Typical standby: 2.1W. Built-in supercapacitor guarantees clean filesystem flush on cut.
+              </td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-lg font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">ac_unit</span>
+<span>Operating Environment</span>
+</td>
+<td class="py-space-md px-space-lg font-label-mono-sm text-label-mono-sm text-on-surface">
+                -25°C to +70°C ambient operating, fanless passive conduction cooling
+              </td>
+<td class="py-space-md px-space-lg font-body-sm text-body-sm text-on-surface-variant">
+                Humidity: 5% to 95% non-condensing. Vibration test rating: 5G @ 10-500Hz per IEC 60068-2-6; Shock resistant to 30G half-sine 11ms.
+              </td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container/20">
+<td class="py-space-md px-space-lg font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock</span>
+<span>Security Architecture</span>
+</td>
+<td class="py-space-md px-space-lg font-label-mono-sm text-label-mono-sm text-secondary">
+                Hardware TPM 2.0 cryptoprocessor, WireGuard VPN, zero open inbound WAN ports
+              </td>
+<td class="py-space-md px-space-lg font-body-sm text-body-sm text-on-surface-variant">
+                Mutual TLS 1.3 key exchange. Outbound-only tunnel initiator. Firmware image verified via cryptographic asymmetric signature at bootstrap.
+              </td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-lg font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+<span>Regulatory Certifications</span>
+</td>
+<td class="py-space-md px-space-lg font-label-mono-sm text-label-mono-sm text-tertiary">
+                IEC 61000-6-2 (Industrial Immunity), IEC 61000-6-4 (Emissions), CE, RoHS
+              </td>
+<td class="py-space-md px-space-lg font-body-sm text-body-sm text-on-surface-variant">
+                Class A industrial compliance. Tested in presence of heavy variable frequency drives (VFDs) and arc welding equipment.
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- HOW REMOTE PLC PROGRAMMING OPERATES (STEP-BY-STEP) -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-xl">
+<div class="max-w-[1440px] mx-auto w-full">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wider uppercase block mb-1">SECTION 04 // OPERATIONAL WORKFLOW</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-sm">
+          Deterministic Remote PLC Programming Workflow
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Zero port forwarding, zero static IP requests to corporate IT, and zero compromise of plant security policies. Here is how field engineers achieve real-time online diagnostics across global factories.
+        </p>
+</div>
+<!-- 4-Step Technical Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Step 1 -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg text-primary font-bold">01</span>
+<span class="material-symbols-outlined text-primary text-[28px]">electrical_services</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              DIN-Rail Machine Hookup
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Snap the TD-GATE100 onto the standard 35mm DIN rail. Connect Machine Port (ETH1) to the Siemens S7-1200 or Allen-Bradley CompactLogix switch. Connect 24V DC.
+            </p>
+</div>
+<div class="pt-space-sm bg-surface-container-lowest px-space-sm py-2 rounded font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+            Target: Port 102 (Siemens) / 44818 (CIP)
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg text-secondary font-bold">02</span>
+<span class="material-symbols-outlined text-secondary text-[28px]">vpn_lock</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              Encrypted Outbound Handshake
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              The gateway automatically establishes an outbound mTLS WireGuard tunnel over port 443 via plant LAN or onboard 4G fallback. No incoming firewall ports opened.
+            </p>
+</div>
+<div class="pt-space-sm bg-surface-container-lowest px-space-sm py-2 rounded font-label-mono-sm text-label-mono-sm text-secondary">
+            TLS 1.3 / ChaCha20-Poly1305
+          </div>
+</div>
+<!-- Step 3 -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg text-tertiary font-bold">03</span>
+<span class="material-symbols-outlined text-tertiary text-[28px]">terminal</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              Launch Virtual Bridge Client
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              The automation engineer authenticates via MFA on their field laptop. The Tools Digital Bridge spawns a virtual TAP adapter mirroring the machine's layer-2 broadcast domain.
+            </p>
+</div>
+<div class="pt-space-sm bg-surface-container-lowest px-space-sm py-2 rounded font-label-mono-sm text-label-mono-sm text-tertiary">
+            Virtual TAP: 10.0.4.250 / L2 Transparent
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg text-alert-amber font-bold">04</span>
+<span class="material-symbols-outlined text-alert-amber text-[28px]">monitor_heart</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium mb-space-xs">
+              Live TIA / Studio 5000 Online
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Open Siemens TIA Portal or Rockwell Studio 5000. Press "Go Online". Edit ladder rungs, upload blocks, verify force tables, and troubleshoot drive alarms with zero latency lag.
+            </p>
+</div>
+<div class="pt-space-sm bg-surface-container-lowest px-space-sm py-2 rounded font-label-mono-sm text-label-mono-sm text-alert-amber">
+            Roundtrip Ping: &lt;14ms Jitter-free
+          </div>
+</div>
+</div>
+<!-- Architecture Flowchart Diagram (Inline SVG) -->
+<div class="mt-space-lg p-space-lg bg-surface-container rounded-lg overflow-x-auto">
+<div class="min-w-[760px] flex items-center justify-between gap-space-md font-label-mono-sm text-label-mono-sm">
+<!-- PLC Node -->
+<div class="flex flex-col items-center p-space-sm bg-surface-container-lowest rounded w-48 text-center">
+<span class="material-symbols-outlined text-primary text-[28px] mb-1">developer_board</span>
+<span class="text-on-surface font-semibold">SHOP FLOOR PLC</span>
+<span class="text-on-surface-variant text-[10px]">Siemens S7-1500 / AB 5380</span>
+<span class="text-primary mt-1 text-[11px]">10.0.4.10</span>
+</div>
+<!-- Arrow 1 -->
+<div class="flex flex-col items-center flex-1">
+<span class="text-on-surface-variant text-[10px] mb-1">Ethernet PROFINET cable</span>
+<svg class="w-full h-4 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 100 8">
+<line stroke="currentColor" stroke-dasharray="4 2" stroke-width="2" x1="0" x2="96" y1="4" y2="4"></line>
+<polygon fill="currentColor" points="96,1 100,4 96,7"></polygon>
+</svg>
+<span class="text-secondary text-[10px] mt-1">Air-gapped OT Zone</span>
+</div>
+<!-- TD-GATE100 -->
+<div class="flex flex-col items-center p-space-sm bg-primary/10 rounded w-52 text-center">
+<span class="material-symbols-outlined text-primary text-[28px] mb-1">router</span>
+<span class="text-primary font-bold">TD-GATE100 EDGE</span>
+<span class="text-on-surface-variant text-[10px]">TPM 2.0 + RT-Linux</span>
+<span class="text-primary mt-1 text-[11px]">Outbound Tunnel Initiator</span>
+</div>
+<!-- Arrow 2 -->
+<div class="flex flex-col items-center flex-1">
+<span class="text-on-surface-variant text-[10px] mb-1">Outbound 443 TLS 1.3</span>
+<svg class="w-full h-4 text-tertiary" fill="none" preserveaspectratio="none" viewbox="0 0 100 8">
+<line stroke="currentColor" stroke-width="2" x1="0" x2="96" y1="4" y2="4"></line>
+<polygon fill="currentColor" points="96,1 100,4 96,7"></polygon>
+</svg>
+<span class="text-tertiary text-[10px] mt-1">Zero Open Ports</span>
+</div>
+<!-- Cloud Rendezvous -->
+<div class="flex flex-col items-center p-space-sm bg-surface-container-lowest rounded w-48 text-center">
+<span class="material-symbols-outlined text-secondary text-[28px] mb-1">cloud_sync</span>
+<span class="text-on-surface font-semibold">SECURE RENDEZVOUS</span>
+<span class="text-on-surface-variant text-[10px]">Encrypted Relay Mesh</span>
+<span class="text-secondary mt-1 text-[11px]">No Inbound Payload Decrypt</span>
+</div>
+<!-- Arrow 3 -->
+<div class="flex flex-col items-center flex-1">
+<span class="text-on-surface-variant text-[10px] mb-1">Encrypted WireGuard</span>
+<svg class="w-full h-4 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 100 8">
+<line stroke="currentColor" stroke-width="2" x1="0" x2="96" y1="4" y2="4"></line>
+<polygon fill="currentColor" points="96,1 100,4 96,7"></polygon>
+</svg>
+<span class="text-primary text-[10px] mt-1">MFA Authenticated</span>
+</div>
+<!-- Engineer Workstation -->
+<div class="flex flex-col items-center p-space-sm bg-surface-container-lowest rounded w-48 text-center">
+<span class="material-symbols-outlined text-alert-amber text-[28px] mb-1">laptop_chromebook</span>
+<span class="text-on-surface font-semibold">REMOTE ENGINEER</span>
+<span class="text-on-surface-variant text-[10px]">TIA Portal / Studio 5000</span>
+<span class="text-alert-amber mt-1 text-[11px]">Virtual TAP Active</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- COMPARISON VS CONSUMER ROUTERS / GENERIC CELLULAR MODEMS -->
+<section class="w-full bg-surface-container px-margin-mobile lg:px-margin py-space-xl">
+<div class="max-w-[1440px] mx-auto w-full">
+<div class="mb-space-xl text-center max-w-3xl mx-auto">
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber tracking-wider uppercase block mb-1">CRITICAL FACTORY FLOOR RELIABILITY</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-sm">
+          Industrial Hardening vs Generic Modems &amp; Routers
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Why off-the-shelf SOHO routers and cheap cellular USB dongles consistently fail inside industrial motor control centers and lead to costly unannounced line stoppages.
+        </p>
+</div>
+<!-- Comparative Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Ground Loops -->
+<div class="p-space-lg bg-surface-container-low rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-error mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">error</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase font-semibold">Hazard: Ground Loop Burnout</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold mb-space-xs">
+              Factory Earth Potential Fluctuations
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+              Heavy induction motors generate massive common-mode ground spikes. Consumer routers without optical isolation blow serial transceivers and brick ethernet switches.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant block text-[10px]">TD-GATE100 RESOLUTION:</span>
+<span class="text-primary font-medium">3kV continuous opto-isolation across all serial &amp; power buses.</span>
+</div>
+</div>
+<!-- OT Airgap Segregation -->
+<div class="p-space-lg bg-surface-container-low rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-error mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">gpp_maybe</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase font-semibold">Hazard: IT/OT Cross-Contamination</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold mb-space-xs">
+              Broadcast Storm Leaks &amp; Malware
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+              Standard modems lack dual isolated physical network stacks. Office malware scans or broadcast storms flood PLC backplanes, triggering safety shutdowns on CNC lines.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant block text-[10px]">TD-GATE100 RESOLUTION:</span>
+<span class="text-primary font-medium">Strict physical L3 airgap. Dual independent MAC PHY chips.</span>
+</div>
+</div>
+<!-- Latency Jitter -->
+<div class="p-space-lg bg-surface-container-low rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-alert-amber mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase font-semibold">Hazard: Ladder Logic Timing Timeouts</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold mb-space-xs">
+              Non-Deterministic Latency Spikes
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+              Generic cellular modems suffer 300ms packet buffers. When TIA Portal or Rockwell attempts an online ladder upload, connection drops unexpectedly during safety tag writes.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant block text-[10px]">TD-GATE100 RESOLUTION:</span>
+<span class="text-primary font-medium">PREEMPT_RT Real-Time kernel with zero-buffer bloat scheduling.</span>
+</div>
+</div>
+</div>
+<!-- Direct Comparison Spec Breakdown -->
+<div class="mt-space-lg bg-surface-container-lowest rounded-lg overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase">
+<th class="py-space-sm px-space-md">Parameter</th>
+<th class="py-space-sm px-space-md text-primary">Tools Digital TD-GATE100</th>
+<th class="py-space-sm px-space-md text-on-surface-variant">Generic 4G Industrial Router</th>
+<th class="py-space-sm px-space-md text-error">Consumer Grade SOHO Modem</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-border/40 font-label-mono-sm text-label-mono-sm">
+<tr>
+<td class="py-space-sm px-space-md text-on-surface font-semibold">Physical Mounting</td>
+<td class="py-space-sm px-space-md text-primary">Spring-loaded EN-35 DIN clip</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Sheet metal bracket</td>
+<td class="py-space-sm px-space-md text-error">Desktop rubber feet (unstable)</td>
+</tr>
+<tr>
+<td class="py-space-sm px-space-md text-on-surface font-semibold">Supply Voltage</td>
+<td class="py-space-sm px-space-md text-primary">9V – 36V DC Redundant screw</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">12V – 24V DC Single</td>
+<td class="py-space-sm px-space-md text-error">12V Barrel plug (vibration risks)</td>
+</tr>
+<tr>
+<td class="py-space-sm px-space-md text-on-surface font-semibold">Firewall Inbound Ports</td>
+<td class="py-space-sm px-space-md text-primary">0 Open (Initiator mTLS only)</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">Requires OpenVPN port / Port-fwd</td>
+<td class="py-space-sm px-space-md text-error">Exposed HTTP/UPnP interface</td>
+</tr>
+<tr>
+<td class="py-space-sm px-space-md text-on-surface font-semibold">Operating Lifespan</td>
+<td class="py-space-sm px-space-md text-primary">10+ Years Industrial Roadmap</td>
+<td class="py-space-sm px-space-md text-on-surface-variant">2-3 Years MTBF</td>
+<td class="py-space-sm px-space-md text-error">Under 12 months in 45°C cabinet</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- ORDERING & PILOT EVALUATION CTA STRIP -->
+<section class="w-full bg-surface-container-high px-margin-mobile lg:px-margin py-space-xl relative overflow-hidden" id="eval-unit">
+<!-- Subtle Teal Accent Backdrop -->
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10 pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto w-full relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container w-fit mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-medium">30-Day Plant Risk-Free Trial Program</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs">
+            Deploy a TD-GATE100 Evaluation Unit on Your Line
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed mb-space-md">
+            Test remote PLC upload/download, Modbus telemetry ingestion, and offline store-and-forward directly on your shop floor. Ships pre-configured with active global cellular SIM and industrial DIN clip.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span>48-Hour Dispatch</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span>Dedicated Automation FAE</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span>Full WireGuard Virtual Client</span>
+</div>
+</div>
+</div>
+<!-- Evaluation Form / Direct Action Card -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-lg">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">
+            Order Evaluation Gateway
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Enter your factory facility details for immediate engineering team review.
+          </p>
+<form class="space-y-space-sm" onsubmit="event.preventDefault(); alert('Evaluation request dispatched to Industrial Engineering Center. Tracking ID: TD-EVAL-' + Math.floor(1000 + Math.random() * 9000));">
+<div>
+<label class="block font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase mb-1">Corporate Work Email</label>
+<input class="w-full px-space-sm py-2 rounded bg-surface border border-slate-border text-on-surface font-body-sm text-body-sm focus:border-primary focus:outline-none transition-colors" placeholder="engineer@manufacturing.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase mb-1">Primary PLC Platform in Facility</label>
+<select class="w-full px-space-sm py-2 rounded bg-surface border border-slate-border text-on-surface font-body-sm text-body-sm focus:border-primary focus:outline-none transition-colors">
+<option>Siemens S7 (1200 / 1500 / 300 / 400)</option>
+<option>Rockwell / Allen-Bradley (ControlLogix / CompactLogix)</option>
+<option>Mitsubishi (MELSEC FX / Q / iQ-R)</option>
+<option>Schneider Modicon (M241 / M251)</option>
+<option>Omron (Sysmac NJ/NX / CJ)</option>
+<option>Legacy Serial Modbus RTU Only</option>
+</select>
+</div>
+<div>
+<label class="block font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase mb-1">Uplink Preference</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-2 rounded bg-surface border border-slate-border cursor-pointer hover:border-primary transition-colors">
+<input checked="" class="accent-primary" name="uplink" type="radio"/>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Dual 4G Cat-1</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface border border-slate-border cursor-pointer hover:border-primary transition-colors">
+<input class="accent-primary" name="uplink" type="radio"/>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Isolated LAN</span>
+</label>
+</div>
+</div>
+<button class="w-full mt-space-sm py-2.5 px-space-md rounded bg-primary text-on-primary font-label-mono-lg text-label-mono-lg uppercase font-bold tracking-wider hover:bg-primary-fixed transition-colors" type="submit">
+              Request Hardware Dispatch
+            </button>
+</form>
+<div class="mt-space-sm text-center">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant text-[10px]">
+              Direct OEM / SI Volume Discounts: Call <a class="text-primary hover:underline" href="tel:18004197285">1800-419-7285</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-slate-border py-space-xl"><div class="w-full px-margin-mobile lg:px-margin max-w-[1440px] mx-auto"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl"><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">memory</span><h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-medium">Tools Digital Industrial</h3></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm leading-relaxed">DIN-rail edge gateways, deterministic telemetry, zero-cloud dependency options for smart manufacturing.</p><div class="inline-flex items-center px-space-sm py-1 rounded bg-surface-container border border-slate-border"><span class="material-symbols-outlined text-primary text-[16px] mr-1">verified_user</span><span class="font-label-mono-sm text-label-mono-sm text-primary">2-Year industrial replacement warranty</span></div></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-secondary text-[20px]">settings_input_component</span><h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-medium">Hardware &amp; Protocols</h3></div><ul class="space-y-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant"><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Modbus RTU/TCP</li><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Siemens PPI / MPI / PROFINET</li><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Allen-Bradley EtherNet/IP</li><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Mitsubishi MELSEC</li><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Omron Host Link</li></ul></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-tertiary text-[20px]">support_agent</span><h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-medium">Engineering Support</h3></div><div class="mb-space-sm"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block uppercase text-[10px]">24/7 Field Escalation Hotline</span><a class="font-label-mono-lg text-label-mono-lg text-primary hover:underline font-semibold" href="tel:18004197285">1800-419-7285</a></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><span class="text-on-surface font-medium block">On-site dispatch centers:</span>Pune, Nashik, Ahmedabad, Coimbatore, Manesar</p></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-alert-amber text-[20px]">gavel</span><h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-medium">Compliance &amp; Standards</h3></div><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">shield</span>IEC 62443 Industrial Cybersecurity</li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>CE / FCC Class A Compliant</li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">inventory_2</span>IP40 / IP67 Rugged Enclosures</li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">terminal</span>RFC 9116 security.txt Verified</li></ul></div></div><div class="pt-space-md border-t border-slate-border flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary"></span><span>© 2025 Tools Digital Pvt Ltd. All industrial rights reserved.</span></div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" data-path="legal-compliance" href="#">Security Policy</a><a class="hover:text-primary transition-colors" data-path="legal-compliance" href="#">Terms of Industrial Supply</a><a class="hover:text-primary transition-colors" data-path="legal-compliance" href="#">Telemetry Privacy</a></div></div></div></footer></body></html>

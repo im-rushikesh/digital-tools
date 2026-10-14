@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#006b5f","on-error-container":"#ffdad6","primary-container":"#14b8a6","inverse-surface":"#dae2fd","alert-amber":"#F59E0B","primary-fixed-dim":"#4fdbc8","on-tertiary-fixed-variant":"#00513a","surface":"#0b1326","tertiary":"#7bd8b1","secondary-fixed-dim":"#80d5cb","on-tertiary-fixed":"#002115","on-tertiary":"#003827","on-primary-fixed":"#00201c","outline-variant":"#3c4947","canvas-light":"#F8FAFC","on-primary-fixed-variant":"#005048","on-tertiary-container":"#00432f","on-secondary-fixed":"#00201d","surface-dim":"#0b1326","surface-container-highest":"#2d3449","on-secondary-fixed-variant":"#00504a","surface-container-high":"#222a3d","secondary-container":"#007068","tertiary-container":"#58b590","surface-container":"#171f33","on-background":"#dae2fd","error":"#ffb4ab","secondary":"#80d5cb","surface-container-lowest":"#060e20","on-primary-container":"#00423b","tertiary-fixed-dim":"#7bd8b1","surface-bright":"#31394d","primary-fixed":"#71f8e4","error-container":"#93000a","background":"#0b1326","primary":"#4fdbc8","on-secondary-container":"#9af0e5","outline":"#859490","inverse-on-surface":"#283044","secondary-fixed":"#9cf2e8","on-surface":"#dae2fd","surface-tint":"#4fdbc8","on-error":"#690005","on-secondary":"#003733","tertiary-fixed":"#97f5cc","surface-container-low":"#131b2e","on-surface-variant":"#bbcac6","slate-border":"#334155","surface-variant":"#2d3449","slate-surface":"#1E293B","on-primary":"#003731"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","space-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem"},"fontFamily":{"label-mono-lg":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"display-hero":["Space Grotesk"],"body-md":["Inter"],"body-sm":["Inter"],"label-mono-sm":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"body-lg":["Inter"],"title-md":["Inter"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"]},"fontSize":{"label-mono-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-mono-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-slate-border"><div class="h-16 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm" data-path="overview-and-architecture" href="#"><img alt="Precision geometric tech logo for 'Tools Digital'. An intertwined hexagonal circuit gear merged with a stylized agricultural leaf and digital node network. Minimal, clean vector badge, technical emerald teal (#14B8A6) and crisp cyan accents on dark industrial background.. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold hidden sm:inline-block">Tools Digital <span class="text-primary font-normal">| Industrial Automation</span></span></a><div class="hidden xl:flex items-center px-space-sm py-space-xs rounded bg-surface-container border border-slate-border"><span class="w-1.5 h-1.5 rounded-full bg-primary mr-space-xs animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">PLANT FLOOR TELEMETRY &amp; EDGE GATEWAYS</span></div></div><nav class="hidden lg:flex items-center gap-space-xs font-body-sm text-body-sm" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg"><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="overview-and-architecture" href="#">Overview &amp; Architecture</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="industrial-iot-gateway" href="#">Industrial IoT Gateway</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="retrofit-and-machine-access" href="#">Retrofit &amp; Machine Access</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="case-studies-and-uptime" href="#">Case Studies &amp; Uptime</a><a class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="field-support-and-diagnostics" href="#">Field Support &amp; Diagnostics</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="hidden md:flex items-center font-label-mono-sm text-label-mono-sm text-on-surface-variant hover:text-primary transition-colors py-1 px-space-xs" data-path="main-portal" href="#"><span class="material-symbols-outlined text-[16px] mr-1">arrow_back</span>Main Portal</a><div class="hidden sm:flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high rounded border border-slate-border"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-mono-sm text-label-mono-sm text-secondary font-medium tracking-wide uppercase">VPN / TLS 1.3 Hardened</span></div><button aria-label="Toggle system appearance" class="w-8 h-8 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface border border-slate-border transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-space-xl px-margin-mobile lg:px-margin">
+<!-- Ambient technical grid overlay -->
+<div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none opacity-40"></div>
+<div class="absolute -top-32 right-10 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="relative max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Left Column: Copy & CTAs -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Security Compliance Pill -->
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-sm bg-surface-container-high text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">IEC 62443 COMPLIANT // DETERMINISTIC INDUSTRIAL TELEMETRY</span>
+</div>
+<!-- Primary Hero Headline -->
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero text-on-surface tracking-tight leading-tight">
+          Zero-Downtime Remote Programming, Live HMI Mirroring &amp; <span class="text-primary">Deterministic Gateways</span>
+</h1>
+<!-- Subhead -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Secure end-to-end encrypted remote access to legacy and modern shop floor machinery over isolated Wi-Fi, Ethernet, or 4G LTE. Eliminate costly technician site visits while protecting factory OT control layers with hardware-level physical air gapping.
+        </p>
+<!-- CTA Action Hub -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-3 rounded bg-primary text-on-primary font-label-mono-lg text-label-mono-lg uppercase font-semibold hover:bg-primary-fixed transition-all flex items-center gap-2 shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+            Request Industrial Gateway Demo
+          </button>
+<a class="px-space-md py-3 rounded bg-surface-container text-on-surface font-label-mono-lg text-label-mono-lg uppercase hover:bg-surface-container-high hover:text-primary transition-all flex items-center gap-2 shadow-sm" href="#matrix-section">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+            Explore Retrofit Protocols
+          </a>
+</div>
+<!-- Live KPI Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-md">
+<div class="p-space-sm rounded bg-surface-container-low">
+<span class="font-headline-md text-headline-md text-primary font-bold block">15-Min</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">DIN-Rail Mount</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low">
+<span class="font-headline-md text-headline-md text-secondary font-bold block">₹0 / $0</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Zero Recurring Cloud</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low">
+<span class="font-headline-md text-headline-md text-tertiary font-bold block">-65%</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">MTTR Reduction</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low">
+<span class="font-headline-md text-headline-md text-primary-fixed-dim font-bold block">&lt;18ms</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Determinism Loop</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Hardware Telemetry HUD -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="bg-surface-container rounded-lg p-space-md shadow-xl relative overflow-hidden">
+<!-- Glass glow edge -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary"></div>
+<!-- Header status line -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">router</span>
+<span class="font-label-mono-lg text-label-mono-lg font-semibold text-on-surface">TD-GATE100 // NODE-04</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-sm bg-primary/10 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-semibold tracking-wider">HARDENED ONLINE</span>
+</div>
+</div>
+<!-- Simulated Hardware Image with Micro-badges -->
+<div class="relative rounded overflow-hidden my-space-xs bg-surface-container-lowest">
+<img class="w-full h-52 object-cover opacity-80" data-alt="Ruggedized DIN-rail industrial IoT automation gateway installed inside a stainless steel electrical switchboard enclosure. Anodized black aluminum heatsink chassis with terminal blocks, dual RJ45 gigabit ports glowing emerald green (#14B8A6), optical serial isolation terminals, and fiber optic cabling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbi6TahwvTe34KnsEgeuEPJx6tPoFgA_L_MwLXfwya1R52IpdIWpZU7075qO0mlz62IVksbP6QO-AtsghMlM9yAv9zwcTmjMUFpAnPYtWj2CcJl3PTJooGTB0EuNnVhSWm_hpEul-9z75XWy4TLGMmpTLWsURnezG7JGFOPQqPWYYDJVhk3EbBOVq-BiP9jKvaFhXjaOXGVwU6gz3zZ66Djqb_69ySxERHrHT6dXy_iYawnqZjRn-7"/>
+<div class="absolute bottom-2 left-2 px-2 py-1 bg-surface-container-lowest/90 backdrop-blur rounded text-primary font-label-mono-sm text-label-mono-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+              WireGuard / TLS 1.3 Tunnel Hardened
+            </div>
+<div class="absolute top-2 right-2 px-2 py-1 bg-surface-container-lowest/90 backdrop-blur rounded text-tertiary font-label-mono-sm text-label-mono-sm">
+              24V DC DUAL REDUNDANT
+            </div>
+</div>
+<!-- Technical Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs text-on-surface">
+<div class="bg-surface-container-high p-space-sm rounded">
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-label-mono-sm mb-1">
+<span>TUNNEL LATENCY</span>
+<span class="text-primary font-bold">18.2 ms</span>
+</div>
+<!-- Real-time Sparkline SVG -->
+<svg class="w-full h-8 text-primary overflow-visible" fill="none" viewbox="0 0 100 24">
+<path d="M0 16 L15 14 L30 18 L45 8 L60 12 L75 10 L90 7 L100 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<circle class="fill-current text-primary animate-pulse" cx="100" cy="9" r="3"></circle>
+</svg>
+</div>
+<div class="bg-surface-container-high p-space-sm rounded">
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-label-mono-sm mb-1">
+<span>OT BUFFER POOL</span>
+<span class="text-secondary font-bold">99.8% READY</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded overflow-hidden mt-3">
+<div class="bg-secondary h-full rounded w-[99%]"></div>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block mt-1 text-right">0 Dropped Frames</span>
+</div>
+</div>
+<!-- Active PLC Protocol Pollers -->
+<div class="mt-space-sm pt-space-sm bg-surface-container-low p-space-sm rounded">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider block mb-2">Connected Shop Floor Buses</span>
+<div class="flex flex-wrap gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="px-2 py-1 bg-surface-container-highest rounded text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Modbus TCP (192.168.1.101)
+              </span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> PROFINET IO Node 0x4B
+              </span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-on-surface flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Mitsubishi MELSEC Q-Series
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4 SHOP FLOOR BOTTLENECKS SECTION -->
+<section class="w-full bg-surface py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-primary tracking-widest block mb-1">01 / RESOLVING FRICTION</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Critical Plant Bottlenecks vs Deterministic Edge Hardware</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Traditional OEM support cycles bleed thousands of dollars every hour of machine stall. We bridge physical field infrastructure to engineer consoles instantaneously.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Bottleneck 1 -->
+<div class="bg-surface-container rounded-lg p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2 py-0.5 rounded-sm bg-error/10 text-error font-label-mono-sm text-label-mono-sm font-semibold">BOTTLENECK 01</span>
+<span class="material-symbols-outlined text-alert-amber text-[24px]">flight_takeoff</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Expensive Emergency OEM Travel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Specialized technicians flying in from Germany, Japan, or Mumbai simply to execute a 10-minute ladder logic tweak or inspect a safety interlock flag. Average downtime cost: $14,000+ per shift.
+            </p>
+</div>
+<div class="bg-surface-container-high p-space-md rounded">
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold mb-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Tools Digital Edge Architecture
+            </div>
+<p class="font-body-md text-body-md text-on-surface">
+              Hardware-isolated VPN tunneling direct to PLC programming ports (Siemens TIA Portal, Rockwell Studio 5000, GX Works) without firewall modification or technician transport delay.
+            </p>
+</div>
+</div>
+<!-- Bottleneck 2 -->
+<div class="bg-surface-container rounded-lg p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2 py-0.5 rounded-sm bg-error/10 text-error font-label-mono-sm text-label-mono-sm font-semibold">BOTTLENECK 02</span>
+<span class="material-symbols-outlined text-alert-amber text-[24px]">cable</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Legacy Machines Without Native Ethernet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Heavy hydraulic presses, stamping lines, and CNC centers built between 1995-2012 trapped behind RS-485/RS-232 serial loops. Lack of plant visibility leads to manual clipboard tracking.
+            </p>
+</div>
+<div class="bg-surface-container-high p-space-md rounded">
+<div class="flex items-center gap-2 text-secondary font-label-mono-sm text-label-mono-sm uppercase font-semibold mb-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Tools Digital Edge Architecture
+            </div>
+<p class="font-body-md text-body-md text-on-surface">
+              Multi-drop serial to IP translation with deterministic edge ring-buffering. Zero packet loss during intermittent factory Wi-Fi dips or noisy RF shop-floor interference.
+            </p>
+</div>
+</div>
+<!-- Bottleneck 3 -->
+<div class="bg-surface-container rounded-lg p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2 py-0.5 rounded-sm bg-error/10 text-error font-label-mono-sm text-label-mono-sm font-semibold">BOTTLENECK 03</span>
+<span class="material-symbols-outlined text-alert-amber text-[24px]">gavel</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">OT / IT Cybersecurity Impasse</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Enterprise IT blocks all cloud agents and incoming port forwards to prevent Ransomware bridging into plant safety relays, paralyzing modernization teams.
+            </p>
+</div>
+<div class="bg-surface-container-high p-space-md rounded">
+<div class="flex items-center gap-2 text-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold mb-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Tools Digital Edge Architecture
+            </div>
+<p class="font-body-md text-body-md text-on-surface">
+              Dual physical NIC air-gap separation (WAN port electrically decoupled from Machine OT port) plus physical keyed rotary switch on cabinet door for physical maintenance isolation.
+            </p>
+</div>
+</div>
+<!-- Bottleneck 4 -->
+<div class="bg-surface-container rounded-lg p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2 py-0.5 rounded-sm bg-error/10 text-error font-label-mono-sm text-label-mono-sm font-semibold">BOTTLENECK 04</span>
+<span class="material-symbols-outlined text-alert-amber text-[24px]">warning</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Unexpected Breakdown &amp; Blind 3rd Shifts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Spindle motor thermal overload and lubrication pressure drops occurring during night shifts remain unnoticed until tool rupture wrecks expensive tooling.
+            </p>
+</div>
+<div class="bg-surface-container-high p-space-md rounded">
+<div class="flex items-center gap-2 text-tertiary font-label-mono-sm text-label-mono-sm uppercase font-semibold mb-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Tools Digital Edge Architecture
+            </div>
+<p class="font-body-md text-body-md text-on-surface">
+              Deterministic edge alarm monitors trigger instant WhatsApp/SMS notifications and actuate local dry-contact emergency stop interlock relays within 5 milliseconds.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ARCHITECTURE & PIPELINE DIAGRAM SECTION -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-space-lg">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary tracking-widest block mb-1">02 / END-TO-END DATA PIPELINE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Deterministic Edge-to-Engineer Topography</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          Engineered for strict separation of control and telemetry planes without third-party cloud routing.
+        </p>
+</div>
+<!-- 4-Step Pipeline Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-md relative">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-mono-lg text-label-mono-lg font-bold text-primary">01. MACHINE CELL</span>
+<span class="material-symbols-outlined text-primary text-[20px]">precision_manufacturing</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-title-md text-title-md text-on-surface mb-space-xs">Shop Floor Field Assets</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              PLC Controllers (Siemens S7-1200/300, Mitsubishi FX5U, Omron NX), variable frequency drives, and CNC spindles running on 24V bus logic.
+            </p>
+<div class="p-2 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-secondary">
+              Physical: RS485 / RJ45 OT Port
+            </div>
+</div>
+<div class="pt-space-xs">
+<div class="h-1 w-full bg-primary/20 rounded">
+<div class="h-full bg-primary w-full rounded"></div>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-md relative">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-mono-lg text-label-mono-lg font-bold text-secondary">02. EDGE HARDWARE</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">developer_board</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-title-md text-title-md text-on-surface mb-space-xs">TD-GATE100 Module</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              DIN-rail industrial unit with optical isolation (2.5kV), 24V DC redundant power rail, dual Gigabit MACs, and onboard non-volatile telemetry queue buffer.
+            </p>
+<div class="p-2 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-secondary">
+              Processing: ARM Cortex-A53 quad
+            </div>
+</div>
+<div class="pt-space-xs">
+<div class="h-1 w-full bg-secondary/20 rounded">
+<div class="h-full bg-secondary w-full rounded"></div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-md relative">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-mono-lg text-label-mono-lg font-bold text-tertiary">03. SECURE TRANSPORT</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">vpn_key</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-title-md text-title-md text-on-surface mb-space-xs">Hardened WireGuard Mesh</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              Point-to-point encrypted channel with zero listening inbound ports. Automatic fallback between plant fiber, private Wi-Fi, and 4G fallback micro-SIM.
+            </p>
+<div class="p-2 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-tertiary">
+              Cipher: ChaCha20-Poly1305 / TLS1.3
+            </div>
+</div>
+<div class="pt-space-xs">
+<div class="h-1 w-full bg-tertiary/20 rounded">
+<div class="h-full bg-tertiary w-full rounded"></div>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-md relative">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-mono-lg text-label-mono-lg font-bold text-primary-fixed-dim">04. CONTROL WORKSPACE</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">monitoring</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-title-md text-title-md text-on-surface mb-space-xs">Engineer Diagnostic Client</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+              Native virtual COM port adapter, live PLC variable debugging, remote web HMI streaming at 60 FPS, and proactive telemetry analytics dashboard.
+            </p>
+<div class="p-2 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-primary-fixed-dim">
+              Client: Win/Linux/Android Native
+            </div>
+</div>
+<div class="pt-space-xs">
+<div class="h-1 w-full bg-primary-fixed-dim/20 rounded">
+<div class="h-full bg-primary-fixed-dim w-full rounded"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Real Field Installation Showcase Photo -->
+<div class="mt-space-lg rounded-lg overflow-hidden bg-surface-container shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+<div class="lg:col-span-5 p-space-lg flex flex-col gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-primary">FIELD PROVEN DEPLOYMENT</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Tested Inside Severe Indian &amp; Global Plant Environments</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              High electromagnetic interference from 150-ton mechanical presses, conductive coal dust, and ambient furnace heat up to 65°C. Tools Digital DIN modules operate without active cooling fans.
+            </p>
+<div class="flex items-center gap-4 text-on-surface font-label-mono-sm text-label-mono-sm pt-space-xs">
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[18px]">thermostat</span> -25°C to +70°C Rated</div>
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[18px]">bolt</span> 4kV Surge Immunity</div>
+</div>
+</div>
+<div class="lg:col-span-7 h-72 lg:h-96 w-full">
+<img class="w-full h-full object-cover" data-alt="A technician wearing safety gloves wiring a DIN rail mounted industrial IoT telemetry gateway inside a high-voltage machinery control panel. Orange and blue network cables neatly routed through slotted wiring ducts, status LEDs actively blinking with emerald teal accents, sharp macro depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSwkBFXTbxUoFo4WPDnvTzAEj5wIaxxRJRrNBSeL41CGEYsfzyBhHKreUQAQ0KmmB67oK-MmjEXvBrhaQyUqN3IznLWql1fFZKi5v_6dUjODxMnRondL3qk7bu9ig5lCHjbE8Bqj734q9et3NLbnp-AtfME_7c2nAu3QCBo7SRin_sX8d0qhoPBkblcvAas6cHVnzj7--Ooz-F1BVnSILT3YRjSSc4LkiY6O-d9mIKl0QdXQX2Be9K"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROTOCOL COMPATIBILITY MATRIX SECTION -->
+<section class="w-full bg-surface py-space-xl px-margin-mobile lg:px-margin" id="matrix-section">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-primary tracking-widest block mb-1">03 / INTEROPERABILITY</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Supported Industrial Protocols &amp; PLC Matrix</h2>
+</div>
+<div class="inline-flex items-center gap-2 px-space-sm py-1.5 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+          45+ Protocol Drivers Pre-Compiled
+        </div>
+</div>
+<!-- Specification Matrix Table -->
+<div class="overflow-x-auto rounded-lg bg-surface-container shadow-md">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm uppercase">
+<tr>
+<th class="p-space-md">Manufacturer / Brand</th>
+<th class="p-space-md">Controllers &amp; Series</th>
+<th class="p-space-md">Physical Media</th>
+<th class="p-space-md">Industrial Bus / Protocol</th>
+<th class="p-space-md">Engineering Software Compatibility</th>
+<th class="p-space-md text-right">Tunnel Latency</th>
+</tr>
+</thead>
+<tbody class="text-on-surface divide-y-0">
+<!-- Row 1: Siemens -->
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-semibold text-primary">Siemens</td>
+<td class="p-space-md">S7-1200, S7-1500, S7-300, ET200SP</td>
+<td class="p-space-md font-label-mono-sm text-label-mono-sm">PROFINET / MPI / PPI</td>
+<td class="p-space-md"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm">S7comm / PROFINET IO</span></td>
+<td class="p-space-md text-on-surface-variant font-label-mono-sm text-label-mono-sm">TIA Portal v13-v19, STEP 7 Micro/WIN</td>
+<td class="p-space-md text-right font-label-mono-sm text-label-mono-sm text-primary">12ms - 19ms</td>
+</tr>
+<!-- Row 2: Allen-Bradley -->
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-semibold text-primary">Rockwell / Allen-Bradley</td>
+<td class="p-space-md">ControlLogix, CompactLogix, Micro800</td>
+<td class="p-space-md font-label-mono-sm text-label-mono-sm">EtherNet/IP, DF1 Serial</td>
+<td class="p-space-md"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm">CIP (Common Industrial Protocol)</span></td>
+<td class="p-space-md text-on-surface-variant font-label-mono-sm text-label-mono-sm">Studio 5000, RSLogix 500/5000</td>
+<td class="p-space-md text-right font-label-mono-sm text-label-mono-sm text-primary">15ms - 22ms</td>
+</tr>
+<!-- Row 3: Mitsubishi -->
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-semibold text-secondary">Mitsubishi Electric</td>
+<td class="p-space-md">iQ-R, iQ-F (FX5U), Q-Series, FX3U</td>
+<td class="p-space-md font-label-mono-sm text-label-mono-sm">RS-422, RS-485, Ethernet</td>
+<td class="p-space-md"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm">MELSEC MC Protocol / CC-Link</span></td>
+<td class="p-space-md text-on-surface-variant font-label-mono-sm text-label-mono-sm">GX Works2 / GX Works3</td>
+<td class="p-space-md text-right font-label-mono-sm text-label-mono-sm text-secondary">16ms - 24ms</td>
+</tr>
+<!-- Row 4: Omron -->
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-semibold text-secondary">Omron</td>
+<td class="p-space-md">Sysmac NX/NJ, CP1H, CJ2M</td>
+<td class="p-space-md font-label-mono-sm text-label-mono-sm">EtherNet/IP, Host Link RS-232</td>
+<td class="p-space-md"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm">FINS / EtherNet/IP</span></td>
+<td class="p-space-md text-on-surface-variant font-label-mono-sm text-label-mono-sm">Sysmac Studio, CX-Programmer</td>
+<td class="p-space-md text-right font-label-mono-sm text-label-mono-sm text-secondary">14ms - 20ms</td>
+</tr>
+<!-- Row 5: Schneider & Delta -->
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-semibold text-tertiary">Schneider &amp; Delta</td>
+<td class="p-space-md">Modicon M221/M241, Delta DVP / AS300</td>
+<td class="p-space-md font-label-mono-sm text-label-mono-sm">RS-485 2-Wire, Modbus TCP</td>
+<td class="p-space-md"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm">Modbus RTU / Modbus TCP</span></td>
+<td class="p-space-md text-on-surface-variant font-label-mono-sm text-label-mono-sm">EcoStruxure Machine Expert, ISPSoft</td>
+<td class="p-space-md text-right font-label-mono-sm text-label-mono-sm text-tertiary">10ms - 17ms</td>
+</tr>
+<!-- Row 6: Fanuc & ABB Robotics -->
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-semibold text-primary-fixed-dim">Fanuc &amp; ABB</td>
+<td class="p-space-md">R-30iB Plus, IRC5 / OmniCore</td>
+<td class="p-space-md font-label-mono-sm text-label-mono-sm">EtherNet/IP, PROFINET, Socket</td>
+<td class="p-space-md"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm">Robot Remote TP / OPC UA</span></td>
+<td class="p-space-md text-on-surface-variant font-label-mono-sm text-label-mono-sm">ROBOGUIDE, RobotStudio</td>
+<td class="p-space-md text-right font-label-mono-sm text-label-mono-sm text-primary-fixed-dim">18ms - 26ms</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA CONVERSION BANNER -->
+<section class="w-full bg-surface-container-lowest py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-[1440px] mx-auto bg-surface-container-high rounded-xl p-space-lg lg:p-space-xl relative overflow-hidden shadow-2xl">
+<!-- Glow ambient backdrop -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container text-primary font-label-mono-sm text-label-mono-sm mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            TURNKEY PILOT IN 7 BUSINESS DAYS
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">
+            Modernize Your Production Line Without Replacing Proven Machines
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+            Ship a pre-configured TD-GATE100 demo gateway directly to your plant. Connect in 15 minutes with our senior automation engineering team standing by on live video.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm shrink-0">
+<button class="px-space-lg py-3.5 rounded bg-primary text-on-primary font-label-mono-lg text-label-mono-lg uppercase font-semibold hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2 shadow-lg" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+            Schedule Pilot Consultation
+          </button>
+<a class="px-space-lg py-3.5 rounded bg-surface-container text-on-surface hover:text-primary font-label-mono-lg text-label-mono-lg uppercase font-semibold transition-colors flex items-center justify-center gap-2 shadow-sm" href="tel:18004197285">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+            1800-419-7285
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-slate-border py-space-xl"><div class="w-full px-margin-mobile lg:px-margin max-w-[1440px] mx-auto"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl"><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">memory</span><h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-medium">Tools Digital Industrial</h3></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm leading-relaxed">DIN-rail edge gateways, deterministic telemetry, zero-cloud dependency options for smart manufacturing.</p><div class="inline-flex items-center px-space-sm py-1 rounded bg-surface-container border border-slate-border"><span class="material-symbols-outlined text-primary text-[16px] mr-1">verified_user</span><span class="font-label-mono-sm text-label-mono-sm text-primary">2-Year industrial replacement warranty</span></div></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-secondary text-[20px]">settings_input_component</span><h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-medium">Hardware &amp; Protocols</h3></div><ul class="space-y-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant"><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Modbus RTU/TCP</li><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Siemens PPI / MPI / PROFINET</li><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Allen-Bradley EtherNet/IP</li><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Mitsubishi MELSEC</li><li class="flex items-center gap-1.5"><span class="text-primary">›</span>Omron Host Link</li></ul></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-tertiary text-[20px]">support_agent</span><h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-medium">Engineering Support</h3></div><div class="mb-space-sm"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block uppercase text-[10px]">24/7 Field Escalation Hotline</span><a class="font-label-mono-lg text-label-mono-lg text-primary hover:underline font-semibold" href="tel:18004197285">1800-419-7285</a></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><span class="text-on-surface font-medium block">On-site dispatch centers:</span>Pune, Nashik, Ahmedabad, Coimbatore, Manesar</p></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-alert-amber text-[20px]">gavel</span><h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-medium">Compliance &amp; Standards</h3></div><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">shield</span>IEC 62443 Industrial Cybersecurity</li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>CE / FCC Class A Compliant</li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">inventory_2</span>IP40 / IP67 Rugged Enclosures</li><li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">terminal</span>RFC 9116 security.txt Verified</li></ul></div></div><div class="pt-space-md border-t border-slate-border flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-mono-sm text-label-mono-sm text-on-surface-variant"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary"></span><span>© 2025 Tools Digital Pvt Ltd. All industrial rights reserved.</span></div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" data-path="legal-compliance" href="#">Security Policy</a><a class="hover:text-primary transition-colors" data-path="legal-compliance" href="#">Terms of Industrial Supply</a><a class="hover:text-primary transition-colors" data-path="legal-compliance" href="#">Telemetry Privacy</a></div></div></div></footer></body></html>

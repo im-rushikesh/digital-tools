@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-dim":"#0b1326","on-primary-fixed":"#00201c","secondary-container":"#007068","surface-bright":"#31394d","error":"#ffb4ab","slate-surface":"#1E293B","inverse-surface":"#dae2fd","primary-fixed-dim":"#4fdbc8","outline-variant":"#3c4947","primary":"#4fdbc8","secondary-fixed":"#9cf2e8","on-tertiary-fixed":"#002115","on-secondary-container":"#9af0e5","on-background":"#dae2fd","background":"#0b1326","surface-container-highest":"#2d3449","on-primary-container":"#00423b","on-error-container":"#ffdad6","on-secondary-fixed-variant":"#00504a","on-surface":"#dae2fd","tertiary":"#7bd8b1","tertiary-fixed":"#97f5cc","canvas-light":"#F8FAFC","inverse-primary":"#006b5f","on-secondary":"#003733","surface-container-low":"#131b2e","secondary-fixed-dim":"#80d5cb","on-tertiary-container":"#00432f","surface-tint":"#4fdbc8","outline":"#859490","on-surface-variant":"#bbcac6","surface-variant":"#2d3449","on-error":"#690005","inverse-on-surface":"#283044","on-tertiary-fixed-variant":"#00513a","slate-border":"#334155","on-primary":"#003731","on-primary-fixed-variant":"#005048","surface-container":"#171f33","alert-amber":"#F59E0B","tertiary-container":"#58b590","primary-fixed":"#71f8e4","secondary":"#80d5cb","on-tertiary":"#003827","tertiary-fixed-dim":"#7bd8b1","surface-container-lowest":"#060e20","error-container":"#93000a","surface":"#0b1326","on-secondary-fixed":"#00201d","primary-container":"#14b8a6","surface-container-high":"#222a3d"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"2.5rem","margin":"2rem","space-md":"1rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-lg":"1.5rem","margin-mobile":"1rem","space-sm":"0.5rem","gutter":"1.5rem"},"fontFamily":{"headline-lg-mobile":["Space Grotesk"],"body-md":["Inter"],"headline-sm":["Space Grotesk"],"body-lg":["Inter"],"headline-lg":["Space Grotesk"],"body-sm":["Inter"],"title-md":["Inter"],"label-mono-lg":["JetBrains Mono"],"display-hero":["Space Grotesk"],"label-mono-sm":["JetBrains Mono"],"headline-md":["Space Grotesk"]},"fontSize":{"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-mono-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-mono-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="h-16 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><img alt="Tools Digital" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-title-md font-semibold tracking-tight text-on-surface whitespace-nowrap">Tools Digital</span><span class="hidden lg:inline text-outline-variant font-label-mono-sm text-label-mono-sm">//</span><span class="hidden lg:inline text-on-surface-variant font-label-mono-sm text-label-mono-sm tracking-wide uppercase">Field Telemetry &amp; Video Archives</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-2 py-0.5 rounded-lg bg-surface-container-high border border-outline-variant/40"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wider uppercase">RFC 9116 / ZERO-TRACKER VIDEO FACADES</span></div></div><nav class="hidden md:flex items-center gap-1 lg:gap-2" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-medium shadow-sm"><a class="px-3 py-1.5 rounded-lg font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-3 py-1.5 rounded-lg font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agriculture" href="#">Agriculture</a><a class="px-3 py-1.5 rounded-lg font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="industrial" href="#">Industrial</a><a class="px-3 py-1.5 rounded-lg font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="apps" href="#">Apps</a><a aria-current="page" class="px-3 py-1.5 uppercase transition-colors bg-primary-container text-on-primary-container rounded-lg font-medium shadow-sm" data-path="videos" href="#">Videos</a><a class="px-3 py-1.5 rounded-lg font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="legal" href="#">Legal</a></nav><div class="flex items-center gap-space-sm flex-shrink-0"><a class="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant hover:border-primary-container font-label-mono-sm text-label-mono-sm uppercase text-on-surface transition-colors" data-path="main-portal" href="#">Main Portal</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- Top Telemetry Banner & Privacy Verification -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile md:px-margin py-6">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-4">
+<!-- Breadcrumb & System Verification Strip -->
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wider uppercase">ARCHIVE NODES ACTIVE</span>
+<span class="text-outline-variant font-label-mono-sm text-label-mono-sm">/</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">RFC 9116 COMPLIANT // ZERO THIRD-PARTY TRACKERS // PRIVACY-PRESERVING NOCACHE EMBEDS</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-mono-sm text-label-mono-sm text-tertiary">
+            CSP: STRICT NO-COOKIE
+          </span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">HASH: 9A4F-C081</span>
+</div>
+</div>
+<!-- Main Section Header -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end pt-2">
+<div class="lg:col-span-8 flex flex-col gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Field Testing, Bench Proofs &amp; Hardware Demonstrations
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl leading-relaxed">
+            Verifiable engineering footage of deep-field agricultural radio sweeps, 415V surge bench audits, remote PLC diagnostics, and mobile app operational workflows. Click-to-load architecture ensures no Google/YouTube cookies or telemetry scripts execute without explicit user action.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-2 bg-surface-container p-4 rounded-xl">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-outline">TELEMETRY FACADE</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold">AIR-GAPPED THUMBNAILS</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span>External iframes injected strictly on click. Zero pre-rendering beacon calls.</span>
+</div>
+</div>
+</div>
+<!-- KPI Metrics Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4">
+<div class="bg-surface-container p-4 rounded-xl flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">ARCHIVAL DEMOS</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface font-bold">14</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">1080p / 4K UHD</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated lab &amp; rugged field captures</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">TRACKING COOKIES</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-primary font-bold">0</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">CSP ENFORCED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Strict youtube-nocookie sandbox</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">MAX RF SWEEP RANGE</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-on-surface font-bold">12</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">KILOMETERS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sub-GHz western ghats elevation test</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">TIME-TO-FIRST-FRAME</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-headline-lg text-secondary font-bold">&lt;100</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">MILLISECONDS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant cached static SVG/Poster layers</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Callout: RFC & Privacy Embed Architecture -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin py-6">
+<div class="max-w-[1440px] mx-auto bg-surface-container-low rounded-xl p-5 md:p-6 shadow-md">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">shield</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-title-md font-semibold text-on-surface">Architectural Spec: RFC 9116 &amp; Zero-Tracker Video Facades</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-primary">SECURITY GUARANTEE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+              Standard embedded video players download analytics scripts and set Google identifier cookies prior to user engagement. Tools Digital employs an air-gapped web facade: static SVG posters render natively with zero outbound telemetry requests. External secure frames only mount upon deliberate playback initiation using <code class="font-label-mono-sm text-label-mono-sm px-1.5 py-0.5 bg-surface-container rounded text-primary">youtube-nocookie.com</code> with <code class="font-label-mono-sm text-label-mono-sm px-1.5 py-0.5 bg-surface-container rounded text-primary">autoplay=1&amp;rel=0&amp;modestbranding=1</code>.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto flex-shrink-0">
+<div class="p-3 bg-surface-container rounded-lg flex flex-col gap-1 font-label-mono-sm text-label-mono-sm text-on-surface-variant min-w-[200px]">
+<span class="text-outline">POLICY ENFORCEMENT</span>
+<span class="text-primary font-bold">FRAME-SRC STRICT</span>
+<span class="text-on-surface">0 THIRD-PARTY BEACONS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Spotlight Video Benchmark -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin py-8">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold uppercase">BENCHMARK SPOTLIGHT</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Western Ghats 12 km Long-Range RF Sweep</span>
+</div>
+<span class="hidden md:inline font-label-mono-sm text-label-mono-sm text-tertiary">REF ID: TD-VID-868MHZ-01</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-surface-container rounded-xl p-4 md:p-6 shadow-xl">
+<!-- Interactive Player Facade (Wide) -->
+<div class="lg:col-span-8 flex flex-col gap-3">
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-lowest group cursor-pointer" id="featured-player-container" onclick="loadFacadePlayer('featured-player-container', 'featured-brief-toggle', 'TD_BENCHMARK_12KM')">
+<!-- Simulated Video Frame / Placeholder -->
+<div class="bg-cover bg-center w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="High-contrast cinematic photography of industrial radio mast on mountain ridge overlooking sugarcane valley in Maharashtra Western Ghats, dramatic golden hour sky, field technician holding portable telemetry monitor showing radio spectrum analyzer waveform, rugged electronic testing setup." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCh8wr7MBiTS2nm2gDAn0tYzcRSl9FjDgIOjdeV1ovHZFWoCwAKECx19yqE5d8hNZV3vjxicn69HlRlSFiTknwtGb3D3cBxOjh4wfKRoqfeiKMBoQg17JhFtZqG7eb7cgTKb79Qws7RwyTtW9BLPC26JtrJFsLnKVYo8afws_6jsF0Gf_moT7mOS-JQiwywF7Nozn5WcE6owa7NprTNj5ZYzesNUJY3fGFow_6aBQIAcxgZ4-HR1gtt')"></div>
+<!-- Video Frame Telemetry Overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/90 via-surface-dim/20 to-surface-dim/40 p-4 md:p-6 flex flex-col justify-between pointer-events-none">
+<!-- Top HUD -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 bg-surface-dim/80 backdrop-blur-md px-3 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">REC // 4K 60FPS</span>
+<span class="text-outline font-label-mono-sm text-label-mono-sm">|</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">RSSI -94 dBm</span>
+</div>
+<div class="bg-surface-dim/80 backdrop-blur-md px-3 py-1 rounded font-label-mono-sm text-label-mono-sm text-on-surface">
+                  DURATION: 08:45
+                </div>
+</div>
+<!-- Center Play Overlay Button -->
+<div class="self-center flex flex-col items-center gap-3">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-[36px] md:text-[44px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-canvas-light bg-surface-dim/90 px-3 py-1 rounded backdrop-blur-sm uppercase tracking-wide">
+                  Click to Load Secure Stream (Zero Telemetry)
+                </span>
+</div>
+<!-- Bottom Status Banner -->
+<div class="flex items-center justify-between text-canvas-light">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-bright font-label-mono-sm text-label-mono-sm">868 MHz ISM</span>
+<span class="font-headline-sm text-title-md font-semibold text-on-surface">Western Ghats Valley Sweep: Kolhapur to Shirol Ridge</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">100% PACKET RETENTION</span>
+</div>
+</div>
+</div>
+<!-- Video Audio / Language Selector Strip -->
+<div class="flex flex-wrap items-center justify-between gap-2 pt-2 px-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">translate</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Audio Track:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-mono-sm text-label-mono-sm text-on-surface">English (Master)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-mono-sm text-label-mono-sm text-on-surface-variant">मराठी (Field Audio)</span>
+</div>
+<div class="flex items-center gap-3 font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>RESOLUTION: 3840×2160</span>
+<span>CODEC: AV01 / VP9</span>
+</div>
+</div>
+</div>
+<!-- Accompanying Engineering Brief -->
+<div class="lg:col-span-4 flex flex-col justify-between gap-4 bg-surface-container-low p-5 rounded-lg">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold uppercase">// BENCHMARK SPEC SHEET</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<div class="space-y-3">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">System Under Test</span>
+<p class="font-headline-sm text-title-md font-semibold text-on-surface">TD-RF12K Radio Pump Controller</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Spread spectrum modulation, 868 MHz ISM, proprietary air-time interleaving.</p>
+</div>
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Test Topography &amp; Coordinates</span>
+<p class="font-body-md text-body-md text-on-surface">Kolhapur Valley to Shirol Ridge, MH</p>
+<p class="font-label-mono-sm text-label-mono-sm text-outline-variant">11.8 km direct link across dense sugarcane canopy &amp; undulating foothills.</p>
+</div>
+<!-- Technical Observation Strip -->
+<div class="p-3 bg-surface-container rounded-lg space-y-2">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase">OBSERVED FIELD TELEMETRY</span>
+<div class="flex justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Transmitter Power:</span>
+<span class="text-on-surface font-semibold">27 dBm (500mW)</span>
+</div>
+<div class="flex justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Received RSSI:</span>
+<span class="text-on-surface font-semibold">-94 dBm avg</span>
+</div>
+<div class="flex justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Packet Loss Ratio:</span>
+<span class="text-primary font-bold">0.00% (250/250 cycles)</span>
+</div>
+<div class="flex justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">415V Grid Jitter Immunity:</span>
+<span class="text-on-surface font-semibold">Verified Class-3 Surge</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full py-2.5 px-4 rounded bg-primary text-on-primary font-label-mono-lg text-label-mono-lg uppercase font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center justify-center gap-2" onclick="document.getElementById('tech-specs-modal').scrollIntoView({behavior: 'smooth'})">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+              Inspect Runbook &amp; BOM
+            </button>
+<div class="grid grid-cols-2 gap-2">
+<a class="py-2 px-3 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm uppercase text-center hover:bg-surface-bright transition-colors" href="#">
+                Datasheet PDF
+              </a>
+<a class="py-2 px-3 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm uppercase text-center hover:bg-surface-bright transition-colors" href="#">
+                Schematic v2.1
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Controls: Filters, Search, Language Toggles -->
+<section class="w-full bg-surface-container-low px-margin-mobile md:px-margin py-6">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-4">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+<!-- Interactive Category Pills -->
+<div class="flex flex-wrap items-center gap-2" id="filter-pills">
+<button class="filter-btn active-pill px-3.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold transition-colors" onclick="filterGallery('all', this)">
+            All Archives (14)
+          </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase font-semibold transition-colors" onclick="filterGallery('agritech', this)">
+            AgriTech Hardware (5)
+          </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase font-semibold transition-colors" onclick="filterGallery('industrial', this)">
+            Industrial Automation (4)
+          </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase font-semibold transition-colors" onclick="filterGallery('apps', this)">
+            Mobile Apps &amp; Software (3)
+          </button>
+<button class="filter-btn px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm uppercase font-semibold transition-colors" onclick="filterGallery('bench', this)">
+            Field Bench &amp; Stress Tests (2)
+          </button>
+</div>
+<!-- Language Selector -->
+<div class="flex items-center gap-2 bg-surface-container p-1 rounded-lg self-start lg:self-auto">
+<span class="font-label-mono-sm text-label-mono-sm text-outline px-2 uppercase">Audio:</span>
+<button class="lang-btn px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm font-medium" onclick="setLanguage('all', this)">All</button>
+<button class="lang-btn px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm" onclick="setLanguage('en', this)">English</button>
+<button class="lang-btn px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm" onclick="setLanguage('hi', this)">हिन्दी</button>
+<button class="lang-btn px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm" onclick="setLanguage('mr', this)">मराठी</button>
+</div>
+</div>
+<!-- Search Input Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full bg-surface-container rounded-lg pl-11 pr-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-highest" id="gallery-search" onkeyup="searchGallery()" placeholder="Filter by equipment, protocol (e.g. Modbus, 12km RF, Attendy, S7-1500, DOL Starter), or region..." type="text"/>
+<span class="absolute right-3.5 top-1/2 -translate-y-1/2 font-label-mono-sm text-label-mono-sm text-outline-variant hidden sm:inline">ESC TO RESET</span>
+</div>
+</div>
+</section>
+<!-- Responsive Demonstration Grid (6 Technical Video Cards) -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin py-8">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="video-grid">
+<!-- Video Card 1: Borewell Starter & 415V Surge -->
+<div class="video-card group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-md transition-all duration-200" data-category="agritech bench" data-lang="mr hi">
+<!-- Poster / Click-to-load Facade -->
+<div class="relative aspect-video w-full bg-surface-container-lowest overflow-hidden cursor-pointer" onclick="activateCardPlayer(this, 'TD_BOREWELL_415V')">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-300 group-hover:scale-105" data-alt="Technical close-up photograph of an industrial 3-phase agricultural direct-on-line DOL starter panel mounted on concrete wall inside a dusty farm pump shed, cyan LED status indicators, heavy copper contactor wiring and digital surge bench probe clips." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjLd7JgD3OJajsrHqQ34F4nkzYFwtrqdBQtQVOw5T1moqGq2QZqoQ4rIGi-1xkX0EIcc_i4N9hGezDQg7JDqXrGZFrOhhPBifFowmjRYQRrgFYytHzomAPM2WNAVgGDydlHvyvIplJG7oANrXI6yZUSaWnjIbzQyGCWXpFvtxH1bl0vbmHp31bfIlLsH12geZvxM3FTttCW8GdGVJUFp4okeiTb1524rSjdVC6sJW0nN9UQF_zfBZi')"></div>
+<!-- Play trigger badge -->
+<div class="absolute inset-0 bg-surface-dim/40 flex items-center justify-center group-hover:bg-surface-dim/20 transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<!-- Overlaid Info Chips -->
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-tertiary">05:12</span>
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-on-surface">मराठी / Hindi Subs</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/90 font-label-mono-sm text-label-mono-sm text-primary">NOCACHE FACADE</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold uppercase">AGRITECH // MOTOR CONTROL</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">SKU: TD-RF12K</span>
+</div>
+<h3 class="font-headline-sm text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Zero-Internet Borewell Starter Installation &amp; 415V Surge Testing
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Step-by-step unboxing, DIN-rail mounting in a rural pump room, wiring phase-reversal trigger, and instant sub-second radio remote ON/OFF confirmation under active grid fluctuations.
+              </p>
+</div>
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm py-1.5 px-2.5 bg-surface-container-high rounded text-on-surface">
+<span class="text-outline">HARDWARE:</span>
+<span class="font-semibold">TD-RF12K + 3-Phase DOL Panel</span>
+</div>
+<div class="flex items-center justify-between">
+<button class="text-primary hover:text-primary-fixed-dim font-label-mono-sm text-label-mono-sm uppercase font-semibold flex items-center gap-1" onclick="loadDrawer('TD_BOREWELL_415V')">
+                  View BOM &amp; Runbook <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">SURGE: 4.2 kV OK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Card 2: Siemens S7-1500 WireGuard OT Mesh -->
+<div class="video-card group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-md transition-all duration-200" data-category="industrial" data-lang="en">
+<!-- Poster / Facade -->
+<div class="relative aspect-video w-full bg-surface-container-lowest overflow-hidden cursor-pointer" onclick="activateCardPlayer(this, 'TD_SIEMENS_OT_MESH')">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-300 group-hover:scale-105" data-alt="Technical engineering photography inside an automated packaging factory control cabinet showing a Siemens S7-1500 PLC rack with blinking green profinet LEDs alongside a rugged DIN rail mounted cyber telemetry gateway router with blue ethernet cables." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCC8ttPI87lvp1E8_EVZi2VyRdnijXrRnQtvF28u_l-xkdZ6VGAa0bf1LFaqfy-Z_SLz5qcpPS0k83z0oxU-7MTJU9u5uIlJAXgZ5lro0XG1AGfJ2I3I1mwmcAQQw5z5LkTGr16UUbHyDRVz7rP13xWYmKWdjRZVHEFnnYbrFZEd0ZU3Xj6mLjMG_F-aLhcb2AzvXADINrxAac-Ru59HIKS6NJRVqE5jX4KL-YcCgYYwoNvWHHwNwS9')"></div>
+<div class="absolute inset-0 bg-surface-dim/40 flex items-center justify-center group-hover:bg-surface-dim/20 transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-tertiary">06:30</span>
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-on-surface">English Audio</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/90 font-label-mono-sm text-label-mono-sm text-primary">NOCACHE FACADE</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold uppercase">INDUSTRIAL // OT SECURITY</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">SKU: TD-GATE100</span>
+</div>
+<h3 class="font-headline-sm text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Zero-Downtime Siemens S7-1500 Ladder Modification via WireGuard OT Mesh
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Live remote diagnostics and block update on an active pharmaceutical packaging line in Pune without firewall modifications or on-site engineer dispatch.
+              </p>
+</div>
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm py-1.5 px-2.5 bg-surface-container-high rounded text-on-surface">
+<span class="text-outline">SUITE:</span>
+<span class="font-semibold">TIA Portal v18 + WireGuard OT</span>
+</div>
+<div class="flex items-center justify-between">
+<button class="text-primary hover:text-primary-fixed-dim font-label-mono-sm text-label-mono-sm uppercase font-semibold flex items-center gap-1" onclick="loadDrawer('TD_SIEMENS_OT_MESH')">
+                  View BOM &amp; Runbook <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">0 PORT FORWARDS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Card 3: Dual Root-Depth Moisture Automation -->
+<div class="video-card group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-md transition-all duration-200" data-category="agritech" data-lang="en hi">
+<!-- Poster / Facade -->
+<div class="relative aspect-video w-full bg-surface-container-lowest overflow-hidden cursor-pointer" onclick="activateCardPlayer(this, 'TD_SOIL_AUTOPUMP')">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-300 group-hover:scale-105" data-alt="Agricultural engineering outdoor shot showing Bhagwa pomegranate orchard with precision drip irrigation drippers, soil capacitance sensor cross-section probe inserted into dry clay soil with digital telemetry display showing 18 percent volumetric water content." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSdLzqyn00mu5NUk03jyMRjHUWbr3OzgLhJWo0nY-x7U3dXaXYcpQY5c76G4Miqp9s_-vQb7u__sn00ga36jUA6ObS5puYFkDTyBZA2mUQAbGMY582TnEzfMYrl4FvaNopv89SZLxDWbP9rg1Brpud9CegvTY8TYvAYST6n5oSX7fbOTwg_jwbTg9SInBGt48Ml6PXH1cmKbNA64ovoiYib7jl9BgF1u6P_0vK3a_xDa3wF2vm6q1A')"></div>
+<div class="absolute inset-0 bg-surface-dim/40 flex items-center justify-center group-hover:bg-surface-dim/20 transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-tertiary">04:18</span>
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-on-surface">English / Hindi</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/90 font-label-mono-sm text-label-mono-sm text-primary">NOCACHE FACADE</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold uppercase">AGRITECH // HYDRO CLOSED-LOOP</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">SKU: TD-AUTOPUMP</span>
+</div>
+<h3 class="font-headline-sm text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Dual Root-Depth Soil Moisture Auto-Triggering a 15 HP Submersible
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Demonstration of threshold-based irrigation automation in high-density Bhagwa pomegranate soil, reducing total borewell run hours while preventing root rot.
+              </p>
+</div>
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm py-1.5 px-2.5 bg-surface-container-high rounded text-on-surface">
+<span class="text-outline">SENSORS:</span>
+<span class="font-semibold">Dual Capacitance (15cm &amp; 45cm)</span>
+</div>
+<div class="flex items-center justify-between">
+<button class="text-primary hover:text-primary-fixed-dim font-label-mono-sm text-label-mono-sm uppercase font-semibold flex items-center gap-1" onclick="loadDrawer('TD_SOIL_AUTOPUMP')">
+                  View BOM &amp; Runbook <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">34% WATER SAVING</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Card 4: Attendy Mobile App Workflow -->
+<div class="video-card group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-md transition-all duration-200" data-category="apps" data-lang="en">
+<!-- Poster / Facade -->
+<div class="relative aspect-video w-full bg-surface-container-lowest overflow-hidden cursor-pointer" onclick="activateCardPlayer(this, 'TD_ATTENDY_PAYROLL')">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-300 group-hover:scale-105" data-alt="High tech modern user interface mockup of Attendy Android smartphone application displaying circular map polygon geofence over an industrial warehouse facility with live employee timestamp list and clean dark mode typography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB57iVxCnkRHLEbNa8nlhHCXLn5fsQnKmqagsm1fg-Ko_GLjM6McXnt9H-wHTd0U27cibjj2__nJEmZwACUybcwKhugv6RAnsoGjKlf_Pva8kpYQQOyN_JywC5NZfZKz54O8AnwgQaKdN6PgKpHEcO4hp9NPXxw0LWIO8eK0JIq7pWMED0wQZHDKwOrDznOoYzoTlxPDHHrT9PjwbKdAygYJHUxGv3g-J7skySSImzshXnptP4fVRCO')"></div>
+<div class="absolute inset-0 bg-surface-dim/40 flex items-center justify-center group-hover:bg-surface-dim/20 transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-tertiary">03:40</span>
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-on-surface">English Audio</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/90 font-label-mono-sm text-label-mono-sm text-primary">NOCACHE FACADE</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary font-semibold uppercase">MOBILE APPS // WORKFORCE OS</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">v2.4-PROD</span>
+</div>
+<h3 class="font-headline-sm text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Attendy Geofencing Setup &amp; Instant Roster Payroll Run in 90 Seconds
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Workshop supervisor configures polygon perimeter, scans field workers via encrypted zero-lag QR, and generates statutory PDF payroll reports on-device.
+              </p>
+</div>
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm py-1.5 px-2.5 bg-surface-container-high rounded text-on-surface">
+<span class="text-outline">RUNTIME:</span>
+<span class="font-semibold">Android 14 Native (Offline-First)</span>
+</div>
+<div class="flex items-center justify-between">
+<button class="text-primary hover:text-primary-fixed-dim font-label-mono-sm text-label-mono-sm uppercase font-semibold flex items-center gap-1" onclick="loadDrawer('TD_ATTENDY_PAYROLL')">
+                  View BOM &amp; Runbook <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">LOCAL SQL ENCRYPTED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Card 5: Wild Boar Acoustic Deterrent -->
+<div class="video-card group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-md transition-all duration-200" data-category="agritech" data-lang="en mr">
+<!-- Poster / Facade -->
+<div class="relative aspect-video w-full bg-surface-container-lowest overflow-hidden cursor-pointer" onclick="activateCardPlayer(this, 'TD_DETER800_WILDLIFE')">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-300 group-hover:scale-105" data-alt="Monochrome thermal infrared night vision imaging showing wild boars turning away and fleeing in a sugarcane field border, solar-powered electronic unit mounted on fence post with green status LED illumination." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3zMb0s7XiTlCvnaSJ87Y7qSxWUc1jTjbIh_RyTQ0cM1d-dQ1HiFEsU_yKs3rLnw_PedmRq2hPUXcmlvML_P5aUfIxR1tZQP_hghe5CxAI3q2Hgk2gjBHu82CDiCdeqGLOhpVH75SyLX_q4__Bbc5OKmXlThBfZrVtFmEWcvuuu8mLr9ZcLQNZta8dq-aANpkg8fpafndCnqFaqxZAK_L4jNC_ONFJEusDd8EknVhD9gNIjR1yi_tx')"></div>
+<div class="absolute inset-0 bg-surface-dim/40 flex items-center justify-center group-hover:bg-surface-dim/20 transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-tertiary">07:15</span>
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-on-surface">English / Marathi</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/90 font-label-mono-sm text-label-mono-sm text-primary">NOCACHE FACADE</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold uppercase">AGRITECH // WILDLIFE TELEMETRY</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">SKU: TD-DETER800</span>
+</div>
+<h3 class="font-headline-sm text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Acoustic Non-Habituating Wild Boar Deterrent Night Test
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Thermal camera field capture demonstrating immediate animal herd retreat under pseudo-random acoustic frequencies without physical barriers or power-grid dependency.
+              </p>
+</div>
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm py-1.5 px-2.5 bg-surface-container-high rounded text-on-surface">
+<span class="text-outline">POWER:</span>
+<span class="font-semibold">Integrated 20W Solar + LiFePO4</span>
+</div>
+<div class="flex items-center justify-between">
+<button class="text-primary hover:text-primary-fixed-dim font-label-mono-sm text-label-mono-sm uppercase font-semibold flex items-center gap-1" onclick="loadDrawer('TD_DETER800_WILDLIFE')">
+                  View BOM &amp; Runbook <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">0 HABITUATION</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Card 6: Stamping Press Retrofit -->
+<div class="video-card group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-md transition-all duration-200" data-category="industrial bench" data-lang="en">
+<!-- Poster / Facade -->
+<div class="relative aspect-video w-full bg-surface-container-lowest overflow-hidden cursor-pointer" onclick="activateCardPlayer(this, 'TD_STAMPING_SNIFFER')">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-300 group-hover:scale-105" data-alt="Industrial metal stamping press machine from 1990s in auto-parts factory floor, technician clipping opto-isolated non-invasive sensor clamp around yellow 24V indicator wires without breaking connection, digital oscilloscope displaying square pulses." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCN3ZbXNl9v9PWlFO17QypDUMXULcBj-d4uWbnmQGUjjk9lUQfBtDU3PQIQ2KYxREJK01uceMEqesKiV1Kps-1HXDKffq0vvPmC6joMjUoFcU1S093JiwsIiQDUx7KXE7dLF9G3YY5_eJOdJFcc8gVC0PFgjVPAAaOQ7C3IdRLpVEwh8zWB4aDO5lLv9_b7oLbHIAuI0QAyqIb6vGsGLy7eUpUKXDn_FzBXeVvV-pHgU0CRWUdmJu3s')"></div>
+<div class="absolute inset-0 bg-surface-dim/40 flex items-center justify-center group-hover:bg-surface-dim/20 transition-colors">
+<div class="w-12 h-12 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-tertiary">05:55</span>
+<span class="px-2 py-0.5 rounded bg-surface-dim/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm text-on-surface">English Audio</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-dim/90 font-label-mono-sm text-label-mono-sm text-primary">NOCACHE FACADE</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold uppercase">INDUSTRIAL // BROWNFIELD IIOT</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">SKU: TD-OPTO4</span>
+</div>
+<h3 class="font-headline-sm text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Non-Invasive 24V Tower Light &amp; Hydraulic Sniffing on Stamping Press
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Capturing unrecorded micro-stops on mechanical presses manufactured in 1994 without voiding machine CE certification or modifying PLC code.
+              </p>
+</div>
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm py-1.5 px-2.5 bg-surface-container-high rounded text-on-surface">
+<span class="text-outline">ISOLATION:</span>
+<span class="font-semibold">3.75 kVrms Optocoupled Bus</span>
+</div>
+<div class="flex items-center justify-between">
+<button class="text-primary hover:text-primary-fixed-dim font-label-mono-sm text-label-mono-sm uppercase font-semibold flex items-center gap-1" onclick="loadDrawer('TD_STAMPING_SNIFFER')">
+                  View BOM &amp; Runbook <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">ZERO DOWN-TIME</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Technical Runbook & BOM Inspection Panel -->
+<section class="w-full bg-surface-container-low px-margin-mobile md:px-margin py-8" id="tech-specs-modal">
+<div class="max-w-[1440px] mx-auto bg-surface-container rounded-xl p-6 md:p-8 shadow-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">engineering</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Technical Runbook &amp; Equipment BOM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Exact timecode milestones, schematic references, and hardware BOM for selected archival footage.
+          </p>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-mono-sm text-label-mono-sm text-outline">CURRENT ACTIVE PROFILE:</span>
+<span class="px-3 py-1 rounded bg-surface-container-high font-label-mono-sm text-label-mono-sm text-primary font-semibold" id="active-profile-name">
+            TD-RF12K // 12KM BENCHMARK SWEEP
+          </span>
+</div>
+</div>
+<!-- Split Grid: Timeline Milestones vs Bill-of-Materials -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6">
+<!-- Left: Timestamp Markers -->
+<div class="lg:col-span-5 space-y-4">
+<h4 class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold flex items-center justify-between">
+<span>Video Timecode Milestones</span>
+<span class="text-outline font-normal">SYNCHRONIZED</span>
+</h4>
+<div class="space-y-2" id="runbook-timestamps">
+<div class="p-3 bg-surface-container-low rounded-lg flex items-start gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-tertiary">00:00</span>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Topography &amp; Line-of-Sight Calibration</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mast altitude: 740m MSL; sugarcane canopy attenuation estimate.</p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-start gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-tertiary">02:14</span>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Sub-GHz Transceiver RSSI Sweep</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Stepwise distance check: 3km, 7km, and 11.8km terminal point.</p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-start gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-tertiary">05:40</span>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Simulated 415V Phase Sag &amp; Surge</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validating motor control packet integrity under 65V drop condition.</p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-start gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-tertiary">07:22</span>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Final Verification &amp; Cryptographic Signoff</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero dropped frame audit ledger generated in field terminal.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Hardware Bill-of-Materials (BOM) Table -->
+<div class="lg:col-span-7 space-y-4">
+<div class="flex items-center justify-between">
+<h4 class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-semibold">
+              Demonstrated Equipment Bill-of-Materials
+            </h4>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">STRICT SPECIFICATION</span>
+</div>
+<div class="overflow-x-auto rounded-lg bg-surface-container-low">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-lowest text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase">
+<tr>
+<th class="py-3 px-4">Component</th>
+<th class="py-3 px-4">Identifier / SKU</th>
+<th class="py-3 px-4">Operating Range</th>
+<th class="py-3 px-4 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 text-on-surface" id="bom-table-body">
+<tr class="hover:bg-surface-container/50">
+<td class="py-3 px-4 font-semibold">Radio Controller Node</td>
+<td class="py-3 px-4 font-label-mono-sm text-label-mono-sm text-primary">TD-RF12K-TX</td>
+<td class="py-3 px-4 font-label-mono-sm text-label-mono-sm">868 MHz / 27 dBm</td>
+<td class="py-3 px-4 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-mono-sm text-label-mono-sm text-tertiary">FIELD DEPLOYED</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50">
+<td class="py-3 px-4 font-semibold">Remote Contactor Receiver</td>
+<td class="py-3 px-4 font-label-mono-sm text-label-mono-sm text-primary">TD-RF12K-RX</td>
+<td class="py-3 px-4 font-label-mono-sm text-label-mono-sm">415V 3-Phase / 32A DOL</td>
+<td class="py-3 px-4 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-mono-sm text-label-mono-sm text-tertiary">CERTIFIED</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50">
+<td class="py-3 px-4 font-semibold">Omnidirectional Dipole Mast</td>
+<td class="py-3 px-4 font-label-mono-sm text-label-mono-sm text-on-surface-variant">ANT-868-5DBI</td>
+<td class="py-3 px-4 font-label-mono-sm text-label-mono-sm">5.5 dBi Fiberglass</td>
+<td class="py-3 px-4 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant">COMMERCIAL</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/50">
+<td class="py-3 px-4 font-semibold">Transient Suppression Varistor</td>
+<td class="py-3 px-4 font-label-mono-sm text-label-mono-sm text-on-surface-variant">MOV-415-HIGHJOULE</td>
+<td class="py-3 px-4 font-label-mono-sm text-label-mono-sm">4.2 kV Clamping</td>
+<td class="py-3 px-4 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-mono-sm text-label-mono-sm text-tertiary">VERIFIED</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Safety Admonition -->
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center gap-3 text-alert-amber font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[20px] flex-shrink-0">warning</span>
+<span>
+<strong>HV Safety Notice:</strong> 415V 3-Phase testing requires CAT III certified multimeter isolation. Ground bonding and neutral disconnect tests shown in this video must be replicated only by qualified field electricians.
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Engineering Video Request & On-Site Demonstration Booking CTA -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile md:px-margin py-12">
+<div class="max-w-[1440px] mx-auto bg-gradient-to-r from-surface-container to-surface-container-low rounded-xl p-8 md:p-12 shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-4">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold uppercase">
+              FIELD ENGINEERING DESK
+            </span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">// PROOF-OF-CONCEPT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+            Need a Specific Protocol Demo or Custom Hardware Proof-of-Concept?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            Our field applications engineering team conducts bespoke on-site bench audits, live RF propagation mapping, and virtual video demonstrations over secure zero-knowledge channels. Tell us your field constraints or machinery footprint.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-3">
+<a class="w-full py-3 px-5 rounded bg-primary text-on-primary font-label-mono-lg text-label-mono-lg uppercase font-semibold text-center hover:bg-primary-fixed-dim transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+            Request Field Demonstration
+          </a>
+<a class="w-full py-3 px-5 rounded bg-surface-container-high text-on-surface font-label-mono-lg text-label-mono-lg uppercase font-semibold text-center hover:bg-surface-bright transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+            Contact Applications Engineering
+          </a>
+<a class="w-full py-3 px-5 rounded bg-surface-container-high text-tertiary font-label-mono-lg text-label-mono-lg uppercase font-semibold text-center hover:bg-surface-bright transition-colors flex items-center justify-center gap-2" href="https://wa.me/919800012345" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+            WhatsApp Farmer Helpline (+91 98000 12345)
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript Controller for Click-To-Load Facade, Filters, and BOM Switcher -->
+<script>
+    // YouTube nocookie video facade loader
+    function loadFacadePlayer(containerId, toggleId, videoId) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      // Simulated safe embed injection with YouTube-nocookie
+      // In production this injects iframe with strict sandbox
+      container.innerHTML = `
+        <div class="w-full h-full bg-black flex flex-col items-center justify-center text-center p-6 relative">
+          <div class="flex flex-col items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center animate-spin">
+              <span class="material-symbols-outlined text-[28px]">sync</span>
+            </div>
+            <div class="font-headline-sm text-title-md text-on-surface">Secure Sandbox Stream Initialized</div>
+            <div class="font-label-mono-sm text-label-mono-sm text-tertiary">
+              SRC: https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+              Encrypted channel open. Telemetry block active under Content-Security-Policy.
+            </p>
+          </div>
+          <button onclick="location.reload()" class="mt-4 px-3 py-1 bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm rounded hover:bg-surface-bright">
+            Reset Facade Player
+          </button>
+        </div>
+      `;
+    }
+
+    // Individual video card player activation
+    function activateCardPlayer(element, videoId) {
+      element.innerHTML = `
+        <div class="w-full h-full bg-surface-container-lowest flex flex-col items-center justify-center text-center p-4">
+          <span class="material-symbols-outlined text-primary text-[32px] animate-pulse">lock_open</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-on-surface mt-2 font-semibold">STREAM CONNECTED</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-outline">youtube-nocookie.com/${videoId}</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-tertiary mt-1">NO TRACKERS ACTIVE</span>
+        </div>
+      `;
+    }
+
+    // Filter functionality
+    function filterGallery(category, button) {
+      // Update button state
+      document.querySelectorAll('#filter-pills .filter-btn').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      button.classList.add('bg-primary', 'text-on-primary');
+      button.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+      // Filter cards
+      const cards = document.querySelectorAll('.video-card');
+      cards.forEach(card => {
+        const cardCats = card.getAttribute('data-category') || '';
+        if (category === 'all' || cardCats.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Language toggle
+    function setLanguage(lang, button) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('bg-surface-container-highest', 'text-on-surface', 'font-medium');
+        btn.classList.add('text-on-surface-variant');
+      });
+      button.classList.add('bg-surface-container-highest', 'text-on-surface', 'font-medium');
+      button.classList.remove('text-on-surface-variant');
+
+      const cards = document.querySelectorAll('.video-card');
+      cards.forEach(card => {
+        const cardLangs = card.getAttribute('data-lang') || '';
+        if (lang === 'all' || cardLangs.includes(lang)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Search input filtering
+    function searchGallery() {
+      const query = document.getElementById('gallery-search').value.toLowerCase();
+      const cards = document.querySelectorAll('.video-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Dynamic Runbook & BOM updater on button click
+    const runbookData = {
+      'TD_BOREWELL_415V': {
+        title: 'TD-RF12K // 415V BOREWELL DOL INSTALLATION',
+        timestamps: [
+          { time: '00:00', title: 'Farm Pump Shed Arrival & Inspection', desc: 'Assessing 3-phase incoming supply and neutral floating voltage.' },
+          { time: '01:15', title: 'DOL Starter Contactor Disconnect', desc: 'Isolating 415V busbar and clipping DIN-rail auxiliary relay.' },
+          { time: '03:10', title: 'Radio Receiver Interfacing', desc: 'Connecting phase-reversal input to TD-RF12K terminal block.' },
+          { time: '04:45', title: 'Handheld Remote 1km Test Fire', desc: 'Submersible water discharge verified in 820 milliseconds.' }
+        ],
+        bom: [
+          { name: 'Radio Pump Starter Unit', sku: 'TD-RF12K-415V', spec: '3-Phase 415V / 25A', status: 'IN STOCK' },
+          { name: 'Direct-on-Line (DOL) Panel', sku: 'DOL-IND-20HP', spec: 'Siemens/L&T Compatible', status: 'STANDARD' },
+          { name: 'Phase Reversal Detector', sku: 'SN-PHASE-REV', spec: 'Optical Isolation', status: 'VERIFIED' }
+        ]
+      },
+      'TD_SIEMENS_OT_MESH': {
+        title: 'TD-GATE100 // SIEMENS S7-1500 REMOTE OT MESH',
+        timestamps: [
+          { time: '00:00', title: 'Pune Packaging Cell Architecture', desc: 'Siemens S7-1500 CPU 1516-3 PN/DP topology walk-through.' },
+          { time: '01:50', title: 'TD-GATE100 DIN Installation', desc: 'Auxiliary 24V DC feed and PROFINET switch patch cable.' },
+          { time: '03:40', title: 'Zero-Port-Forward WireGuard Handshake', desc: 'Secure air-gapped cryptographic connection established in 12ms.' },
+          { time: '05:30', title: 'TIA Portal Online Diagnostic Block Update', desc: 'Live function block download without machine stop cycle.' }
+        ],
+        bom: [
+          { name: 'Industrial OT Gateway', sku: 'TD-GATE100', spec: 'WireGuard Kernel / Dual GbE', status: 'PROD READY' },
+          { name: 'Siemens S7-1500 CPU', sku: '6ES7516-3AN02-0AB0', spec: 'Profinet Master', status: 'OEM HARNESS' },
+          { name: 'Industrial M12 Patch Cord', sku: 'TD-ETH-M12-CAT6', spec: 'Shielded IP67', status: 'INCLUDED' }
+        ]
+      },
+      'TD_SOIL_AUTOPUMP': {
+        title: 'TD-AUTOPUMP // DUAL DEPTH SOIL TRIGGER',
+        timestamps: [
+          { time: '00:00', title: 'Bhagwa Pomegranate Orchard Baseline', desc: 'Analyzing clay loam soil moisture retention profile.' },
+          { time: '01:20', title: '15cm & 45cm Capacitance Probe Insertion', desc: 'Direct root zone dielectric permittivity measurement.' },
+          { time: '02:50', title: 'Cutoff Threshold Parameter Tuning', desc: 'Setting 22% lower threshold and 38% field capacity trip.' },
+          { time: '04:00', title: 'Automated 15 HP Pump Disengage', desc: 'Telemetry event triggers auto-stop when tap root depth saturates.' }
+        ],
+        bom: [
+          { name: 'Closed-Loop Irrigation Controller', sku: 'TD-AUTOPUMP-V2', spec: 'RS485 Modbus RTU', status: 'PROD READY' },
+          { name: 'Capacitance Moisture Sensors (x2)', sku: 'TD-SOIL-CAP-100', spec: '0-100% VWC / IP68', status: 'CALIBRATED' },
+          { name: 'Heavy Duty Contactor Drive', sku: 'TD-RELAY-40A', spec: 'AC-3 Rated 415V', status: 'FIELD TESTED' }
+        ]
+      },
+      'TD_ATTENDY_PAYROLL': {
+        title: 'ATTENDY OS // GEOFENCING & INSTANT PAYROLL',
+        timestamps: [
+          { time: '00:00', title: 'Factory Floor Geofence Configuration', desc: 'Drawing 50-meter GPS polygon boundary around assembly line.' },
+          { time: '00:45', title: 'Worker QR Badge Punch Demonstration', desc: 'Offline-first sub-100ms QR scan validation on local SQLite.' },
+          { time: '01:50', title: 'Shift Differential & Overtime Compute', desc: 'Deterministic wage engine calculates night allowance.' },
+          { time: '03:10', title: 'Encrypted PDF Salary Slip Export', desc: 'Instant batch export with statutory PF/ESIC deductions.' }
+        ],
+        bom: [
+          { name: 'Attendy Android Application', sku: 'ATTENDY-APK-v2.4', spec: 'Offline-First Engine', status: 'DEPLOYED' },
+          { name: 'Industrial Rugged Scanner Tablet', sku: 'TAB-IP65-ANDROID', spec: 'Octa-Core / Dual SIM', status: 'COMPATIBLE' },
+          { name: 'Encrypted Bluetooth Receipt Printer', sku: 'PRN-ESC-BT', spec: '203 DPI Thermal', status: 'OPTIONAL' }
+        ]
+      },
+      'TD_DETER800_WILDLIFE': {
+        title: 'TD-DETER800 // ACOUSTIC BOAR DETERRENT',
+        timestamps: [
+          { time: '00:00', title: 'Sugarcane Boundary Night Camera Setup', desc: 'Calibrating thermal FLIR sensor along 200m forest edge.' },
+          { time: '02:10', title: 'Wild Boar Pack Approach Detected', desc: 'Herd of 8 animals crossing within 15 meters of perimeter.' },
+          { time: '03:40', title: 'Non-Habituating Frequency Discharge', desc: 'Pseudo-random acoustic patterns activate at 112 dB.' },
+          { time: '06:15', title: 'Immediate Pack Dispersal Verification', desc: 'Zero crop damage; telemetry unit logs timestamp to local NVRAM.' }
+        ],
+        bom: [
+          { name: 'Solar Wildlife Deterrent Node', sku: 'TD-DETER800', spec: '12-28 kHz Dynamic Horn', status: 'PROD READY' },
+          { name: 'Monocrystalline Solar Panel', sku: 'PV-20W-RUGGED', spec: 'Aluminum Frame IP66', status: 'INCLUDED' },
+          { name: 'LiFePO4 Deep Cycle Battery', sku: 'BAT-LIFE-12V6AH', spec: '3000 Cycles @ 60°C', status: 'INSTALLED' }
+        ]
+      },
+      'TD_STAMPING_SNIFFER': {
+        title: 'TD-OPTO4 // NON-INVASIVE BROWNFIELD SNIFFER',
+        timestamps: [
+          { time: '00:00', title: 'Stamping Press 1994 Control Cabinet', desc: 'Inspecting legacy 24V DC incandescent stack light wiring.' },
+          { time: '01:30', title: 'Optocoupler Clamp Attachment', desc: 'Zero wire cutting; galvanic isolation clamp seated on RUN wire.' },
+          { time: '03:00', title: 'Pulse Calibration & Edge Counting', desc: 'Telemetry node registers hydraulic stroke cycles with zero noise.' },
+          { time: '05:10', title: 'Micro-Stop Detection Dashboard Live', desc: 'Capturing 18-second tool-feed micro delays missed by shift logs.' }
+        ],
+        bom: [
+          { name: 'Opto-Isolated Signal Sniffer', sku: 'TD-OPTO4-DIN', spec: '4-Channel 24V DC / 3.75kV', status: 'PROD READY' },
+          { name: 'Hall-Effect Current Clamp', sku: 'CLMP-50A-DC', spec: 'Non-Invasive Split-Core', status: 'CERTIFIED' },
+          { name: 'Brownfield Telemetry Transmitter', sku: 'TD-TX-MQTT-RS485', spec: 'Cellular / Wi-Fi Fallback', status: 'TESTED' }
+        ]
+      }
+    };
+
+    function loadDrawer(videoId) {
+      const data = runbookData[videoId];
+      if (!data) return;
+
+      // Update active profile title
+      document.getElementById('active-profile-name').innerText = data.title;
+
+      // Update timestamps
+      const tsContainer = document.getElementById('runbook-timestamps');
+      tsContainer.innerHTML = data.timestamps.map(ts => `
+        <div class="p-3 bg-surface-container-low rounded-lg flex items-start gap-3">
+          <span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-mono-sm text-label-mono-sm text-tertiary">${ts.time}</span>
+          <div>
+            <span class="font-body-sm text-body-sm font-semibold text-on-surface">${ts.title}</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">${ts.desc}</p>
+          </div>
+        </div>
+      `).join('');
+
+      // Update BOM table
+      const bomBody = document.getElementById('bom-table-body');
+      bomBody.innerHTML = data.bom.map(item => `
+        <tr class="hover:bg-surface-container/50">
+          <td class="py-3 px-4 font-semibold">${item.name}</td>
+          <td class="py-3 px-4 font-label-mono-sm text-label-mono-sm text-primary">${item.sku}</td>
+          <td class="py-3 px-4 font-label-mono-sm text-label-mono-sm">${item.spec}</td>
+          <td class="py-3 px-4 text-right">
+            <span class="px-2 py-0.5 rounded bg-surface-container font-label-mono-sm text-label-mono-sm text-tertiary">${item.status}</span>
+          </td>
+        </tr>
+      `).join('');
+
+      // Smooth scroll to inspect table
+      document.getElementById('tech-specs-modal').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30"><div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg"><div class="space-y-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">terminal</span><span class="font-headline-sm text-title-md font-semibold text-on-surface">Tools Digital</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Deterministic automation architectures and field-grade video telemetry nodes. Engineered for low-bandwidth agronomic arrays and high-reliability industrial infrastructure.</p><div class="pt-space-xs flex items-center gap-2"><span class="px-2 py-0.5 rounded-lg bg-surface-container font-label-mono-sm text-label-mono-sm text-tertiary border border-outline-variant/30">ARCHIVE PROTOCOL v4.2</span></div></div><div class="space-y-space-sm"><span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-primary">Division Telemetry</span><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors flex items-center gap-2" data-path="agriculture" href="#"><span class="w-1 h-1 bg-outline-variant rounded-full"></span>Agronomic Sensor Arrays</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-2" data-path="industrial" href="#"><span class="w-1 h-1 bg-outline-variant rounded-full"></span>SCADA Actuator Bus Telemetry</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-2" data-path="videos" href="#"><span class="w-1 h-1 bg-outline-variant rounded-full"></span>Edge Optical Stream Facades</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-2" data-path="apps" href="#"><span class="w-1 h-1 bg-outline-variant rounded-full"></span>Air-Gapped Client Runtime</a></li></ul></div><div class="space-y-space-sm"><span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-primary">Security &amp; Compliance</span><div class="p-3 rounded-lg bg-surface-container border border-outline-variant/30 space-y-2"><div class="flex items-center justify-between"><span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold">RFC 9116 Policy</span><span class="w-2 h-2 rounded-full bg-tertiary"></span></div><p class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Zero third-party script tracking, zero canvas fingerprinting, zero remote CDN surveillance.</p><div class="pt-1 border-t border-outline-variant/20 flex items-center justify-between"><span class="font-label-mono-sm text-label-mono-sm text-outline">SECURITY CONTACT</span><a class="font-label-mono-sm text-label-mono-sm text-primary hover:underline" href="mailto:security@toolsdigital.internal">sec@tools.internal</a></div></div></div><div class="space-y-space-sm"><span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-primary">Node Identity</span><div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant space-y-1.5"><div class="flex justify-between"><span class="text-outline">CORE SYSTEM:</span><span class="text-on-surface">HARDENED ARCHIVE</span></div><div class="flex justify-between"><span class="text-outline">LOCATION:</span><span class="text-on-surface">EDGE CLUSTER A-9</span></div><div class="flex justify-between"><span class="text-outline">CERT HASH:</span><span class="text-on-surface">sha256-4b89f2a</span></div><div class="flex justify-between"><span class="text-outline">SECURITY RFC:</span><span class="text-primary">9116 VERIFIED</span></div></div></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-mono-sm text-label-mono-sm"><div>© 2025 Tools Digital Architecture Group. All field telemetry and media assets reserved.</div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" data-path="legal" href="#">LEGAL / COMPLIANCE</a><span class="text-outline-variant">|</span><a class="hover:text-primary transition-colors" data-path="security-txt" href="#">/.WELL-KNOWN/SECURITY.TXT</a></div></div></div></footer></body></html>

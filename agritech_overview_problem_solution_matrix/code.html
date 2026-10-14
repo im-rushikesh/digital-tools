@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#0b1326", "error-container": "#93000a", "secondary-fixed-dim": "#80d5cb", "on-tertiary-fixed-variant": "#00513a", "slate-border": "#334155", "on-secondary-fixed-variant": "#00504a", "on-error-container": "#ffdad6", "on-primary-container": "#00423b", "secondary": "#80d5cb", "alert-amber": "#F59E0B", "canvas-light": "#F8FAFC", "surface-container-high": "#222a3d", "primary-container": "#14b8a6", "inverse-primary": "#006b5f", "on-tertiary": "#003827", "on-primary-fixed-variant": "#005048", "tertiary": "#7bd8b1", "inverse-on-surface": "#283044", "primary-fixed-dim": "#4fdbc8", "primary-fixed": "#71f8e4", "error": "#ffb4ab", "on-background": "dae2fd", "on-primary": "#003731", "surface-container-highest": "#2d3449", "on-secondary-container": "#9af0e5", "on-secondary": "#003733", "secondary-container": "#007068", "on-tertiary-container": "#00432f", "on-surface-variant": "#bbcac6", "tertiary-container": "#58b590", "surface-variant": "#2d3449", "surface-container-low": "#131b2e", "tertiary-fixed": "#97f5cc", "on-secondary-fixed": "#00201d", "surface-dim": "#0b1326", "surface": "#0b1326", "on-error": "#690005", "on-surface": "#dae2fd", "tertiary-fixed-dim": "#7bd8b1", "secondary-fixed": "#9cf2e8", "surface-container": "#171f33", "slate-surface": "#1E293B", "surface-tint": "#4fdbc8", "outline": "#859490", "primary": "#4fdbc8", "outline-variant": "#3c4947", "surface-bright": "#31394d", "on-tertiary-fixed": "#002115", "inverse-surface": "#dae2fd", "surface-container-lowest": "#060e20", "on-primary-fixed": "#00201c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-mono-sm": [ "JetBrains Mono" ], "display-hero": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "headline-md": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-lg-mobile": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "body-md": [ "Inter" ], "label-mono-lg": [ "JetBrains Mono" ], "title-md": [ "Inter" ] }, "fontSize": { "label-mono-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "label-mono-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Precision geometric tech logo for 'Tools Digital'. An intertwined hexagonal circuit gear merged with a stylized agricultural leaf and digital node network. Minimal, clean vector badge, technical emerald teal (#14B8A6) and crisp cyan accents on dark industrial background.. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W0G30ESVtF-uJILCRjGrPZlaN0tSfFL_77U-QUe1h8RsZRHMYqdVOLz9kJ_AxJd2-M9C71Ahibg6RJFkggnqsILsH3_6drtfUNScrtoaoIbt3ftfYDMUI5V1OZgfdiudkmhrpPbEsi2_6-Wx6K9Oghdjt65-Sl4CD_JXMZhHfHnXejVqQsHiz137g4OLEXDW5ux-c9DpkLz-3L4gmvZfeax4UZ9YLWsNpOgON18z-5j7jjWUpMvQrZ3w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">Tools Digital <span class="text-primary font-normal">| AgriTech Division</span></span><div class="flex items-center gap-space-xs mt-0.5"><span class="inline-flex items-center px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase tracking-wider">AGRICULTURE PORTAL (/agriculture)</span></div></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="transition-colors py-space-xs px-space-sm bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="overview" href="#overview">Overview</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="problems-and-solutions" href="#problems">Problems &amp; Solutions</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="hardware-and-devices" href="#hardware">Hardware &amp; Devices</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="real-life-impact" href="#impact">Real-life Impact</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm" data-path="farmer-support-and-hotline" href="#support">Farmer Support &amp; Hotline</a><a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md py-space-xs px-space-sm flex items-center gap-space-xs" data-path="back-to-main-portal" href="/"><span class="text-primary-fixed">←</span> Main Portal</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-space-xs rounded-lg text-on-surface-variant font-label-mono-sm text-label-mono-sm gap-space-xs"><span class="text-primary font-bold">EN</span><span class="text-outline-variant">|</span><span class="hover:text-on-surface cursor-pointer">हिन्दी</span><span class="text-outline-variant">|</span><span class="hover:text-on-surface cursor-pointer">मराठी</span></div><a class="inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase px-space-md py-space-sm rounded shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-semibold" href="#support"><span class="material-symbols-outlined text-[18px]">chat</span><span>WhatsApp Farmer Help</span></a><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface cursor-pointer"><span class="material-symbols-outlined text-[18px]">dark_mode</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-space-xl px-gutter">
+<div class="absolute inset-0 opacity-15 pointer-events-none">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="48" id="industrial-grid" patternunits="userSpaceOnUse" width="48">
+<path d="M 48 0 L 0 0 0 48" fill="none" stroke="#4fdbc8" stroke-dasharray="2 6" stroke-width="0.75"></path>
+<circle cx="0" cy="0" fill="#4fdbc8" opacity="0.6" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#industrial-grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Background radial glow -->
+<div class="absolute -top-32 right-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Breadcrumb & Badge -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-sm bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          AGRITECH HARDWARE &amp; ZERO-INTERNET AUTOMATION
+        </span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">// SYS_VER: 4.8.2-OFFLINE</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-sm bg-surface-container-high text-tertiary font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span> SUB-GHZ PHY ACTIVE
+        </span>
+</div>
+<!-- Main Headline & Subtitle Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+            Engineered for Farmers Who Battle <span class="text-primary">Rural Grid Volatility</span> &amp; Zero Connectivity
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            In deep agricultural belts, cellular networks collapse and 3-phase electricity arrives unpredictably at 2:00 AM. Tools Digital equips growers with 10–12 km long-range radio remote starters, autonomous soil moisture closed-loop triggers, and rugged telemetry nodes built to operate 100% independent of telecom infrastructure.
+          </p>
+<!-- Action buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-mono-lg text-label-mono-lg uppercase font-semibold px-space-lg py-space-sm rounded-lg hover:bg-primary-fixed transition-colors shadow-lg" href="#matrix">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Inspect Solutions Matrix</span>
+</a>
+<a class="inline-flex items-center gap-space-xs bg-surface-container-high text-on-surface font-label-mono-lg text-label-mono-lg uppercase px-space-lg py-space-sm rounded-lg hover:bg-surface-bright transition-colors" href="#hardware-strip">
+<span class="material-symbols-outlined text-primary text-[18px]">inventory_2</span>
+<span>Browse All 5 Agri Devices</span>
+</a>
+<a class="inline-flex items-center gap-space-xs bg-surface-container text-tertiary font-label-mono-lg text-label-mono-lg uppercase px-space-md py-space-sm rounded-lg hover:bg-surface-container-high transition-colors" href="https://wa.me/9118004197284">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Toll-Free Kisan Desk: 1800-419-7284</span>
+</a>
+</div>
+</div>
+<!-- Right Side Industrial Telemetry Terminal Quick Status -->
+<div class="lg:col-span-4 bg-surface-container rounded-lg p-space-md flex flex-col gap-space-sm shadow-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase">Live Field RF Monitor</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary bg-surface-container-highest px-space-xs py-0.5 rounded-sm">868 / 433 MHz</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-lowest p-space-xs rounded-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">ACK LATENCY</span>
+<span class="font-label-mono-lg text-label-mono-lg text-primary font-bold">142 ms</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">SURGE LIMIT</span>
+<span class="font-label-mono-lg text-label-mono-lg text-tertiary font-bold">5.8 kV / 415V</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">TX CARRIER</span>
+<span class="font-label-mono-lg text-label-mono-lg text-on-surface font-bold">FSK / LoRa PHY</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant block">CELL DEPENDENCY</span>
+<span class="font-label-mono-lg text-label-mono-lg text-primary font-bold">0.00% (Air-Gapped)</span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="bg-surface-container-lowest p-space-xs rounded-sm mt-space-xs">
+<div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-label-mono-sm mb-1">
+<span>VOLTAGE TRANSIENT CLAMP RATIO</span>
+<span class="text-primary font-mono">NORMAL</span>
+</div>
+<svg class="w-full h-8 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 200 32">
+<path d="M0 24 L20 22 L40 25 L60 20 L80 23 L100 8 L105 28 L110 16 L130 18 L160 20 L180 19 L200 21" stroke="currentColor" stroke-width="1.75" vector-effect="non-scaling-stroke"></path>
+<path d="M0 24 L20 22 L40 25 L60 20 L80 23 L100 8 L105 28 L110 16 L130 18 L160 20 L180 19 L200 21 L200 32 L0 32 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Stat Badges Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-md">
+<div class="bg-surface-container p-space-md rounded-lg flex items-center gap-space-md shadow-sm">
+<div class="p-space-sm bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined text-[28px]">settings_remote</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">12 km</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Line-of-Sight RF Direct</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex items-center gap-space-md shadow-sm">
+<div class="p-space-sm bg-tertiary/10 text-tertiary rounded-lg">
+<span class="material-symbols-outlined text-[28px]">signal_cellular_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Zero SIM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero Recurring Subscriptions</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex items-center gap-space-md shadow-sm">
+<div class="p-space-sm bg-secondary/10 text-secondary rounded-lg">
+<span class="material-symbols-outlined text-[28px]">flash_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">415V / 3Φ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Surge &amp; Phase-Reverse Proof</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex items-center gap-space-md shadow-sm">
+<div class="p-space-sm bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined text-[28px]">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">IP66 Ingress</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Monsoon &amp; Alkaline Salt Hardened</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: FIELD REALITIES & WHO IT IS FOR -->
+<section class="w-full bg-surface py-space-xl px-gutter">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider">// ON-GROUND REALITIES</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Designed for Rural Realities, Not Silicon Valley Labs</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Standard consumer smart home devices burn out under 415V phase reversal and drop out when cellular towers disconnect. Here is who we build for.
+        </p>
+</div>
+<!-- 3 Persona Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container rounded-lg p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded-sm bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm">FIELD PROFILE 01</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">water_pump</span>
+</div>
+<div class="h-44 w-full rounded-md overflow-hidden bg-surface-container-lowest relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An Indian farmer in late night walking with a flashlight along a dark rural irrigation trench canal near an agricultural borewell pump room, misty atmosphere, subtle teal and slate color accents, dramatic realistic low-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH3gN2Zbf62rDjtS6V-V70hT5EWoUOWlfTgsa_9oBiyUSA9Vno0KRQnZQeYyVkFrKHcZDDEUN16dv8_IgmOYa494n02ABS4-zDwPTCHjY7NSN6MCWni6naCfrLANcOxAbbUu_toJ9k9EWTR7G0HjFEOHVwLWjc8eC0YS8ZEycZDxBaSbXanWovNK9RoTnSGEwfa43YGeOmpbMT4qjPFTq_20shYLb4wRqcUzFbwVJrhW08tVUbrwd2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 px-space-xs py-0.5 bg-surface-container-lowest/80 backdrop-blur rounded font-label-mono-sm text-label-mono-sm text-on-surface">Open Well / Borewell Operative</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Remote Well Owners &amp; Canal Irrigators</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Farmers forced to walk 2–4 km through muddy ridges, unlit canals, and snake hazards at 1:30 AM merely because the state electricity board suddenly energized the 3-phase agricultural line for a 3-hour window.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/60 p-space-sm rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> SOLUTION DEPLOYED
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Sub-GHz 12 km Handheld RF Starter with instant physical switch verification buzzer.</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container rounded-lg p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded-sm bg-surface-container-highest text-alert-amber font-label-mono-sm text-label-mono-sm">FIELD PROFILE 02</span>
+<span class="material-symbols-outlined text-alert-amber text-[24px]">forest</span>
+</div>
+<div class="h-44 w-full rounded-md overflow-hidden bg-surface-container-lowest relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An expansive sugarcane and maize field border adjoining dense jungle buffer zone at twilight with an electronic solar deterrence node on a steel post flashing subtle alert beacons, cinematic industrial agriculture mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBT09EtvVH1ovnPJaqEx_0JKNs5uyCF5KPfWBmlpoChyjPP0rAducby7M_ljuJVoFagDOIIS9O2mfiZd2tUz_9T9K4QsqS8_rDW-3p8i_oNDjBEEc5FMFFq9G6YtF2kfewyovQSJy7_SZ72q-47fmUY0-0DHqfGDVMal2HJzf-cQQaklmkFrvoRaB0ded7n5ku1LRMfjt7fkg7HgybANllItP6h9XTZTtxHYUVeWuTJFqWFMkrCDMS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 px-space-xs py-0.5 bg-surface-container-lowest/80 backdrop-blur rounded font-label-mono-sm text-label-mono-sm text-on-surface">Forest Edge &amp; Perimeter Farms</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Border Crop Growers Facing Wild Animal Damage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Farms adjacent to reserved forests losing entire sugarcane, groundnut, and banana yields to midnight herds of wild boar, deer, and nilgai. Farmers previously lost sleep burning fires or risking crude electric fences.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/60 p-space-sm rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> SOLUTION DEPLOYED
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Solar-powered non-habituating multi-frequency acoustic repeller + random strobe sweep.</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container rounded-lg p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded-sm bg-surface-container-highest text-tertiary font-label-mono-sm text-label-mono-sm">FIELD PROFILE 03</span>
+<span class="material-symbols-outlined text-tertiary text-[24px]">potted_plant</span>
+</div>
+<div class="h-44 w-full rounded-md overflow-hidden bg-surface-container-lowest relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High density pomegranate and grape vineyard with drip irrigation tubes and a rugged hand-held digital probe inserted into rich red soil, high precision agronomy hardware with sunlight glinting off metallic probes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADFsB4AWky1FJpTwt83HXzZbdMlVYvMzRrEo0K7egnBNesfoGLHE2YLcK7UOpTROt8WMzpRcFN6B2awCuWBhKS7JRe1TDbnf7cmYDI27y_1nmYAyUd6gs1uuzp3HOp0gcfoXmQsga832rNTupJxL2ZoLu8UPKlvu48BDvfih3cpt-02rEfmR14sixx_hzJY_iSNit623pkWC09znqvbBETms4gMzW2e4JAuTGG2OheX2gLxtwcyfx8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 px-space-xs py-0.5 bg-surface-container-lowest/80 backdrop-blur rounded font-label-mono-sm text-label-mono-sm text-on-surface">High-Value Cash Crop Growers</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Precision Cash Crop &amp; Horticulture Farmers</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Grape, pomegranate, and cotton growers who cannot afford delayed 21-day government lab tests or catastrophic root-rot from waterlogged subsurface soil during erratic seasonal monsoon shifts.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/60 p-space-sm rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> SOLUTION DEPLOYED
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Digital multi-depth stainless soil telemetry &amp; direct autonomous contactor trigger.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: PROBLEM TO SOLUTION MATRIX -->
+<section class="w-full bg-surface-container-low py-space-xl px-gutter scroll-mt-24" id="matrix">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-sm bg-primary/20 text-primary font-label-mono-sm text-label-mono-sm uppercase">COMPREHENSIVE SPECIFICATION</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SRC/CONTENT/AGRI-SOLUTIONS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The 5 Core Agricultural Bottlenecks &amp; Hardware Responses</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Deterministic hardware replacing manual physical exposure, guesswork, and recurring telecom costs.
+        </p>
+</div>
+<!-- Filter / Quick Switcher -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container p-1 rounded-lg">
+<button class="px-space-sm py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase bg-primary text-on-primary font-bold" id="btn-all" onclick="filterMatrix('all')">All 5 Challenges</button>
+<button class="px-space-sm py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-on-surface" id="btn-power" onclick="filterMatrix('power')">Power &amp; Pumps</button>
+<button class="px-space-sm py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-on-surface" id="btn-wildlife" onclick="filterMatrix('wildlife')">Wildlife Protection</button>
+<button class="px-space-sm py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-on-surface" id="btn-irrigation" onclick="filterMatrix('irrigation')">Moisture &amp; Water</button>
+<button class="px-space-sm py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-on-surface" id="btn-nutrients" onclick="filterMatrix('nutrients')">NPK &amp; Soil Lab</button>
+<button class="px-space-sm py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-on-surface" id="btn-livestock" onclick="filterMatrix('livestock')">Livestock Geofence</button>
+</div>
+<!-- Interactive Comparison Stack -->
+<div class="flex flex-col gap-space-md" id="matrix-container">
+<!-- ROW 1: 3-Phase Power -->
+<div class="matrix-card bg-surface-container rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md" data-category="power">
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-primary/20 text-primary flex items-center justify-center font-label-mono-sm text-label-mono-sm font-bold">01</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Erratic 3-Phase Power at Midnight &amp; Remote Pump Access</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm rounded">SUB-GHZ RF / HARDWARE CLASS A</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-error uppercase font-medium">The Farmer Problem</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                State electricity dispatch delivers 3-phase power between 11 PM and 4 AM. Farmers risk animal bites, falls, and motor burnout if a single phase drops unnoticed while running unattended.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-medium">Tools Digital Hardware</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                TD-RAD12 Sub-GHz Long-Range Radio Remote Pump Controller
+              </p>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Industrial 415V DIN-rail contactor adapter with integrated physical piezo ACK.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase font-medium">Operating Architecture</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Sub-GHz frequency hop packet transceiver connects directly to the panel starter. Handheld field unit transmits 12 km deterministic pulses. Handheld emits high-decibel beep when pump switch confirms contact.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase font-medium">Concrete Real-World Result</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-tertiary font-bold">100%</span>
+<span class="font-body-sm text-body-sm text-on-surface">Night Hazards Avoided</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Saves 1.5–2 hours of nightly travel across broken terrain; preserves motor health against unphased brownouts; zero SIM recharge fees.
+              </p>
+</div>
+</div>
+</div>
+<!-- ROW 2: Wild Animal Devastation -->
+<div class="matrix-card bg-surface-container rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md" data-category="wildlife">
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-alert-amber/20 text-alert-amber flex items-center justify-center font-label-mono-sm text-label-mono-sm font-bold">02</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Night-time Crop Devastation by Wild Boars, Deer &amp; Nilgai</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-alert-amber font-label-mono-sm text-label-mono-sm rounded">ACOUSTIC SWEEP / SOLAR HARVESTING</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-error uppercase font-medium">The Farmer Problem</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Single nights of wild boar root-digging ruin up to ₹60,000 worth of harvestable sugarcane, peanuts, or young maize. Fixed sirens fail after 3 nights as herds habituate.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-alert-amber uppercase font-medium">Tools Digital Hardware</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                TD-DET800 Non-Habituating Ultrasonic/Acoustic Field Sentry
+              </p>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Monocrystalline solar-to-supercapacitor pole mount with anti-tamper enclosure.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase font-medium">Operating Architecture</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Microcontroller executes pseudo-random frequency sweeps (16 kHz – 28 kHz) paired with asynchronous high-lux xenon strobe bursts. Prevents neuro-acoustic tolerance in wild animals.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase font-medium">Concrete Real-World Result</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-tertiary font-bold">&gt;85%</span>
+<span class="font-body-sm text-body-sm text-on-surface">Crop Incursion Cut</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Documented reduction in perimeter foraging with zero ecological harm or legal liabilities associated with unauthorized lethal wire fences.
+              </p>
+</div>
+</div>
+</div>
+<!-- ROW 3: Over-Irrigation & Root Rot -->
+<div class="matrix-card bg-surface-container rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md" data-category="irrigation">
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-primary/20 text-primary flex items-center justify-center font-label-mono-sm text-label-mono-sm font-bold">03</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Over-Irrigation, Root Rot &amp; Aquifer Depletion</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm rounded">CLOSED-LOOP AUTONOMOUS RELAY</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-error uppercase font-medium">The Farmer Problem</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Farmers leave pumps running blindly for entire power windows out of fear of water shortages, leading to fungal collar rot in horti-trees and massive underground water waste.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-medium">Tools Digital Hardware</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                TD-SOIL-LOOP Autonomous Moisture Contactor System
+              </p>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Direct opto-isolated dry contact line linking soil probes to motor switchgear.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase font-medium">Operating Architecture</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Dual-depth corrosion-resistant stainless probes sense volumetric water content (VWC) at 15cm and 45cm. Opto-isolated relay trips pump off when active feeder root saturation reaches preset band.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase font-medium">Concrete Real-World Result</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-tertiary font-bold">35%</span>
+<span class="font-body-sm text-body-sm text-on-surface">Groundwater Preserved</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Eliminates drowned root zones; reduces monthly kWh power pump consumption while guaranteeing constant soil oxygenation.
+              </p>
+</div>
+</div>
+</div>
+<!-- ROW 4: Slow Soil Testing -->
+<div class="matrix-card bg-surface-container rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md" data-category="nutrients">
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-tertiary/20 text-tertiary flex items-center justify-center font-label-mono-sm text-label-mono-sm font-bold">04</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Slow, Inaccessible Soil Testing &amp; Guesswork Fertilization</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-mono-sm text-label-mono-sm rounded">ON-FIELD SPECTRO-IMPEDANCE</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-error uppercase font-medium">The Farmer Problem</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                District soil testing labs take 18–30 days to return paper reports. Farmers sow in the dark, routinely over-applying expensive chemical Urea and DAP, degrading soil biology.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase font-medium">Tools Digital Hardware</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                TD-NPK-DIGIT Rugged 5-Pin Handheld Soil Analyzer
+              </p>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">High-visibility backlit industrial LCD display; works completely without internet.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase font-medium">Operating Architecture</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Solid 316 stainless sensor pins execute multi-frequency electrical impedance and optical reflection spectrometry to compute N, P, K, pH, and electrical conductivity within 12 seconds on-screen.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase font-medium">Concrete Real-World Result</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-tertiary font-bold">₹14,500</span>
+<span class="font-body-sm text-body-sm text-on-surface">Saved / Acre / Season</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Replaces chemical over-application with exact dosed macro-nutrients. Instant guidance in local language directly on the LCD panel.
+              </p>
+</div>
+</div>
+</div>
+<!-- ROW 5: Open-Pasture Grazing -->
+<div class="matrix-card bg-surface-container rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md" data-category="livestock">
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-secondary/20 text-secondary flex items-center justify-center font-label-mono-sm text-label-mono-sm font-bold">05</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Open-Pasture Grazing, Herd Wandering &amp; Cattle Theft</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-mono-sm text-label-mono-sm rounded">SUB-GHZ GEOFENCE BEACON</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-error uppercase font-medium">The Farmer Problem</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Cattle, buffaloes, and sheep herds graze on open commons and river valleys where there is no 4G signal. Straying animals damage neighbor crops, sparking village conflicts or total theft loss.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase font-medium">Tools Digital Hardware</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                TD-PASTURE-TAG Solar Powered Cattle Ear-Tag + Base Hub
+              </p>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Ultra-light 28g flexible polyurethane clamp with 5-year battery reserve.</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase font-medium">Operating Architecture</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Beacon broadcasts long-range chirp every 90 seconds. If a tagged animal moves beyond the calibrated 3 km pasture perimeter, the homestead base station sounds an audible siren bell.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-md flex flex-col gap-1">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase font-medium">Concrete Real-World Result</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-tertiary font-bold">0 Cases</span>
+<span class="font-body-sm text-body-sm text-on-surface">Lost Livestock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Continuous real-time presence verification without paying recurring telecom tracking monthly fees or depending on cellular towers.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: HARDWARE CATALOG QUICK STRIP & TECHNICAL SPECS -->
+<section class="w-full bg-surface py-space-xl px-gutter" id="hardware-strip">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-wider">// HARDWARE ARSENAL</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">5 Autonomous Field-Grade Agri Devices</h2>
+</div>
+<a class="font-label-mono-sm text-label-mono-sm text-primary hover:text-primary-fixed flex items-center gap-1 uppercase" href="#support">
+<span>Request Physical Field Trial Unit</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- 5 Hardware Device Tiles -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Device 1 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 rounded bg-primary/10 text-primary">TD-RAD12</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">RANGE: 12 KM</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Radio Remote Pump Starter</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Heavy-duty handheld transmitter and DIN-rail panel receiver with phase-dropout auto-kill switch and 415V surge shunt.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-label-mono-sm text-label-mono-sm flex flex-col gap-1 text-on-surface-variant">
+<div class="flex justify-between"><span>RF Band:</span><span class="text-on-surface">868 MHz ISM band</span></div>
+<div class="flex justify-between"><span>Switchgear Compatibility:</span><span class="text-on-surface">L&amp;T, BCH, Crompton, Havells</span></div>
+<div class="flex justify-between"><span>Battery Tx:</span><span class="text-on-surface">2x AA (18-Month Lifespan)</span></div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹4,850</span>
+<span class="text-on-surface-variant font-label-mono-sm text-label-mono-sm">IP66 Contactor Box Included</span>
+</div>
+</div>
+<!-- Device 2 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 rounded bg-alert-amber/10 text-alert-amber">TD-DET800</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">PERIMETER: 800M</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Acoustic Animal Deterrent</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Solar-powered wildlife perimeter guardian using dynamic acoustic sweep algorithms to protect sugarcane and vegetable crops.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-label-mono-sm text-label-mono-sm flex flex-col gap-1 text-on-surface-variant">
+<div class="flex justify-between"><span>Audio Range:</span><span class="text-on-surface">120 dB @ 1m (Anti-Boar)</span></div>
+<div class="flex justify-between"><span>Power System:</span><span class="text-on-surface">5W Monocrystal + SuperCap</span></div>
+<div class="flex justify-between"><span>Autonomy:</span><span class="text-on-surface">7 Continuous Rainy Days</span></div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-alert-amber font-bold">₹6,200</span>
+<span class="text-on-surface-variant font-label-mono-sm text-label-mono-sm">Mounting Rig Included</span>
+</div>
+</div>
+<!-- Device 3 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 rounded bg-primary/10 text-primary">TD-SOIL-LOOP</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">PROBE DEPTH: 45 CM</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Autonomous Moisture Trigger</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Closed-loop dry contact relay connecting underground moisture sensors straight to pump starter switch. Operates with zero cloud servers.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-label-mono-sm text-label-mono-sm flex flex-col gap-1 text-on-surface-variant">
+<div class="flex justify-between"><span>Relay Output:</span><span class="text-on-surface">16A 250VAC Dry Contact</span></div>
+<div class="flex justify-between"><span>Probe Material:</span><span class="text-on-surface">316L Marine Stainless</span></div>
+<div class="flex justify-between"><span>Trigger Logic:</span><span class="text-on-surface">Dial Hysteresis (20-80% VWC)</span></div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹5,400</span>
+<span class="text-on-surface-variant font-label-mono-sm text-label-mono-sm">Dual Probe Pair Included</span>
+</div>
+</div>
+<!-- Device 4 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary">TD-NPK-DIGIT</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">READOUT: 12 SEC</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Handheld NPK &amp; pH Soil Lab</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Instant on-field testing kit for Nitrogen, Phosphorus, Potassium, Salinity, and pH with sunlight-readable high-contrast LCD screen.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-label-mono-sm text-label-mono-sm flex flex-col gap-1 text-on-surface-variant">
+<div class="flex justify-between"><span>Precision:</span><span class="text-on-surface">±2% Full-Scale Calibrated</span></div>
+<div class="flex justify-between"><span>Vernacular UI:</span><span class="text-on-surface">English, हिन्दी, मराठी</span></div>
+<div class="flex justify-between"><span>Battery:</span><span class="text-on-surface">Rechargeable LiFePO4 (Type-C)</span></div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">₹8,900</span>
+<span class="text-on-surface-variant font-label-mono-sm text-label-mono-sm">Rugged Hard Carry Case</span>
+</div>
+</div>
+<!-- Device 5 -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-mono-sm text-label-mono-sm px-space-xs py-0.5 rounded bg-secondary/10 text-secondary">TD-PASTURE-TAG</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">BEACON: 3 KM</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Livestock Geofence Ear-Tag</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Ultra-light ear tag paired with homestead RF base alert station. Alerts farmer when livestock herd strays across perimeter line.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-label-mono-sm text-label-mono-sm flex flex-col gap-1 text-on-surface-variant">
+<div class="flex justify-between"><span>Weight:</span><span class="text-on-surface">28 grams (Veterinary Grade)</span></div>
+<div class="flex justify-between"><span>Base Alert:</span><span class="text-on-surface">105 dB Siren + LED Strobe</span></div>
+<div class="flex justify-between"><span>Network:</span><span class="text-on-surface">Zero-SIM Offline RF Mesh</span></div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">₹3,400</span>
+<span class="text-on-surface-variant font-label-mono-sm text-label-mono-sm">Pack of 4 Tags + 1 Hub</span>
+</div>
+</div>
+<!-- Custom Order Card -->
+<div class="bg-surface-container-high rounded-lg p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-1 text-primary font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+<span>CUSTOM INTEGRATION</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Large Acreage &amp; Sugar Mill Cooperatives</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Deploying across 500+ farmer federations or canal water user associations? We customize RF relay repeaters and multilingual telemetry consoles.
+            </p>
+</div>
+<div class="mt-space-md">
+<a class="w-full text-center py-space-xs px-space-md rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm uppercase font-bold inline-block hover:bg-primary-fixed transition-colors" href="tel:18004197284">
+              Speak With Field Engineering
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: REAL LIFE FIELD METRICS & EVIDENCE -->
+<section class="w-full bg-surface-container-low py-space-xl px-gutter">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase">// DOCUMENTED FIELD IMPACT</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Real Life Impact Across 14,000+ Operational Hectares</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            From the black cotton soils of Khandesh to the canal belts of Belagavi, Tools Digital telemetry systems perform where fragile consumer electronics fail.
+          </p>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Zero SIM Downtime During Cyclone &amp; Heavy Monsoons</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">While cellular towers go offline during grid failures, sub-GHz point-to-point radios maintain deterministic 100% control.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Over 4.2 Million Midnight Well Walks Prevented</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Farmers switch 15HP starters from the safety of their home verandas with instant physical feedback beeps.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Data Visualizer Card -->
+<div class="lg:col-span-7 bg-surface-container rounded-lg p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Field Operations Comparative Metric</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary bg-tertiary/10 px-space-xs py-0.5 rounded">SEASONAL COMPARISON</span>
+</div>
+<!-- Benchmark Metrics Comparison -->
+<div class="flex flex-col gap-space-md">
+<div>
+<div class="flex justify-between items-center text-on-surface font-label-mono-sm text-label-mono-sm mb-1">
+<span>MIDNIGHT ACCIDENT RISK REDUCTION</span>
+<span class="text-primary font-bold">98.4%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-lowest overflow-hidden flex">
+<div class="bg-primary h-full rounded-full" style="width: 98.4%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center text-on-surface font-label-mono-sm text-label-mono-sm mb-1">
+<span>PUMP OVERHEAT / DRY-RUN BURNOUT PREVENTION</span>
+<span class="text-tertiary font-bold">94.1%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-lowest overflow-hidden flex">
+<div class="bg-tertiary h-full rounded-full" style="width: 94.1%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center text-on-surface font-label-mono-sm text-label-mono-sm mb-1">
+<span>GROUNDWATER EXTRACTION OVER-RUN REDUCTION</span>
+<span class="text-secondary font-bold">38.0%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-lowest overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full" style="width: 38%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center text-on-surface font-label-mono-sm text-label-mono-sm mb-1">
+<span>CROP INJURY / ANIMAL DAMAGE PROTECTION</span>
+<span class="text-alert-amber font-bold">87.5%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-lowest overflow-hidden flex">
+<div class="bg-alert-amber h-full rounded-full" style="width: 87.5%;"></div>
+</div>
+</div>
+</div>
+<!-- Quote from Field Farmer -->
+<div class="mt-space-xs p-space-sm bg-surface-container-lowest rounded-md flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary text-[32px] shrink-0">format_quote</span>
+<div class="flex flex-col">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                "Our well is 3.5 km away across a canal bank. We used to wake up our whole house at 2 AM whenever the phase light flickered. With the radio remote, my father presses the button from our roof terrace and hears the confirmation buzzer. That peace of mind cannot be measured."
+              </p>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1">— Rameshwar Patil, Sugarcane Grower (18 Acres), Niphad, Nashik</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: FARMER SUPPORT HOTLINE & MULTILINGUAL ASSISTANCE -->
+<section class="w-full bg-surface py-space-xl px-gutter" id="support">
+<div class="max-w-7xl mx-auto bg-surface-container rounded-lg p-space-lg md:p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-xl relative overflow-hidden">
+<!-- Ambient circuit accent overlay -->
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary uppercase">MULTILINGUAL KISAN ASSISTANCE DESK</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Need Help Selecting the Right Starter or Probe?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Speak with agricultural technicians who understand phase fluctuations, local soil salinity, and switchgear brands. Direct phone support in English, हिन्दी, and मराठी.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">call</span>
+<span class="font-label-mono-lg text-label-mono-lg text-on-surface font-bold">1800-419-7284 (Toll-Free)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">chat</span>
+<span class="font-label-mono-lg text-label-mono-lg text-on-surface">+91 94220-41890 (WhatsApp Direct)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-space-sm shrink-0 w-full md:w-auto">
+<a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary font-label-mono-lg text-label-mono-lg uppercase font-semibold px-space-lg py-space-sm rounded-lg hover:bg-primary-fixed transition-colors text-center" href="https://wa.me/919422041890?text=Hello%20Tools%20Digital,%20I%20need%20information%20on%20the%20Agri%20Radio%20Remote%20Pump%20Controller.">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Engineer</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-high text-on-surface font-label-mono-lg text-label-mono-lg uppercase px-space-lg py-space-sm rounded-lg hover:bg-surface-bright transition-colors text-center" href="tel:18004197284">
+<span class="material-symbols-outlined text-primary text-[18px]">phone_in_talk</span>
+<span>Call Toll-Free</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<!-- Simple Filter Script -->
+<script>
+  function filterMatrix(category) {
+    const cards = document.querySelectorAll('.matrix-card');
+    const buttons = ['all', 'power', 'wildlife', 'irrigation', 'nutrients', 'livestock'];
+    
+    // Update button states
+    buttons.forEach(btnId => {
+      const btn = document.getElementById('btn-' + btnId);
+      if (btn) {
+        if (btnId === category) {
+          btn.className = 'px-space-sm py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase bg-primary text-on-primary font-bold';
+        } else {
+          btn.className = 'px-space-sm py-space-xs rounded font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant hover:text-on-surface';
+        }
+      }
+    });
+
+    // Toggle card visibilities
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      if (category === 'all' || cardCategory === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-lg"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tools Digital</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">AgriTech Division delivering rugged IoT telemetry, telemetry automation, and field intelligence for distributed agriculture.</p><div class="flex items-center gap-space-xs mt-space-sm font-label-mono-sm text-label-mono-sm text-primary"><span class="material-symbols-outlined text-[16px]">verified</span><span>2-Year Full Replacement Hardware Warranty</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">AgriTech Hardware Systems</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="hover:text-primary cursor-pointer">Sub-GHz Long-Range Radio Nodes</li><li class="hover:text-primary cursor-pointer">Digital Soil NPK &amp; Moisture Kits</li><li class="hover:text-primary cursor-pointer">Three-Phase Auto Starters &amp; Switchgear</li><li class="hover:text-primary cursor-pointer">Solar-Powered Livestock Geofence Trackers</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Farmer Field Support &amp; Help</span><p class="font-body-sm text-body-sm">Multilingual Kisan Helpline: <span class="font-label-mono-sm text-label-mono-sm text-on-surface font-medium">1800-419-7284 (Toll-Free)</span></p><p class="font-body-sm text-body-sm">Direct Field Dispatch Centres: Nashik, Indore, Belagavi, Karnal</p><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">translate</span><span>Vernacular Assistance: English, हिन्दी, मराठी</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Mobile &amp; Architecture</span><div class="flex flex-col gap-space-xs"><a class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-sm rounded text-on-surface hover:bg-surface-container-high transition-colors font-label-mono-sm text-label-mono-sm" href="#"><span class="material-symbols-outlined text-primary text-[20px]">android</span><span>Companion Farmer App on Play Store</span></a><div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono-sm text-label-mono-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">security</span><span>Zero-Tracker Telemetry Architecture</span></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-mono-sm text-label-mono-sm"><span class="text-on-surface-variant">© 2025 Tools Digital Architecture &amp; Industrial Electronics. All rights reserved.</span><div class="flex items-center gap-space-md"><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Field Telemetry Standards</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Offline Firmware Policy</span><span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Privacy Charter</span></div></div></div></footer></body></html>
