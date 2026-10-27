@@ -188,9 +188,115 @@
 </div>
 </div>
 </section>
-<!-- SECTION 3: FLAGSHIP APPLICATION SHOWCASE - ATTENDY -->
+<!-- SECTION 3: INTERACTIVE SMARTPHONE APP SIMULATOR & FLAGSHIP SHOWCASE -->
 <section class="py-space-xl" id="apps-showcase">
 <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin space-y-space-xl">
+
+<!-- Top Interactive Phone & Problem-Solution Showcase -->
+<div class="rounded-3xl bg-surface-container border border-slate-border/80 p-6 lg:p-10 shadow-2xl relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-slate-border/50 gap-4">
+    <div>
+      <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Live Interactive App Explorer</span>
+      <h2 class="font-headline-lg text-2xl sm:text-3xl text-on-surface font-bold mt-1">
+        Mobile Utilities &bull; Click Tabs to Test How They Work
+      </h2>
+    </div>
+    <!-- App Switcher Tabs -->
+    <div class="flex items-center gap-2 p-1.5 bg-surface-container-lowest rounded-2xl border border-slate-border/60">
+      <button id="tab-btn-call" onclick="switchAppPreview('call')" class="px-4 py-2 rounded-xl text-xs font-label-mono-sm uppercase font-bold transition-all bg-primary text-on-primary shadow-sm flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+        <span>Call Assistant</span>
+      </button>
+      <button id="tab-btn-attendy" onclick="switchAppPreview('attendy')" class="px-4 py-2 rounded-xl text-xs font-label-mono-sm uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[16px]">how_to_reg</span>
+        <span>Attendy</span>
+      </button>
+      <button id="tab-btn-sudoku" onclick="switchAppPreview('sudoku')" class="px-4 py-2 rounded-xl text-xs font-label-mono-sm uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[16px]">grid_4x4</span>
+        <span>Sudoku Pro</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Interactive Grid: Phone Mockup + Problem/Solution Card -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    
+    <!-- Left: Virtual Interactive Smartphone -->
+    <div class="lg:col-span-5 flex justify-center">
+      <div class="w-full max-w-[320px] rounded-[40px] bg-slate-950 p-4 border-4 border-slate-700/80 shadow-2xl shadow-primary/20 relative">
+        <!-- Top Speaker & Camera Notch -->
+        <div class="w-24 h-4 bg-slate-800 rounded-full mx-auto mb-3 flex items-center justify-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-slate-950"></span>
+          <span class="w-6 h-1 rounded-full bg-slate-900"></span>
+        </div>
+
+        <!-- Phone Display Screen -->
+        <div id="phone-screen-container" class="rounded-[28px] bg-surface-container-lowest p-5 min-h-[460px] flex flex-col justify-between border border-slate-800 text-on-surface relative overflow-hidden transition-all duration-300">
+          <!-- Dynamic Content rendered by JS -->
+        </div>
+
+        <!-- Bottom Home Indicator Bar -->
+        <div class="w-28 h-1 bg-slate-700 rounded-full mx-auto mt-3"></div>
+      </div>
+    </div>
+
+    <!-- Right: Problem Solved & Architecture -->
+    <div class="lg:col-span-7 flex flex-col gap-5">
+      <div class="flex items-center gap-2">
+        <span id="preview-badge" class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary font-label-mono-sm text-xs font-semibold">
+          100% OFFLINE // ZERO DATA RETENTION
+        </span>
+        <span id="preview-pkg" class="font-mono text-xs text-on-surface-variant">com.agecalculator.protoos</span>
+      </div>
+
+      <h3 id="preview-title" class="font-headline-lg text-2xl sm:text-3xl font-bold text-on-surface">
+        Call Assistant : Auto &bull; Hands-Free Telephony &amp; Blocker
+      </h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/50">
+          <div class="flex items-center gap-1.5 text-alert-amber text-xs font-mono font-bold uppercase mb-1">
+            <span class="material-symbols-outlined text-[16px]">warning</span>
+            The User Problem
+          </div>
+          <p id="preview-problem" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+            Driving car, bike riding, or surgery/cooking me call uthana jaanleva hota hai. Third-party apps personal call logs apne cloud server par bechte hain aur invasive ads dikhate hain.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/50">
+          <div class="flex items-center gap-1.5 text-primary text-xs font-mono font-bold uppercase mb-1">
+            <span class="material-symbols-outlined text-[16px]">check_circle</span>
+            How Our App Solves It
+          </div>
+          <p id="preview-solution" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+            Configurable 3-second auto-answer lagaiye ya headset detect hote hi call uthayein. Zero cloud sync: Aapka call log phone se 1 bit bhi bahar nahi jata.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Bullet Points -->
+      <div id="preview-features" class="grid grid-cols-2 gap-2 text-xs font-mono text-on-surface">
+        <!-- Injected by JS -->
+      </div>
+
+      <div class="pt-4 border-t border-slate-border/50 flex flex-wrap items-center gap-4">
+        <a id="preview-play-link" href="https://play.google.com/store/apps/details?id=com.agecalculator.protoos" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-sm text-xs uppercase font-bold transition-all shadow-md flex items-center gap-2 btn-shimmer">
+          <span class="material-symbols-outlined text-[18px]">shop</span>
+          <span>Get On Google Play</span>
+        </a>
+        <a id="preview-policy-link" href="/apps/call-assistant/" class="px-5 py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-mono-sm text-xs uppercase transition-all flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">policy</span>
+          <span>View Privacy Policy</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- Flagship 01: ATTENDY -->
 <article class="app-card rounded-2xl bg-surface-container-low/90 backdrop-blur-md p-space-md lg:p-space-lg shadow-xl relative overflow-hidden transition-all duration-200 card-3d spotlight-card border border-slate-border/50 hover:border-primary/50 reveal-on-scroll" data-category="workforce" data-keywords="attendy attendance payroll geofencing gps salary slip protoos com.attendance.protoos">
 <!-- Top Status Diode and ID Bar -->
@@ -857,6 +963,195 @@
         });
       }
     })();
+
+    // Interactive Smartphone App Preview Switcher
+    const appSimulatorData = {
+      'call': {
+        badge: '100% OFFLINE // ZERO DATA RETENTION',
+        pkg: 'com.agecalculator.protoos',
+        title: 'Call Assistant : Auto &bull; Hands-Free Telephony & Blocker',
+        problem: 'Car driving, bike riding, ya surgery/cooking ke waqt phone haath me lena khatarnaak hota hai. Commercial apps personal contacts aur call logs apne server par bechte hain.',
+        solution: 'Configurable delay (e.g. 3 second) ke baad ya Bluetooth headset lagte hi call automatically pick ho jaata hai. Phone se 1 byte data bhi bahar nahi jaata.',
+        features: [
+          '&check; Configurable Auto-Pickup Delay (1-10s)',
+          '&check; Auto-Hangup & Duration Timer',
+          '&check; Local Offline Number Blacklist',
+          '&check; Zero Cloud Transmission (Strict Local)'
+        ],
+        playLink: 'https://play.google.com/store/apps/details?id=com.agecalculator.protoos',
+        policyLink: '/apps/call-assistant/',
+        screenHtml: `
+          <!-- Incoming Call Simulator -->
+          <div class="flex items-center justify-between text-[11px] font-mono text-on-surface-variant">
+            <span>CALL ASSISTANT</span>
+            <span class="flex items-center gap-1 text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> AUTO-ANSWER ON</span>
+          </div>
+          <div class="my-auto flex flex-col items-center text-center gap-3">
+            <div class="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center animate-bounce">
+              <span class="material-symbols-outlined text-[32px]">phone_in_talk</span>
+            </div>
+            <div>
+              <span class="font-headline-sm text-lg font-bold text-on-surface block">Work Delivery Manager</span>
+              <span class="font-mono text-xs text-on-surface-variant">+91 98765 43210</span>
+            </div>
+            <div class="px-3 py-1 rounded-full bg-primary-container/20 text-primary font-mono text-xs animate-pulse">
+              Auto-Answering in 3s (Headset Active)...
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+            <button class="py-2.5 rounded-xl bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">call_end</span> Auto-Cut
+            </button>
+            <button class="py-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">call</span> Pick Up
+            </button>
+          </div>
+        `
+      },
+      'attendy': {
+        badge: 'PRODUCTION READY // 5,000+ WORKFORCE INSTALLS',
+        pkg: 'com.attendance.protoos',
+        title: 'Attendy: Attendance &bull; Geofenced Shift & Payroll Engine',
+        problem: 'Small factories, shops aur schools me fingerprint machine baar-baar kharab hoti hai aur monthly SaaS cloud apps mota subscription fee charge karte hain.',
+        solution: 'Har employee ke phone se polygon GPS geofence punch hota hai. End of month 1-click me attendance aur PF/ESIC sahit salary slip PDF ban jati hai bina kisi cloud server ke.',
+        features: [
+          '&check; 100m Precision Polygon Geofence',
+          '&check; Overtime, Shift Allowance & PF Engine',
+          '&check; Local Cryptographic PDF Salary Slips',
+          '&check; SQLite AES-256 On-Device Vault'
+        ],
+        playLink: 'https://play.google.com/store/apps/details?id=com.attendance.protoos',
+        policyLink: '/apps/attendy/',
+        screenHtml: `
+          <!-- Attendy Workplace Punch Terminal -->
+          <div class="flex items-center justify-between text-[11px] font-mono text-on-surface-variant">
+            <span>ATTENDY WORKFORCE</span>
+            <span class="flex items-center gap-1 text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> GEOFENCE: INSIDE</span>
+          </div>
+          <div class="my-auto flex flex-col items-center text-center gap-3">
+            <div class="w-16 h-16 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[32px]">fingerprint</span>
+            </div>
+            <div>
+              <span class="font-headline-sm text-lg font-bold text-on-surface block">PUNCH IN VERIFIED</span>
+              <span class="font-mono text-xs text-tertiary">08:58 AM &bull; Shift #A</span>
+            </div>
+            <div class="p-3 bg-surface-container rounded-xl w-full text-left font-mono text-xs space-y-1">
+              <div class="flex justify-between text-on-surface-variant"><span>Daily Hours:</span> <strong class="text-on-surface">8h 14m</strong></div>
+              <div class="flex justify-between text-on-surface-variant"><span>Overtime Earned:</span> <strong class="text-tertiary">+₹240</strong></div>
+            </div>
+          </div>
+          <button class="w-full py-2.5 rounded-xl bg-tertiary text-on-tertiary font-mono text-xs font-bold uppercase shadow flex items-center justify-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span> Export Salary Slip PDF
+          </button>
+        `
+      },
+      'sudoku': {
+        badge: 'STRICT ZERO-DATA // AD-FREE LOGIC ENGINE',
+        pkg: 'com.sudokumasterpro.protoos',
+        title: 'Sudoku Master Pro &bull; Distraction-Free Math Matrix',
+        problem: 'Play store ke sudoku games me har 2 minute me 30 second ka intrusive video ad aa jata hai aur battery tezi se drain hoti hai.',
+        solution: '100% ad-free offline mathematical algorithm. Har puzzle on-device mathematical symmetry se generate hota hai aur 0 byte tracking hoti hai.',
+        features: [
+          '&check; Mathematical On-Device Puzzle Engine',
+          '&check; Strict Zero Commercial Tracking SDKs',
+          '&check; Dark Slate Low-Power AMOLED Theme',
+          '&check; Offline Undo & Candidate Penciling'
+        ],
+        playLink: 'https://play.google.com/store/apps/dev?id=6740194394029144829',
+        policyLink: '/apps/sudoku-master-pro/',
+        screenHtml: `
+          <!-- Sudoku Matrix Screen -->
+          <div class="flex items-center justify-between text-[11px] font-mono text-on-surface-variant">
+            <span>SUDOKU PRO</span>
+            <span class="text-alert-amber font-bold">EXPERT &bull; 04:12</span>
+          </div>
+          <div class="my-auto grid grid-cols-3 gap-1 bg-slate-800 p-1 rounded-xl w-full">
+            <div class="grid grid-cols-3 gap-0.5 bg-slate-900 p-1 rounded">
+              <span class="text-center font-mono text-xs text-primary font-bold">5</span>
+              <span class="text-center font-mono text-xs text-slate-400">3</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-400">6</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-primary font-bold">9</span>
+              <span class="text-center font-mono text-xs text-slate-400">8</span>
+            </div>
+            <div class="grid grid-cols-3 gap-0.5 bg-slate-900 p-1 rounded">
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-alert-amber font-bold">7</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-primary font-bold">1</span>
+              <span class="text-center font-mono text-xs text-slate-400">9</span>
+              <span class="text-center font-mono text-xs text-slate-400">5</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+            </div>
+            <div class="grid grid-cols-3 gap-0.5 bg-slate-900 p-1 rounded">
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-slate-400">6</span>
+              <span class="text-center font-mono text-xs text-slate-600">.</span>
+              <span class="text-center font-mono text-xs text-alert-amber font-bold">4</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-xs font-mono text-on-surface-variant pt-2 border-t border-slate-800">
+            <span class="text-tertiary">Mistakes: 0/3</span>
+            <span class="text-primary font-bold">ZERO ADS</span>
+          </div>
+        `
+      }
+    };
+
+    function switchAppPreview(appId) {
+      const data = appSimulatorData[appId];
+      if (!data) return;
+
+      // Update tabs styling
+      ['call', 'attendy', 'sudoku'].forEach(id => {
+        const btn = document.getElementById(`tab-btn-${id}`);
+        if (btn) {
+          if (id === appId) {
+            btn.className = 'px-4 py-2 rounded-xl text-xs font-label-mono-sm uppercase font-bold transition-all bg-primary text-on-primary shadow-sm flex items-center gap-1.5';
+          } else {
+            btn.className = 'px-4 py-2 rounded-xl text-xs font-label-mono-sm uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1.5';
+          }
+        }
+      });
+
+      // Update right text
+      document.getElementById('preview-badge').textContent = data.badge;
+      document.getElementById('preview-pkg').textContent = data.pkg;
+      document.getElementById('preview-title').innerHTML = data.title;
+      document.getElementById('preview-problem').textContent = data.problem;
+      document.getElementById('preview-solution').textContent = data.solution;
+      document.getElementById('preview-play-link').href = data.playLink;
+      document.getElementById('preview-policy-link').href = data.policyLink;
+
+      // Render features
+      const featEl = document.getElementById('preview-features');
+      featEl.innerHTML = '';
+      data.features.forEach(f => {
+        const div = document.createElement('div');
+        div.className = 'p-2 rounded-lg bg-surface-container-high border border-slate-border/40';
+        div.innerHTML = f;
+        featEl.appendChild(div);
+      });
+
+      // Render virtual phone screen
+      document.getElementById('phone-screen-container').innerHTML = data.screenHtml;
+    }
+
+    // Initialize with Call Assistant preview
+    document.addEventListener('DOMContentLoaded', () => {
+      switchAppPreview('call');
+    });
   </script>
 </div></main><footer class="w-full bg-surface-container-lowest border-t border-slate-border">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

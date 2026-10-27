@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="web_standard" name="shell-type"/>
-  <title>Smart Agriculture Solutions & Zero-Internet Hardware | Digital Tools</title>
+  <title>Smart Agriculture Solutions &amp; Zero-Internet Farm Hardware | Digital Tools</title>
   <link rel="icon" type="image/png" href="/logo.png"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -14,6 +14,12 @@
   <script type="module" src="/src/effects.js"></script>
   <style>
     @layer base { html, body { margin: 0; padding: 0; } }
+    .farm-gradient {
+      background: radial-gradient(circle at 50% 20%, rgba(20, 184, 166, 0.15), rgba(11, 19, 38, 0.95) 75%);
+    }
+    .device-card:hover .device-image {
+      transform: scale(1.05);
+    }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -40,7 +46,9 @@
             "tertiary-container": "#58b590",
             "outline": "#859490",
             "slate-border": "#334155",
-            "alert-amber": "#F59E0B"
+            "alert-amber": "#F59E0B",
+            "farm-green": "#22c55e",
+            "farm-accent": "#10b981"
           },
           fontFamily: {
             "headline-lg": ["Space Grotesk"],
@@ -58,7 +66,7 @@
     };
   </script>
 </head>
-<body class="bg-background font-body-md text-on-surface antialiased">
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-tertiary selection:text-on-primary">
   <!-- Standardized Main Header -->
   <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-slate-border">
     <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
@@ -67,7 +75,7 @@
           <img alt="Digital Tools Logo" class="h-9 w-auto object-contain" src="/logo.png"/>
           <div class="flex flex-col">
             <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight hover:text-primary transition-colors flex items-center gap-1.5 font-bold leading-none">
-              Digital Tools<span class="h-1.5 w-1.5 rounded-full bg-primary-container animate-pulse"></span>
+              Digital Tools<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-pulse"></span>
             </span>
             <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider hidden sm:inline-block mt-1">
               AgriTech Division &bull; Smart Farming
@@ -77,7 +85,7 @@
       </div>
       <nav class="hidden lg:flex items-center gap-1">
         <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/">Home</a>
-        <a class="px-3.5 py-2 font-body-md text-body-md text-primary font-semibold bg-primary-container/20 rounded-xl transition-colors" href="/agriculture/">Agriculture</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-tertiary font-semibold bg-tertiary/15 rounded-xl transition-colors" href="/agriculture/">Agriculture</a>
         <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/industrial/">Industrial</a>
         <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/apps/">Mobile Apps</a>
         <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/contact/">Contact</a>
@@ -87,338 +95,598 @@
           <span class="material-symbols-outlined text-[16px]" id="sound-toggle-icon">volume_off</span>
           <span id="sound-toggle-label">SFX: OFF</span>
         </button>
-        <a class="flex items-center gap-1.5 px-3.5 py-2 bg-primary-container hover:bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold rounded-lg transition-all shadow-sm btn-shimmer" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank">
-          <span class="material-symbols-outlined text-[18px]">android</span>
-          <span class="uppercase tracking-wider">Google Play</span>
+        <a class="flex items-center gap-1.5 px-3.5 py-2 bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-mono-sm text-label-mono-sm font-semibold rounded-lg transition-all shadow-sm btn-shimmer" href="https://wa.me/918000000000?text=Namaste%20Digital%20Tools%2C%20mujhe%20Smart%20Agriculture%20hardware%20ke%20bare%20me%20jankari%20chahiye." target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Kisan WhatsApp</span>
         </a>
       </div>
     </div>
   </header>
 
-  <main class="w-full pt-20 bg-background min-h-screen">
-    <!-- HERO: AGRICULTURE SPECIFIC -->
-    <section class="relative w-full bg-gradient-to-b from-surface-container-lowest via-surface-container-low to-background overflow-hidden py-16 md:py-24 cyber-grid border-b border-slate-border/50">
-      <div class="laser-scan-line"></div>
-      <div class="absolute -right-24 top-1/4 w-[450px] h-[450px] bg-tertiary/10 rounded-full blur-3xl pointer-events-none animate-float-slow"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col gap-8">
-        <div class="flex flex-wrap items-center gap-3 reveal-on-scroll">
+  <main class="w-full pt-20">
+    <!-- HERO: DEEP AGRICULTURE ATMOSPHERE -->
+    <section class="relative w-full farm-gradient overflow-hidden py-16 md:py-24 border-b border-slate-border">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#10b98110_1px,transparent_1px),linear-gradient(to_bottom,#10b98110_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none opacity-40"></div>
+      <div class="absolute -top-32 right-10 w-[500px] h-[500px] bg-tertiary/10 rounded-full blur-3xl pointer-events-none animate-float-slow"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Agriculture Badges -->
+        <div class="flex flex-wrap items-center gap-3 mb-6">
           <span class="inline-flex items-center gap-2 px-3.5 py-1 bg-tertiary/20 backdrop-blur-md border border-tertiary/40 rounded-full text-tertiary font-label-mono-sm text-xs font-semibold badge-glow">
             <span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
-            AGRITECH EDGE &bull; SUB-GHZ ENCRYPTED RADIO MESH
+            SMART AGRI HARDWARE &bull; ZERO-INTERNET RADIO MESH
           </span>
           <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container/80 border border-slate-border text-on-surface font-label-mono-sm text-xs rounded-full">
-            <span class="material-symbols-outlined text-[14px] text-primary">bolt</span> 415V 3-PHASE HARDENED
+            <span class="material-symbols-outlined text-[14px] text-primary">bolt</span> 415V 3-PHASE MOTOR GUARD
           </span>
           <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container/80 border border-slate-border text-alert-amber font-label-mono-sm text-xs rounded-full">
-            <span class="material-symbols-outlined text-[14px]">shield</span> 6KV LIGHTNING SURGE PROOF
+            <span class="material-symbols-outlined text-[14px]">cell_tower</span> 10&ndash;12 KM LINE-OF-SIGHT RF
           </span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div class="lg:col-span-8 flex flex-col gap-6 reveal-on-scroll">
+          <div class="lg:col-span-8 flex flex-col gap-6">
             <h1 class="font-display-hero text-3xl sm:text-5xl lg:text-6xl text-on-surface font-extrabold tracking-tight leading-tight">
-              Hardware Engineered for <span class="text-tertiary underline decoration-tertiary/40 decoration-wavy">Real Working Farms</span> | No Internet Required
+              Hardware Built for <span class="text-tertiary underline decoration-tertiary/40 decoration-wavy">Real Working Farms</span><br/>
+              Zero Cellular Network Needed.
             </h1>
             <p class="font-body-lg text-lg text-on-surface-variant max-w-2xl leading-relaxed">
-              Survive rural voltage drops, unpredictable power windows, and zero-cellular dead zones. We manufacture robust wireless motor starters, on-spot soil testing probes, and ultrasonic wildlife deterrents that operate 24/7 completely independent of internet connectivity.
+              In remote rural fields, cellular networks fail and 3-phase electricity comes unpredictably at 2:00 AM. Digital Tools equips growers with 10–12 km radio motor starters, instant soil NPK testing probes, and wildlife deterrents that work 100% offline.
             </p>
+
             <div class="flex flex-wrap items-center gap-4 pt-2">
-              <a href="#hardware-catalog" class="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-lg transition-all btn-shimmer">
+              <a href="#hardware-catalog" class="inline-flex items-center gap-2 px-6 py-3.5 bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-lg shadow-tertiary/20 transition-all btn-shimmer">
                 <span class="material-symbols-outlined text-[18px]">inventory_2</span>
-                Browse Hardware Catalog (5 Devices)
+                <span>Explore 5 Farm Devices</span>
               </a>
-              <a href="#farmer-hotline" class="inline-flex items-center gap-2 px-6 py-3.5 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-md transition-all btn-shimmer">
-                <span class="material-symbols-outlined text-[18px]">chat</span>
-                WhatsApp Farmer Support
+              <a href="#problem-solution-matrix" class="inline-flex items-center gap-2 px-6 py-3.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-mono-sm text-xs uppercase font-semibold rounded-xl border border-slate-border/80 hover:border-tertiary transition-all btn-shimmer">
+                <span class="material-symbols-outlined text-[18px] text-tertiary">psychology_alt</span>
+                <span>How We Solve Farm Problems</span>
               </a>
-              <a href="/contact/?interest=agriculture" class="inline-flex items-center gap-2 px-5 py-3.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-mono-sm text-xs uppercase rounded-xl border border-slate-border/60 hover:border-primary/50 transition-all btn-shimmer">
-                Request Farm Demo &rarr;
+              <a href="/contact/?interest=agriculture" class="inline-flex items-center gap-2 px-5 py-3.5 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-mono-sm text-xs uppercase rounded-xl border border-slate-border/50 transition-all">
+                <span>Book Farm Demo &rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- Agriculture Telemetry Spec Box -->
-          <div class="lg:col-span-4 bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl border border-tertiary/30 shadow-2xl card-3d spotlight-card flex flex-col gap-4 reveal-on-scroll delay-100">
+          <!-- Live Agrarian Telemetry Card -->
+          <div class="lg:col-span-4 bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl border border-tertiary/30 shadow-2xl card-3d spotlight-card flex flex-col gap-4">
             <div class="flex items-center justify-between pb-2 border-b border-slate-border/50">
               <span class="font-label-mono-sm text-xs text-tertiary font-bold uppercase flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-[16px]">agriculture</span> FIELD READOUT: LIVE
+                <span class="material-symbols-outlined text-[18px]">agriculture</span> FIELD TELEMETRY ENGINE
               </span>
-              <span class="px-2.5 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-mono text-[10px] font-bold">12 KM RANGE</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-mono text-[11px] font-bold">LIVE SYNC</span>
             </div>
-            <div class="space-y-3 font-mono text-xs">
-              <div class="flex justify-between p-2.5 bg-surface-container-lowest/80 rounded-xl border border-slate-border/40">
-                <span class="text-on-surface-variant">Radio Carrier</span>
-                <span class="text-primary font-bold">868 MHz Sub-GHz</span>
+            
+            <div class="space-y-2.5 font-mono text-xs">
+              <div class="flex justify-between p-3 bg-surface-container-lowest rounded-xl border border-slate-border/50">
+                <span class="text-on-surface-variant">RF Carrier Frequency</span>
+                <span class="text-tertiary font-bold">865-867 MHz ISM</span>
               </div>
-              <div class="flex justify-between p-2.5 bg-surface-container-lowest/80 rounded-xl border border-slate-border/40">
-                <span class="text-on-surface-variant">Line Voltage</span>
-                <span class="text-on-surface font-bold">415 V (3-Phase)</span>
+              <div class="flex justify-between p-3 bg-surface-container-lowest rounded-xl border border-slate-border/50">
+                <span class="text-on-surface-variant">Line Voltage Tolerance</span>
+                <span class="text-on-surface font-bold">180V &ndash; 460V AC</span>
               </div>
-              <div class="flex justify-between p-2.5 bg-surface-container-lowest/80 rounded-xl border border-slate-border/40">
-                <span class="text-on-surface-variant">Surge Rating</span>
-                <span class="text-tertiary font-bold">6 kV Dielectric</span>
+              <div class="flex justify-between p-3 bg-surface-container-lowest rounded-xl border border-slate-border/50">
+                <span class="text-on-surface-variant">Single-Phase Burn Cutoff</span>
+                <span class="text-alert-amber font-bold">&lt; 400 ms Auto-Trip</span>
               </div>
-              <div class="flex justify-between p-2.5 bg-surface-container-lowest/80 rounded-xl border border-slate-border/40">
-                <span class="text-on-surface-variant">Enclosure</span>
-                <span class="text-on-surface font-bold">IP66 Weatherproof</span>
+              <div class="flex justify-between p-3 bg-surface-container-lowest rounded-xl border border-slate-border/50">
+                <span class="text-primary font-bold">0.00% (Pure Radio)</span>
               </div>
             </div>
-            <div class="pt-2 text-[11px] text-on-surface-variant flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-tertiary text-[14px]">check_circle</span>
-              Tested across 450+ acres in Western Maharashtra
+
+            <div class="pt-2 border-t border-slate-border/50 flex items-center justify-between text-[11px] font-mono text-on-surface-variant">
+              <span>FARMER TOLL FREE</span>
+              <span class="text-tertiary font-bold">1800-419-7284</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- HARDWARE CATALOG SECTION -->
-    <section class="w-full py-20 bg-surface-dim" id="hardware-catalog">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-on-scroll">
-          <div class="flex flex-col gap-2 max-w-2xl">
-            <span class="text-primary font-label-mono-sm text-xs uppercase tracking-wider font-semibold flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-[16px]">inventory</span> Proven Agronomic Hardware
-            </span>
-            <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-extrabold tracking-tight">
-              5 Field-Tested Agriculture Systems
-            </h2>
-            <p class="font-body-md text-on-surface-variant leading-relaxed">
-              Standardized modular equipment ready for immediate installation on your agricultural starters and borehole setups.
+    <!-- SECTION: HOW IT WORKS / KAISE KAAM KARTA HAI (INTERACTIVE DEVICE EXPLORATION) -->
+    <section id="hardware-catalog" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="font-label-mono-sm text-xs text-tertiary uppercase tracking-wider font-semibold">Interactive Hardware Portfolio</span>
+        <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold mt-2">
+          Agricultural Devices &bull; Click to See How They Work
+        </h2>
+        <p class="font-body-lg text-on-surface-variant text-base sm:text-lg mt-3">
+          Har ek device par click karke dekhiye ki wo khet me kaise kaam karta hai, kisan ki kaunsi samasya hal karta hai, aur do-tarfa feedback kaise deta hai.
+        </p>
+      </div>
+
+      <!-- Devices Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Device 1: 12 km Radio Pump Controller -->
+        <div class="device-card bg-surface-container rounded-3xl border border-slate-border hover:border-tertiary/60 transition-all duration-300 p-6 flex flex-col justify-between shadow-xl cursor-pointer group" onclick="openDeviceModal('td-rf12k')">
+          <div>
+            <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container-lowest mb-5">
+              <img class="device-image w-full h-full object-cover transition-transform duration-500" alt="12 km Sub-GHz Long Range Radio Pump Controller" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMMxDyQDQ-OZaUrcIQGxDc-flqQMeJGLB73LnC73M2NDslNFgaNBEDw1l3_WlQJ5mT-5OtfmkR2FopbcDUfp4Lglq3yY_VmcM9SFhvx4MU3yOhKKeJra4gixqJGP3UiiTDgLPciARnXkzi62jTuVfOjQ6aNhP8KLHBbCgtFutQUBvVsm_UBUXDVevuDmvS7vKJWyxPgarVXy-KeGg6IlEjmoDu8pKWtUXRbrxJo6Rg-subWLWKoTkG"/>
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="px-2.5 py-1 rounded bg-tertiary text-on-tertiary font-label-mono-sm text-[10px] font-bold uppercase tracking-wider">FLAGSHIP</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-[10px]">TD-RF12K</span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-surface-container-lowest/90 text-primary font-label-mono-sm text-xs flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">cell_tower</span>
+                <span>10&ndash;12 km Range</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono text-tertiary mb-1">
+              <span>ZERO CELLULAR NEEDED</span>
+              <span>2-YEAR WARRANTY</span>
+            </div>
+            <h3 class="font-headline-sm text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors">
+              12 km Radio Pump Controller
+            </h3>
+            <p class="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
+              Ghar baithe 12 km door ke borewell starter ko chalu/band karein. Do-tarfa buzzer aur green LED se pakka pata chalta hai ki paani chal gaya.
             </p>
           </div>
-          <a href="/contact/?interest=bulk-agriculture" class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-container hover:bg-surface-container-high text-primary font-label-mono-sm text-xs uppercase rounded-xl border border-slate-border/50 hover:border-primary/50 transition-all btn-shimmer self-start md:self-auto">
-            <span>Request Price Sheet &amp; Quotes</span> &rarr;
-          </a>
+
+          <div class="mt-6 pt-4 border-t border-slate-border/50 flex items-center justify-between">
+            <span class="font-label-mono-sm text-xs text-primary font-semibold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to See How It Works
+            </span>
+            <span class="material-symbols-outlined text-tertiary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
         </div>
 
-        <!-- Devices Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Device 1 -->
-          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-primary/20 flex flex-col justify-between gap-6 reveal-on-scroll">
-            <div class="flex flex-col gap-4">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-mono-sm text-xs font-semibold border border-primary/20">
-                  AVAILABLE // 10-12 KM RF
-                </span>
-                <span class="material-symbols-outlined text-primary text-[26px]">settings_remote</span>
+        <!-- Device 2: Soil NPK & pH Testing Wand -->
+        <div class="device-card bg-surface-container rounded-3xl border border-slate-border hover:border-tertiary/60 transition-all duration-300 p-6 flex flex-col justify-between shadow-xl cursor-pointer group" onclick="openDeviceModal('td-soil4p')">
+          <div>
+            <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container-lowest mb-5">
+              <img class="device-image w-full h-full object-cover transition-transform duration-500" alt="Digital Soil Testing Wand NPK pH Probe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwgG9fHhCAbyXb-Og0dKWcVTJ0T6GlZTeuVUHID0CXCFFVixvB_o-wW1mQDTrVU2AX-O1ZrCZ2H1NS68uOCqPkyBECd9V8HRDUAAIjB0oQC8fAhIU8AF_T8I8-UmF6597APJULnSJ7MlkJ6bMQ1VNJl8VRDJjXdtIfRVDCyXQsdLrczpQkaW5VDJRNRVT5B-hIRTKuOWlHCNvYpdgTDUPaTXxiHrILKu8tGvAXCMsfcmMbtKxnesIk"/>
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="px-2.5 py-1 rounded bg-alert-amber text-slate-900 font-label-mono-sm text-[10px] font-bold uppercase tracking-wider">INSTANT TEST</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-[10px]">TD-SOIL4P</span>
               </div>
-              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Radio-based Remote Pump Controller</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Turn high-voltage agricultural water pumps ON/OFF over 10-12 km range without any cellular connectivity or internet SIM card. Built-in 3-phase auto-voltage detector shuts down motor on phase failure.
-              </p>
-              <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2">
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Range</span>
-                  <span class="text-on-surface font-bold">12 km Line-of-Sight</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Line Load</span>
-                  <span class="text-primary font-bold">415V 3-Phase</span>
-                </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-surface-container-lowest/90 text-alert-amber font-label-mono-sm text-xs flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">timer</span>
+                <span>8-Second Result</span>
               </div>
             </div>
-            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
-              <span class="text-xs font-mono text-tertiary flex items-center gap-1">
-                <span class="material-symbols-outlined text-[14px]">check_circle</span> Zero GSM Latency
-              </span>
-              <a href="/contact/?product=pump-controller" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+
+            <div class="flex items-center justify-between text-xs font-mono text-alert-amber mb-1">
+              <span>QUAD STAINLESS PROBE</span>
+              <span>TYPE-C RECHARGEABLE</span>
+            </div>
+            <h3 class="font-headline-sm text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors">
+              Digital Soil NPK &amp; pH Tester
+            </h3>
+            <p class="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
+              Laboratory ke hafton ke intezar ko khatam karein. Seedha khet me daalkar 8 second me Nitrogen, Phosphorus, Potassium aur pH ka sahi reading payein.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-border/50 flex items-center justify-between">
+            <span class="font-label-mono-sm text-xs text-primary font-semibold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to See How It Works
+            </span>
+            <span class="material-symbols-outlined text-tertiary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Device 3: Automatic Moisture Starter -->
+        <div class="device-card bg-surface-container rounded-3xl border border-slate-border hover:border-tertiary/60 transition-all duration-300 p-6 flex flex-col justify-between shadow-xl cursor-pointer group" onclick="openDeviceModal('td-autopump')">
+          <div>
+            <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container-lowest mb-5">
+              <img class="device-image w-full h-full object-cover transition-transform duration-500" alt="Automatic Closed Loop Soil Moisture Pump Controller" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE0WfDvP7ltLOoDpYhvwobHHhG8g0J2eQLviWdHuV7iTtku2DzS_1EdCEomWGWeQSk236dQgqluTIHAOjUfz_Jwp-CoNKhMQ15gtOn_qaqlpJreg3ZRMdxk9dDyhBZCPrNmIuB2Q_M98kot4nhw4KhqIOLKFVAmjr6BsbcJ2N2ii5A4tu0U6xRN_unwpSGIlxkOJy8KOttHDD7W2QADgWdYwzPwTGqcuKY96TpEAkgUPsW-fX5wMan"/>
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="px-2.5 py-1 rounded bg-farm-green text-slate-950 font-label-mono-sm text-[10px] font-bold uppercase tracking-wider">AUTONOMOUS</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-[10px]">TD-AUTOPUMP</span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-surface-container-lowest/90 text-farm-green font-label-mono-sm text-xs flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">water_drop</span>
+                <span>Dry-Run Auto Trip</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono text-farm-green mb-1">
+              <span>30A SOLID STATE RELAYS</span>
+              <span>ROOT-ZONE TENSION</span>
+            </div>
+            <h3 class="font-headline-sm text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors">
+              Automatic Closed-Loop Pump Starter
+            </h3>
+            <p class="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
+              Mitti sukhne par apne aap motor chalu karta hai aur khet bharte hi band. Agar kuan/borewell sookh jaye toh 12 second me motor trip karke motor jalne se bachata hai.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-border/50 flex items-center justify-between">
+            <span class="font-label-mono-sm text-xs text-primary font-semibold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to See How It Works
+            </span>
+            <span class="material-symbols-outlined text-tertiary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Device 4: Wildlife Acoustic Deterrent -->
+        <div class="device-card bg-surface-container rounded-3xl border border-slate-border hover:border-tertiary/60 transition-all duration-300 p-6 flex flex-col justify-between shadow-xl cursor-pointer group" onclick="openDeviceModal('td-deter800')">
+          <div>
+            <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container-lowest mb-5">
+              <img class="device-image w-full h-full object-cover transition-transform duration-500" alt="Wild Animal Acoustic Sound Deterrent Solar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3nqFaa7abcFfH6Hnh5lhc1fYrYl8ayfS4zuVgmR-cRYn6JsCnNI8SKrMdk4QLDaIO0Vz7UbLBmboalVBQP9ux1j4tnWowrzt-cNMzzgVZignvn4x6horsb8ZR-J-xzjhkbAAb-0Ytdg9L4VCOysj-1xWnpPPD1Vvyt4NMaPsEPiqNwFxc1uSoHPsFF5mlXcKBhGU1KCOEiySbtYjF7nk_VpFkMFrCSGIM1_OGDR_f9xIqlGy6VV8Z"/>
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="px-2.5 py-1 rounded bg-tertiary/30 text-tertiary font-label-mono-sm text-[10px] font-bold uppercase tracking-wider">SOLAR POWERED</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-[10px]">TD-DETER800</span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-surface-container-lowest/90 text-tertiary font-label-mono-sm text-xs flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">volume_up</span>
+                <span>250m Radius (5 Acre)</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono text-tertiary mb-1">
+              <span>BIO-ACOUSTIC SHIELD</span>
+              <span>NON-LETHAL DEFENSE</span>
+            </div>
+            <h3 class="font-headline-sm text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors">
+              Wild-Animal Acoustic Deterrent
+            </h3>
+            <p class="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
+              Jangli suar (boars), nilgai, aur hiran ko khet se door rakhta hai bina bijli ke jhatke (electric fencing) ya zeher ke. Solar panel se chalta hai aur raat me strobe light jalata hai.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-border/50 flex items-center justify-between">
+            <span class="font-label-mono-sm text-xs text-primary font-semibold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to See How It Works
+            </span>
+            <span class="material-symbols-outlined text-tertiary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Device 5: High-Precision Soil Moisture Profile Probe -->
+        <div class="device-card bg-surface-container rounded-3xl border border-slate-border hover:border-tertiary/60 transition-all duration-300 p-6 flex flex-col justify-between shadow-xl cursor-pointer group" onclick="openDeviceModal('td-profile')">
+          <div>
+            <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container-lowest mb-5">
+              <img class="device-image w-full h-full object-cover transition-transform duration-500" alt="Multi-Depth Subterranean Moisture Profiler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMMxDyQDQ-OZaUrcIQGxDc-flqQMeJGLB73LnC73M2NDslNFgaNBEDw1l3_WlQJ5mT-5OtfmkR2FopbcDUfp4Lglq3yY_VmcM9SFhvx4MU3yOhKKeJra4gixqJGP3UiiTDgLPciARnXkzi62jTuVfOjQ6aNhP8KLHBbCgtFutQUBvVsm_UBUXDVevuDmvS7vKJWyxPgarVXy-KeGg6IlEjmoDu8pKWtUXRbrxJo6Rg-subWLWKoTkG"/>
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="px-2.5 py-1 rounded bg-primary/20 text-primary font-label-mono-sm text-[10px] font-bold uppercase tracking-wider">DEPTH PROFILE</span>
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-on-surface font-label-mono-sm text-[10px]">TD-SOIL-DEPTH</span>
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-surface-container-lowest/90 text-primary font-label-mono-sm text-xs flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">layers</span>
+                <span>3 Depth Levels (15, 30, 60cm)</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono text-primary mb-1">
+              <span>ROOT ZONE TELEMETRY</span>
+              <span>10-YEAR BATTERY LIFE</span>
+            </div>
+            <h3 class="font-headline-sm text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors">
+              Multi-Depth Sub-Soil Moisture Probe
+            </h3>
+            <p class="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
+              Jadon ke andar 3 alag-alag gehraai par paani aur namak ka star napta hai. Drip irrigation ke liye sabse behtareen jisse 40% paani aur khad ki bachat hoti hai.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-border/50 flex items-center justify-between">
+            <span class="font-label-mono-sm text-xs text-primary font-semibold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to See How It Works
+            </span>
+            <span class="material-symbols-outlined text-tertiary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </div>
+
+        <!-- Help Card / Order Custom Setup -->
+        <div class="bg-gradient-to-br from-surface-container to-surface-container-high rounded-3xl border border-tertiary/40 p-6 flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-tertiary/20 text-tertiary flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[28px]">support_agent</span>
+            </div>
+            <span class="font-label-mono-sm text-xs text-tertiary font-bold uppercase">KISAN KENDRA SUPPORT</span>
+            <h3 class="font-headline-sm text-xl font-bold text-on-surface mt-1">Apne Khet Ke Anusar Custom Setup Banwayein</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
+              Agar aapka kuan pahaad ke peeche hai ya 15 km door hai, toh humare engineers Sub-GHz antenna repeater ke saath custom setup taiyaar karke dete hain.
+            </p>
+          </div>
+
+          <div class="mt-6 space-y-3">
+            <a href="https://wa.me/918000000000?text=Namaste%20Digital%20Tools%2C%20mujhe%20apne%20khet%20ke%20liye%20pump%20controller%20setup%20chahiye." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-mono-sm text-xs uppercase font-bold rounded-xl flex items-center justify-center gap-2 transition-all btn-shimmer">
+              <span class="material-symbols-outlined text-[18px]">chat</span>
+              <span>WhatsApp Par Baat Karein</span>
+            </a>
+            <a href="/contact/?interest=agriculture" class="w-full py-3 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-mono-sm text-xs uppercase font-semibold rounded-xl flex items-center justify-center gap-2 border border-slate-border/50 transition-all">
+              <span>Direct Quotation Mangwayein &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PROBLEM-SOLUTION MATRIX (HOW WE SOLVE REAL FARM PROBLEMS) -->
+    <section id="problem-solution-matrix" class="py-20 px-4 sm:px-6 lg:px-8 bg-surface-container-low border-y border-slate-border">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-label-mono-sm text-xs text-tertiary uppercase tracking-wider font-semibold">Rural Ground Realities</span>
+          <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold mt-2">
+            Kisan Ki Samasya vs. Digital Tools Ka Hal
+          </h2>
+          <p class="font-body-lg text-on-surface-variant text-base sm:text-lg mt-3">
+            Khet me aamtaur par aane wali 4 badi pareshaniyan aur hamara hardware unhe bina internet ke kaise jad se khatam karta hai:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Problem 1 -->
+          <div class="p-8 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-alert-amber mb-3">
+                <span class="material-symbols-outlined text-[24px]">nightlight</span>
+                <span class="font-label-mono-sm text-xs font-bold uppercase tracking-wider">SAMASYA #1: RAAT ME 2 KM KA SAFAR</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">
+                Raat 2 baje bijli aane par khet jaana aur zehrile saamp/keedo ka khatra
+              </h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Gaon me 3-phase bijli ka koi time nahi hota. Raat ko 1 baje ya 3 baje aati hai. Kisan ko andhere me khet chal kar jaana padta hai jisse accidents aur saamp ke kaatne ka sabse bada khatra rehta hai.
+              </p>
+            </div>
+            
+            <div class="mt-6 pt-5 border-t border-slate-border/50 bg-surface-container-lowest p-4 rounded-2xl">
+              <div class="flex items-center gap-2 text-tertiary mb-1">
+                <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                <span class="font-label-mono-sm text-xs font-bold uppercase">DIGITAL TOOLS KA HAL: TD-RF12K</span>
+              </div>
+              <p class="font-body-sm text-xs text-on-surface leading-relaxed">
+                Ghar ke aangan me baithe-baithe handheld remote ka button dabaiye. 12 km door borewell starter on ho jayega aur remote buzzer bajakar bata dega ki motor ghoom gayi hai!
+              </p>
             </div>
           </div>
 
-          <!-- Device 2 -->
-          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-alert-amber/20 flex flex-col justify-between gap-6 reveal-on-scroll delay-100">
-            <div class="flex flex-col gap-4">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 rounded-full bg-alert-amber/20 text-alert-amber font-label-mono-sm text-xs font-semibold border border-alert-amber/20">
-                  PORTABLE // FIELD READY
-                </span>
-                <span class="material-symbols-outlined text-alert-amber text-[26px]">science</span>
+          <!-- Problem 2 -->
+          <div class="p-8 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-alert-amber mb-3">
+                <span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+                <span class="font-label-mono-sm text-xs font-bold uppercase tracking-wider">SAMASYA #2: SINGLE-PHASING SE MOTOR JALNA</span>
               </div>
-              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Instant Digital Soil Testing Probe</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Get real-time NPK (Nitrogen, Phosphorus, Potassium), pH, and Electrical Conductivity measurements directly in your field within 8 seconds. Replaces multi-week laboratory turnaround.
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">
+                Ek phase udd jane par 5 minute me motor ka coil jal jana (₹12,000 nuksan)
+              </h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Rural transformers me load imbalance se aksar 1 phase gayab ho jata hai. Ordinary starter motor ko 2 phase par chalata rehta hai jisse winding garam hoke jal jaati hai aur rewinding me ₹10,000 se ₹15,000 lag jate hain.
               </p>
-              <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2">
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Sample Speed</span>
-                  <span class="text-on-surface font-bold">8 Seconds</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Sensor Probe</span>
-                  <span class="text-alert-amber font-bold">316 Stainless</span>
-                </div>
-              </div>
             </div>
-            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
-              <span class="text-xs font-mono text-primary flex items-center gap-1">
-                <span class="material-symbols-outlined text-[14px]">bluetooth</span> BLE Instant Sync
-              </span>
-              <a href="/contact/?product=soil-tester" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            
+            <div class="mt-6 pt-5 border-t border-slate-border/50 bg-surface-container-lowest p-4 rounded-2xl">
+              <div class="flex items-center gap-2 text-tertiary mb-1">
+                <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                <span class="font-label-mono-sm text-xs font-bold uppercase">DIGITAL TOOLS KA HAL: PHASE-VOLT TRIP</span>
+              </div>
+              <p class="font-body-sm text-xs text-on-surface leading-relaxed">
+                Hamara unit continuous 3-phase line sense karta hai. Agar ek bhi phase me 15% se jyada voltage drop hua, toh 400 millisecond ke andar contactor cut-off karke motor ko 100% surakshit kar deta hai.
+              </p>
             </div>
           </div>
 
-          <!-- Device 3 -->
-          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-primary/20 flex flex-col justify-between gap-6 reveal-on-scroll delay-200">
-            <div class="flex flex-col gap-4">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-mono-sm text-xs font-semibold border border-primary/20">
-                  AUTOMATED // CLOSED-LOOP
-                </span>
-                <span class="material-symbols-outlined text-primary text-[26px]">water_drop</span>
+          <!-- Problem 3 -->
+          <div class="p-8 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-alert-amber mb-3">
+                <span class="material-symbols-outlined text-[24px]">water_damage</span>
+                <span class="font-label-mono-sm text-xs font-bold uppercase tracking-wider">SAMASYA #3: DRY RUN (PAANI KHATAM HONA)</span>
               </div>
-              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Automatic Soil-Moisture Pump Starter</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Autonomous soil-moisture probes placed at root zones automatically trigger your 3-phase pump starter relay when moisture falls below optimal thresholds, and cut off automatically.
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">
+                Borewell me paani sookhne ke baad bhi pump ka khali ghoomna aur stage kharab hona
+              </h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Garmiyo me borewell ka water table jaldi girta hai. Pump khali chalta rehta hai jisse submersible pump ke teflon bush aur stage friction se pighal jaate hain.
               </p>
-              <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2">
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Root Depth</span>
-                  <span class="text-on-surface font-bold">15 &ndash; 60 cm</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Switch Relay</span>
-                  <span class="text-primary font-bold">30A Continuous</span>
-                </div>
-              </div>
             </div>
-            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
-              <span class="text-xs font-mono text-tertiary flex items-center gap-1">
-                <span class="material-symbols-outlined text-[14px]">eco</span> Prevents Aquifer Overuse
-              </span>
-              <a href="/contact/?product=auto-moisture-starter" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            
+            <div class="mt-6 pt-5 border-t border-slate-border/50 bg-surface-container-lowest p-4 rounded-2xl">
+              <div class="flex items-center gap-2 text-tertiary mb-1">
+                <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                <span class="font-label-mono-sm text-xs font-bold uppercase">DIGITAL TOOLS KA HAL: CURRENT DELTA TRIP</span>
+              </div>
+              <p class="font-body-sm text-xs text-on-surface leading-relaxed">
+                Paani na hone par motor ka load achanak 14A se girkar 7A ho jata hai. Controller is current drop ko turant pehchan kar motor ko 12 second me shut-off kar deta hai aur dry-run timer shuru kar deta hai.
+              </p>
             </div>
           </div>
 
-          <!-- Device 4 -->
-          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-tertiary/20 flex flex-col justify-between gap-6 reveal-on-scroll">
-            <div class="flex flex-col gap-4">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 rounded-full bg-tertiary/20 text-tertiary font-label-mono-sm text-xs font-semibold border border-tertiary/20">
-                  SOLAR-POWERED // BIO-ACOUSTIC
-                </span>
-                <span class="material-symbols-outlined text-tertiary text-[26px]">volume_up</span>
+          <!-- Problem 4 -->
+          <div class="p-8 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-alert-amber mb-3">
+                <span class="material-symbols-outlined text-[24px]">pest_control</span>
+                <span class="font-label-mono-sm text-xs font-bold uppercase tracking-wider">SAMASYA #4: JANGLI SUAR AUR ROJ (NILGAI)</span>
               </div>
-              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Solar Wild-Animal Sound Deterrent</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Frequency-modulated bio-acoustic sound sweeps protect sugarcane, banana, and grain fields from wild boars and deer without harming wildlife. Randomized firing intervals prevent habituation.
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">
+                Kadi mehnat se ugi fasal ko raat me janwaro dwara barbaad kiya jana
+              </h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Ganne, makka, kela aur chane ki fasal me raat ko suar aur nilgai ghus kar lakho ka nuksan karte hain. Bijli ke taar lagana kanoonan apradh hai aur jaanleva saabit hota hai.
               </p>
-              <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2">
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Protected Radius</span>
-                  <span class="text-on-surface font-bold">350m Radial Sweep</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Solar Power</span>
-                  <span class="text-tertiary font-bold">10W Self-Sustained</span>
-                </div>
-              </div>
             </div>
-            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
-              <span class="text-xs font-mono text-tertiary flex items-center gap-1">
-                <span class="material-symbols-outlined text-[14px]">shield</span> IP66 Weatherproof
-              </span>
-              <a href="/contact/?product=wildlife-deterrent" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            
+            <div class="mt-6 pt-5 border-t border-slate-border/50 bg-surface-container-lowest p-4 rounded-2xl">
+              <div class="flex items-center gap-2 text-tertiary mb-1">
+                <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                <span class="font-label-mono-sm text-xs font-bold uppercase">DIGITAL TOOLS KA HAL: TD-DETER800</span>
+              </div>
+              <p class="font-body-sm text-xs text-on-surface leading-relaxed">
+                Solar acoustic sound shield pseudorandom frequencies aur night strobe emit karta hai. Janwaro ko dard ya chot pahunchaye bina khet ki boundary se 250m door bhaga deta hai.
+              </p>
             </div>
           </div>
 
-          <!-- Device 5 -->
-          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-slate-border/60 flex flex-col justify-between gap-6 md:col-span-2 lg:col-span-2 reveal-on-scroll delay-100">
-            <div class="flex flex-col gap-4">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 rounded-full bg-secondary-fixed/20 text-secondary-fixed font-label-mono-sm text-xs font-semibold border border-secondary-fixed/20">
-                  HYBRID ORBIT + GROUND LORA MESH
-                </span>
-                <span class="material-symbols-outlined text-secondary-fixed text-[26px]">satellite_alt</span>
-              </div>
-              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Livestock &amp; Crop Canopy Health Monitor</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed max-w-2xl">
-                Smart collar tags track animal rumination rhythms, herd thermal stress, and boundary geofences over BLE &amp; LoRa. Integrates with Sentinel satellite NDVI field scanning to map crop stress zones before visible blight occurs.
-              </p>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono pt-2">
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Collar Weight</span>
-                  <span class="text-on-surface font-bold">98 Grams (Ultra-light)</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Satellite NDVI</span>
-                  <span class="text-secondary-fixed font-bold">10m Ground Resolution</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
-                  <span class="text-on-surface-variant block">Battery Life</span>
-                  <span class="text-tertiary font-bold">3+ Years Continuous</span>
-                </div>
-              </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: REAL FIELD TESTIMONIALS / REGIONAL IMPACT -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="font-label-mono-sm text-xs text-tertiary uppercase tracking-wider font-semibold">Field Verified Results</span>
+        <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold mt-2">
+          Kisan Bhaiyon Ke Asli Anubhav
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-7 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed italic">
+            "Pahle raat ko 2 baje light aane par 3 km door khet jana padta tha. TD-RF12K lagane ke baad se aangan me baithe hi motor on ho jaati hai. Sabse acchi baat ye hai ki remote par ghanti bajti hai aur green light aati hai jisse pata chal jata hai ki paani chal gaya!"
+          </p>
+          <div class="mt-6 pt-4 border-t border-slate-border/50 flex items-center justify-between">
+            <div>
+              <span class="font-headline-sm text-sm font-bold text-on-surface block">Rameshwar Patil</span>
+              <span class="font-label-mono-sm text-xs text-tertiary">Sangli, Maharashtra &bull; Sugarcane 18 Acres</span>
             </div>
-            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
-              <span class="text-xs font-mono text-secondary-fixed flex items-center gap-1">
-                <span class="material-symbols-outlined text-[14px]">tune</span> Multi-Spectrum Analysis
-              </span>
-              <a href="/contact/?product=livestock-monitor" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            <span class="material-symbols-outlined text-tertiary">verified</span>
+          </div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed italic">
+            "Ganne ke khet me har saal wild boars lakho ka nuksan karte the. TD-DETER800 lagane ke baad ek bhi suar boundary cross nahi kiya. Solar se chalta hai toh battery charge karne ka koi jhanjhat nahi."
+          </p>
+          <div class="mt-6 pt-4 border-t border-slate-border/50 flex items-center justify-between">
+            <div>
+              <span class="font-headline-sm text-sm font-bold text-on-surface block">Digvijay Singh</span>
+              <span class="font-label-mono-sm text-xs text-tertiary">Sehore, Madhya Pradesh &bull; Soybean &amp; Wheat</span>
             </div>
+            <span class="material-symbols-outlined text-tertiary">verified</span>
+          </div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed italic">
+            "Soil probe se mitti me kitna DAP aur Urea daalna hai wo turant pata chal gaya. Pehle bematlab khad daalne me ₹40,000 kharch hote the, ab seedha 30% khad ki bachat hui aur kela ka size bhi badhiya nikla."
+          </p>
+          <div class="mt-6 pt-4 border-t border-slate-border/50 flex items-center justify-between">
+            <div>
+              <span class="font-headline-sm text-sm font-bold text-on-surface block">Kiran Chaudhari</span>
+              <span class="font-label-mono-sm text-xs text-tertiary">Jalgaon, Maharashtra &bull; Banana Plantation</span>
+            </div>
+            <span class="material-symbols-outlined text-tertiary">verified</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FARMER HOTLINE & SUPPORT CONTACT -->
-    <section class="w-full py-16 bg-surface-container-lowest border-t border-slate-border/50" id="farmer-hotline">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-10 items-center justify-between">
-        <div class="flex flex-col gap-4 max-w-xl">
-          <span class="text-tertiary font-label-mono-sm text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
-            <span class="material-symbols-outlined text-[16px]">support_agent</span> 24/7 Farmer Support &amp; Field Demos
-          </span>
-          <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-extrabold tracking-tight">
-            Need Help or a Demonstration on Your Farm?
-          </h2>
-          <p class="font-body-md text-on-surface-variant leading-relaxed">
-            Our agricultural technicians visit working farms to test radio signal lines, install 3-phase starter clips, and demonstrate controllers. Contact us directly via WhatsApp or phone.
-          </p>
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="https://wa.me/918000000000?text=Hello%20Digital%20Tools%2C%20I%20am%20interested%20in%20your%20Agricultural%20hardware%20and%20would%20like%20a%20demo." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-lg transition-all btn-shimmer">
-              <span class="material-symbols-outlined text-[18px]">chat</span>
-              WhatsApp Farmer Hotline
-            </a>
-            <a href="tel:+918000000000" class="inline-flex items-center gap-2 px-6 py-3.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-mono-sm text-xs uppercase rounded-xl border border-slate-border/50 transition-all btn-shimmer">
-              <span class="material-symbols-outlined text-[18px] text-primary">call</span>
-              Direct Engineer Line
-            </a>
-            <a href="/contact/?interest=agritech" class="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-lg transition-all btn-shimmer">
-              Full Contact &amp; Booking Form &rarr;
-            </a>
-          </div>
+    <!-- SECTION: FARMER HOTLINE & DEMO DESK -->
+    <section id="farmer-hotline" class="py-16 px-4 sm:px-6 lg:px-8 bg-surface-container-lowest border-t border-slate-border">
+      <div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-8 sm:p-12 border border-tertiary/40 text-center flex flex-col items-center gap-6 shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-tertiary/10 blur-2xl pointer-events-none"></div>
+        <div class="w-16 h-16 rounded-2xl bg-tertiary/20 text-tertiary flex items-center justify-center">
+          <span class="material-symbols-outlined text-[36px]">agriculture</span>
         </div>
+        
+        <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold">
+          Apne Khet Me Free Live Demo Dekhna Chahte Hain?
+        </h2>
+        
+        <p class="font-body-lg text-on-surface-variant text-base sm:text-lg max-w-2xl">
+          Humare field technician aapke gaon/khet me aakar 12 km radio controller aur soil probe ka live demonstration dikha sakte hain.
+        </p>
 
-        <div class="w-full lg:w-96 bg-surface-container p-6 rounded-3xl border border-tertiary/30 shadow-2xl flex flex-col gap-4">
-          <span class="font-label-mono-sm text-xs text-on-surface uppercase font-bold tracking-wider flex items-center gap-1.5">
-            <span class="material-symbols-outlined text-tertiary text-[16px]">bolt</span> Quick Farm Inquiry
-          </span>
-          <form class="flex flex-col gap-3" onsubmit="event.preventDefault(); window.showToast('Farm inquiry sent! Our field technician will reach out.'); this.reset();">
-            <div>
-              <label class="font-body-sm text-xs text-on-surface-variant block mb-1">Your Name / Village / Farm</label>
-              <input class="w-full bg-surface-container-lowest p-2.5 rounded-xl text-on-surface text-sm border border-slate-border/50 focus:outline-none focus:border-primary" placeholder="e.g. Ramesh Patil (Kolhapur)" required type="text"/>
-            </div>
-            <div>
-              <label class="font-body-sm text-xs text-on-surface-variant block mb-1">Phone / WhatsApp Number</label>
-              <input class="w-full bg-surface-container-lowest p-2.5 rounded-xl text-on-surface text-sm border border-slate-border/50 focus:outline-none focus:border-primary" placeholder="+91 98..." required type="tel"/>
-            </div>
-            <div>
-              <label class="font-body-sm text-xs text-on-surface-variant block mb-1">Requirement</label>
-              <select class="w-full bg-surface-container-lowest p-2.5 rounded-xl text-on-surface text-sm border border-slate-border/50 focus:outline-none focus:border-primary">
-                <option>Radio Pump Controller (12 km Range)</option>
-                <option>Automatic Soil Moisture Starter</option>
-                <option>Instant Soil NPK &amp; pH Tester</option>
-                <option>Wild Animal Acoustic Deterrent</option>
-              </select>
-            </div>
-            <button type="submit" class="w-full py-3 bg-primary-container hover:bg-primary text-on-primary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-md transition-all btn-shimmer mt-2">
-              Send Farm Request &rarr;
-            </button>
-          </form>
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a class="px-8 py-4 bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-mono-lg text-sm uppercase font-bold rounded-xl shadow-lg shadow-tertiary/20 transition-all flex items-center gap-2 btn-shimmer" href="https://wa.me/918000000000?text=Namaste%20Digital%20Tools%2C%20mujhe%20apne%20khet%20me%20Free%20Field%20Demo%20chahiye." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            <span>WhatsApp Par Demo Book Karein</span>
+          </a>
+          <a class="px-8 py-4 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-mono-lg text-sm uppercase font-bold rounded-xl border border-slate-border transition-all flex items-center gap-2 btn-shimmer" href="/contact/?interest=agriculture">
+            <span class="material-symbols-outlined text-[20px] text-primary">send</span>
+            <span>Commercial Quote &rarr;</span>
+          </a>
         </div>
+        
+        <p class="font-label-mono-sm text-xs text-on-surface-variant">
+          Direct Kisan Helpline: <a href="mailto:support@adigitaltools.in" class="text-tertiary hover:underline">support@adigitaltools.in</a> &bull; Response SLA &lt; 24h
+        </p>
       </div>
     </section>
   </main>
+
+  <!-- INTERACTIVE DEVICE EXPLORATION MODAL (POPUP) -->
+  <div id="device-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container max-w-3xl w-full rounded-3xl border border-tertiary/50 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <!-- Modal Header -->
+      <div class="p-6 bg-surface-container-high border-b border-slate-border/50 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div id="modal-icon" class="w-10 h-10 rounded-xl bg-tertiary/20 text-tertiary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[24px]">agriculture</span>
+          </div>
+          <div>
+            <h3 id="modal-title" class="font-headline-sm text-xl font-bold text-on-surface">Device Name</h3>
+            <span id="modal-subtitle" class="font-label-mono-sm text-xs text-tertiary">Model &bull; Architecture</span>
+          </div>
+        </div>
+        <button onclick="closeDeviceModal()" class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="p-6 overflow-y-auto space-y-6">
+        <!-- Interactive Animated Architecture Diagram -->
+        <div class="p-5 rounded-2xl bg-surface-container-lowest border border-slate-border/50">
+          <div class="flex items-center justify-between text-xs font-mono text-tertiary mb-3">
+            <span>LIVE 3D SIGNAL FLOW ARCHITECTURE</span>
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> TRANSMITTING 868 MHz</span>
+          </div>
+          
+          <div id="modal-diagram" class="grid grid-cols-4 gap-2 text-center text-xs font-mono py-2">
+            <!-- Dynamic steps rendered by JS -->
+          </div>
+        </div>
+
+        <!-- 4 Step Detailed Explanation -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/40">
+            <span class="font-label-mono-sm text-xs text-alert-amber font-bold block mb-1">1. KISAN KI ASLI SAMASYA</span>
+            <p id="modal-problem" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">Description of real problem...</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/40">
+            <span class="font-label-mono-sm text-xs text-tertiary font-bold block mb-1">2. YE KAISE KAAM KARTA HAI</span>
+            <p id="modal-operation" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">Description of operation...</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/40">
+            <span class="font-label-mono-sm text-xs text-primary font-bold block mb-1">3. DO-TARFA CONFIRMATION (FEEDBACK)</span>
+            <p id="modal-feedback" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">How acknowledgment confirms pump is pumping water...</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/40">
+            <span class="font-label-mono-sm text-xs text-farm-green font-bold block mb-1">4. MOTOR JALNE SE BACHAV (FAILSAFE)</span>
+            <p id="modal-failsafe" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">Single phasing and dry run protection...</p>
+          </div>
+        </div>
+
+        <!-- Spec Table -->
+        <div class="p-4 rounded-2xl bg-surface-container-lowest border border-slate-border/40 font-mono text-xs">
+          <div class="text-on-surface-variant font-bold uppercase mb-2">TECHNICAL HARDWARE SPECIFICATIONS</div>
+          <div id="modal-specs" class="space-y-1.5 text-on-surface">
+            <!-- Specs injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-5 bg-surface-container-high border-t border-slate-border/50 flex flex-wrap items-center justify-between gap-3">
+        <span class="font-label-mono-sm text-xs text-on-surface-variant">2-Year Full Replacement Warranty</span>
+        <div class="flex items-center gap-3">
+          <a id="modal-whatsapp-btn" href="#" target="_blank" class="px-5 py-2.5 rounded-xl bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-mono-sm text-xs uppercase font-bold transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>Order On WhatsApp</span>
+          </a>
+          <button onclick="closeDeviceModal()" class="px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-mono-sm text-xs uppercase transition-all">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Standardized Main Footer -->
   <footer class="w-full bg-surface-container-lowest border-t border-slate-border">
@@ -438,7 +706,7 @@
         <div class="flex flex-col gap-2.5">
           <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Core Solutions</span>
           <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant">
-            <li><a class="hover:text-primary transition-colors text-primary font-medium" href="/agriculture/">Agriculture Radio Mesh</a></li>
+            <li><a class="hover:text-primary transition-colors text-tertiary font-medium" href="/agriculture/">Agriculture Radio Mesh</a></li>
             <li><a class="hover:text-primary transition-colors" href="/industrial/">Industrial IoT Gateway</a></li>
             <li><a class="hover:text-primary transition-colors" href="/apps/">Everyday Mobile Utilities</a></li>
             <li><a class="hover:text-primary transition-colors" href="/contact/">Contact &amp; Services</a></li>
@@ -477,5 +745,162 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Script Data -->
+  <script>
+    const deviceData = {
+      'td-rf12k': {
+        title: '12 km Long-Range Radio Pump Controller',
+        subtitle: 'Model: TD-RF12K // Sub-GHz 865-867 MHz LoRa PHY',
+        diagram: [
+          { label: 'Ghar Par Remote', sub: 'Handheld Transceiver', icon: 'settings_remote', color: 'text-tertiary' },
+          { label: '12 km Radio Tarang', sub: 'Sub-GHz Penetration', icon: 'podcasts', color: 'text-primary' },
+          { label: 'Starter Box Unit', sub: '415V Relay Controller', icon: 'developer_board', color: 'text-alert-amber' },
+          { label: 'Do-tarfa Buzzer', sub: 'Current Sense ACK', icon: 'notifications_active', color: 'text-farm-green' }
+        ],
+        problem: 'Raat ko 2 baje bijli aane par kisan ko andhere me 2 km door khet jaana padta hai jisse saamp aur keedo ka jaanleva khatra rehta hai. Cellular network na hone se mobile waale starter kaam nahi karte.',
+        operation: 'Kisan ghar ke aangan se remote par Start dabata hai. 868 MHz ki radio waves pahaad, ped aur khet ko paar karke borewell par lagi receiver unit ko 140ms me command deti hain aur starter contactor jud jaata hai.',
+        feedback: 'Kuan chalu hone par current transformer motor ke 14 Ampere current ko sense karta hai aur wapas remote ko wireless signal bhejta hai. Remote me buzzer bajti hai aur green LED jal jati hai ki haan, paani nikalna shuru ho gaya!',
+        failsafe: 'Agar line ka 1 phase gayab ho jaye (single phasing) ya motor me paani khatam ho jaye (dry run), toh controller 400 millisecond ke andar contactor trip kar deta hai, jisse ₹12,000 ki motor rewinding ka kharcha bach jata hai.',
+        specs: [
+          'Operating Range: 10-12 km Line-of-Sight (Sub-GHz 865-867 MHz)',
+          'Voltage Compatibility: 415V AC 3-Phase with 6kV MOV Surge Arrester',
+          'Enclosure: IP66 Weatherproof Polycarbonate with Brass Cable Glands',
+          'Starter Compatibility: Direct fit for DOL and Star-Delta starters (L&T, BCH, Siemens)'
+        ]
+      },
+      'td-soil4p': {
+        title: 'Digital Soil NPK & pH Testing Wand',
+        subtitle: 'Model: TD-SOIL4P // Quad 316L Stainless Array',
+        diagram: [
+          { label: 'Mitti Me Insert', sub: 'Quad Probe Wand', icon: 'arrow_downward', color: 'text-alert-amber' },
+          { label: 'Sensor Excitation', sub: 'High-Freq EC Wave', icon: 'sensors', color: 'text-primary' },
+          { label: 'Edge Algorithm', sub: 'Temp Compensation', icon: 'memory', color: 'text-tertiary' },
+          { label: '8-Sec Readout', sub: 'Transflective LCD', icon: 'insights', color: 'text-farm-green' }
+        ],
+        problem: 'Soil testing lab se report aane me 3 se 4 hafte lagte hain, tab tak kisan andaze se mehengi khad (DAP, Urea, Potash) daal deta hai jisse mitti kharab hoti hai aur kharcha bekar hota hai.',
+        operation: 'Wand ko khet me mitti ke andar dabayein. Chaaro stainless steel pins mitti ki electrical conductivity, ion mobility aur pH ko 8 second me measure karke screen par exact reading dikha deti hain.',
+        feedback: 'Screen par turant dikhta hai: N (Nitrogen) kitna hai, P (Phosphorus) kitna hai, K (Potassium) kitna hai aur pH 6.5 hai ya 8.2. Kisan ko pata chal jata hai ki abhi kaunsi khad ki jarurat hai.',
+        failsafe: '316L medical-grade stainless steel probe acid aur namak wali mitti me kabhi zang nahi pakadta. 500 offline borehole tests ka data device ki internal memory me safe rehta hai.',
+        specs: [
+          'Response Time: 8 Seconds per sample',
+          'Battery: 40 Hours runtime on single Type-C fast recharge',
+          'Display: 2.4-inch Sunlight Transflective LCD (kadi dhoop me bhi saaf dikhe)',
+          'Parameters: Nitrogen (N), Phosphorus (P), Potassium (K), pH, EC, Temp'
+        ]
+      },
+      'td-autopump': {
+        title: 'Automatic Closed-Loop Pump Starter',
+        subtitle: 'Model: TD-AUTOPUMP // Autonomous Soil Moisture Loop',
+        diagram: [
+          { label: 'Mitti Ki Nami', sub: 'Root-Zone Probe', icon: 'opacity', color: 'text-primary' },
+          { label: 'Threshold Logic', sub: 'Zero-Cloud MCU', icon: 'memory', color: 'text-tertiary' },
+          { label: '30A Relay Starter', sub: 'Automatic Ignition', icon: 'electric_meter', color: 'text-alert-amber' },
+          { label: 'Dry Run Sensor', sub: 'Current Delta Trip', icon: 'shield', color: 'text-farm-green' }
+        ],
+        problem: 'Kisan khet me paani laga kar bhool jata hai ya so jata hai, jisse khet me over-irrigation se jad sadti hai (root rot) aur borewell ka paani khatam hone par khali pump chalne se submersible jal jaata hai.',
+        operation: 'Jadon ke paas lagi moisture probe mitti ki tension continuous napati hai. Jaise hi mitti 30% se zyada sukhti hai, starter apne aap motor on karta hai. Khet bharte hi apne aap band kar deta hai.',
+        feedback: 'Agar kuan ka paani khatam hua, motor ka current 14 Ampere se gir kar 7 Ampere ho jata hai. Controller 12 second me samajh jata hai ki pump khali ghoom raha hai aur turant motor band kar deta hai.',
+        failsafe: 'Fully standalone edge intelligence. Internet ya mobile signal ki koi jarurat nahi. 30A solid state relays 10 lakh operations bina contact chhape chalte hain.',
+        specs: [
+          'Relay Capacity: 30A Continuous Heavy Duty Solid State',
+          'Sensor Depth: Dual subterranean capacitance probes (15-60cm)',
+          'Mounting: Universal DIN-rail starter enclosure fit (15 min installation)',
+          'Safety: Instant Dry-Run shutoff and Overload Thermal trip'
+        ]
+      },
+      'td-deter800': {
+        title: 'Wild-Animal Bio-Acoustic Deterrent',
+        subtitle: 'Model: TD-DETER800 // Solar Powered Perimeter Shield',
+        diagram: [
+          { label: 'Solar LiFePO4', sub: '100% Autonomous', icon: 'solar_power', color: 'text-alert-amber' },
+          { label: 'PIR Motion Sensor', sub: '360° Night Scan', icon: 'radar', color: 'text-primary' },
+          { label: 'Bio-Acoustic Horn', sub: 'Randomized Frequency', icon: 'campaign', color: 'text-tertiary' },
+          { label: 'Animal Defense', sub: '250m Repel Radius', icon: 'pets', color: 'text-farm-green' }
+        ],
+        problem: 'Jangli suar (wild boars), nilgai aur hiran raat ko khet me ghus kar khadi fasal (ganne, makka, daal) ko raund dete hain. Bijli ke taar lagana kanoonan jurm hai aur janwaro/insano ke liye jaanleva hota hai.',
+        operation: 'Solar powered device khet ki meed (boundary) par lagta hai. Raat ko motion sensor jaise hi janwar ki movement detect karta hai, ye achanak multi-frequency bio-acoustic predator sounds aur pulsed strobe flash karta hai.',
+        feedback: 'Randomized frequencies ki wajah se janwar is aawaz ke aadi nahi hote aur bina koi chot ya dard pahunche khet ki disha se ulte paav bhaag jate hain.',
+        failsafe: 'Non-lethal, eco-safe. LiFePO4 battery baarish aur badal chhae hone par bhi 7 din lagatar chalti hai. IP66 chassis ke andar keede aur paani nahi jaa sakta.',
+        specs: [
+          'Coverage: 250m radial sweep (~4.8 to 5 Acres per device)',
+          'Power: 10W Monocrystalline Solar Panel + 12.8V LiFePO4 Battery',
+          'Strobe Lamp: 800-Lumen Pulsed Nocturnal LED Beam',
+          'Enclosure: IP66 High-impact copolymer chassis with insect barrier'
+        ]
+      },
+      'td-profile': {
+        title: 'Multi-Depth Sub-Soil Moisture Profiler',
+        subtitle: 'Model: TD-SOIL-DEPTH // 3-Tier Root-Zone Array',
+        diagram: [
+          { label: '15cm Shallow Layer', sub: 'Evaporation Zone', icon: 'grass', color: 'text-tertiary' },
+          { label: '30cm Main Root', sub: 'Nutrient Uptake', icon: 'compost', color: 'text-primary' },
+          { label: '60cm Deep Soil', sub: 'Groundwater Storage', icon: 'water', color: 'text-alert-amber' },
+          { label: 'Drip Optimization', sub: '40% Water Savings', icon: 'verified', color: 'text-farm-green' }
+        ],
+        problem: 'Upar se mitti sookhi lagti hai lekin jadon me paani rehta hai, ya upar se geeli lagti hai aur jadon tak paani nahi pahunchta. Is galatfehmi se kisan drip irrigation me paani aur khad barbaad karta hai.',
+        operation: 'Single probe wand me 3 alag-alag sensors 15cm, 30cm aur 60cm par fixed hote hain. Ye jad ke active zone ki mitti ki nami aur EC ka graph real time me dikhata hai.',
+        feedback: 'Kisan ko saaf pata chalta hai ki drip 20 minute chalana hai ya 1 ghanta. 40% bijli aur paani ki direct bachat hoti hai.',
+        failsafe: 'Lithium battery 10 saal tak chalti hai. Khet ki mitti me saalo saal gade rehne par bhi sensor wear-and-tear nahi hota.',
+        specs: [
+          'Depth Layers: 15 cm, 30 cm, 60 cm simultaneous',
+          'Battery Life: 10 Years hermetically sealed lithium thionyl',
+          'Connectivity: Sub-GHz wireless to pump controller or BLE wand',
+          'Target Crops: Sugarcane, Banana, Cotton, Pomegranate, Grapes'
+        ]
+      }
+    };
+
+    function openDeviceModal(id) {
+      const data = deviceData[id];
+      if (!data) return;
+
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-subtitle').textContent = data.subtitle;
+      document.getElementById('modal-problem').textContent = data.problem;
+      document.getElementById('modal-operation').textContent = data.operation;
+      document.getElementById('modal-feedback').textContent = data.feedback;
+      document.getElementById('modal-failsafe').textContent = data.failsafe;
+
+      // Render diagram
+      const diagEl = document.getElementById('modal-diagram');
+      diagEl.innerHTML = '';
+      data.diagram.forEach((step, idx) => {
+        const div = document.createElement('div');
+        div.className = 'p-3 rounded-xl bg-surface-container-high flex flex-col items-center justify-between border border-slate-border/50 relative';
+        div.innerHTML = `
+          <span class="material-symbols-outlined ${step.color} text-[24px] mb-1">${step.icon}</span>
+          <span class="font-bold text-on-surface text-[11px] leading-tight">${step.label}</span>
+          <span class="text-[9px] text-on-surface-variant mt-0.5">${step.sub}</span>
+        `;
+        diagEl.appendChild(div);
+      });
+
+      // Render specs
+      const specsEl = document.getElementById('modal-specs');
+      specsEl.innerHTML = '';
+      data.specs.forEach(spec => {
+        const p = document.createElement('p');
+        p.className = 'flex items-center gap-2';
+        p.innerHTML = `<span class="text-tertiary">&check;</span> <span>${spec}</span>`;
+        specsEl.appendChild(p);
+      });
+
+      // WhatsApp link
+      const waBtn = document.getElementById('modal-whatsapp-btn');
+      waBtn.href = `https://wa.me/918000000000?text=${encodeURIComponent('Namaste Digital Tools, mujhe ' + data.title + ' ke bare me jankari chahiye aur order karna hai.')}`;
+
+      document.getElementById('device-modal').classList.remove('hidden');
+    }
+
+    function closeDeviceModal() {
+      document.getElementById('device-modal').classList.add('hidden');
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDeviceModal();
+    });
+  </script>
 </body>
 </html>

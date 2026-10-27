@@ -14,12 +14,8 @@
   <script type="module" src="/src/effects.js"></script>
   <style>
     @layer base { html, body { margin: 0; padding: 0; } }
-    .m2m-pulse {
-      animation: m2m-pulse-anim 3s infinite ease-in-out;
-    }
-    @keyframes m2m-pulse-anim {
-      0%, 100% { opacity: 0.3; transform: scale(0.98); }
-      50% { opacity: 0.8; transform: scale(1.02); }
+    .machine-card:hover .machine-photo {
+      transform: scale(1.05);
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -47,7 +43,8 @@
             "tertiary-container": "#58b590",
             "outline": "#859490",
             "slate-border": "#334155",
-            "alert-amber": "#F59E0B"
+            "alert-amber": "#F59E0B",
+            "cyber-cyan": "#06b6d4"
           },
           fontFamily: {
             "headline-lg": ["Space Grotesk"],
@@ -65,7 +62,7 @@
     };
   </script>
 </head>
-<body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-alert-amber selection:text-slate-900">
   <!-- Standardized Main Header -->
   <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-slate-border">
     <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
@@ -85,7 +82,7 @@
       <nav class="hidden lg:flex items-center gap-1">
         <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/">Home</a>
         <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/agriculture/">Agriculture</a>
-        <a class="px-3.5 py-2 font-body-md text-body-md text-primary font-semibold bg-primary-container/20 rounded-xl transition-colors" href="/industrial/">Industrial</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-alert-amber font-semibold bg-alert-amber/15 rounded-xl transition-colors" href="/industrial/">Industrial</a>
         <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/apps/">Mobile Apps</a>
         <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/contact/">Contact</a>
       </nav>
@@ -94,8 +91,8 @@
           <span class="material-symbols-outlined text-[16px]" id="sound-toggle-icon">volume_off</span>
           <span id="sound-toggle-label">SFX: OFF</span>
         </button>
-        <a class="flex items-center gap-1.5 px-3.5 py-2 bg-primary-container hover:bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold rounded-lg transition-all shadow-sm btn-shimmer" href="/contact/">
-          <span>Request Quote</span>
+        <a class="flex items-center gap-1.5 px-3.5 py-2 bg-primary-container hover:bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold rounded-lg transition-all shadow-sm btn-shimmer" href="/contact/?interest=industrial">
+          <span>Plant Audit</span>
           <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
         </a>
       </div>
@@ -105,354 +102,372 @@
   <main class="w-full pt-20">
     <!-- HERO SECTION: Industry 4.0 & Cybernetic M2M -->
     <section class="relative w-full overflow-hidden bg-surface-container-lowest py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-border">
-      <!-- Ambient technical grid overlay -->
       <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b20_1px,transparent_1px),linear-gradient(to_bottom,#1e293b20_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none opacity-50"></div>
-      <div class="absolute -top-32 right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-alert-amber/5 blur-3xl pointer-events-none"></div>
+      <div class="absolute -top-32 right-10 w-96 h-96 rounded-full bg-alert-amber/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
 
       <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <!-- Left: Copy & High-Performance Metrics -->
         <div class="lg:col-span-7 flex flex-col gap-6">
-          <div class="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded bg-surface-container-high border border-primary/30 text-primary">
-            <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+          <div class="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded bg-surface-container-high border border-alert-amber/40 text-alert-amber">
+            <span class="w-2 h-2 rounded-full bg-alert-amber animate-ping"></span>
             <span class="font-label-mono-sm text-xs uppercase tracking-wider font-semibold">
-              Industry 4.0 &bull; 5G/6G Ready M2M Telemetry &bull; IEC 62443 Hardened
+              Industry 4.0 &bull; M2M Autonomous Coordination &bull; IEC 62443 Hardened
             </span>
           </div>
 
           <h1 class="font-display-hero text-4xl sm:text-5xl lg:text-6xl text-on-surface tracking-tight leading-tight font-bold">
-            Autonomous <span class="text-primary">Machine-to-Machine</span> (M2M) &amp; Deterministic Edge Gateways
+            Autonomous <span class="text-alert-amber">Machine-to-Machine</span> (M2M) &amp; Deterministic Edge Gateways
           </h1>
 
           <p class="font-body-lg text-lg text-on-surface-variant max-w-2xl leading-relaxed">
-            Connect legacy PLCs, CNC machines, SCADA loops, and robotic cells seamlessly. Our DIN-rail IoT gateways empower plant floors with self-healing private wireless, zero-touch Modbus sniffing, and end-to-end encrypted remote PLC debugging without breaking air-gapped security.
+            20-saal purani mechanical presses aur modern CNCs ko aapas me connect karein. Humare DIN-rail IoT gateways machine ke RS-485 / Modbus bus se passive optical tap ke jariye data sniffer lagate hain—<strong>bina koi taar kaate aur bina production roke</strong>.
           </p>
 
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a class="px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-lg text-sm uppercase font-bold transition-all flex items-center gap-2 shadow-lg shadow-primary/20 btn-shimmer" href="/contact/?interest=industrial">
-              <span class="material-symbols-outlined text-[18px]">bolt</span>
-              <span>Deploy Industrial Gateway</span>
+            <a class="px-6 py-3.5 rounded-xl bg-alert-amber hover:bg-amber-400 text-slate-950 font-label-mono-lg text-sm uppercase font-bold transition-all flex items-center gap-2 shadow-lg shadow-alert-amber/20 btn-shimmer" href="#machines-catalog">
+              <span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+              <span>Inspect 4 Machine Solutions</span>
             </a>
-            <a class="px-6 py-3.5 rounded-xl bg-surface-container text-on-surface font-label-mono-lg text-sm uppercase hover:bg-surface-container-high hover:text-primary transition-all flex items-center gap-2 border border-slate-border btn-shimmer" href="#m2m-architecture">
-              <span class="material-symbols-outlined text-[18px]">hub</span>
-              <span>Explore M2M Protocols</span>
+            <a class="px-6 py-3.5 rounded-xl bg-surface-container text-on-surface font-label-mono-lg text-sm uppercase hover:bg-surface-container-high hover:text-alert-amber transition-all flex items-center gap-2 border border-slate-border btn-shimmer" href="/contact/?interest=industrial">
+              <span class="material-symbols-outlined text-[18px]">request_quote</span>
+              <span>Request Factory Audit</span>
             </a>
           </div>
 
           <!-- Live KPI Strip -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-border/50">
             <div class="p-3.5 rounded-xl bg-surface-container-low border border-slate-border/50">
-              <span class="font-headline-md text-2xl text-primary font-bold block">15-Min</span>
-              <span class="font-label-mono-sm text-xs text-on-surface-variant">DIN-Rail Snap Mount</span>
+              <span class="font-headline-md text-2xl text-alert-amber font-bold block">15-Min</span>
+              <span class="font-label-mono-sm text-xs text-on-surface-variant">DIN-Rail Snap Fit</span>
             </div>
             <div class="p-3.5 rounded-xl bg-surface-container-low border border-slate-border/50">
-              <span class="font-headline-md text-2xl text-alert-amber font-bold block">0s</span>
-              <span class="font-label-mono-sm text-xs text-on-surface-variant">Production Interruption</span>
+              <span class="font-headline-md text-2xl text-primary font-bold block">0s</span>
+              <span class="font-label-mono-sm text-xs text-on-surface-variant">Line Downtime During Retrofit</span>
             </div>
             <div class="p-3.5 rounded-xl bg-surface-container-low border border-slate-border/50">
               <span class="font-headline-md text-2xl text-tertiary font-bold block">-65%</span>
               <span class="font-label-mono-sm text-xs text-on-surface-variant">MTTR Breakdown Cut</span>
             </div>
             <div class="p-3.5 rounded-xl bg-surface-container-low border border-slate-border/50">
-              <span class="font-headline-md text-2xl text-primary-container font-bold block">&lt; 18ms</span>
-              <span class="font-label-mono-sm text-xs text-on-surface-variant">M2M Control Determinism</span>
+              <span class="font-headline-md text-2xl text-cyber-cyan font-bold block">&lt; 18ms</span>
+              <span class="font-label-mono-sm text-xs text-on-surface-variant">Local M2M Loop Trip</span>
             </div>
           </div>
         </div>
 
         <!-- Right: Real-Time Machine Telemetry HUD -->
         <div class="lg:col-span-5 flex flex-col gap-4">
-          <div class="bg-surface-container rounded-2xl p-6 shadow-2xl border border-slate-border relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-alert-amber to-tertiary"></div>
+          <div class="bg-surface-container rounded-3xl p-6 shadow-2xl border border-alert-amber/30 relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-alert-amber via-primary to-tertiary"></div>
             
             <div class="flex items-center justify-between pb-4 border-b border-slate-border/50">
               <div class="flex items-center gap-2.5">
-                <span class="material-symbols-outlined text-primary text-[22px]">precision_manufacturing</span>
+                <span class="material-symbols-outlined text-alert-amber text-[24px]">precision_manufacturing</span>
                 <div>
-                  <span class="font-label-mono-lg text-sm font-semibold text-on-surface block">TD-GATE100 // EDGE NODE</span>
-                  <span class="font-label-mono-sm text-xs text-on-surface-variant">PLANT_ID: P4-AUTOMOTIVE-STAMPING</span>
+                  <span class="font-label-mono-lg text-sm font-semibold text-on-surface block">TD-GATE100 // INDUSTRIAL EDGE</span>
+                  <span class="font-label-mono-sm text-xs text-on-surface-variant">SHOPFLOOR: CHAKAN AUTOMOTIVE CLUSTER</span>
                 </div>
               </div>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary/10 text-primary border border-primary/20">
-                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span class="font-label-mono-sm text-xs font-semibold">M2M SYNC: OK</span>
-              </div>
-            </div>
-
-            <!-- Visual Machine Mesh Map -->
-            <div class="my-5 p-4 rounded-xl bg-surface-container-lowest border border-slate-border/40 flex flex-col gap-3">
-              <div class="flex items-center justify-between text-xs font-label-mono-sm text-on-surface-variant">
-                <span>M2M BUS TOPOLOGY</span>
-                <span class="text-tertiary">RS-485 / PROFINET / 5G PRIVATE</span>
-              </div>
-              
-              <div class="grid grid-cols-3 gap-2 text-center text-xs font-label-mono-sm">
-                <div class="p-2.5 rounded bg-surface-container-high border border-primary/30 flex flex-col items-center">
-                  <span class="material-symbols-outlined text-primary text-[20px]">smart_toy</span>
-                  <span class="font-bold text-on-surface mt-1">ROBOT-1</span>
-                  <span class="text-[10px] text-tertiary">0.4ms Jitter</span>
-                </div>
-                <div class="p-2.5 rounded bg-surface-container-high border border-alert-amber/30 flex flex-col items-center">
-                  <span class="material-symbols-outlined text-alert-amber text-[20px]">memory</span>
-                  <span class="font-bold text-on-surface mt-1">PLC-SIEMENS</span>
-                  <span class="text-[10px] text-primary">Modbus TCP</span>
-                </div>
-                <div class="p-2.5 rounded bg-surface-container-high border border-tertiary/30 flex flex-col items-center">
-                  <span class="material-symbols-outlined text-tertiary text-[20px]">sensors</span>
-                  <span class="font-bold text-on-surface mt-1">HMI-NODE</span>
-                  <span class="text-[10px] text-tertiary">Encrypted Tunnel</span>
-                </div>
-              </div>
-
-              <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-alert-amber w-3/4 animate-pulse"></div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-alert-amber/10 text-alert-amber border border-alert-amber/30">
+                <span class="w-2 h-2 rounded-full bg-alert-amber animate-pulse"></span>
+                <span class="font-label-mono-sm text-xs font-semibold">M2M SYNC: ACTIVE</span>
               </div>
             </div>
 
-            <!-- Telemetry Metrics & Sparkline -->
-            <div class="grid grid-cols-2 gap-3 text-on-surface">
-              <div class="bg-surface-container-high p-3.5 rounded-xl border border-slate-border/50">
-                <div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-xs mb-1">
-                  <span>M2M PACKET LOSS</span>
-                  <span class="text-primary font-bold">0.000%</span>
-                </div>
-                <svg class="w-full h-7 text-primary overflow-visible" fill="none" viewBox="0 0 100 24">
-                  <path d="M0 16 L20 14 L40 15 L60 12 L80 13 L100 11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                </svg>
+            <!-- Simulated Hardware Image with Micro-badges -->
+            <div class="relative rounded-2xl overflow-hidden my-4 bg-surface-container-lowest">
+              <img class="w-full h-48 object-cover opacity-85" alt="DIN Rail IoT Industrial Gateway Installed in Panel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbi6TahwvTe34KnsEgeuEPJx6tPoFgA_L_MwLXfwya1R52IpdIWpZU7075qO0mlz62IVksbP6QO-AtsghMlM9yAv9zwcTmjMUFpAnPYtWj2CcJl3PTJooGTB0EuNnVhSWm_hpEul-9z75XWy4TLGMmpTLWsURnezG7JGFOPQqPWYYDJVhk3EbBOVq-BiP9jKvaFhXjaOXGVwU6gz3zZ66Djqb_69ySxERHrHT6dXy_iYawnqZjRn-7"/>
+              <div class="absolute bottom-2 left-2 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur rounded-lg text-primary font-label-mono-sm text-xs flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[14px]">lock</span>
+                WireGuard Air-Gap Tunnel Active
               </div>
-
-              <div class="bg-surface-container-high p-3.5 rounded-xl border border-slate-border/50">
-                <div class="flex justify-between items-center text-on-surface-variant font-label-mono-sm text-xs mb-1">
-                  <span>CYBER ISOLATION</span>
-                  <span class="text-tertiary font-bold">IEC 62443 SL-3</span>
-                </div>
-                <div class="flex items-center gap-2 mt-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
-                  <span class="font-label-mono-sm text-xs text-on-surface">OT Air-Gap Active</span>
-                </div>
+              <div class="absolute top-2 right-2 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur rounded-lg text-alert-amber font-label-mono-sm text-xs">
+                24V DC DUAL REDUNDANT
               </div>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-slate-border/50 flex items-center justify-between text-xs font-label-mono-sm">
-              <span class="text-on-surface-variant">UPTIME: 1,482h 14m</span>
-              <span class="text-primary">NO CLOUD VENDOR LOCK-IN</span>
+            <!-- Technical Metrics Grid -->
+            <div class="grid grid-cols-2 gap-3 text-on-surface font-mono text-xs">
+              <div class="bg-surface-container-high p-3 rounded-xl border border-slate-border/50">
+                <span class="text-on-surface-variant block mb-1">M2M CYCLE DETERMINISM</span>
+                <span class="text-alert-amber text-base font-bold">14.6 ms</span>
+              </div>
+              <div class="bg-surface-container-high p-3 rounded-xl border border-slate-border/50">
+                <span class="text-on-surface-variant block mb-1">MODBUS SNIFFER JITTER</span>
+                <span class="text-primary text-base font-bold">0.02 ms</span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-border/50 flex items-center justify-between text-xs font-mono text-on-surface-variant">
+              <span>SECURITY: IEC 62443 SL-3</span>
+              <span class="text-tertiary font-bold">ZERO CLOUD VENDOR LOCK-IN</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION: What is Industry 4.0 & Modern M2M? -->
-    <section id="m2m-architecture" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <!-- SECTION: CLICKABLE MACHINES & WHAT WE ACTUALLY DO -->
+    <section id="machines-catalog" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Autonomous Shopfloor Intelligence</span>
+        <span class="font-label-mono-sm text-xs text-alert-amber uppercase tracking-wider font-semibold">Factory Retrofit Blueprints</span>
         <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold mt-2">
-          How Modern M2M Communication Powers Industry 4.0
+          Shop Floor Machines &bull; Click to See What We Actually Do
         </h2>
         <p class="font-body-lg text-on-surface-variant text-base sm:text-lg mt-3">
-          In a true Industry 4.0 facility, machines talk directly to each other without waiting for slow cloud servers. If machine #1 detects thermal strain, it automatically commands feeder #2 to ease torque over local 5G / private mesh.
+          Kisi bhi machine photo par click karke dekhiye ki hum plant floor par actual kya kaam karte hain, us machine ki konsi problem solve hoti hai, aur M2M communication kaise kaam karta hai.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Feature 1 -->
-        <div class="p-8 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col gap-4">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-            <span class="material-symbols-outlined text-[28px]">cable</span>
+      <!-- 4 Common Machine Cards Bento Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Machine 1: Hydraulic & Mechanical Stamping Press -->
+        <div class="machine-card bg-surface-container rounded-3xl border border-slate-border hover:border-alert-amber/60 transition-all duration-300 overflow-hidden shadow-2xl cursor-pointer group flex flex-col justify-between" onclick="openMachineModal('press')">
+          <div>
+            <div class="relative h-64 w-full overflow-hidden bg-surface-container-lowest">
+              <img class="machine-photo w-full h-full object-cover transition-transform duration-500" alt="400-ton Hydraulic Stamping Press in Automotive Plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdQSfVSsZrVyxkgH2aRSuBhR1oYcK-Tjt7x-VdL6d6U-rHkRA1_6q9tYqxlgLT-1-F8ePAJI3blLaNBg_iRnhKba3g6oVb2FmC00FDSC-eeb-1DiesEm48y1dcCyOfqckkaZWeC0G7ma3WEqPjHnrcxI8hRZEQ-o41GN4NoFVW2ACoY-Dbvg7aIzH2OSbsfk6uC9cxOXB0pz3VcjMbuZS4RW739cLvNUMle_xqKwtFjplCrQQNEuzu"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded bg-surface-container-lowest/90 text-alert-amber font-mono text-xs font-bold uppercase tracking-wider">
+                  BLUEPRINT 01 // PRESS SHOP
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-primary font-mono text-xs">
+                  22-MIN INSTALLATION &bull; ZERO WIRES CUT
+                </span>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <h3 class="font-headline-sm text-2xl font-bold text-on-surface group-hover:text-alert-amber transition-colors">
+                Legacy Mechanical &amp; Hydraulic Stamping Presses
+              </h3>
+              <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed">
+                ₹1.2 Crore ki purani stamping press me koi network port nahi hota. Operator manual register me stroke likhte hain aur hydraulic oil garam hone par valve phat jata hai.
+              </p>
+              
+              <div class="mt-4 p-3.5 rounded-xl bg-surface-container-lowest border border-slate-border/50 text-xs font-mono text-on-surface">
+                <span class="text-tertiary font-bold block mb-1">HAM KYA KAAM KARTE HAIN:</span>
+                Non-contact optical sensor ram guide par snap hota hai + 4-20mA hydraulic oil transducer lagta hai. 18ms me die fracture aur cavity alert trigger hota hai!
+              </div>
+            </div>
           </div>
-          <h3 class="font-headline-sm text-xl font-bold text-on-surface">Zero-Downtime Legacy Retrofit</h3>
-          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-            No need to throw away million-dollar CNC machines or older Siemens/Allen-Bradley PLCs. Our optical tap modules clip onto existing RS-485 and CAN buses passively without stopping production or invalidating OEM warranties.
-          </p>
-          <ul class="font-label-mono-sm text-xs text-primary flex flex-col gap-1.5 mt-auto pt-4 border-t border-slate-border/50">
-            <li>&check; Passive high-impedance RX sniffing</li>
-            <li>&check; Zero impact on cycle timing</li>
-            <li>&check; 2.5 kV galvanic surge isolation</li>
-          </ul>
+
+          <div class="px-6 pb-6 pt-2 border-t border-slate-border/50 flex items-center justify-between text-xs font-mono">
+            <span class="text-alert-amber font-bold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to View Solution Architecture
+            </span>
+            <span class="material-symbols-outlined text-alert-amber group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="p-8 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col gap-4">
-          <div class="w-12 h-12 rounded-xl bg-alert-amber/10 text-alert-amber flex items-center justify-center">
-            <span class="material-symbols-outlined text-[28px]">cell_tower</span>
+        <!-- Machine 2: CNC & VMC Machining Cells -->
+        <div class="machine-card bg-surface-container rounded-3xl border border-slate-border hover:border-alert-amber/60 transition-all duration-300 overflow-hidden shadow-2xl cursor-pointer group flex flex-col justify-between" onclick="openMachineModal('cnc')">
+          <div>
+            <div class="relative h-64 w-full overflow-hidden bg-surface-container-lowest">
+              <img class="machine-photo w-full h-full object-cover transition-transform duration-500" alt="Precision CNC Milling and VMC Machining Center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDvB8CySfFkcPnjHj3Fn24F1-bLw_nel4DZo6NLCabqvAf33XHsRQ6NdQj66qGq5WM2eRmtfl17kSe6qdt8DmDFHXT2-8vvUgg1Dj_w7chTQIa1LMbXTHHGGFrLmO6u8XEMehIfsRx_bH2hlMc5-DmmgabQf-xPIWK9UuxStyezr9Mu-6RztmSNCrQPh_sXyQ53XbFAlPXKmnrDFC8gAWEgUvhScfiYlFJOF4T6_9psbND7idYJkdU"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded bg-surface-container-lowest/90 text-primary font-mono text-xs font-bold uppercase tracking-wider">
+                  BLUEPRINT 02 // CNC &amp; VMC
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-alert-amber font-mono text-xs">
+                  18-MIN RETROFIT &bull; NO PLC CODE CHANGE
+                </span>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <h3 class="font-headline-sm text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">
+                Automotive Ancillary CNC &amp; VMC Machining Cells
+              </h3>
+              <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed">
+                Fanuc 0i ya Siemens 808D machines par operator pendrive le kar ghoomte hain. Tool insert ghisne par part rejection ho jata hai aur OEE unmonitored rehti hai.
+              </p>
+              
+              <div class="mt-4 p-3.5 rounded-xl bg-surface-container-lowest border border-slate-border/50 text-xs font-mono text-on-surface">
+                <span class="text-primary font-bold block mb-1">HAM KYA KAAM KARTE HAIN:</span>
+                RS-232 serial DNC tap + spindle motor power current sniffer lagate hain. Tool wear pehle hi detect ho jata hai aur remote safe G-code dispatch hota hai!
+              </div>
+            </div>
           </div>
-          <h3 class="font-headline-sm text-xl font-bold text-on-surface">5G / 6G &amp; Private Industrial Wireless</h3>
-          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-            Ultra-reliable low-latency communication (URLLC). Industrial nodes talk directly over localized sub-gigahertz and private 5G cellular channels, ensuring factory automation keeps ticking even if the commercial internet goes completely dark.
-          </p>
-          <ul class="font-label-mono-sm text-xs text-alert-amber flex flex-col gap-1.5 mt-auto pt-4 border-t border-slate-border/50">
-            <li>&check; Deterministic sub-20ms packet roundtrips</li>
-            <li>&check; Immune to metal wall reflections</li>
-            <li>&check; Self-healing peer-to-peer mesh</li>
-          </ul>
+
+          <div class="px-6 pb-6 pt-2 border-t border-slate-border/50 flex items-center justify-between text-xs font-mono">
+            <span class="text-primary font-bold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to View Solution Architecture
+            </span>
+            <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
         </div>
 
-        <!-- Feature 3 -->
-        <div class="p-8 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col gap-4">
-          <div class="w-12 h-12 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center">
-            <span class="material-symbols-outlined text-[28px]">shield_person</span>
+        <!-- Machine 3: Automated Conveyor & Packaging Line -->
+        <div class="machine-card bg-surface-container rounded-3xl border border-slate-border hover:border-alert-amber/60 transition-all duration-300 overflow-hidden shadow-2xl cursor-pointer group flex flex-col justify-between" onclick="openMachineModal('packaging')">
+          <div>
+            <div class="relative h-64 w-full overflow-hidden bg-surface-container-lowest">
+              <img class="machine-photo w-full h-full object-cover transition-transform duration-500" alt="High Speed Industrial Automated Packaging Conveyor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5sH_yxCUamge1yaPnkYhunLjCI_oC6inNF1wNsOhuq7YlWPRoWEp2d9w4_vy4sY7KRx1ZKSqXQIMTVGTVQY25hzCAG2vnk6JWwKrul6ahhWmxr2OvMz1kpGvgBMisXjJaQUACo3wWET6vEF2S25VPibn4-iKofjx3-Yp-MIfsMLnS32mfB7HAqh1xyzSgHJteKiZQmBGzXOYFUMr4ZxJN9soSRpMbvHN8TOvF94m1fxF4YOaWylpK"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded bg-surface-container-lowest/90 text-tertiary font-mono text-xs font-bold uppercase tracking-wider">
+                  BLUEPRINT 03 // FMCG PACKAGING
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-cyber-cyan font-mono text-xs">
+                  M2M AUTO-PAUSE &bull; ZERO PACKET LOSS
+                </span>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <h3 class="font-headline-sm text-2xl font-bold text-on-surface group-hover:text-tertiary transition-colors">
+                High-Speed Packaging &amp; Continuous Bagging Lines
+              </h3>
+              <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed">
+                Carton pack hone ke dauran aage conveyor jam ho jata hai toh peeche ki machine dabbe banati rehti hai jisse collision hota hai aur ₹50,000 ka packet damage ho jata hai.
+              </p>
+              
+              <div class="mt-4 p-3.5 rounded-xl bg-surface-container-lowest border border-slate-border/50 text-xs font-mono text-on-surface">
+                <span class="text-tertiary font-bold block mb-1">HAM KYA KAAM KARTE HAIN:</span>
+                M2M Machine-to-Machine communication setup karte hain. Conveyor jam hote hi aage ki machine 18ms ke andar feeder machine ko pause signal bhejti hai!
+              </div>
+            </div>
           </div>
-          <h3 class="font-headline-sm text-xl font-bold text-on-surface">Air-Gapped Cybersecurity (IEC 62443)</h3>
-          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-            Corporate IT and factory OT should never share unsegmented networks. Our gateways utilize hardware cryptographic keys, strict read-only OT diode architecture, and WireGuard tunnels so offsite engineers can troubleshoot without opening firewall ports.
-          </p>
-          <ul class="font-label-mono-sm text-xs text-tertiary flex flex-col gap-1.5 mt-auto pt-4 border-t border-slate-border/50">
-            <li>&check; Hardware unidirectional data diode mode</li>
-            <li>&check; ChaCha20-Poly1305 cipher tunneling</li>
-            <li>&check; Physical tamper intrusion switches</li>
-          </ul>
+
+          <div class="px-6 pb-6 pt-2 border-t border-slate-border/50 flex items-center justify-between text-xs font-mono">
+            <span class="text-tertiary font-bold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to View Solution Architecture
+            </span>
+            <span class="material-symbols-outlined text-tertiary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
         </div>
+
+        <!-- Machine 4: Heavy Rotary Screw Compressors & Chillers -->
+        <div class="machine-card bg-surface-container rounded-3xl border border-slate-border hover:border-alert-amber/60 transition-all duration-300 overflow-hidden shadow-2xl cursor-pointer group flex flex-col justify-between" onclick="openMachineModal('compressor')">
+          <div>
+            <div class="relative h-64 w-full overflow-hidden bg-surface-container-lowest">
+              <img class="machine-photo w-full h-full object-cover transition-transform duration-500" alt="Industrial Rotary Screw Air Compressor Utility Basement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbi6TahwvTe34KnsEgeuEPJx6tPoFgA_L_MwLXfwya1R52IpdIWpZU7075qO0mlz62IVksbP6QO-AtsghMlM9yAv9zwcTmjMUFpAnPYtWj2CcJl3PTJooGTB0EuNnVhSWm_hpEul-9z75XWy4TLGMmpTLWsURnezG7JGFOPQqPWYYDJVhk3EbBOVq-BiP9jKvaFhXjaOXGVwU6gz3zZ66Djqb_69ySxERHrHT6dXy_iYawnqZjRn-7"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded bg-surface-container-lowest/90 text-cyber-cyan font-mono text-xs font-bold uppercase tracking-wider">
+                  BLUEPRINT 04 // UTILITY BASEMENT
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-alert-amber font-mono text-xs">
+                  AIR LEAK DETECTION &bull; 24% POWER CUT
+                </span>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <h3 class="font-headline-sm text-2xl font-bold text-on-surface group-hover:text-cyber-cyan transition-colors">
+                High-Pressure Rotary Screw Compressors &amp; Chillers
+              </h3>
+              <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed">
+                Plant floor me compressed air line me hidden leakages hoti hain jisse compressor pura din bematlab chalta rehta hai aur mahine ka bijli bill ₹2 se 3 Lakh badh jata hai.
+              </p>
+              
+              <div class="mt-4 p-3.5 rounded-xl bg-surface-container-lowest border border-slate-border/50 text-xs font-mono text-on-surface">
+                <span class="text-cyber-cyan font-bold block mb-1">HAM KYA KAAM KARTE HAIN:</span>
+                RS-485 Modbus sniffer lagakar compressor ke internal load/unload ratio aur pressure delta ko match karte hain. Leakage detect karke 24% bijli bill bachate hain!
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 pb-6 pt-2 border-t border-slate-border/50 flex items-center justify-between text-xs font-mono">
+            <span class="text-cyber-cyan font-bold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span> Click to View Solution Architecture
+            </span>
+            <span class="material-symbols-outlined text-cyber-cyan group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- SECTION: Protocol Matrix & Multi-Vendor Compatibility -->
+    <!-- SECTION: INDUSTRIAL CASE STUDIES (REAL DEPLOYMENTS) -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-surface-container-low border-y border-slate-border">
       <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Broad Ecosystem Support</span>
-            <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold mt-2">
-              Multi-Vendor PLC &amp; Protocol Support
-            </h2>
-          </div>
-          <p class="font-body-md text-sm text-on-surface-variant max-w-md">
-            Deploy our edge hardware across mixed-brand factory floors without rewriting ladder logic or replacing functional controllers.
-          </p>
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-label-mono-sm text-xs text-alert-amber uppercase tracking-wider font-semibold">Verified Plant Results</span>
+          <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold mt-2">
+            Real Factory Deployments &amp; Verified Savings
+          </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Card 1 -->
-          <div class="p-6 rounded-xl bg-surface-container border border-slate-border flex flex-col gap-3">
-            <span class="font-label-mono-sm text-xs text-primary font-bold">MODBUS &amp; SERIAL</span>
-            <h4 class="font-headline-sm text-lg font-bold text-on-surface">Modbus RTU / ASCII / TCP</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-              Sniff or query up to 64 multidrop slave nodes per RS-485 port. Automatic baud detection (1,200 to 115,200 bps) and register mapping.
-            </p>
-            <div class="mt-auto pt-3 border-t border-slate-border/50 font-label-mono-sm text-[11px] text-tertiary">
-              RS-485 &bull; RS-232 &bull; RS-422
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-8 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-alert-amber/20 text-alert-amber font-mono text-xs font-bold uppercase">Automotive Tier-1 Press Shop</span>
+                <span class="font-mono text-xs text-on-surface-variant">Pune Industrial Corridor</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">
+                400T Press Retrofit with 18ms Vibration Emergency Trip
+              </h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Har saal die smash ki wajah se ₹12 Lakh ka breakdown hota tha. TD-GATE100 DIN module install karne ke baad 14 mahine me ek baar bhi die fracture nahi hua kyunki abnormal vibration aate hi clutch 18ms me disengage ho jata hai.
+              </p>
+            </div>
+            <div class="grid grid-cols-3 gap-3 pt-6 border-t border-slate-border/50 text-center font-mono mt-6">
+              <div class="p-2.5 rounded-xl bg-surface-container-high">
+                <span class="text-alert-amber font-bold text-lg block">₹4.8M</span>
+                <span class="text-[10px] text-on-surface-variant">Annual Savings</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-surface-container-high">
+                <span class="text-primary font-bold text-lg block">0 Min</span>
+                <span class="text-[10px] text-on-surface-variant">Line Downtime</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-surface-container-high">
+                <span class="text-tertiary font-bold text-lg block">14 Mo.</span>
+                <span class="text-[10px] text-on-surface-variant">Zero Die Damage</span>
+              </div>
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="p-6 rounded-xl bg-surface-container border border-slate-border flex flex-col gap-3">
-            <span class="font-label-mono-sm text-xs text-primary font-bold">INDUSTRIAL ETHERNET</span>
-            <h4 class="font-headline-sm text-lg font-bold text-on-surface">EtherNet/IP &amp; PROFINET</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-              Dual gigabit RJ45 interfaces with isolated MAC routing. Read Siemens S7-1200/1500 DB registers and Allen-Bradley ControlLogix tags.
-            </p>
-            <div class="mt-auto pt-3 border-t border-slate-border/50 font-label-mono-sm text-[11px] text-tertiary">
-              Siemens S7 &bull; CIP &bull; EtherCAT
+          <div class="p-8 rounded-3xl bg-surface-container border border-slate-border flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-primary/20 text-primary font-mono text-xs font-bold uppercase">Textile Spinning Mill</span>
+                <span class="font-mono text-xs text-on-surface-variant">Coimbatore Textile Cluster</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">
+                120 Spindle Frames HMI Mirroring Across 12 Sheds
+              </h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                40 acre ki factory me engineer ko error code check karne ke liye 2 km chalna padta tha. Ab WireGuard encrypted private Wi-Fi tunnel ke jariye central control room se koi bhi machine screen 60 FPS par mirror ho jati hai.
+              </p>
             </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="p-6 rounded-xl bg-surface-container border border-slate-border flex flex-col gap-3">
-            <span class="font-label-mono-sm text-xs text-alert-amber font-bold">VEHICULAR &amp; HEAVY MACHINERY</span>
-            <h4 class="font-headline-sm text-lg font-bold text-on-surface">CAN 2.0B &amp; J1939</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-              Real-time telemetry from diesel generators, automated guided vehicles (AGVs), cranes, and hydraulic pump power units.
-            </p>
-            <div class="mt-auto pt-3 border-t border-slate-border/50 font-label-mono-sm text-[11px] text-alert-amber">
-              OBD-II &bull; J1939 Engine Diagnostics
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="p-6 rounded-xl bg-surface-container border border-slate-border flex flex-col gap-3">
-            <span class="font-label-mono-sm text-xs text-tertiary font-bold">EDGE TO CLOUD / SCADA</span>
-            <h4 class="font-headline-sm text-lg font-bold text-on-surface">MQTT Sparkplug B &amp; OPC UA</h4>
-            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-              Publish structured telemetry payloads directly to local Ignition SCADA, Node-RED, or on-prem databases with zero cloud subscription fees.
-            </p>
-            <div class="mt-auto pt-3 border-t border-slate-border/50 font-label-mono-sm text-[11px] text-primary">
-              Local Broker &bull; TLS 1.3 Certified
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: Industrial Case Studies & Verified Results -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Proven Shopfloor Results</span>
-        <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold mt-2">
-          Real Industrial Deployments &amp; Verified Uptime
-        </h2>
-        <p class="font-body-lg text-on-surface-variant text-base sm:text-lg mt-3">
-          See how our deterministic edge gateways saved manufacturing lines from catastrophic downtime and eliminated off-site engineering flights.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Case Study 1 -->
-        <div class="p-8 rounded-2xl bg-surface-container border border-slate-border flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded bg-primary/10 text-primary font-label-mono-sm text-xs uppercase font-semibold">Automotive Stamping Line</span>
-              <span class="text-xs font-label-mono-sm text-on-surface-variant">Pune Industrial Corridor</span>
-            </div>
-            <h3 class="font-headline-sm text-2xl font-bold text-on-surface mb-3">
-              Zero-Downtime Press Retrofit with 18ms Vibration M2M Trip
-            </h3>
-            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
-              A Tier-1 automotive press plant faced unplanned die smash failures costing ₹1.2M per breakdown. We installed 4 DIN-rail TD-GATE100 units wired to piezo vibration sensors and RS-485 PLC registers. The system autonomously commands emergency clutch disengagement within 18ms of harmonic abnormality, preventing 100% of catastrophic die strikes over 14 months.
-            </p>
-          </div>
-          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-slate-border/50 text-center">
-            <div class="p-2.5 rounded bg-surface-container-high">
-              <span class="font-headline-sm text-lg font-bold text-primary block">₹4.8M</span>
-              <span class="font-label-mono-sm text-[11px] text-on-surface-variant">Annual Savings</span>
-            </div>
-            <div class="p-2.5 rounded bg-surface-container-high">
-              <span class="font-headline-sm text-lg font-bold text-alert-amber block">0 Hours</span>
-              <span class="font-label-mono-sm text-[11px] text-on-surface-variant">Retrofit Downtime</span>
-            </div>
-            <div class="p-2.5 rounded bg-surface-container-high">
-              <span class="font-headline-sm text-lg font-bold text-tertiary block">14 Mo.</span>
-              <span class="font-label-mono-sm text-[11px] text-on-surface-variant">Zero Die Fractures</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case Study 2 -->
-        <div class="p-8 rounded-2xl bg-surface-container border border-slate-border flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-xs uppercase font-semibold">Textile Spinning Mill</span>
-              <span class="text-xs font-label-mono-sm text-on-surface-variant">Coimbatore Cluster</span>
-            </div>
-            <h3 class="font-headline-sm text-2xl font-bold text-on-surface mb-3">
-              Remote HMI Mirroring &amp; Spindle Sync across 12 Sheds
-            </h3>
-            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
-              With 120 spinning frames dispersed over 40 acres, maintenance teams spent hours walking between sheds to inspect error codes. By deploying our private Wi-Fi / WireGuard tunnel mesh, technicians now mirror any machine's touch screen HMI securely from their central desk with 60 FPS fluidity.
-            </p>
-          </div>
-          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-slate-border/50 text-center">
-            <div class="p-2.5 rounded bg-surface-container-high">
-              <span class="font-headline-sm text-lg font-bold text-primary block">-65%</span>
-              <span class="font-label-mono-sm text-[11px] text-on-surface-variant">Mean Time To Repair</span>
-            </div>
-            <div class="p-2.5 rounded bg-surface-container-high">
-              <span class="font-headline-sm text-lg font-bold text-alert-amber block">120 Nodes</span>
-              <span class="font-label-mono-sm text-[11px] text-on-surface-variant">Unified Mesh</span>
-            </div>
-            <div class="p-2.5 rounded bg-surface-container-high">
-              <span class="font-headline-sm text-lg font-bold text-tertiary block">100%</span>
-              <span class="font-label-mono-sm text-[11px] text-on-surface-variant">Local OT Security</span>
+            <div class="grid grid-cols-3 gap-3 pt-6 border-t border-slate-border/50 text-center font-mono mt-6">
+              <div class="p-2.5 rounded-xl bg-surface-container-high">
+                <span class="text-primary font-bold text-lg block">-65%</span>
+                <span class="text-[10px] text-on-surface-variant">MTTR Repair Time</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-surface-container-high">
+                <span class="text-alert-amber font-bold text-lg block">120 Nodes</span>
+                <span class="text-[10px] text-on-surface-variant">Private Mesh</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-surface-container-high">
+                <span class="text-tertiary font-bold text-lg block">100%</span>
+                <span class="text-[10px] text-on-surface-variant">Air-Gap Secure</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION: CTA & Quotation Desk -->
+    <!-- SECTION: CTA AUDIT DESK -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-surface-container-lowest border-t border-slate-border">
       <div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-8 sm:p-12 border border-slate-border text-center flex flex-col items-center gap-6 shadow-2xl relative overflow-hidden">
-        <div class="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
-        <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
-          <span class="material-symbols-outlined text-[36px]">precision_manufacturing</span>
+        <div class="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-alert-amber/10 blur-2xl pointer-events-none"></div>
+        <div class="w-16 h-16 rounded-2xl bg-alert-amber/20 text-alert-amber flex items-center justify-center">
+          <span class="material-symbols-outlined text-[36px]">engineering</span>
         </div>
         
         <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold">
@@ -460,26 +475,99 @@
         </h2>
         
         <p class="font-body-lg text-on-surface-variant text-base sm:text-lg max-w-2xl">
-          Get in touch with our industrial automation engineering desk. We provide on-site protocol audits, custom DIN-rail gateway quotes, and turnkey pilot deployments.
+          Apni factory ka machine model aur requirements batayein. Humare industrial automation engineers on-site protocol audit karke custom quote aur 15-minute DIN-rail demo schedule karenge.
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <a class="px-8 py-4 bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-lg text-sm uppercase font-bold rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center gap-2 btn-shimmer" href="/contact/?interest=industrial">
+          <a class="px-8 py-4 bg-alert-amber hover:bg-amber-400 text-slate-950 font-label-mono-lg text-sm uppercase font-bold rounded-xl shadow-lg shadow-alert-amber/20 transition-all flex items-center gap-2 btn-shimmer" href="/contact/?interest=industrial">
             <span class="material-symbols-outlined text-[20px]">send</span>
-            <span>Request Engineering Consultation</span>
+            <span>Request Engineering Consultation &rarr;</span>
           </a>
-          <a class="px-8 py-4 bg-surface-container-highest hover:bg-surface-container text-on-surface font-label-mono-lg text-sm uppercase font-bold rounded-xl border border-slate-border transition-all flex items-center gap-2 btn-shimmer" href="https://wa.me/918000000000?text=Hello%20Digital%20Tools%2C%20I%20am%20interested%20in%20Industry%204.0%20and%20M2M%20IoT%20Gateways." target="_blank" rel="noopener noreferrer">
+          <a class="px-8 py-4 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-mono-lg text-sm uppercase font-bold rounded-xl border border-slate-border transition-all flex items-center gap-2 btn-shimmer" href="https://wa.me/918000000000?text=Hello%20Digital%20Tools%2C%20I%20am%20interested%20in%20Industry%204.0%20and%20M2M%20IoT%20Gateways." target="_blank" rel="noopener noreferrer">
             <span class="material-symbols-outlined text-[20px] text-tertiary">chat</span>
-            <span>Chat on WhatsApp</span>
+            <span>Industrial WhatsApp Desk</span>
           </a>
         </div>
-        
-        <p class="font-label-mono-sm text-xs text-on-surface-variant">
-          Direct inquiries: <a href="mailto:support@adigitaltools.in" class="text-primary hover:underline">support@adigitaltools.in</a> &bull; Response SLA &lt; 24h
-        </p>
       </div>
     </section>
   </main>
+
+  <!-- INTERACTIVE MACHINE RETROFIT MODAL (POPUP) -->
+  <div id="machine-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container max-w-3xl w-full rounded-3xl border border-alert-amber/50 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <!-- Modal Header -->
+      <div class="p-6 bg-surface-container-high border-b border-slate-border/50 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div id="m-modal-icon" class="w-10 h-10 rounded-xl bg-alert-amber/20 text-alert-amber flex items-center justify-center">
+            <span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+          </div>
+          <div>
+            <h3 id="m-modal-title" class="font-headline-sm text-xl font-bold text-on-surface">Machine Architecture</h3>
+            <span id="m-modal-subtitle" class="font-mono text-xs text-alert-amber">Blueprint // Non-Invasive Retrofit</span>
+          </div>
+        </div>
+        <button onclick="closeMachineModal()" class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-6">
+        <!-- Animated M2M Signal Flow Diagram -->
+        <div class="p-5 rounded-2xl bg-surface-container-lowest border border-slate-border/50">
+          <div class="flex items-center justify-between text-xs font-mono text-alert-amber mb-3">
+            <span>DETERMINISTIC M2M BUS TOPOLOGY</span>
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-alert-amber animate-pulse"></span> 18ms LOOP DETERMINISM</span>
+          </div>
+          <div id="m-modal-diagram" class="grid grid-cols-4 gap-2 text-center text-xs font-mono py-2">
+            <!-- Dynamic flow rendered by JS -->
+          </div>
+        </div>
+
+        <!-- 4 Core Solution Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/40">
+            <span class="font-mono text-xs text-alert-amber font-bold block mb-1">1. FACTORY FLOOR KI SAMASYA (BOTTLENECK)</span>
+            <p id="m-modal-problem" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">Description of plant bottleneck...</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/40">
+            <span class="font-mono text-xs text-primary font-bold block mb-1">2. HUM ACTUAL ME KYA KAAM KARTE HAIN</span>
+            <p id="m-modal-retrofit" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">How we hook into machine without downtime...</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/40">
+            <span class="font-mono text-xs text-tertiary font-bold block mb-1">3. M2M (MACHINE TO MACHINE) KAISE BAAT KARTI HAI</span>
+            <p id="m-modal-m2m" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">Local private mesh machine communication...</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-surface-container-low border border-slate-border/40">
+            <span class="font-mono text-xs text-cyber-cyan font-bold block mb-1">4. AIR-GAP WIREGUARD REMOTE ACCESS</span>
+            <p id="m-modal-security" class="font-body-sm text-xs text-on-surface-variant leading-relaxed">60 FPS HMI screen mirror without cyber vulnerability...</p>
+          </div>
+        </div>
+
+        <!-- Specifications -->
+        <div class="p-4 rounded-2xl bg-surface-container-lowest border border-slate-border/40 font-mono text-xs">
+          <div class="text-on-surface-variant font-bold uppercase mb-2">ENGINEERING SPECS &amp; DEPLOYED RESULTS</div>
+          <div id="m-modal-specs" class="space-y-1.5 text-on-surface">
+            <!-- Specs injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-5 bg-surface-container-high border-t border-slate-border/50 flex flex-wrap items-center justify-between gap-3">
+        <span class="font-mono text-xs text-on-surface-variant">DIN-Rail Snap Fit &bull; Zero Cable Cutting</span>
+        <div class="flex items-center gap-3">
+          <a id="m-modal-audit-btn" href="/contact/?interest=industrial" class="px-5 py-2.5 rounded-xl bg-alert-amber hover:bg-amber-400 text-slate-950 font-mono text-xs uppercase font-bold transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">engineering</span>
+            <span>Request Factory Audit</span>
+          </a>
+          <button onclick="closeMachineModal()" class="px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-highest text-on-surface font-mono text-xs uppercase transition-all">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Standardized Main Footer -->
   <footer class="w-full bg-surface-container-lowest border-t border-slate-border">
@@ -500,7 +588,7 @@
           <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Core Solutions</span>
           <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant">
             <li><a class="hover:text-primary transition-colors" href="/agriculture/">Agriculture Radio Mesh</a></li>
-            <li><a class="hover:text-primary transition-colors text-primary font-medium" href="/industrial/">Industrial IoT Gateway</a></li>
+            <li><a class="hover:text-primary transition-colors text-alert-amber font-medium" href="/industrial/">Industrial IoT Gateway</a></li>
             <li><a class="hover:text-primary transition-colors" href="/apps/">Everyday Mobile Utilities</a></li>
             <li><a class="hover:text-primary transition-colors" href="/contact/">Contact &amp; Services</a></li>
           </ul>
@@ -538,5 +626,136 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const machineData = {
+      'press': {
+        title: 'Legacy Mechanical & Hydraulic Stamping Presses',
+        subtitle: 'Blueprint 01 // 400-Ton Sheet Metal Stamping Retrofit',
+        diagram: [
+          { label: 'Ram Guide Tap', sub: 'Optical Stroke Sensor', icon: 'vertical_align_bottom', color: 'text-alert-amber' },
+          { label: 'TD-GATE100 DIN', sub: 'Edge Controller', icon: 'router', color: 'text-primary' },
+          { label: 'M2M Clutch Trip', sub: '18ms Determinism', icon: 'bolt', color: 'text-tertiary' },
+          { label: 'ERP OEE Sync', sub: 'Zero Paper Logbooks', icon: 'analytics', color: 'text-cyber-cyan' }
+        ],
+        problem: '1990s stamping press me relay logic ya obsolete PLC hota hai. Unmonitored hydraulic oil garam hone se cavitation aati hai, die smash se ₹12 Lakh ka nuksan hota hai aur production count clipboard par likha jata hai.',
+        retrofit: 'Hum 22 minute me DIN-rail gateway install karte hain. Ram guide par non-contact optical stroke counter clamp hota hai aur manifold par 4-20mA oil sensor lagta hai—bina koi cable cut kiye aur bina machine ko 1 minute bhi roke!',
+        m2m: 'Stamping press ka gateway aage lage sheet metal blank feeder aur transfer arm ke saath local 5G / Sub-GHz wireless mesh par direct connect hota hai. Stroke sync 18ms me hota hai bina kisi cloud server ke.',
+        security: 'Hardware OT air gap data diode mode par rehta hai. Plant manager central control room se WireGuard encrypted tunnel me real-time SPM (strokes per minute) aur hydraulic pressure graph dekhta hai.',
+        specs: [
+          'Installation Window: 22 Minutes (Zero Production Stoppage)',
+          'Die Protection: 18ms Abnormal Harmonic Clutch Cutoff',
+          'OEE Tracking: Automated stroke counter synced to ERP',
+          'Interfacing: RS-485 Modbus / 4-20mA / Dry Contact Relay'
+        ]
+      },
+      'cnc': {
+        title: 'Automotive CNC & VMC Machining Centers',
+        subtitle: 'Blueprint 02 // Fanuc, Siemens 808D & Mitsubishi Mills',
+        diagram: [
+          { label: 'RS-232 / DNC Tap', sub: 'Opto-Isolated Tap', icon: 'settings_input_component', color: 'text-primary' },
+          { label: 'Spindle Current CT', sub: 'Load Peak Sniffer', icon: 'speed', color: 'text-alert-amber' },
+          { label: 'Air-Gap Bridge', sub: 'WireGuard Tunnel', icon: 'security', color: 'text-tertiary' },
+          { label: 'Remote G-Code', sub: 'Zero USB Malware', icon: 'terminal', color: 'text-cyber-cyan' }
+        ],
+        problem: 'Standalone Fanuc ya Siemens CNC me factory network connection nahi hota. Operator USB drive le kar machine me g-code daalte hain jisse malware virus aata hai. Tool insert kab dull hua pata nahi chalta jisse precision part scrap ho jata hai.',
+        retrofit: 'Hum RS-232 serial DNC port par optical isolated bridge lagate hain aur spindle motor power cable par split-core current sensor lagate hain. Ek bhi PLC ladder logic line badalne ki jarurat nahi padti.',
+        m2m: 'Machine jaise hi milling cycle shuru karti hai, aage wali robot loading arm ko status signal bhejti hai. Spindle load threshold cross hote hi feedrate override ko automatically 15% slow kar deti hai.',
+        security: 'Air-gapped remote G-Code dispatch: Design room se seedha authorized code machine me push hota hai bina operator ke pendrive use kiye.',
+        specs: [
+          'Installation Time: 18 Minutes without modifying ladder logic',
+          'Tool Wear Prevention: Instant detection of blunt carbide inserts',
+          'OEE Monitoring: Real-time feedrate override & cycle pause log',
+          'Supported Controllers: Fanuc 0i, Siemens 808D/828D, Mitsubishi M70'
+        ]
+      },
+      'packaging': {
+        title: 'Continuous High-Speed Packaging & Bagging Lines',
+        subtitle: 'Blueprint 03 // FMCG Conveyor Jam Collision Defense',
+        diagram: [
+          { label: 'Optical Jam Sense', sub: 'Photoelectric Sensor', icon: 'sensors', color: 'text-tertiary' },
+          { label: 'TD-GATE100 M2M', sub: 'Peer-to-Peer Bus', icon: 'hub', color: 'text-alert-amber' },
+          { label: 'Feeder Auto-Pause', sub: '< 18ms Loop Stop', icon: 'pause_circle', color: 'text-primary' },
+          { label: 'Throughput HUD', sub: 'PPM Real-time Speed', icon: 'conveyor_belt', color: 'text-cyber-cyan' }
+        ],
+        problem: 'High-speed packaging line me aage conveyor par agar packet fas jata hai (jamming), toh peeche ki packaging machine continuously packets phenkti rehti hai jisse collision pile-up hota hai aur lakho ka product damage hota hai.',
+        retrofit: 'Packaging line ke individual conveyor zones par optical sensors ke saath humare M2M nodes lagte hain. Yeh nodes bina central PLC par load dale localized high-speed communication karte hain.',
+        m2m: 'Jaise hi jam detect hota hai, downstream node aage ke upstream carton feeder ko 18ms ke andar pause command de deta hai. Jam hat-te hi line smoothly automatically resume ho jaati hai.',
+        security: 'Zero packet loss deterministic protocol. Pure factory cleanroom me WiFi interference hone par bhi sub-GHz RF mesh packet deliver karti hai.',
+        specs: [
+          'Response Determinism: Under 18ms between line machines',
+          'Damage Prevention: Eliminates 100% of conveyor jam pile-ups',
+          'Throughput Rate: Real-time Packs-Per-Minute (PPM) telemetry',
+          'Protocols: PROFINET / EtherNet/IP / Modbus TCP / MQTT Sparkplug B'
+        ]
+      },
+      'compressor': {
+        title: 'High-Pressure Rotary Screw Compressors & Chillers',
+        subtitle: 'Blueprint 04 // Utility Basement Energy & Air Leak Audit',
+        diagram: [
+          { label: 'Pressure Delta Tap', sub: 'Manifold Transducer', icon: 'compress', color: 'text-cyber-cyan' },
+          { label: 'Modbus Sniffer', sub: 'Load/Unload Logic', icon: 'developer_board', color: 'text-primary' },
+          { label: 'Leak Analytics', sub: 'CFM Air Flow Delta', icon: 'insights', color: 'text-alert-amber' },
+          { label: '24% Power Cut', sub: 'Smart VFD Staging', icon: 'savings', color: 'text-tertiary' }
+        ],
+        problem: 'Industrial plants me 20% se 30% bijli compressor chalane me kharch hoti hai. Piping me hidden air leaks hone ki wajah se compressor bina jarurat ke unload state me ghoomta rehta hai aur bill badhata hai.',
+        retrofit: 'Compressor ke RS-485 port se hum internal load/unload register data passively read karte hain aur main line flowmeter ke sath cross-verify karte hain. Zero shut-down installation.',
+        m2m: 'Utility basement ka compressor plant floor ke machines ke saath sync hota hai. Agar plant floor ki 2 line lunch break me band hain, toh compressor apne aap VFD frequency kam kar deta hai.',
+        security: 'Local edge analytics: Data plant ke andar hi process hota hai. Cloud par bhejne ka koi monthly subscription fee nahi lagta.',
+        specs: [
+          'Energy Reduction: 20% to 26% direct power bill savings',
+          'Leakage Pinpointing: Identifies CFM pressure loss in pipe zones',
+          'VFD Synchronization: Multi-compressor cascading control',
+          'Hardware: TD-GATE100 with Dual RS-485 Isolated Ports'
+        ]
+      }
+    };
+
+    function openMachineModal(id) {
+      const data = machineData[id];
+      if (!data) return;
+
+      document.getElementById('m-modal-title').textContent = data.title;
+      document.getElementById('m-modal-subtitle').textContent = data.subtitle;
+      document.getElementById('m-modal-problem').textContent = data.problem;
+      document.getElementById('m-modal-retrofit').textContent = data.retrofit;
+      document.getElementById('m-modal-m2m').textContent = data.m2m;
+      document.getElementById('m-modal-security').textContent = data.security;
+
+      // Render diagram
+      const diagEl = document.getElementById('m-modal-diagram');
+      diagEl.innerHTML = '';
+      data.diagram.forEach((step, idx) => {
+        const div = document.createElement('div');
+        div.className = 'p-3 rounded-xl bg-surface-container-high flex flex-col items-center justify-between border border-slate-border/50 relative';
+        div.innerHTML = `
+          <span class="material-symbols-outlined ${step.color} text-[24px] mb-1">${step.icon}</span>
+          <span class="font-bold text-on-surface text-[11px] leading-tight">${step.label}</span>
+          <span class="text-[9px] text-on-surface-variant mt-0.5">${step.sub}</span>
+        `;
+        diagEl.appendChild(div);
+      });
+
+      // Render specs
+      const specsEl = document.getElementById('m-modal-specs');
+      specsEl.innerHTML = '';
+      data.specs.forEach(spec => {
+        const p = document.createElement('p');
+        p.className = 'flex items-center gap-2';
+        p.innerHTML = `<span class="text-alert-amber">&check;</span> <span>${spec}</span>`;
+        specsEl.appendChild(p);
+      });
+
+      document.getElementById('machine-modal').classList.remove('hidden');
+    }
+
+    function closeMachineModal() {
+      document.getElementById('machine-modal').classList.add('hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMachineModal();
+    });
+  </script>
 </body>
 </html>
