@@ -791,31 +791,31 @@ function initAudioSystem() {
 }
 
 /* ----------------------------------------------------
-   16. JITTER.VIDEO KINETIC WORD CYCLER
+   16. KINETIC WORD CYCLER (Zero-Overlap Dynamic Text)
 ---------------------------------------------------- */
 function initKineticWordCycler() {
-  const cycler = document.querySelector('.jitter-word-cycler');
-  if (!cycler) return;
+  const el = document.getElementById('kinetic-dynamic-text');
+  if (!el) return;
 
-  const words = cycler.querySelectorAll('.jitter-word');
-  if (words.length <= 1) return;
-
-  let currentIndex = 0;
+  const words = [
+    'Everyday Work.',
+    'Deep Farms.',
+    'Industrial Plants.',
+    'Offline Logic.'
+  ];
+  let index = 0;
 
   setInterval(() => {
-    const currentWord = words[currentIndex];
-    currentWord.classList.remove('active');
-    currentWord.classList.add('exit');
-
-    currentIndex = (currentIndex + 1) % words.length;
-    const nextWord = words[currentIndex];
-    nextWord.classList.remove('exit');
-    nextWord.classList.add('active');
+    el.classList.add('text-flip-out');
+    el.classList.remove('text-flip-in');
 
     setTimeout(() => {
-      currentWord.classList.remove('exit');
-    }, 700);
-  }, 2800);
+      index = (index + 1) % words.length;
+      el.textContent = words[index];
+      el.classList.remove('text-flip-out');
+      el.classList.add('text-flip-in');
+    }, 350);
+  }, 3200);
 }
 
 /* ----------------------------------------------------

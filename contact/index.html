@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Contact &amp; Hardware/Service Procurement | Digital Tools</title>
+  <link rel="icon" type="image/png" href="/logo.png"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/effects.css"/>
+  <script type="module" src="/src/effects.js"></script>
+  <style>
+    @layer base { html, body { margin: 0; padding: 0; } }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4fdbc8",
+            "primary-container": "#14b8a6",
+            "on-primary": "#003731",
+            "on-primary-container": "#00423b",
+            "background": "#0b1326",
+            "surface": "#0b1326",
+            "surface-dim": "#060e20",
+            "surface-container-lowest": "#060e20",
+            "surface-container-low": "#131b2e",
+            "surface-container": "#171f33",
+            "surface-container-high": "#222a3d",
+            "surface-container-highest": "#2d3449",
+            "on-surface": "#dae2fd",
+            "on-surface-variant": "#bbcac6",
+            "tertiary": "#7bd8b1",
+            "tertiary-container": "#58b590",
+            "outline": "#859490",
+            "slate-border": "#334155",
+            "alert-amber": "#F59E0B"
+          },
+          fontFamily: {
+            "headline-lg": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "display-hero": ["Space Grotesk"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "label-mono-sm": ["JetBrains Mono"],
+            "label-mono-lg": ["JetBrains Mono"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+  <!-- Standardized Main Header -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-slate-border">
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="/" class="flex items-center gap-3">
+          <img alt="Digital Tools Logo" class="h-9 w-auto object-contain" src="/logo.png"/>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight hover:text-primary transition-colors flex items-center gap-1.5 font-bold leading-none">
+              Digital Tools<span class="h-1.5 w-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            </span>
+            <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider hidden sm:inline-block mt-1">
+              Procurement Desk &bull; Direct Support
+            </span>
+          </div>
+        </a>
+      </div>
+      <nav class="hidden lg:flex items-center gap-1">
+        <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/">Home</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/agriculture/">Agriculture</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/industrial/">Industrial</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/apps/">Mobile Apps</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-primary font-semibold bg-primary-container/20 rounded-xl transition-colors" href="/contact/">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3 shrink-0">
+        <button id="sound-toggle-btn" type="button" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high border border-slate-border text-on-surface-variant font-label-mono-sm text-xs transition-colors btn-shimmer" title="Toggle UI sound effects">
+          <span class="material-symbols-outlined text-[16px]" id="sound-toggle-icon">volume_off</span>
+          <span id="sound-toggle-label">SFX: OFF</span>
+        </button>
+        <a class="flex items-center gap-1.5 px-3.5 py-2 bg-primary-container hover:bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold rounded-lg transition-all shadow-sm btn-shimmer" href="mailto:support@adigitaltools.in">
+          <span class="material-symbols-outlined text-[16px]">mail</span>
+          <span>support@adigitaltools.in</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20">
+    <!-- HERO SECTION -->
+    <section class="relative w-full overflow-hidden bg-surface-container-lowest py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-border">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b20_1px,transparent_1px),linear-gradient(to_bottom,#1e293b20_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none opacity-40"></div>
+      <div class="absolute -top-24 right-10 w-80 h-80 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+
+      <div class="relative max-w-7xl mx-auto text-center flex flex-col items-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-surface-container-high border border-primary/30 text-primary mb-4">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span class="font-label-mono-sm text-xs uppercase tracking-wider font-semibold">
+            Support Desk &bull; Hardware Orders &bull; Enterprise Solutions
+          </span>
+        </div>
+        <h1 class="font-display-hero text-4xl sm:text-5xl lg:text-6xl text-on-surface font-bold tracking-tight">
+          Let's Build Something <span class="text-primary">Reliable</span> Together
+        </h1>
+        <p class="font-body-lg text-lg text-on-surface-variant max-w-2xl mt-4 leading-relaxed">
+          Order field-tested AgriTech devices, request custom Industrial IoT quotes, inquire about our mobile utilities, or chat directly with our engineering team.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: Interactive Contact Form & Direct Channels -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Modern Contact Form -->
+        <div class="lg:col-span-7 bg-surface-container rounded-3xl p-8 sm:p-10 border border-slate-border shadow-2xl relative">
+          <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-border/50">
+            <div>
+              <h2 class="font-headline-sm text-2xl font-bold text-on-surface">Send an Inquiry</h2>
+              <p class="font-body-sm text-xs text-on-surface-variant mt-1">Directly delivers to <span class="text-primary font-mono">support@adigitaltools.in</span></p>
+            </div>
+            <span class="material-symbols-outlined text-primary text-[28px]">mark_email_read</span>
+          </div>
+
+          <!-- Notification Toast -->
+          <div id="contact-toast" class="hidden mb-6 p-4 rounded-xl bg-primary/10 border border-primary/40 text-primary font-body-sm text-xs flex items-start gap-3">
+            <span class="material-symbols-outlined text-[20px] shrink-0 text-primary">check_circle</span>
+            <div>
+              <strong class="block font-semibold">Inquiry Prepared Successfully!</strong>
+              <span>Opening your default mail client to dispatch to <strong class="underline">support@adigitaltools.in</strong>. A copy was also saved to your clipboard.</span>
+            </div>
+          </div>
+
+          <form id="contact-desk-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block font-body-sm text-xs font-semibold text-on-surface-variant mb-1.5 uppercase tracking-wider">Your Full Name *</label>
+                <input id="form-name" type="text" required placeholder="e.g. Ramesh Patil / Alex Kumar" class="w-full bg-surface-container-lowest border border-slate-border/80 rounded-xl px-4 py-3 text-sm text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:border-primary transition-all"/>
+              </div>
+              <div>
+                <label class="block font-body-sm text-xs font-semibold text-on-surface-variant mb-1.5 uppercase tracking-wider">Your Email Address *</label>
+                <input id="form-email" type="email" required placeholder="e.g. name@company.com" class="w-full bg-surface-container-lowest border border-slate-border/80 rounded-xl px-4 py-3 text-sm text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:border-primary transition-all"/>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block font-body-sm text-xs font-semibold text-on-surface-variant mb-1.5 uppercase tracking-wider">Phone / WhatsApp Number</label>
+                <input id="form-phone" type="tel" placeholder="+91 98765 43210" class="w-full bg-surface-container-lowest border border-slate-border/80 rounded-xl px-4 py-3 text-sm text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:border-primary transition-all"/>
+              </div>
+              <div>
+                <label class="block font-body-sm text-xs font-semibold text-on-surface-variant mb-1.5 uppercase tracking-wider">Division / Interest *</label>
+                <select id="form-interest" class="w-full bg-surface-container-lowest border border-slate-border/80 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-all">
+                  <option value="Smart Agriculture Hardware">Smart Agriculture Hardware (LoRa Pump / Soil)</option>
+                  <option value="Industrial IoT & M2M Gateway">Industrial IoT &amp; M2M Gateways (Industry 4.0)</option>
+                  <option value="Mobile App Licensing & Support">Mobile Apps (Attendy / Call Assistant / Sudoku)</option>
+                  <option value="Custom Embedded & Firmware Engineering">Custom Embedded Hardware &amp; Firmware</option>
+                  <option value="General Support Inquiry">General Support Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-body-sm text-xs font-semibold text-on-surface-variant mb-1.5 uppercase tracking-wider">Specific Product / Model (Optional)</label>
+              <input id="form-product" type="text" placeholder="e.g. TD-AGRI100 LoRa Controller or TD-GATE100 DIN Gateway" class="w-full bg-surface-container-lowest border border-slate-border/80 rounded-xl px-4 py-3 text-sm text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:border-primary transition-all"/>
+            </div>
+
+            <div>
+              <label class="block font-body-sm text-xs font-semibold text-on-surface-variant mb-1.5 uppercase tracking-wider">Detailed Message / Requirement *</label>
+              <textarea id="form-message" required rows="4" placeholder="Describe your field size, machine models, quantity, or specific problem you need solved..." class="w-full bg-surface-container-lowest border border-slate-border/80 rounded-xl px-4 py-3 text-sm text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:border-primary transition-all resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-lg text-sm uppercase font-bold rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2 btn-shimmer">
+              <span class="material-symbols-outlined text-[20px]">send</span>
+              <span>Submit Inquiry to support@adigitaltools.in &rarr;</span>
+            </button>
+            <p class="font-label-mono-sm text-[11px] text-center text-on-surface-variant">
+              &check; No spam &bull; Direct technical response within 24 hours &bull; Zero external analytics
+            </p>
+          </form>
+        </div>
+
+        <!-- Right Column: Direct Channels & WhatsApp -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          
+          <!-- Direct WhatsApp Support Box -->
+          <div class="bg-surface-container rounded-3xl p-8 border border-slate-border shadow-xl flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-tertiary/10 text-tertiary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[28px]">chat</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-xl font-bold text-on-surface">Instant WhatsApp Support</h3>
+                <span class="font-label-mono-sm text-xs text-tertiary font-semibold">DIRECT FIELD HOTLINE</span>
+              </div>
+            </div>
+            
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Need immediate answers regarding pump controller ranges, DIN-rail mounting, or urgent field troubleshooting? Chat with our team directly.
+            </p>
+
+            <a id="whatsapp-direct-link" href="https://wa.me/918000000000?text=Hello%20Digital%20Tools%20team%2C%20I%20would%20like%20to%20inquire%20about%20your%20products%20and%20services." target="_blank" rel="noopener noreferrer" class="py-3.5 px-6 rounded-xl bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-mono-lg text-xs uppercase font-bold transition-all flex items-center justify-center gap-2 btn-shimmer shadow-md">
+              <span class="material-symbols-outlined text-[18px]">forum</span>
+              <span>Open WhatsApp Chat &rarr;</span>
+            </a>
+          </div>
+
+          <!-- Official Email & SLA Card -->
+          <div class="bg-surface-container rounded-3xl p-8 border border-slate-border shadow-xl flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[28px]">alternate_email</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-xl font-bold text-on-surface">Email Support Desk</h3>
+                <span class="font-label-mono-sm text-xs text-primary font-semibold">support@adigitaltools.in</span>
+              </div>
+            </div>
+
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              For official purchase orders, commercial distributor quotes, RFPs, and formal technical tickets:
+            </p>
+
+            <div class="p-3.5 rounded-xl bg-surface-container-lowest border border-slate-border/50 flex items-center justify-between">
+              <span class="font-label-mono-sm text-xs text-on-surface font-semibold">support@adigitaltools.in</span>
+              <button type="button" data-copy="support@adigitaltools.in" class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-container text-primary text-xs font-label-mono-sm border border-slate-border transition-colors">
+                Copy
+              </button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 pt-2 text-xs font-label-mono-sm">
+              <div class="p-2.5 rounded bg-surface-container-high text-on-surface-variant">
+                <span class="text-primary font-bold block">SLA &lt; 24h</span>
+                <span>All Inquiries</span>
+              </div>
+              <div class="p-2.5 rounded bg-surface-container-high text-on-surface-variant">
+                <span class="text-tertiary font-bold block">Pan-India</span>
+                <span>Direct Dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Operating Philosophy -->
+          <div class="p-6 rounded-2xl bg-surface-container-low border border-slate-border/50 text-xs font-label-mono-sm text-on-surface-variant flex flex-col gap-2">
+            <span class="text-on-surface font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-primary text-[16px]">verified_user</span>
+              Customer-First Commitment
+            </span>
+            <p class="font-body-sm leading-relaxed">
+              No mandatory cloud lock-in. All purchased hardware includes schematics, firmware rollback options, and lifetime offline functionality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Buy Service & Hardware Procurement Library -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-surface-container-low border-t border-slate-border">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Commercial Procurement Catalog</span>
+          <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-bold mt-2">
+            Products &amp; Turnkey Services Ready for Order
+          </h2>
+          <p class="font-body-lg text-on-surface-variant text-base mt-3">
+            Select any item below to automatically pre-fill your inquiry form or request an instant hardware invoice.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Product 1 -->
+          <div class="p-7 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-primary/10 text-primary font-label-mono-sm text-xs font-semibold">SMART AGRI</span>
+                <span class="font-label-mono-sm text-xs text-on-surface-variant">SKU: TD-AGRI100</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">12 km LoRa Radio Pump Controller</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Long-range zero-internet starter unit with physical feedback verification, dry-run cut-off, and heavy-duty 3-phase contactor interface.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-border/50 flex items-center justify-between">
+              <span class="font-label-mono-sm text-xs text-tertiary font-bold">Hardware Unit</span>
+              <button type="button" onclick="selectProduct('TD-AGRI100 LoRa Pump Controller', 'Smart Agriculture Hardware')" class="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-sm text-xs uppercase font-bold transition-all">
+                Order / Inquire &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="p-7 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-primary/10 text-primary font-label-mono-sm text-xs font-semibold">SMART AGRI</span>
+                <span class="font-label-mono-sm text-xs text-on-surface-variant">SKU: TD-SOIL50</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">Multi-Depth Soil NPK &amp; pH Probe</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Sub-surface optical and capacitive array measuring soil moisture, electrical conductivity, and nitrogen-phosphorus-potassium balance in real time.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-border/50 flex items-center justify-between">
+              <span class="font-label-mono-sm text-xs text-tertiary font-bold">Field Kit</span>
+              <button type="button" onclick="selectProduct('TD-SOIL50 Multi-Depth Soil Probe', 'Smart Agriculture Hardware')" class="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-sm text-xs uppercase font-bold transition-all">
+                Order / Inquire &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="p-7 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-alert-amber/10 text-alert-amber font-label-mono-sm text-xs font-semibold">INDUSTRY 4.0</span>
+                <span class="font-label-mono-sm text-xs text-on-surface-variant">SKU: TD-GATE100</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">TD-GATE100 DIN-Rail IoT Gateway</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Industrial DIN-rail gateway with dual isolated RS-485 ports, dual gigabit Ethernet, hardware VPN tunnel, and passive Modbus sniffing capability.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-border/50 flex items-center justify-between">
+              <span class="font-label-mono-sm text-xs text-alert-amber font-bold">DIN Hardware</span>
+              <button type="button" onclick="selectProduct('TD-GATE100 DIN-Rail IoT Gateway', 'Industrial IoT & M2M Gateway')" class="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-sm text-xs uppercase font-bold transition-all">
+                Order / Inquire &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="p-7 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-alert-amber/10 text-alert-amber font-label-mono-sm text-xs font-semibold">INDUSTRY 4.0</span>
+                <span class="font-label-mono-sm text-xs text-on-surface-variant">SERVICE</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">Zero-Downtime Plant Retrofit Audit</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Full engineering survey of existing shop floor machinery (Siemens, Allen-Bradley, Mitsubishi, Fanuc) to map passive telemetry extraction without line stoppage.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-border/50 flex items-center justify-between">
+              <span class="font-label-mono-sm text-xs text-alert-amber font-bold">Turnkey Service</span>
+              <button type="button" onclick="selectProduct('Zero-Downtime Plant Retrofit Audit', 'Industrial IoT & M2M Gateway')" class="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-sm text-xs uppercase font-bold transition-all">
+                Order / Inquire &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="p-7 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-xs font-semibold">MOBILE UTILITIES</span>
+                <span class="font-label-mono-sm text-xs text-on-surface-variant">ENTERPRISE</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">Attendy Multi-Site Deployment License</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Custom offline attendance kiosk builds, bulk student/worker biometric export pipelines, and tailored local network sync without cloud subscriptions.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-border/50 flex items-center justify-between">
+              <span class="font-label-mono-sm text-xs text-tertiary font-bold">Commercial License</span>
+              <button type="button" onclick="selectProduct('Attendy Multi-Site Deployment License', 'Mobile App Licensing & Support')" class="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-sm text-xs uppercase font-bold transition-all">
+                Order / Inquire &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="p-7 rounded-2xl bg-surface-container border border-slate-border hover:border-primary/50 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-tertiary/10 text-tertiary font-label-mono-sm text-xs font-semibold">CUSTOM ENGINEERING</span>
+                <span class="font-label-mono-sm text-xs text-on-surface-variant">BESPOKE</span>
+              </div>
+              <h3 class="font-headline-sm text-xl font-bold text-on-surface mb-2">Custom Microcontroller Firmware &amp; PCB</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                End-to-end hardware prototyping: schematic design, 4-layer PCB layout, ultra-low-power sleep firmware, and field enclosure manufacturing.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-border/50 flex items-center justify-between">
+              <span class="font-label-mono-sm text-xs text-tertiary font-bold">Contract R&amp;D</span>
+              <button type="button" onclick="selectProduct('Custom Microcontroller Firmware & PCB Contract', 'Custom Embedded Hardware & Firmware')" class="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-mono-sm text-xs uppercase font-bold transition-all">
+                Order / Inquire &rarr;
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Standardized Main Footer -->
+  <footer class="w-full bg-surface-container-lowest border-t border-slate-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-2.5">
+            <img alt="Digital Tools Logo" class="h-7 w-auto object-contain" src="/logo.png"/>
+            <span class="font-headline-sm text-lg text-on-surface font-bold">Digital Tools</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Autonomous AgriTech hardware, robust industrial automation retrofits, and zero-telemetry mobile applications built for real-world resilience.
+          </p>
+          <span class="font-label-mono-sm text-xs text-primary">adigitaltools.in</span>
+        </div>
+        
+        <div class="flex flex-col gap-2.5">
+          <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Core Solutions</span>
+          <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="/agriculture/">Agriculture Radio Mesh</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/industrial/">Industrial IoT Gateway</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/apps/">Everyday Mobile Utilities</a></li>
+            <li><a class="hover:text-primary transition-colors text-primary font-medium" href="/contact/">Contact &amp; Services</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2.5">
+          <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Mobile Apps &amp; Policies</span>
+          <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="/apps/call-assistant/">Call Assistant : Auto Policy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/apps/attendy/">Attendy Attendance Policy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/apps/sudoku-master-pro/">Sudoku Master Pro Policy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="https://play.google.com/store/apps/dev?id=6740194394029144829" target="_blank">Google Play Developer Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2.5">
+          <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Developer &amp; Support Desk</span>
+          <div class="flex flex-col gap-1.5 font-body-sm text-sm text-on-surface-variant">
+            <p class="text-on-surface font-medium">Digital Tools Team</p>
+            <p>Email: <a href="mailto:support@adigitaltools.in" class="text-primary hover:underline cursor-pointer" data-copy="support@adigitaltools.in" title="Click to copy email">support@adigitaltools.in</a></p>
+            <p class="font-label-mono-sm text-xs text-outline mt-1">Average response SLA: &lt; 24 hours</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-slate-border flex flex-col sm:flex-row items-center justify-between gap-4 font-label-mono-sm text-xs text-on-surface-variant">
+        <span>&copy; 2024&ndash;2026 Digital Tools. All field and telemetry rights reserved.</span>
+        <div class="flex items-center gap-4">
+          <span>Zero Tracker Telemetry</span>
+          <span>&bull;</span>
+          <span>WCAG AA Compliant</span>
+          <span>&bull;</span>
+          <a href="/contact/" class="hover:text-primary transition-colors">Support &amp; Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Product pre-selection from catalog buttons
+    function selectProduct(productName, category) {
+      const productInput = document.getElementById('form-product');
+      const interestSelect = document.getElementById('form-interest');
+      const msgInput = document.getElementById('form-message');
+      
+      if (productInput) productInput.value = productName;
+      if (interestSelect) {
+        for (let i = 0; i < interestSelect.options.length; i++) {
+          if (interestSelect.options[i].value.includes(category) || category.includes(interestSelect.options[i].value)) {
+            interestSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      if (msgInput && !msgInput.value) {
+        msgInput.value = `Hello, I would like to inquire about purchasing or getting a quote for: ${productName}. Please share pricing, availability, and technical documentation.`;
+      }
+
+      // Scroll smoothly to form
+      const formEl = document.getElementById('contact-desk-form');
+      if (formEl) {
+        formEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        productInput.focus();
+      }
+    }
+
+    // Auto-detect URL query params (e.g. ?interest=industrial or ?product=...)
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const interestParam = urlParams.get('interest');
+      const productParam = urlParams.get('product');
+
+      if (productParam) {
+        const prod = document.getElementById('form-product');
+        if (prod) prod.value = productParam;
+      }
+
+      if (interestParam) {
+        const interestSelect = document.getElementById('form-interest');
+        if (interestSelect) {
+          if (interestParam.toLowerCase().includes('agri')) {
+            interestSelect.value = "Smart Agriculture Hardware";
+          } else if (interestParam.toLowerCase().includes('indus')) {
+            interestSelect.value = "Industrial IoT & M2M Gateway";
+          } else if (interestParam.toLowerCase().includes('app')) {
+            interestSelect.value = "Mobile App Licensing & Support";
+          }
+        }
+      }
+
+      // Contact Form Submission Handler
+      const form = document.getElementById('contact-desk-form');
+      const toast = document.getElementById('contact-toast');
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('form-name').value.trim();
+          const email = document.getElementById('form-email').value.trim();
+          const phone = document.getElementById('form-phone').value.trim();
+          const interest = document.getElementById('form-interest').value;
+          const product = document.getElementById('form-product').value.trim();
+          const message = document.getElementById('form-message').value.trim();
+
+          const mailSubject = encodeURIComponent(`[Inquiry] ${interest}${product ? ' - ' + product : ''} from ${name}`);
+          const mailBodyText = `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nDepartment / Division: ${interest}\nSpecific Product: ${product || 'General'}\n\nRequirement / Message:\n${message}\n\n--\nSent via Digital Tools Web Procurement Desk (support@adigitaltools.in)`;
+          
+          const mailBodyEncoded = encodeURIComponent(mailBodyText);
+
+          // Copy text to user clipboard for convenience
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(mailBodyText).catch(() => {});
+          }
+
+          // Show confirmation toast
+          if (toast) {
+            toast.classList.remove('hidden');
+          }
+
+          // Trigger mailto link directly to support@adigitaltools.in
+          const mailtoUrl = `mailto:support@adigitaltools.in?subject=${mailSubject}&body=${mailBodyEncoded}`;
+          window.location.href = mailtoUrl;
+        });
+      }
+    });
+  </script>
+</body>
+</html>

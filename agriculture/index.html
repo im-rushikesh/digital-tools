@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Smart Agriculture Solutions & Zero-Internet Hardware | Digital Tools</title>
+  <link rel="icon" type="image/png" href="/logo.png"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/effects.css"/>
+  <script type="module" src="/src/effects.js"></script>
+  <style>
+    @layer base { html, body { margin: 0; padding: 0; } }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4fdbc8",
+            "primary-container": "#14b8a6",
+            "on-primary": "#003731",
+            "on-primary-container": "#00423b",
+            "background": "#0b1326",
+            "surface": "#0b1326",
+            "surface-dim": "#060e20",
+            "surface-container-lowest": "#060e20",
+            "surface-container-low": "#131b2e",
+            "surface-container": "#171f33",
+            "surface-container-high": "#222a3d",
+            "surface-container-highest": "#2d3449",
+            "on-surface": "#dae2fd",
+            "on-surface-variant": "#bbcac6",
+            "tertiary": "#7bd8b1",
+            "tertiary-container": "#58b590",
+            "outline": "#859490",
+            "slate-border": "#334155",
+            "alert-amber": "#F59E0B"
+          },
+          fontFamily: {
+            "headline-lg": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "display-hero": ["Space Grotesk"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "label-mono-sm": ["JetBrains Mono"],
+            "label-mono-lg": ["JetBrains Mono"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <!-- Standardized Main Header -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-slate-border">
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="/" class="flex items-center gap-3">
+          <img alt="Digital Tools Logo" class="h-9 w-auto object-contain" src="/logo.png"/>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight hover:text-primary transition-colors flex items-center gap-1.5 font-bold leading-none">
+              Digital Tools<span class="h-1.5 w-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            </span>
+            <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase tracking-wider hidden sm:inline-block mt-1">
+              AgriTech Division &bull; Smart Farming
+            </span>
+          </div>
+        </a>
+      </div>
+      <nav class="hidden lg:flex items-center gap-1">
+        <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/">Home</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-primary font-semibold bg-primary-container/20 rounded-xl transition-colors" href="/agriculture/">Agriculture</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/industrial/">Industrial</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/apps/">Mobile Apps</a>
+        <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/contact/">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3 shrink-0">
+        <button id="sound-toggle-btn" type="button" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high border border-slate-border text-on-surface-variant font-label-mono-sm text-xs transition-colors btn-shimmer" title="Toggle UI sound effects">
+          <span class="material-symbols-outlined text-[16px]" id="sound-toggle-icon">volume_off</span>
+          <span id="sound-toggle-label">SFX: OFF</span>
+        </button>
+        <a class="flex items-center gap-1.5 px-3.5 py-2 bg-primary-container hover:bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold rounded-lg transition-all shadow-sm btn-shimmer" href="https://play.google.com/store/apps/dev?id=6740194394029144829" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[18px]">android</span>
+          <span class="uppercase tracking-wider">Google Play</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-background min-h-screen">
+    <!-- HERO: AGRICULTURE SPECIFIC -->
+    <section class="relative w-full bg-gradient-to-b from-surface-container-lowest via-surface-container-low to-background overflow-hidden py-16 md:py-24 cyber-grid border-b border-slate-border/50">
+      <div class="laser-scan-line"></div>
+      <div class="absolute -right-24 top-1/4 w-[450px] h-[450px] bg-tertiary/10 rounded-full blur-3xl pointer-events-none animate-float-slow"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col gap-8">
+        <div class="flex flex-wrap items-center gap-3 reveal-on-scroll">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 bg-tertiary/20 backdrop-blur-md border border-tertiary/40 rounded-full text-tertiary font-label-mono-sm text-xs font-semibold badge-glow">
+            <span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+            AGRITECH EDGE &bull; SUB-GHZ ENCRYPTED RADIO MESH
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container/80 border border-slate-border text-on-surface font-label-mono-sm text-xs rounded-full">
+            <span class="material-symbols-outlined text-[14px] text-primary">bolt</span> 415V 3-PHASE HARDENED
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container/80 border border-slate-border text-alert-amber font-label-mono-sm text-xs rounded-full">
+            <span class="material-symbols-outlined text-[14px]">shield</span> 6KV LIGHTNING SURGE PROOF
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-8 flex flex-col gap-6 reveal-on-scroll">
+            <h1 class="font-display-hero text-3xl sm:text-5xl lg:text-6xl text-on-surface font-extrabold tracking-tight leading-tight">
+              Hardware Engineered for <span class="text-tertiary underline decoration-tertiary/40 decoration-wavy">Real Working Farms</span> | No Internet Required
+            </h1>
+            <p class="font-body-lg text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              Survive rural voltage drops, unpredictable power windows, and zero-cellular dead zones. We manufacture robust wireless motor starters, on-spot soil testing probes, and ultrasonic wildlife deterrents that operate 24/7 completely independent of internet connectivity.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#hardware-catalog" class="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-lg transition-all btn-shimmer">
+                <span class="material-symbols-outlined text-[18px]">inventory_2</span>
+                Browse Hardware Catalog (5 Devices)
+              </a>
+              <a href="#farmer-hotline" class="inline-flex items-center gap-2 px-6 py-3.5 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-md transition-all btn-shimmer">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                WhatsApp Farmer Support
+              </a>
+              <a href="/contact/?interest=agriculture" class="inline-flex items-center gap-2 px-5 py-3.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-mono-sm text-xs uppercase rounded-xl border border-slate-border/60 hover:border-primary/50 transition-all btn-shimmer">
+                Request Farm Demo &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Agriculture Telemetry Spec Box -->
+          <div class="lg:col-span-4 bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl border border-tertiary/30 shadow-2xl card-3d spotlight-card flex flex-col gap-4 reveal-on-scroll delay-100">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-border/50">
+              <span class="font-label-mono-sm text-xs text-tertiary font-bold uppercase flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">agriculture</span> FIELD READOUT: LIVE
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-mono text-[10px] font-bold">12 KM RANGE</span>
+            </div>
+            <div class="space-y-3 font-mono text-xs">
+              <div class="flex justify-between p-2.5 bg-surface-container-lowest/80 rounded-xl border border-slate-border/40">
+                <span class="text-on-surface-variant">Radio Carrier</span>
+                <span class="text-primary font-bold">868 MHz Sub-GHz</span>
+              </div>
+              <div class="flex justify-between p-2.5 bg-surface-container-lowest/80 rounded-xl border border-slate-border/40">
+                <span class="text-on-surface-variant">Line Voltage</span>
+                <span class="text-on-surface font-bold">415 V (3-Phase)</span>
+              </div>
+              <div class="flex justify-between p-2.5 bg-surface-container-lowest/80 rounded-xl border border-slate-border/40">
+                <span class="text-on-surface-variant">Surge Rating</span>
+                <span class="text-tertiary font-bold">6 kV Dielectric</span>
+              </div>
+              <div class="flex justify-between p-2.5 bg-surface-container-lowest/80 rounded-xl border border-slate-border/40">
+                <span class="text-on-surface-variant">Enclosure</span>
+                <span class="text-on-surface font-bold">IP66 Weatherproof</span>
+              </div>
+            </div>
+            <div class="pt-2 text-[11px] text-on-surface-variant flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-tertiary text-[14px]">check_circle</span>
+              Tested across 450+ acres in Western Maharashtra
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HARDWARE CATALOG SECTION -->
+    <section class="w-full py-20 bg-surface-dim" id="hardware-catalog">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-on-scroll">
+          <div class="flex flex-col gap-2 max-w-2xl">
+            <span class="text-primary font-label-mono-sm text-xs uppercase tracking-wider font-semibold flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">inventory</span> Proven Agronomic Hardware
+            </span>
+            <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-extrabold tracking-tight">
+              5 Field-Tested Agriculture Systems
+            </h2>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              Standardized modular equipment ready for immediate installation on your agricultural starters and borehole setups.
+            </p>
+          </div>
+          <a href="/contact/?interest=bulk-agriculture" class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-container hover:bg-surface-container-high text-primary font-label-mono-sm text-xs uppercase rounded-xl border border-slate-border/50 hover:border-primary/50 transition-all btn-shimmer self-start md:self-auto">
+            <span>Request Price Sheet &amp; Quotes</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Devices Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Device 1 -->
+          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-primary/20 flex flex-col justify-between gap-6 reveal-on-scroll">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-mono-sm text-xs font-semibold border border-primary/20">
+                  AVAILABLE // 10-12 KM RF
+                </span>
+                <span class="material-symbols-outlined text-primary text-[26px]">settings_remote</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Radio-based Remote Pump Controller</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Turn high-voltage agricultural water pumps ON/OFF over 10-12 km range without any cellular connectivity or internet SIM card. Built-in 3-phase auto-voltage detector shuts down motor on phase failure.
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2">
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Range</span>
+                  <span class="text-on-surface font-bold">12 km Line-of-Sight</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Line Load</span>
+                  <span class="text-primary font-bold">415V 3-Phase</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
+              <span class="text-xs font-mono text-tertiary flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">check_circle</span> Zero GSM Latency
+              </span>
+              <a href="/contact/?product=pump-controller" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Device 2 -->
+          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-alert-amber/20 flex flex-col justify-between gap-6 reveal-on-scroll delay-100">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-full bg-alert-amber/20 text-alert-amber font-label-mono-sm text-xs font-semibold border border-alert-amber/20">
+                  PORTABLE // FIELD READY
+                </span>
+                <span class="material-symbols-outlined text-alert-amber text-[26px]">science</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Instant Digital Soil Testing Probe</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Get real-time NPK (Nitrogen, Phosphorus, Potassium), pH, and Electrical Conductivity measurements directly in your field within 8 seconds. Replaces multi-week laboratory turnaround.
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2">
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Sample Speed</span>
+                  <span class="text-on-surface font-bold">8 Seconds</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Sensor Probe</span>
+                  <span class="text-alert-amber font-bold">316 Stainless</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
+              <span class="text-xs font-mono text-primary flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">bluetooth</span> BLE Instant Sync
+              </span>
+              <a href="/contact/?product=soil-tester" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Device 3 -->
+          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-primary/20 flex flex-col justify-between gap-6 reveal-on-scroll delay-200">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-mono-sm text-xs font-semibold border border-primary/20">
+                  AUTOMATED // CLOSED-LOOP
+                </span>
+                <span class="material-symbols-outlined text-primary text-[26px]">water_drop</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Automatic Soil-Moisture Pump Starter</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Autonomous soil-moisture probes placed at root zones automatically trigger your 3-phase pump starter relay when moisture falls below optimal thresholds, and cut off automatically.
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2">
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Root Depth</span>
+                  <span class="text-on-surface font-bold">15 &ndash; 60 cm</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Switch Relay</span>
+                  <span class="text-primary font-bold">30A Continuous</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
+              <span class="text-xs font-mono text-tertiary flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">eco</span> Prevents Aquifer Overuse
+              </span>
+              <a href="/contact/?product=auto-moisture-starter" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Device 4 -->
+          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-tertiary/20 flex flex-col justify-between gap-6 reveal-on-scroll">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-full bg-tertiary/20 text-tertiary font-label-mono-sm text-xs font-semibold border border-tertiary/20">
+                  SOLAR-POWERED // BIO-ACOUSTIC
+                </span>
+                <span class="material-symbols-outlined text-tertiary text-[26px]">volume_up</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Solar Wild-Animal Sound Deterrent</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Frequency-modulated bio-acoustic sound sweeps protect sugarcane, banana, and grain fields from wild boars and deer without harming wildlife. Randomized firing intervals prevent habituation.
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-xs font-mono pt-2">
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Protected Radius</span>
+                  <span class="text-on-surface font-bold">350m Radial Sweep</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Solar Power</span>
+                  <span class="text-tertiary font-bold">10W Self-Sustained</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
+              <span class="text-xs font-mono text-tertiary flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">shield</span> IP66 Weatherproof
+              </span>
+              <a href="/contact/?product=wildlife-deterrent" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Device 5 -->
+          <div class="bg-surface-container/90 backdrop-blur-md p-6 rounded-3xl shadow-xl card-3d spotlight-card border border-slate-border/60 flex flex-col justify-between gap-6 md:col-span-2 lg:col-span-2 reveal-on-scroll delay-100">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-full bg-secondary-fixed/20 text-secondary-fixed font-label-mono-sm text-xs font-semibold border border-secondary-fixed/20">
+                  HYBRID ORBIT + GROUND LORA MESH
+                </span>
+                <span class="material-symbols-outlined text-secondary-fixed text-[26px]">satellite_alt</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-on-surface font-bold">Livestock &amp; Crop Canopy Health Monitor</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed max-w-2xl">
+                Smart collar tags track animal rumination rhythms, herd thermal stress, and boundary geofences over BLE &amp; LoRa. Integrates with Sentinel satellite NDVI field scanning to map crop stress zones before visible blight occurs.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono pt-2">
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Collar Weight</span>
+                  <span class="text-on-surface font-bold">98 Grams (Ultra-light)</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Satellite NDVI</span>
+                  <span class="text-secondary-fixed font-bold">10m Ground Resolution</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-surface-container-lowest border border-slate-border/40">
+                  <span class="text-on-surface-variant block">Battery Life</span>
+                  <span class="text-tertiary font-bold">3+ Years Continuous</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-border/40 flex items-center justify-between">
+              <span class="text-xs font-mono text-secondary-fixed flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">tune</span> Multi-Spectrum Analysis
+              </span>
+              <a href="/contact/?product=livestock-monitor" class="text-xs font-label-mono-sm text-primary hover:underline font-bold">Inquire / Buy &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FARMER HOTLINE & SUPPORT CONTACT -->
+    <section class="w-full py-16 bg-surface-container-lowest border-t border-slate-border/50" id="farmer-hotline">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-10 items-center justify-between">
+        <div class="flex flex-col gap-4 max-w-xl">
+          <span class="text-tertiary font-label-mono-sm text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">support_agent</span> 24/7 Farmer Support &amp; Field Demos
+          </span>
+          <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface font-extrabold tracking-tight">
+            Need Help or a Demonstration on Your Farm?
+          </h2>
+          <p class="font-body-md text-on-surface-variant leading-relaxed">
+            Our agricultural technicians visit working farms to test radio signal lines, install 3-phase starter clips, and demonstrate controllers. Contact us directly via WhatsApp or phone.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="https://wa.me/918000000000?text=Hello%20Digital%20Tools%2C%20I%20am%20interested%20in%20your%20Agricultural%20hardware%20and%20would%20like%20a%20demo." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-lg transition-all btn-shimmer">
+              <span class="material-symbols-outlined text-[18px]">chat</span>
+              WhatsApp Farmer Hotline
+            </a>
+            <a href="tel:+918000000000" class="inline-flex items-center gap-2 px-6 py-3.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-mono-sm text-xs uppercase rounded-xl border border-slate-border/50 transition-all btn-shimmer">
+              <span class="material-symbols-outlined text-[18px] text-primary">call</span>
+              Direct Engineer Line
+            </a>
+            <a href="/contact/?interest=agritech" class="inline-flex items-center gap-2 px-6 py-3.5 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-lg transition-all btn-shimmer">
+              Full Contact &amp; Booking Form &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-96 bg-surface-container p-6 rounded-3xl border border-tertiary/30 shadow-2xl flex flex-col gap-4">
+          <span class="font-label-mono-sm text-xs text-on-surface uppercase font-bold tracking-wider flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-tertiary text-[16px]">bolt</span> Quick Farm Inquiry
+          </span>
+          <form class="flex flex-col gap-3" onsubmit="event.preventDefault(); window.showToast('Farm inquiry sent! Our field technician will reach out.'); this.reset();">
+            <div>
+              <label class="font-body-sm text-xs text-on-surface-variant block mb-1">Your Name / Village / Farm</label>
+              <input class="w-full bg-surface-container-lowest p-2.5 rounded-xl text-on-surface text-sm border border-slate-border/50 focus:outline-none focus:border-primary" placeholder="e.g. Ramesh Patil (Kolhapur)" required type="text"/>
+            </div>
+            <div>
+              <label class="font-body-sm text-xs text-on-surface-variant block mb-1">Phone / WhatsApp Number</label>
+              <input class="w-full bg-surface-container-lowest p-2.5 rounded-xl text-on-surface text-sm border border-slate-border/50 focus:outline-none focus:border-primary" placeholder="+91 98..." required type="tel"/>
+            </div>
+            <div>
+              <label class="font-body-sm text-xs text-on-surface-variant block mb-1">Requirement</label>
+              <select class="w-full bg-surface-container-lowest p-2.5 rounded-xl text-on-surface text-sm border border-slate-border/50 focus:outline-none focus:border-primary">
+                <option>Radio Pump Controller (12 km Range)</option>
+                <option>Automatic Soil Moisture Starter</option>
+                <option>Instant Soil NPK &amp; pH Tester</option>
+                <option>Wild Animal Acoustic Deterrent</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full py-3 bg-primary-container hover:bg-primary text-on-primary font-label-mono-sm text-xs uppercase font-bold rounded-xl shadow-md transition-all btn-shimmer mt-2">
+              Send Farm Request &rarr;
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Standardized Main Footer -->
+  <footer class="w-full bg-surface-container-lowest border-t border-slate-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-2.5">
+            <img alt="Digital Tools Logo" class="h-7 w-auto object-contain" src="/logo.png"/>
+            <span class="font-headline-sm text-lg text-on-surface font-bold">Digital Tools</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Autonomous AgriTech hardware, robust industrial automation retrofits, and zero-telemetry mobile applications built for real-world resilience.
+          </p>
+          <span class="font-label-mono-sm text-xs text-primary">adigitaltools.in</span>
+        </div>
+        
+        <div class="flex flex-col gap-2.5">
+          <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Core Solutions</span>
+          <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors text-primary font-medium" href="/agriculture/">Agriculture Radio Mesh</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/industrial/">Industrial IoT Gateway</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/apps/">Everyday Mobile Utilities</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/contact/">Contact &amp; Services</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2.5">
+          <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Mobile Apps &amp; Policies</span>
+          <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="/apps/call-assistant/">Call Assistant : Auto Policy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/apps/attendy/">Attendy Attendance Policy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/apps/sudoku-master-pro/">Sudoku Master Pro Policy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="https://play.google.com/store/apps/dev?id=6740194394029144829" target="_blank">Google Play Developer Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-2.5">
+          <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Developer &amp; Support Desk</span>
+          <div class="flex flex-col gap-1.5 font-body-sm text-sm text-on-surface-variant">
+            <p class="text-on-surface font-medium">Digital Tools Team</p>
+            <p>Email: <a href="mailto:support@adigitaltools.in" class="text-primary hover:underline cursor-pointer" data-copy="support@adigitaltools.in" title="Click to copy email">support@adigitaltools.in</a></p>
+            <p class="font-label-mono-sm text-xs text-outline mt-1">Average response SLA: &lt; 24 hours</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-slate-border flex flex-col sm:flex-row items-center justify-between gap-4 font-label-mono-sm text-xs text-on-surface-variant">
+        <span>&copy; 2024&ndash;2026 Digital Tools. All field and telemetry rights reserved.</span>
+        <div class="flex items-center gap-4">
+          <span>Zero Tracker Telemetry</span>
+          <span>&bull;</span>
+          <span>WCAG AA Compliant</span>
+          <span>&bull;</span>
+          <a href="/contact/" class="hover:text-primary transition-colors">Support &amp; Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

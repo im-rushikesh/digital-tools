@@ -17,11 +17,11 @@
       </a>
     </div>
     <nav class="hidden lg:flex items-center gap-1">
-      <a class="px-3 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" href="/">Home</a>
-      <a class="px-3 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" href="/#farmer-solutions">Agriculture</a>
-      <a class="px-3 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" href="/#knowledge-split">Industrial</a>
-      <a class="px-3 py-2 font-body-md text-body-md text-on-surface bg-primary-container/20 text-primary font-semibold rounded-lg transition-colors" href="/apps/">Mobile Apps</a>
-      <a class="px-3 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" href="/#contact">Contact</a>
+      <a class="px-3.5 py-2 font-body-md text-body-md text-primary font-semibold bg-primary-container/20 rounded-xl transition-colors" href="/">Home</a>
+      <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/agriculture/">Agriculture</a>
+      <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/industrial/">Industrial</a>
+      <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/apps/">Mobile Apps</a>
+      <a class="px-3.5 py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" href="/contact/">Contact</a>
     </nav>
     <div class="flex items-center gap-3 shrink-0">
       <button id="sound-toggle-btn" type="button" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high border border-slate-border text-on-surface-variant font-label-mono-sm text-xs transition-colors btn-shimmer" title="Toggle UI sound effects">
@@ -63,12 +63,7 @@
 <div class="lg:col-span-8 flex flex-col gap-6 reveal-on-scroll">
 <h1 class="font-display-hero text-headline-lg sm:text-display-hero text-on-surface tracking-tight font-extrabold leading-tight">
             Modern Technology for<br/>
-            <span class="jitter-word-cycler text-gradient-shimmer">
-              <span class="jitter-word active">Everyday Work.</span>
-              <span class="jitter-word">Deep Farms.</span>
-              <span class="jitter-word">Industrial Plants.</span>
-              <span class="jitter-word">Offline Logic.</span>
-            </span>
+            <span id="kinetic-dynamic-text" class="text-primary underline decoration-primary/40 decoration-wavy text-flip-in">Everyday Work.</span>
           </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
             Replacing outdated manual workflows with hardened IoT hardware, radio-mesh automation, and intuitive mobile applications designed for deep-field resilience and industrial precision.
@@ -1398,9 +1393,13 @@
 <span class="material-symbols-outlined text-[18px] text-primary">mail</span>
               support@adigitaltools.in
             </a>
-<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-mono-sm text-label-mono-sm uppercase font-semibold rounded-xl shadow-sm transition-all btn-shimmer" href="https://wa.me/" rel="noopener noreferrer" target="_blank">
+<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-mono-sm text-label-mono-sm uppercase font-semibold rounded-xl shadow-sm transition-all btn-shimmer" href="https://wa.me/918000000000?text=Hello%20Digital%20Tools%20team%2C%20I%20would%20like%20to%20request%20a%20field%20demo." rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">chat</span>
               WhatsApp for Support
+            </a>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-primary/20 hover:bg-primary/30 text-primary font-label-mono-sm text-label-mono-sm uppercase font-semibold rounded-xl shadow-sm transition-all border border-primary/30 btn-shimmer" href="/contact/">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+              Procurement &amp; Orders Desk &rarr;
             </a>
 </div>
 </div>
@@ -1456,9 +1455,10 @@
       <div class="flex flex-col gap-2.5">
         <span class="font-label-mono-sm text-xs text-primary uppercase tracking-wider font-semibold">Core Solutions</span>
         <ul class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant">
-          <li><a class="hover:text-primary transition-colors" href="/#farmer-solutions">Agriculture Radio Mesh</a></li>
-          <li><a class="hover:text-primary transition-colors" href="/#knowledge-split">Industrial IoT Gateway</a></li>
+          <li><a class="hover:text-primary transition-colors" href="/agriculture/">Agriculture Radio Mesh</a></li>
+          <li><a class="hover:text-primary transition-colors" href="/industrial/">Industrial IoT Gateway</a></li>
           <li><a class="hover:text-primary transition-colors" href="/apps/">Everyday Mobile Utilities</a></li>
+          <li><a class="hover:text-primary transition-colors" href="/contact/">Contact &amp; Services</a></li>
         </ul>
       </div>
 
@@ -1489,7 +1489,7 @@
         <span>&bull;</span>
         <span>WCAG AA Compliant</span>
         <span>&bull;</span>
-        <a href="mailto:support@adigitaltools.in" class="hover:text-primary transition-colors">Support</a>
+        <a href="/contact/" class="hover:text-primary transition-colors">Support &amp; Contact</a>
       </div>
     </div>
   </div>
