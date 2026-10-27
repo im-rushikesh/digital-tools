@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initAppMockupTabs();
   initInteractiveAccordions();
   initAudioSystem();
+  initKineticWordCycler();
+  initWaveformCanvas();
+  initJitterFeatureTabs();
+  initNoiseOverlay();
 });
 
 /* ----------------------------------------------------
@@ -785,3 +789,250 @@ function initAudioSystem() {
     });
   }
 }
+
+/* ----------------------------------------------------
+   16. JITTER.VIDEO KINETIC WORD CYCLER
+---------------------------------------------------- */
+function initKineticWordCycler() {
+  const cycler = document.querySelector('.jitter-word-cycler');
+  if (!cycler) return;
+
+  const words = cycler.querySelectorAll('.jitter-word');
+  if (words.length <= 1) return;
+
+  let currentIndex = 0;
+
+  setInterval(() => {
+    const currentWord = words[currentIndex];
+    currentWord.classList.remove('active');
+    currentWord.classList.add('exit');
+
+    currentIndex = (currentIndex + 1) % words.length;
+    const nextWord = words[currentIndex];
+    nextWord.classList.remove('exit');
+    nextWord.classList.add('active');
+
+    setTimeout(() => {
+      currentWord.classList.remove('exit');
+    }, 700);
+  }, 2800);
+}
+
+/* ----------------------------------------------------
+   17. REAL-TIME RF CARRIER SINE-WAVE OSCILLOSCOPE
+---------------------------------------------------- */
+function initWaveformCanvas() {
+  const canvas = document.getElementById('rf-waveform-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  let width = (canvas.width = canvas.parentElement.offsetWidth || 500);
+  let height = (canvas.height = 100);
+
+  const resize = () => {
+    if (!canvas.parentElement) return;
+    width = canvas.width = canvas.parentElement.offsetWidth;
+    height = canvas.height = canvas.parentElement.offsetHeight || 100;
+  };
+  window.addEventListener('resize', resize, { passive: true });
+
+  let step = 0;
+
+  function renderWave() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Subtle grid lines inside oscilloscope
+    ctx.strokeStyle = 'rgba(79, 219, 200, 0.08)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    for (let x = 0; x < width; x += 40) {
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, height);
+    }
+    for (let y = 0; y < height; y += 20) {
+      ctx.moveTo(0, y);
+      ctx.lineTo(width, y);
+    }
+    ctx.stroke();
+
+    // Primary 868MHz carrier wave
+    ctx.beginPath();
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#4fdbc8';
+    ctx.shadowBlur = 8;
+    ctx.shadowColor = '#4fdbc8';
+
+    const midY = height / 2;
+    for (let x = 0; x < width; x++) {
+      const angle = (x * 0.04) + step;
+      const angle2 = (x * 0.015) - (step * 0.5);
+      const y = midY + Math.sin(angle) * 18 + Math.cos(angle2) * 8;
+      if (x === 0) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
+    }
+    ctx.stroke();
+
+    // Secondary harmonic wave
+    ctx.beginPath();
+    ctx.lineWidth = 1.2;
+    ctx.strokeStyle = 'rgba(123, 216, 177, 0.45)';
+    ctx.shadowBlur = 4;
+    ctx.shadowColor = '#7bd8b1';
+
+    for (let x = 0; x < width; x += 2) {
+      const angle = (x * 0.06) - (step * 1.2);
+      const y = midY + Math.sin(angle) * 10;
+      if (x === 0) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
+    }
+    ctx.stroke();
+
+    ctx.shadowBlur = 0;
+    step += 0.065;
+    requestAnimationFrame(renderWave);
+  }
+
+  renderWave();
+}
+
+/* ----------------------------------------------------
+   18. JITTER INTERACTIVE FEATURE TABS (Autoplay & Click)
+---------------------------------------------------- */
+function initJitterFeatureTabs() {
+  const tabs = document.querySelectorAll('.jitter-feature-tab');
+  const panel = document.getElementById('jitter-feature-panel');
+  if (!tabs.length || !panel) return;
+
+  const contentMap = {
+    agritech: `
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-border/50">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-primary animate-ping"></span>
+            <span class="font-label-mono-sm text-xs text-primary font-bold">12 KM SUB-GHZ RADIO LOOP</span>
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full bg-primary/20 text-primary font-label-mono-sm text-xs font-semibold">Zero Internet Needed</span>
+        </div>
+        <p class="text-sm font-body-md text-on-surface leading-relaxed">
+          Switch high-voltage farm irrigation pumps ON/OFF across deep valleys and mountain gaps. In-house fabricated boards with 6kV lightning surge suppressor and automatic phase-imbalance cutoffs.
+        </p>
+        <div class="grid grid-cols-2 gap-3 pt-2">
+          <div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-border/50">
+            <span class="text-[11px] font-mono text-on-surface-variant block">Tested Range</span>
+            <span class="font-bold text-on-surface text-base">12.4 km Line-of-Sight</span>
+          </div>
+          <div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-border/50">
+            <span class="text-[11px] font-mono text-on-surface-variant block">Transformer Savings</span>
+            <span class="font-bold text-tertiary text-base">-40% Power Loss</span>
+          </div>
+        </div>
+      </div>
+    `,
+    industrial: `
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-border/50">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-tertiary animate-pulse"></span>
+            <span class="font-label-mono-sm text-xs text-tertiary font-bold">DIN-RAIL PLC &amp; HMI GATEWAY</span>
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-label-mono-sm text-xs font-semibold">Zero Line Downtime</span>
+        </div>
+        <p class="text-sm font-body-md text-on-surface leading-relaxed">
+          Passive RS-485 bus sniffing and encrypted Wireguard tunnels for remote PLC programming, parameter tuning, and preventive vibration diagnostics on stamping presses and CNC stations.
+        </p>
+        <div class="grid grid-cols-2 gap-3 pt-2">
+          <div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-border/50">
+            <span class="text-[11px] font-mono text-on-surface-variant block">Mean Time To Repair</span>
+            <span class="font-bold text-tertiary text-base">-65% MTTR</span>
+          </div>
+          <div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-border/50">
+            <span class="text-[11px] font-mono text-on-surface-variant block">Protocol Standards</span>
+            <span class="font-bold text-on-surface text-base">Modbus RTU / TCP</span>
+          </div>
+        </div>
+      </div>
+    `,
+    mobile: `
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-border/50">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-secondary-fixed animate-pulse"></span>
+            <span class="font-label-mono-sm text-xs text-secondary-fixed font-bold">OFFLINE-FIRST MOBILE UTILITIES</span>
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/20 text-secondary-fixed font-label-mono-sm text-xs font-semibold">Zero Third-Party SDKs</span>
+        </div>
+        <p class="text-sm font-body-md text-on-surface leading-relaxed">
+          Production Android applications designed with zero-tracker architectures. Local SQLite database storage, single-shot GPS geofencing, and hands-free telephony automation with zero cloud leakage.
+        </p>
+        <div class="grid grid-cols-2 gap-3 pt-2">
+          <div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-border/50">
+            <span class="text-[11px] font-mono text-on-surface-variant block">Verified Downloads</span>
+            <span class="font-bold text-primary text-base">5,000+ Active</span>
+          </div>
+          <div class="bg-surface-container-lowest p-3 rounded-xl border border-slate-border/50">
+            <span class="text-[11px] font-mono text-on-surface-variant block">Play Store Rating</span>
+            <span class="font-bold text-alert-amber text-base">4.1★ Verified</span>
+          </div>
+        </div>
+      </div>
+    `
+  };
+
+  let activeIndex = 0;
+  let timerId;
+
+  function switchTab(index) {
+    tabs.forEach((t) => t.classList.remove('active'));
+    activeIndex = index;
+    const activeTab = tabs[activeIndex];
+    activeTab.classList.add('active');
+
+    const key = activeTab.getAttribute('data-tab-target') || 'agritech';
+    if (contentMap[key]) {
+      panel.style.opacity = '0';
+      panel.style.transform = 'translateY(8px)';
+      setTimeout(() => {
+        panel.innerHTML = contentMap[key];
+        panel.style.opacity = '1';
+        panel.style.transform = 'translateY(0)';
+      }, 150);
+    }
+  }
+
+  tabs.forEach((tab, idx) => {
+    tab.addEventListener('click', () => {
+      clearInterval(timerId);
+      switchTab(idx);
+      startAutoplay();
+    });
+  });
+
+  function startAutoplay() {
+    timerId = setInterval(() => {
+      const nextIndex = (activeIndex + 1) % tabs.length;
+      switchTab(nextIndex);
+    }, 5000);
+  }
+
+  switchTab(0);
+  startAutoplay();
+}
+
+/* ----------------------------------------------------
+   19. FILM GRAIN NOISE OVERLAY
+---------------------------------------------------- */
+function initNoiseOverlay() {
+  if (document.querySelector('.noise-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'noise-overlay';
+  document.body.appendChild(overlay);
+}
+

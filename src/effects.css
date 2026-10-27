@@ -452,3 +452,100 @@ header.scrolled {
 .accordion-item.open .accordion-icon {
   transform: rotate(180deg);
 }
+
+/* ----------------------------------------------------
+   JITTER.VIDEO WEBSITE TEMPLATE ANIMATION SPEC
+---------------------------------------------------- */
+
+/* 1. Kinetic Text Word Cycler */
+.jitter-word-cycler {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 1.3em;
+  min-width: 280px;
+}
+
+.jitter-word {
+  display: block;
+  opacity: 0;
+  transform: translateY(110%) rotateX(-40deg);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  transform-origin: bottom center;
+}
+
+.jitter-word.active {
+  opacity: 1;
+  transform: translateY(0%) rotateX(0deg);
+  position: relative;
+}
+
+.jitter-word.exit {
+  opacity: 0;
+  transform: translateY(-110%) rotateX(40deg);
+  position: absolute;
+}
+
+/* 2. Jitter Animated Browser Mockup Window */
+.jitter-browser-window {
+  background: rgba(11, 19, 38, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(79, 219, 200, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.85), 0 0 35px rgba(79, 219, 200, 0.15);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  will-change: transform;
+}
+
+.jitter-browser-window:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 40px 90px -20px rgba(0, 0, 0, 0.95), 0 0 45px rgba(79, 219, 200, 0.25);
+  border-color: rgba(79, 219, 200, 0.45);
+}
+
+/* 3. Subtle Film Grain / Organic Matte Texture */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999990;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* 4. Jitter Interactive Feature Progress Bar Tabs */
+.jitter-feature-tab {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.jitter-tab-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #14b8a6, #4fdbc8);
+  box-shadow: 0 0 8px #4fdbc8;
+  transition: width 0.05s linear;
+}
+
+.jitter-feature-tab.active .jitter-tab-progress {
+  width: 100%;
+  transition: width 5s linear;
+}
+
+/* 5. Waveform Canvas */
+#rf-waveform-canvas {
+  width: 100%;
+  height: 100px;
+  display: block;
+}
